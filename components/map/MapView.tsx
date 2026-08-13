@@ -15,9 +15,9 @@ import {
   formatStatus,
 } from "@/lib/data/normalize";
 import {
-  MAHARASHTRA_BOUNDS,
-  MAHARASHTRA_CENTER,
-  MAHARASHTRA_DEFAULT_ZOOM,
+  MUMBAI_BOUNDS,
+  MUMBAI_CENTER,
+  MUMBAI_DEFAULT_ZOOM,
   MAHARASHTRA_MAX_BOUNDS,
   MAHARASHTRA_MAX_ZOOM,
   MAHARASHTRA_MIN_ZOOM,
@@ -74,8 +74,8 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
     const map = new MapLibreMap({
       container,
       style: MAP_STYLE,
-      center: MAHARASHTRA_CENTER,
-      zoom: MAHARASHTRA_DEFAULT_ZOOM,
+      center: MUMBAI_CENTER,
+      zoom: MUMBAI_DEFAULT_ZOOM,
       minZoom: MAHARASHTRA_MIN_ZOOM,
       maxZoom: MAHARASHTRA_MAX_ZOOM,
       maxBounds: MAHARASHTRA_MAX_BOUNDS,
@@ -96,7 +96,11 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
     const finishSetup = () => {
       if (cancelled || !mapRef.current) return;
       map.resize();
-      map.fitBounds(MAHARASHTRA_BOUNDS, { padding: 40, maxZoom: 7.2 });
+      map.fitBounds(MUMBAI_BOUNDS, {
+        padding: 48,
+        maxZoom: 11,
+        duration: 0,
+      });
       setReady(true);
     };
 
@@ -215,6 +219,7 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
             hoverCase.establishment.district
           }
           district={hoverCase.establishment.district}
+          status={hoverCase.case.status}
           statusLabel={formatStatus(hoverCase.case.status)}
           dateLabel={formatMonthYear(
             hoverCase.case.action_date ?? hoverCase.case.inspection_date,

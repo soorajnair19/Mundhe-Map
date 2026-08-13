@@ -17,7 +17,8 @@ import {
   parseFiltersFromSearchParams,
 } from "@/lib/data/load";
 import type { CaseFilters } from "@/lib/data/types";
-import { MARKER_STYLES } from "@/lib/data/status";
+import { MARKER_STYLES, type MarkerKind } from "@/lib/data/status";
+import { StatusIcon } from "@/components/status/StatusIcon";
 
 export function MapExperience() {
   const router = useRouter();
@@ -93,9 +94,10 @@ export function MapExperience() {
           <ul className="space-y-1.5">
             {Object.entries(MARKER_STYLES).map(([key, style]) => (
               <li key={key} className="flex items-center gap-2 text-[var(--ink)]">
-                <span
-                  className="inline-block h-2.5 w-2.5 rounded-full border border-white shadow-sm"
-                  style={{ backgroundColor: style.color }}
+                <StatusIcon
+                  kind={key as MarkerKind}
+                  size={14}
+                  color={style.color}
                 />
                 {style.label}
               </li>

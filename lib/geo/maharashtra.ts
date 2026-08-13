@@ -18,6 +18,16 @@ export const MAHARASHTRA_CENTER: [number, number] = [75.85, 18.95];
 
 export const MAHARASHTRA_DEFAULT_ZOOM = 6.35;
 
+/** Greater Mumbai — island city + suburbs, where most cases sit. */
+export const MUMBAI_BOUNDS: [[number, number], [number, number]] = [
+  [72.77, 18.9],
+  [73.02, 19.27],
+];
+
+export const MUMBAI_CENTER: [number, number] = [72.88, 19.08];
+
+export const MUMBAI_DEFAULT_ZOOM = 10.4;
+
 export const MAHARASHTRA_MIN_ZOOM = 5.8;
 
 export const MAHARASHTRA_MAX_ZOOM = 14;

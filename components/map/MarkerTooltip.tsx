@@ -1,9 +1,12 @@
+import { StatusIcon } from "@/components/status/StatusIcon";
+
 interface MarkerTooltipProps {
   x: number;
   y: number;
   name: string;
   locality: string;
   district: string;
+  status: string;
   statusLabel: string;
   dateLabel: string;
   accent: string;
@@ -15,6 +18,7 @@ export function MarkerTooltip({
   name,
   locality,
   district,
+  status,
   statusLabel,
   dateLabel,
   accent,
@@ -32,9 +36,10 @@ export function MarkerTooltip({
         {locality}, {district}
       </p>
       <p
-        className="mt-2 text-xs font-medium tracking-wide"
+        className="mt-2 flex items-center gap-1.5 text-xs font-medium tracking-wide"
         style={{ color: accent }}
       >
+        <StatusIcon status={status} size={13} color={accent} />
         {statusLabel}
       </p>
       <p className="text-xs text-[var(--muted)]">{dateLabel}</p>

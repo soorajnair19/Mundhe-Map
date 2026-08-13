@@ -8,6 +8,7 @@ import {
   formatStatus,
 } from "@/lib/data/normalize";
 import { pinAccent } from "@/lib/data/status";
+import { StatusIcon } from "@/components/status/StatusIcon";
 
 interface CaseDetailPanelProps {
   mapCase: MapCase | null;
@@ -93,10 +94,7 @@ function PanelContent({
           className="inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-xs font-semibold tracking-wide text-white"
           style={{ backgroundColor: accent.pin }}
         >
-          <span
-            className="inline-block h-2 w-2 rounded-[1px] bg-white/90"
-            aria-hidden
-          />
+          <StatusIcon status={enforcementCase.status} size={13} color="#fff" />
           {formatStatus(enforcementCase.status)}
         </div>
 
@@ -157,10 +155,16 @@ function PanelContent({
             <h3 className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
               Timeline
             </h3>
-            <ol className="mt-3 space-y-3 border-l border-[var(--border)] pl-4">
+            <ol className="mt-3 space-y-3 border-l border-[var(--border)] pl-5">
               {history.map((event) => (
                 <li key={event.id} className="relative">
-                  <span className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full bg-[var(--case-accent)]" />
+                  <span className="absolute -left-[28px] top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[var(--panel)]">
+                    <StatusIcon
+                      status={event.status}
+                      size={13}
+                      color={pinAccent(event.status).pin}
+                    />
+                  </span>
                   <p className="text-xs text-[var(--muted)]">
                     {formatDisplayDate(event.effective_date)}
                   </p>
