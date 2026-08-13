@@ -32,8 +32,9 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Updating cases from CSV
 
 1. Edit [`data/seed/cases.csv`](data/seed/cases.csv) using the standard column set.
-2. Run `npm run import-csv` to regenerate [`data/seed/cases.json`](data/seed/cases.json).
-3. Refresh the app.
+2. For exact pins, fill `plus_code` (Google Maps Plus Code) or `latitude`/`longitude`.
+3. Run `npm run import-csv` to regenerate [`data/seed/cases.json`](data/seed/cases.json).
+4. Refresh the app.
 
 Leave cells blank when unknown. Do not invent coordinates, dates, or outcomes.
 

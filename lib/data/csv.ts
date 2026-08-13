@@ -11,9 +11,9 @@ import type {
 
 /** Approximate locality centroids. Pins are neighborhood-level, not doorstep. */
 const LOCALITY_COORDS: Record<string, [number, number]> = {
-  "nariman point|mumbai": [18.9256, 72.8242],
-  "churchgate|mumbai": [18.9322, 72.8264],
-  "marine lines|mumbai": [18.944, 72.8236],
+  "nariman point|mumbai": [18.9258, 72.826],
+  "churchgate|mumbai": [18.9338, 72.8278],
+  "marine lines|mumbai": [18.945, 72.8255],
   "fort|mumbai": [18.9338, 72.8354],
   "bhendi bazaar|mumbai": [18.9601, 72.8316],
   "umarkhadi|mumbai": [18.9608, 72.8365],
@@ -82,8 +82,8 @@ function key(value: string | null | undefined): string {
 function hashOffset(id: string): [number, number] {
   let hash = 0;
   for (const char of id) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
-  const lat = ((hash % 17) - 8) * 0.00045;
-  const lng = (((hash >> 4) % 17) - 8) * 0.00045;
+  const lat = ((hash % 17) - 8) * 0.00018;
+  const lng = (hash % 9) * 0.00012;
   return [lat, lng];
 }
 

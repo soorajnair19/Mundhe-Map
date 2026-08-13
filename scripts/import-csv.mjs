@@ -1,16 +1,18 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { OpenLocationCode } from "open-location-code";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const olc = new OpenLocationCode();
 
 const csvPath = path.join(__dirname, "../data/seed/cases.csv");
 const outPath = path.join(__dirname, "../data/seed/cases.json");
 
 const LOCALITY_COORDS = {
-  "nariman point|mumbai": [18.9256, 72.8242],
-  "churchgate|mumbai": [18.9322, 72.8264],
-  "marine lines|mumbai": [18.944, 72.8236],
+  "nariman point|mumbai": [18.9258, 72.826],
+  "churchgate|mumbai": [18.9338, 72.8278],
+  "marine lines|mumbai": [18.945, 72.8255],
   "fort|mumbai": [18.9338, 72.8354],
   "bhendi bazaar|mumbai": [18.9601, 72.8316],
   "umarkhadi|mumbai": [18.9608, 72.8365],
@@ -126,9 +128,71 @@ function blank(value) {
 function hashOffset(id) {
   let hash = 0;
   for (const char of id) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
-  return [((hash % 17) - 8) * 0.00045, (((hash >> 4) % 17) - 8) * 0.00045];
+  // Keep jitter small, and never push west (into the Arabian Sea on Mumbai's coast).
+  const lat = ((hash % 17) - 8) * 0.00018;
+  const lng = (hash % 9) * 0.00012;
+  return [lat, lng];
 }
 
+function parseLatLng(value) {
+  if (!value) return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
+function coordsFromMapsUrl(url) {
+  if (!url) return null;
+  const at = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+  if (at) return { latitude: Number(at[1]), longitude: Number(at[2]) };
+  const q = url.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/);
+  if (q) return { latitude: Number(q[1]), longitude: Number(q[2]) };
+  return null;
+}
+
+function coordsFromPlusCode(raw, fallback) {
+  if (!raw) return null;
+  const cleaned = raw.toUpperCase().replace(/\s+/g, " ").trim();
+  const codeMatch = cleaned.match(/[23456789CFGHJMPQRVWX+]{4,}/);
+  if (!codeMatch) return null;
+  let code = codeMatch[0];
+  try {
+    if (!olc.isFull(code) && fallback) {
+      code = olc.recoverNearest(code, fallback.latitude, fallback.longitude);
+    }
+    if (!olc.isFull(code)) return null;
+    const area = olc.decode(code);
+    return { latitude: area.latitudeCenter, longitude: area.longitudeCenter };
+  } catch {
+    return null;
+  }
+}
+
+function resolveLocation(row, placeKey) {
+  const fallback = geocode(
+    placeKey,
+    blank(row.locality),
+    blank(row.city),
+    blank(row.district) || "unknown",
+  );
+
+  const lat = parseLatLng(row.latitude);
+  const lng = parseLatLng(row.longitude);
+  if (lat != null && lng != null) {
+    return { latitude: lat, longitude: lng, location_accuracy: "exact" };
+  }
+
+  const fromPlus = coordsFromPlusCode(blank(row.plus_code), fallback);
+  if (fromPlus) {
+    return { ...fromPlus, location_accuracy: "exact" };
+  }
+
+  const fromMaps = coordsFromMapsUrl(blank(row.maps_url));
+  if (fromMaps) {
+    return { ...fromMaps, location_accuracy: "exact" };
+  }
+
+  return fallback;
+}
 function geocode(id, locality, city, district) {
   const loc = (locality ?? "").toLowerCase().trim();
   const cty = (city ?? "").toLowerCase().trim();
@@ -259,7 +323,7 @@ for (const row of records) {
   const name = blank(row.name);
   if (!placeKey || !name) continue;
 
-  const geo = geocode(placeKey, blank(row.locality), blank(row.city), blank(row.district) || "unknown");
+  const geo = resolveLocation(row, placeKey);
   const now = blank(row.source_published_at)
     ? `${row.source_published_at.trim()}T12:00:00+05:30`
     : "2026-08-13T12:00:00+05:30";
