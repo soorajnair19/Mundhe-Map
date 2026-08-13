@@ -92,7 +92,9 @@ export function MapExperience() {
             Legends
           </p>
           <ul className="space-y-1.5">
-            {Object.entries(MARKER_STYLES).map(([key, style]) => (
+            {Object.entries(MARKER_STYLES)
+              .filter(([, style]) => style.inLegend)
+              .map(([key, style]) => (
               <li key={key} className="flex items-center gap-2 text-[var(--ink)]">
                 <StatusIcon
                   kind={key as MarkerKind}

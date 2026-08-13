@@ -2339,7 +2339,7 @@
       "id": "case-goregaon-sports-club-malad",
       "establishment_id": "goregaon-sports-club-malad",
       "case_type": "closure",
-      "status": "other",
+      "status": "notice_issued",
       "inspection_date": "2026-07-27",
       "action_date": "2026-07-28",
       "summary": "Hindustan Times reported that FDA directed the restaurant at Goregaon Sports Club to stop food operations after finding it was operating without a valid food licence or registration.",
@@ -2356,7 +2356,7 @@
         },
         {
           "id": "case-goregaon-sports-club-malad-act-main",
-          "action_type": "other",
+          "action_type": "notice",
           "action_date": "2026-07-28",
           "description": null
         }

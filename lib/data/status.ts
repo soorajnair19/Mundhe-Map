@@ -30,15 +30,35 @@ export function statusToMarkerKind(status: CaseStatus | string): MarkerKind {
 
 export const MARKER_STYLES: Record<
   MarkerKind,
-  { color: string; shape: "circle" | "square" | "diamond" | "triangle"; label: string }
+  {
+    color: string;
+    shape: "circle" | "square" | "diamond" | "triangle";
+    label: string;
+    inLegend: boolean;
+  }
 > = {
-  suspended: { color: "#E07020", shape: "square", label: "Licence suspended" },
-  cancelled: { color: "#8B1E1E", shape: "diamond", label: "Licence cancelled" },
-  sealed: { color: "#E11D2E", shape: "triangle", label: "Sealed" },
-  notice: { color: "#A15C07", shape: "circle", label: "Notice" },
-  inspection: { color: "#3D5A80", shape: "circle", label: "Inspection" },
-  seizure: { color: "#5C4B8A", shape: "square", label: "Seizure" },
-  other: { color: "#5C6770", shape: "circle", label: "Other" },
+  suspended: {
+    color: "#E07020",
+    shape: "square",
+    label: "Licence suspended",
+    inLegend: true,
+  },
+  cancelled: {
+    color: "#8B1E1E",
+    shape: "diamond",
+    label: "Licence cancelled",
+    inLegend: true,
+  },
+  sealed: { color: "#E11D2E", shape: "triangle", label: "Sealed", inLegend: true },
+  notice: { color: "#895129", shape: "circle", label: "Notice", inLegend: true },
+  inspection: {
+    color: "#3D5A80",
+    shape: "circle",
+    label: "Inspection",
+    inLegend: false,
+  },
+  seizure: { color: "#C11C84", shape: "square", label: "Seizure", inLegend: true },
+  other: { color: "#5C6770", shape: "circle", label: "Other", inLegend: true },
 };
 
 /** UI shades derived from a pin colour — hover labels, panel bars, links. */

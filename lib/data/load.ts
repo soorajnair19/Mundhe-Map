@@ -277,7 +277,6 @@ export const ACTION_FILTER_OPTIONS: {
   value: ActionType | CaseType;
   label: string;
 }[] = [
-  { value: "inspection", label: "Inspection" },
   { value: "raid", label: "Raid" },
   { value: "notice", label: "Notice" },
   { value: "licence_suspended", label: "Licence suspended" },
