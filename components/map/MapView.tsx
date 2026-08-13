@@ -37,6 +37,8 @@ interface HoverState {
   y: number;
 }
 
+const CASE_PIN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="map-case-pin__icon" aria-hidden="true"><path d="M0 0h14v14H0z" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.15"><path d="M13.48 7.516a6.5 6.5 0 1 1-6.93-7"/><path d="M9.79 8.09A3 3 0 1 1 5.9 4.21M7 7l2.5-2.5m2 .5l-2-.5l-.5-2l2-2l.5 2l2 .5z"/></g></svg>`;
+
 function createPinElement(mapCase: MapCase, selected: boolean): HTMLButtonElement {
   const kind = statusToMarkerKind(mapCase.case.status);
   const style = MARKER_STYLES[kind];
@@ -48,7 +50,7 @@ function createPinElement(mapCase: MapCase, selected: boolean): HTMLButtonElemen
     "aria-label",
     `${mapCase.establishment.name}, ${formatStatus(mapCase.case.status)}`,
   );
-  button.innerHTML = `<span class="map-case-pin__head"></span><span class="map-case-pin__point"></span>`;
+  button.innerHTML = CASE_PIN_SVG;
   return button;
 }
 
@@ -189,7 +191,7 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
 
       const marker = new Marker({
         element,
-        anchor: "bottom",
+        anchor: "center",
         pitchAlignment: "viewport",
         rotationAlignment: "viewport",
       })

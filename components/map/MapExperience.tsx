@@ -89,7 +89,7 @@ export function MapExperience() {
 
         <div className="pointer-events-none absolute bottom-4 left-4 z-10 hidden rounded-md border border-[var(--border)] bg-[var(--panel)]/95 p-3 text-xs shadow-sm backdrop-blur-sm md:block">
           <p className="mb-2 text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">
-            Marker status
+            Legends
           </p>
           <ul className="space-y-1.5">
             {Object.entries(MARKER_STYLES).map(([key, style]) => (

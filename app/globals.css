@@ -64,48 +64,30 @@ body {
   --pin-color: #e07020;
   position: relative;
   display: flex;
-  width: 28px;
-  height: 36px;
-  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  align-items: center;
   justify-content: center;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--pin-color);
+  color: #fff;
   cursor: pointer;
   filter: drop-shadow(0 3px 6px rgba(15, 32, 28, 0.35));
   transform: translateZ(0);
+  transform-origin: center center;
 }
 
-.map-case-pin__head {
+.map-case-pin__icon {
   display: block;
-  width: 22px;
-  height: 22px;
-  border: 3px solid #fff;
-  border-radius: 999px;
-  background: var(--pin-color);
-}
-
-.map-case-pin__point {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  width: 14px;
-  height: 14px;
-  border-radius: 2px;
-  background: var(--pin-color);
-  transform: translateX(-50%) rotate(45deg);
-  z-index: -1;
+  width: 18px;
+  height: 18px;
 }
 
 .map-case-pin.is-selected {
   z-index: 6;
   transform: scale(1.2);
-}
-
-.map-case-pin.is-selected .map-case-pin__head {
-  width: 26px;
-  height: 26px;
-  border-width: 4px;
 }
 
 .map-case-pin:hover {
