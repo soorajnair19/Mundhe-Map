@@ -2,7 +2,7 @@
 
 Independent, public-interest map of food-safety enforcement actions across Maharashtra.
 
-> **This V1 build uses mock seed data** for UI development. Do not treat establishments, violations, dates, or outcomes in `data/seed/cases.json` as real enforcement records.
+Cases currently shown are compiled from publicly reported news sources in [`data/seed/cases.csv`](data/seed/cases.csv). Pins are **approximate** (neighbourhood / city), not exact doorstep locations.
 
 ## Stack
 
@@ -29,18 +29,15 @@ Open [http://localhost:3000](http://localhost:3000).
 - Live stats driven by the filtered dataset
 - Independent-project disclaimer in the footer
 
-## Replacing mock data with real cases
+## Updating cases from CSV
 
-1. Keep the same shape as [`data/seed/cases.json`](data/seed/cases.json):
-   - `establishments[]`
-   - `cases[]` with nested `actions`, `violations`, `sources`, and optional `status_history`
-2. Prefer source-attributed wording in `summary` and violation `description` fields.
-3. Use `null` for unknown fields — do not invent coordinates, dates, or outcomes.
-4. Set `location_accuracy` to `exact`, `approximate`, `district_only`, or `unknown`.
-5. Only include `status_history` when you have multiple dated events for that place.
-6. Restart or refresh the app after updating the JSON file.
+1. Edit [`data/seed/cases.csv`](data/seed/cases.csv) using the standard column set.
+2. Run `npm run import-csv` to regenerate [`data/seed/cases.json`](data/seed/cases.json).
+3. Refresh the app.
 
-Types live in [`lib/data/types.ts`](lib/data/types.ts). Branding strings (including the product name) live in [`lib/branding.ts`](lib/branding.ts).
+Leave cells blank when unknown. Do not invent coordinates, dates, or outcomes.
+
+Types live in [`lib/data/types.ts`](lib/data/types.ts). Branding strings live in [`lib/branding.ts`](lib/branding.ts).
 
 ## Data access layer
 

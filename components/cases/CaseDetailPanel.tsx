@@ -208,6 +208,20 @@ function PanelContent({
           {establishment.location_accuracy !== "exact" ? (
             <p className="mt-1">
               Location accuracy: {formatLabel(establishment.location_accuracy)}
+              . Pin is placed at neighbourhood / city level, not the exact
+              doorway.
+            </p>
+          ) : null}
+          {establishment.maps_url ? (
+            <p className="mt-2">
+              <a
+                href={establishment.maps_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] underline-offset-2 hover:underline"
+              >
+                Open map search
+              </a>
             </p>
           ) : null}
         </section>

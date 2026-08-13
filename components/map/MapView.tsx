@@ -24,8 +24,6 @@ import {
   MAP_STYLE,
 } from "@/lib/geo/maharashtra";
 import { MarkerTooltip } from "@/components/map/MarkerTooltip";
-import maharashtraBoundary from "@/data/geo/maharashtra.json";
-import maharashtraMask from "@/data/geo/maharashtra-mask.json";
 
 interface MapViewProps {
   cases: MapCase[];
@@ -37,40 +35,6 @@ interface HoverState {
   caseId: string;
   x: number;
   y: number;
-}
-
-function addMaharashtraOverlay(map: MapLibreMap) {
-  if (map.getSource("maharashtra-mask")) return;
-
-  map.addSource("maharashtra-mask", {
-    type: "geojson",
-    data: maharashtraMask as GeoJSON.FeatureCollection,
-  });
-  map.addSource("maharashtra-boundary", {
-    type: "geojson",
-    data: maharashtraBoundary as GeoJSON.FeatureCollection,
-  });
-
-  map.addLayer({
-    id: "maharashtra-mask-fill",
-    type: "fill",
-    source: "maharashtra-mask",
-    paint: {
-      "fill-color": "#e8ece9",
-      "fill-opacity": 0.72,
-    },
-  });
-
-  map.addLayer({
-    id: "maharashtra-boundary-line",
-    type: "line",
-    source: "maharashtra-boundary",
-    paint: {
-      "line-color": "#0F6E56",
-      "line-width": 2,
-      "line-opacity": 0.9,
-    },
-  });
 }
 
 function createPinElement(mapCase: MapCase, selected: boolean): HTMLButtonElement {
@@ -133,7 +97,6 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
       if (cancelled || !mapRef.current) return;
       map.resize();
       map.fitBounds(MAHARASHTRA_BOUNDS, { padding: 40, maxZoom: 7.2 });
-      addMaharashtraOverlay(map);
       setReady(true);
     };
 

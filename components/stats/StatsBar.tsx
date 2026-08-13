@@ -1,5 +1,5 @@
 import type { CaseStats } from "@/lib/data/types";
-import { formatDisplayDate } from "@/lib/data/normalize";
+import { formatDisplayDateTime } from "@/lib/data/normalize";
 import { PRODUCT_NAME, PRODUCT_TAGLINE } from "@/lib/branding";
 
 interface StatsBarProps {
@@ -16,7 +16,7 @@ export function StatsBar({ stats }: StatsBarProps) {
 
   return (
     <header className="border-b border-[var(--border)] bg-[var(--panel)]/95 px-4 py-4 backdrop-blur-sm md:px-6">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--accent)]">
             Independent tracker
@@ -28,13 +28,16 @@ export function StatsBar({ stats }: StatsBarProps) {
             {PRODUCT_TAGLINE}
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="flex flex-wrap gap-2">
           {items.map((item) => (
-            <div key={item.label} className="min-w-[88px]">
-              <p className="font-[family-name:var(--font-display)] text-2xl text-[var(--ink)]">
+            <div
+              key={item.label}
+              className="min-w-[108px] rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2.5"
+            >
+              <p className="font-[family-name:var(--font-display)] text-2xl leading-none text-[var(--ink)]">
                 {item.value}
               </p>
-              <p className="text-[11px] uppercase tracking-[0.12em] text-[var(--muted)]">
+              <p className="mt-1.5 text-[10px] uppercase tracking-[0.12em] text-[var(--muted)]">
                 {item.label}
               </p>
             </div>
@@ -43,7 +46,7 @@ export function StatsBar({ stats }: StatsBarProps) {
       </div>
       <p className="mt-3 text-xs text-[var(--muted)]">
         Last updated{" "}
-        {stats.lastUpdated ? formatDisplayDate(stats.lastUpdated) : "—"}
+        {stats.lastUpdated ? formatDisplayDateTime(stats.lastUpdated) : "—"}
         <span className="mx-2 text-[var(--border-strong)]">·</span>
         Counts follow active filters
       </p>

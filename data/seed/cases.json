@@ -1,1392 +1,3918 @@
 {
   "establishments": [
     {
-      "id": "est-001",
-      "name": "Harbor Spice Kitchen",
-      "normalized_name": "harbor spice kitchen",
-      "address": "12 Marine Drive",
-      "locality": "Churchgate",
+      "id": "flint-waarsa-nariman-point",
+      "name": "Flint & Waarsa",
+      "normalized_name": "flint waarsa",
+      "address": null,
+      "locality": "Nariman Point",
       "district": "Mumbai City",
       "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "400020",
-      "latitude": 18.9432,
-      "longitude": 72.8235,
+      "pincode": null,
+      "latitude": 18.9292,
+      "longitude": 72.8224,
       "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Flint+%26+Waarsa+Nariman+Point+Mumbai",
       "business_type": "restaurant",
-      "created_at": "2026-07-16T10:00:00Z",
-      "updated_at": "2026-08-02T12:00:00Z"
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30"
     },
     {
-      "id": "est-002",
-      "name": "Deccan Bakery House",
-      "normalized_name": "deccan bakery house",
-      "address": "FC Road",
-      "locality": "Shivajinagar",
-      "district": "Pune",
-      "city": "Pune",
-      "state": "Maharashtra",
-      "pincode": "411005",
-      "latitude": 18.5285,
-      "longitude": 73.8472,
-      "location_accuracy": "approximate",
-      "business_type": "bakery",
-      "created_at": "2026-07-20T10:00:00Z",
-      "updated_at": "2026-07-22T10:00:00Z"
-    },
-    {
-      "id": "est-003",
-      "name": "Godavari Dairy Mart",
-      "normalized_name": "godavari dairy mart",
-      "address": "College Road",
-      "locality": "College Road",
-      "district": "Nashik",
-      "city": "Nashik",
-      "state": "Maharashtra",
-      "pincode": "422005",
-      "latitude": 19.9975,
-      "longitude": 73.7898,
-      "location_accuracy": "approximate",
-      "business_type": "dairy",
-      "created_at": "2026-07-10T10:00:00Z",
-      "updated_at": "2026-07-11T10:00:00Z"
-    },
-    {
-      "id": "est-004",
-      "name": "Thane Central Hotel",
-      "normalized_name": "thane central hotel",
-      "address": "Gokhale Road",
-      "locality": "Thane West",
-      "district": "Thane",
-      "city": "Thane",
-      "state": "Maharashtra",
-      "pincode": "400601",
-      "latitude": 19.2183,
-      "longitude": 72.9781,
-      "location_accuracy": "approximate",
-      "business_type": "hotel",
-      "created_at": "2026-08-01T10:00:00Z",
-      "updated_at": "2026-08-05T10:00:00Z"
-    },
-    {
-      "id": "est-005",
-      "name": "Orange City Cloud Kitchen",
-      "normalized_name": "orange city cloud kitchen",
-      "address": "Sitabuldi",
-      "locality": "Sitabuldi",
-      "district": "Nagpur",
-      "city": "Nagpur",
-      "state": "Maharashtra",
-      "pincode": "440012",
-      "latitude": 21.1498,
-      "longitude": 79.0882,
-      "location_accuracy": "approximate",
-      "business_type": "cloud_kitchen",
-      "created_at": "2026-07-28T10:00:00Z",
-      "updated_at": "2026-07-29T10:00:00Z"
-    },
-    {
-      "id": "est-006",
-      "name": "Konkan Fish Stall",
-      "normalized_name": "konkan fish stall",
-      "address": "Malvan Market",
-      "locality": "Malvan",
-      "district": "Sindhudurg",
-      "city": "Malvan",
-      "state": "Maharashtra",
-      "pincode": "416606",
-      "latitude": 16.0594,
-      "longitude": 73.4703,
-      "location_accuracy": "approximate",
-      "business_type": "retailer",
-      "created_at": "2026-06-15T10:00:00Z",
-      "updated_at": "2026-06-16T10:00:00Z"
-    },
-    {
-      "id": "est-007",
-      "name": "Aurangabad Spice Works",
-      "normalized_name": "aurangabad spice works",
-      "address": "MIDC Waluj",
-      "locality": "Waluj",
-      "district": "Chhatrapati Sambhajinagar",
-      "city": "Chhatrapati Sambhajinagar",
-      "state": "Maharashtra",
-      "pincode": "431136",
-      "latitude": 19.833,
-      "longitude": 75.233,
-      "location_accuracy": "approximate",
-      "business_type": "manufacturer",
-      "created_at": "2026-07-05T10:00:00Z",
-      "updated_at": "2026-07-08T10:00:00Z"
-    },
-    {
-      "id": "est-008",
-      "name": "Kolhapur Misal Corner",
-      "normalized_name": "kolhapur misal corner",
-      "address": "Laxmipuri",
-      "locality": "Laxmipuri",
-      "district": "Kolhapur",
-      "city": "Kolhapur",
-      "state": "Maharashtra",
-      "pincode": "416002",
-      "latitude": 16.705,
-      "longitude": 74.2433,
-      "location_accuracy": "approximate",
-      "business_type": "restaurant",
-      "created_at": "2026-08-03T10:00:00Z",
-      "updated_at": "2026-08-03T10:00:00Z"
-    },
-    {
-      "id": "est-009",
-      "name": "Solapur Grain Retail",
-      "normalized_name": "solapur grain retail",
-      "address": "Mangalwar Peth",
-      "locality": "Mangalwar Peth",
-      "district": "Solapur",
-      "city": "Solapur",
-      "state": "Maharashtra",
-      "pincode": "413002",
-      "latitude": 17.6599,
-      "longitude": 75.9064,
-      "location_accuracy": "approximate",
-      "business_type": "retailer",
-      "created_at": "2026-07-18T10:00:00Z",
-      "updated_at": "2026-07-19T10:00:00Z"
-    },
-    {
-      "id": "est-010",
-      "name": "Andheri Lane Cafe",
-      "normalized_name": "andheri lane cafe",
-      "address": "Lokhandwala",
-      "locality": "Andheri West",
+      "id": "mk-bakery-borivali-east",
+      "name": "M.K. Bakery",
+      "normalized_name": "m k bakery",
+      "address": null,
+      "locality": "Borivali East",
       "district": "Mumbai Suburban",
       "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "400053",
-      "latitude": 19.1364,
-      "longitude": 72.8277,
+      "pincode": null,
+      "latitude": 19.2273,
+      "longitude": 72.86715,
       "location_accuracy": "approximate",
-      "business_type": "restaurant",
-      "created_at": "2026-07-25T10:00:00Z",
-      "updated_at": "2026-08-01T10:00:00Z"
-    },
-    {
-      "id": "est-011",
-      "name": "Satara Hill Bakery",
-      "normalized_name": "satara hill bakery",
-      "address": "Powai Naka",
-      "locality": "Satara",
-      "district": "Satara",
-      "city": "Satara",
-      "state": "Maharashtra",
-      "pincode": "415001",
-      "latitude": 17.6805,
-      "longitude": 74.0183,
-      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=M.K.+Bakery+Borivali+East+Mumbai",
       "business_type": "bakery",
-      "created_at": "2026-06-28T10:00:00Z",
-      "updated_at": "2026-06-29T10:00:00Z"
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30"
     },
     {
-      "id": "est-012",
-      "name": "Jalgaon Fresh Foods",
-      "normalized_name": "jalgaon fresh foods",
-      "address": "MJ College Road",
-      "locality": "Jalgaon",
-      "district": "Jalgaon",
-      "city": "Jalgaon",
+      "id": "hotel-shree-krishna-bhandup",
+      "name": "Hotel Shree Krishna (Sujit Bar and Restaurant)",
+      "normalized_name": "hotel shree krishna sujit bar and restaurant",
+      "address": null,
+      "locality": "Bhandup West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "425001",
-      "latitude": 21.0077,
-      "longitude": 75.5626,
+      "pincode": null,
+      "latitude": 19.14845,
+      "longitude": 72.932,
       "location_accuracy": "approximate",
-      "business_type": "manufacturer",
-      "created_at": "2026-07-12T10:00:00Z",
-      "updated_at": "2026-07-14T10:00:00Z"
-    },
-    {
-      "id": "est-013",
-      "name": "Raigad Coastal Kitchen",
-      "normalized_name": "raigad coastal kitchen",
-      "address": "Alibag Market",
-      "locality": "Alibag",
-      "district": "Raigad",
-      "city": "Alibag",
-      "state": "Maharashtra",
-      "pincode": "402201",
-      "latitude": 18.6414,
-      "longitude": 72.8722,
-      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Shree+Krishna+Sujit+Bar+and+Restaurant+Bhandup+West+Mumbai",
       "business_type": "restaurant",
-      "created_at": "2026-08-06T10:00:00Z",
-      "updated_at": "2026-08-07T10:00:00Z"
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30"
     },
     {
-      "id": "est-014",
-      "name": "Amravati Sweets",
-      "normalized_name": "amravati sweets",
-      "address": "Rajapeth",
-      "locality": "Rajapeth",
-      "district": "Amravati",
-      "city": "Amravati",
+      "id": "hotel-gopal-krishna-santacruz",
+      "name": "Hotel Gopal Krishna",
+      "normalized_name": "hotel gopal krishna",
+      "address": null,
+      "locality": "Santacruz East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "444601",
-      "latitude": 20.9374,
-      "longitude": 77.7796,
+      "pincode": null,
+      "latitude": 19.0846,
+      "longitude": 72.8438,
       "location_accuracy": "approximate",
-      "business_type": "retailer",
-      "created_at": "2026-07-02T10:00:00Z",
-      "updated_at": "2026-07-03T10:00:00Z"
-    },
-    {
-      "id": "est-015",
-      "name": "Navi Mumbai Diner",
-      "normalized_name": "navi mumbai diner",
-      "address": "Sector 17",
-      "locality": "Vashi",
-      "district": "Thane",
-      "city": "Navi Mumbai",
-      "state": "Maharashtra",
-      "pincode": "400703",
-      "latitude": 19.0771,
-      "longitude": 72.9987,
-      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Gopal+Krishna+Santacruz+East+Mumbai",
       "business_type": "restaurant",
-      "created_at": "2026-07-30T10:00:00Z",
-      "updated_at": "2026-08-04T10:00:00Z"
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30"
     },
     {
-      "id": "est-016",
-      "name": "Wardha Kirana Store",
-      "normalized_name": "wardha kirana store",
-      "address": "Bajaj Chowk",
-      "locality": "Wardha",
-      "district": "Wardha",
-      "city": "Wardha",
+      "id": "karak-enterprises-andheri-east",
+      "name": "Karak Enterprises Pvt Ltd",
+      "normalized_name": "karak enterprises pvt ltd",
+      "address": null,
+      "locality": "Andheri East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "442001",
-      "latitude": 20.7453,
-      "longitude": 78.6022,
-      "location_accuracy": "district_only",
-      "business_type": "retailer",
-      "created_at": "2026-06-20T10:00:00Z",
-      "updated_at": "2026-06-21T10:00:00Z"
-    },
-    {
-      "id": "est-017",
-      "name": "Sangli Milk Depot",
-      "normalized_name": "sangli milk depot",
-      "address": "Station Road",
-      "locality": "Sangli",
-      "district": "Sangli",
-      "city": "Sangli",
-      "state": "Maharashtra",
-      "pincode": "416416",
-      "latitude": 16.8524,
-      "longitude": 74.5815,
+      "pincode": null,
+      "latitude": 19.11,
+      "longitude": 72.85935,
       "location_accuracy": "approximate",
-      "business_type": "dairy",
-      "created_at": "2026-08-08T10:00:00Z",
-      "updated_at": "2026-08-09T10:00:00Z"
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Karak+Enterprises+Pvt+Ltd+Andheri+East+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30"
     },
     {
-      "id": "est-018",
-      "name": "Bandra Kitchen Collective",
-      "normalized_name": "bandra kitchen collective",
-      "address": "Linking Road",
+      "id": "ace-clubs-resorts-bandra-west",
+      "name": "Ace Clubs and Resorts Pvt Ltd (Madras Diaries)",
+      "normalized_name": "ace clubs and resorts pvt ltd madras diaries",
+      "address": null,
       "locality": "Bandra West",
       "district": "Mumbai Suburban",
       "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "400050",
-      "latitude": 19.0596,
-      "longitude": 72.8295,
+      "pincode": null,
+      "latitude": 19.0623,
+      "longitude": 72.8286,
       "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Ace+Clubs+and+Resorts+Madras+Diaries+Bandra+West+Mumbai",
       "business_type": "restaurant",
-      "created_at": "2026-07-22T10:00:00Z",
-      "updated_at": "2026-07-27T10:00:00Z"
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30"
     },
     {
-      "id": "est-019",
-      "name": "Ahmednagar Inn Kitchen",
-      "normalized_name": "ahmednagar inn kitchen",
-      "address": "Savedi",
-      "locality": "Savedi",
-      "district": "Ahmednagar",
-      "city": "Ahmednagar",
+      "id": "k-rustom-churchgate",
+      "name": "K Rustom & Co",
+      "normalized_name": "k rustom co",
+      "address": null,
+      "locality": "Churchgate",
+      "district": "Mumbai City",
+      "city": "Mumbai",
       "state": "Maharashtra",
-      "pincode": "414003",
-      "latitude": 19.0948,
-      "longitude": 74.748,
+      "pincode": null,
+      "latitude": 18.934,
+      "longitude": 72.8228,
       "location_accuracy": "approximate",
-      "business_type": "hotel",
-      "created_at": "2026-06-10T10:00:00Z",
-      "updated_at": "2026-06-12T10:00:00Z"
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=K+Rustom+%26+Co+Churchgate+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-07-08T12:00:00+05:30",
+      "updated_at": "2026-07-08T12:00:00+05:30"
     },
     {
-      "id": "est-020",
-      "name": "Pimpri Food Court Unit",
-      "normalized_name": "pimpri food court unit",
-      "address": "Pimpri Market",
-      "locality": "Pimpri",
+      "id": "shalimar-hospitality-bhendi-bazaar",
+      "name": "Shalimar Hospitality Pvt Ltd",
+      "normalized_name": "shalimar hospitality pvt ltd",
+      "address": null,
+      "locality": "Bhendi Bazaar",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.95965,
+      "longitude": 72.8316,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Shalimar+Hospitality+Bhendi+Bazaar+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-14T12:00:00+05:30",
+      "updated_at": "2026-07-14T12:00:00+05:30"
+    },
+    {
+      "id": "noor-mohammadi-bhendi-bazaar",
+      "name": "Noor Mohammadi Hotel",
+      "normalized_name": "noor mohammadi hotel",
+      "address": null,
+      "locality": "Bhendi Bazaar",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.9601,
+      "longitude": 72.8343,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Noor+Mohammadi+Hotel+Bhendi+Bazaar+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-14T12:00:00+05:30",
+      "updated_at": "2026-07-14T12:00:00+05:30"
+    },
+    {
+      "id": "rehmania-umarkhadi",
+      "name": "Rehmania Restaurant",
+      "normalized_name": "rehmania restaurant",
+      "address": null,
+      "locality": "Umarkhadi",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.96395,
+      "longitude": 72.8266,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Rehmania+Restaurant+Umarkhadi+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-14T12:00:00+05:30",
+      "updated_at": "2026-07-14T12:00:00+05:30"
+    },
+    {
+      "id": "parsi-dairy-farm-marine-lines",
+      "name": "Parsi Dairy Farm",
+      "normalized_name": "parsi dairy farm",
+      "address": null,
+      "locality": "Marine Lines",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.9422,
+      "longitude": 72.82315,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Parsi+Dairy+Farm+Marine+Lines+Mumbai",
+      "business_type": "dairy",
+      "created_at": "2026-07-17T12:00:00+05:30",
+      "updated_at": "2026-07-17T12:00:00+05:30"
+    },
+    {
+      "id": "bristol-bakery-mahim",
+      "name": "Bristol Bakery",
+      "normalized_name": "bristol bakery",
+      "address": null,
+      "locality": "Mahim West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0401,
+      "longitude": 72.8428,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bristol+Bakery+Mahim+West+Mumbai",
+      "business_type": "bakery",
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30"
+    },
+    {
+      "id": "anmol-bakery-koldongari",
+      "name": "Anmol Bakery & Stores",
+      "normalized_name": "anmol bakery stores",
+      "address": "Andheri East",
+      "locality": "Koldongari",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.1217,
+      "longitude": 72.8406,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Anmol+Bakery+%26+Stores+Koldongari+Andheri+East+Mumbai",
+      "business_type": "bakery",
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30"
+    },
+    {
+      "id": "new-maharashtra-bakery-chembur",
+      "name": "New Maharashtra Bakery & Stores",
+      "normalized_name": "new maharashtra bakery stores",
+      "address": "Chembur",
+      "locality": "Vashi Naka",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0556,
+      "longitude": 72.8945,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=New+Maharashtra+Bakery+%26+Stores+Vashi+Naka+Chembur+Mumbai",
+      "business_type": "bakery",
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30"
+    },
+    {
+      "id": "saba-bakery-goregaon",
+      "name": "Saba Bakery & Stores",
+      "normalized_name": "saba bakery stores",
+      "address": "Goregaon",
+      "locality": "Aarey Road",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.16765,
+      "longitude": 72.85215,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Saba+Bakery+%26+Stores+Aarey+Road+Goregaon+Mumbai",
+      "business_type": "bakery",
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30"
+    },
+    {
+      "id": "unnati-bakery-dahisar",
+      "name": "Unnati Bakery",
+      "normalized_name": "unnati bakery",
+      "address": "Dahisar",
+      "locality": "Laxman Tawde Road",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.257,
+      "longitude": 72.8647,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnati+Bakery+Laxman+Tawde+Road+Dahisar+Mumbai",
+      "business_type": "bakery",
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30"
+    },
+    {
+      "id": "cricket-club-of-india-churchgate",
+      "name": "The Cricket Club of India Ltd",
+      "normalized_name": "the cricket club of india ltd",
+      "address": null,
+      "locality": "Churchgate",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.9295,
+      "longitude": 72.81605,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cricket+Club+of+India+Churchgate+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30"
+    },
+    {
+      "id": "willingdon-sports-club-tardeo",
+      "name": "The Willingdon Sports Club",
+      "normalized_name": "the willingdon sports club",
+      "address": null,
+      "locality": "Tardeo",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.96535,
+      "longitude": 72.81245,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Willingdon+Sports+Club+Tardeo+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30"
+    },
+    {
+      "id": "mig-cricket-club-bandra",
+      "name": "MIG Cricket Club",
+      "normalized_name": "mig cricket club",
+      "address": null,
+      "locality": "Bandra East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0573,
+      "longitude": 72.84635,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=MIG+Cricket+Club+Bandra+East+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30"
+    },
+    {
+      "id": "rk-juhu-gymkhana-juhu",
+      "name": "RK Juhu Gymkhana",
+      "normalized_name": "rk juhu gymkhana",
+      "address": null,
+      "locality": "Juhu",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.1039,
+      "longitude": 72.8263,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=RK+Juhu+Gymkhana+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30"
+    },
+    {
+      "id": "aparna-juhu-gymkhana-juhu",
+      "name": "The Aparna Juhu Gymkhana",
+      "normalized_name": "the aparna juhu gymkhana",
+      "address": null,
+      "locality": "Juhu",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.1066,
+      "longitude": 72.8263,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Aparna+Juhu+Gymkhana+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30"
+    },
+    {
+      "id": "goregaon-sports-club-malad",
+      "name": "Goregaon Sports Club",
+      "normalized_name": "goregaon sports club",
+      "address": null,
+      "locality": "Malad West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.1851,
+      "longitude": 72.84575,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Goregaon+Sports+Club+Malad+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30"
+    },
+    {
+      "id": "poornima-fort",
+      "name": "Poornima Restaurant",
+      "normalized_name": "poornima restaurant",
+      "address": "Raja Bahadur Compound",
+      "locality": "Fort",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.93155,
+      "longitude": 72.8264,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Poornima+Restaurant+Raja+Bahadur+Compound+Fort+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-07-28T12:00:00+05:30",
+      "updated_at": "2026-07-28T12:00:00+05:30"
+    },
+    {
+      "id": "kamal-caterers-bmc-headquarters",
+      "name": "Kamal Caterers Pvt Ltd",
+      "normalized_name": "kamal caterers pvt ltd",
+      "address": "BMC Headquarters",
+      "locality": "BMC Annexe",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.9438,
+      "longitude": 72.83,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kamal+Caterers+BMC+Headquarters+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-07-24T12:00:00+05:30",
+      "updated_at": "2026-07-24T12:00:00+05:30"
+    },
+    {
+      "id": "stany-caterers-kem-parel",
+      "name": "M/s Stany Caterers",
+      "normalized_name": "m s stany caterers",
+      "address": "Old Nurses Home building KEM Hospital",
+      "locality": "Parel",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0066,
+      "longitude": 72.83435,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Stany+Caterers+KEM+Hospital+Parel+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-07-18T12:00:00+05:30",
+      "updated_at": "2026-07-18T12:00:00+05:30"
+    },
+    {
+      "id": "kondhwa-cafe-salunke-vihar",
+      "name": "Cafe on Salunke Vihar Road",
+      "normalized_name": "cafe on salunke vihar road",
+      "address": "Salunke Vihar Road",
+      "locality": "Kondhwa Khurd",
       "district": "Pune",
-      "city": "Pimpri-Chinchwad",
+      "city": "Pune",
       "state": "Maharashtra",
-      "pincode": "411017",
-      "latitude": 18.6298,
-      "longitude": 73.7997,
+      "pincode": null,
+      "latitude": 18.46585,
+      "longitude": 73.8917,
       "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cafe+Salunke+Vihar+Road+Kondhwa+Khurd+Pune",
       "business_type": "restaurant",
-      "created_at": "2026-08-10T10:00:00Z",
-      "updated_at": "2026-08-11T10:00:00Z"
+      "created_at": "2026-07-11T12:00:00+05:30",
+      "updated_at": "2026-07-11T12:00:00+05:30"
+    },
+    {
+      "id": "guru-nanak-dairy-pune",
+      "name": "Guru Nanak Dairy",
+      "normalized_name": "guru nanak dairy",
+      "address": null,
+      "locality": "Wadgaon Sheri",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5537,
+      "longitude": 73.91605,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Guru+Nanak+Dairy+Wadgaon+Sheri+Pune",
+      "business_type": "retailer",
+      "created_at": "2026-06-18T12:00:00+05:30",
+      "updated_at": "2026-06-18T12:00:00+05:30"
+    },
+    {
+      "id": "sppu-refectory-mess-pune",
+      "name": "SPPU Refectory Mess",
+      "normalized_name": "sppu refectory mess",
+      "address": "Savitribai Phule Pune University",
+      "locality": "Shivajinagar",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.53305,
+      "longitude": 73.8506,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=SPPU+Refectory+Mess+Savitribai+Phule+Pune+University",
+      "business_type": "other",
+      "created_at": "2026-06-18T12:00:00+05:30",
+      "updated_at": "2026-06-18T12:00:00+05:30"
+    },
+    {
+      "id": "hotel-grand-purandar-sinhagad",
+      "name": "Hotel Grand Purandar",
+      "normalized_name": "hotel grand purandar",
+      "address": null,
+      "locality": "Sinhagad Road",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.47245,
+      "longitude": 73.81525,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Grand+Purandar+Sinhagad+Road+Pune",
+      "business_type": "hotel",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "crown-bakers-sinhagad",
+      "name": "Crown Bakers",
+      "normalized_name": "crown bakers",
+      "address": null,
+      "locality": "Sinhagad Road",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.47515,
+      "longitude": 73.8148,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Crown+Bakers+Sinhagad+Road+Pune",
+      "business_type": "bakery",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "agrotis-catering-ambegaon",
+      "name": "M/s Agrotis Catering Pvt Ltd",
+      "normalized_name": "m s agrotis catering pvt ltd",
+      "address": null,
+      "locality": "Ambegaon",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.44935,
+      "longitude": 73.8509,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Agrotis+Catering+Ambegaon+Pune",
+      "business_type": "other",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "barkat-biryani-house-wagholi",
+      "name": "Barkat Biryani House",
+      "normalized_name": "barkat biryani house",
+      "address": null,
+      "locality": "Wagholi",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5791,
+      "longitude": 73.9857,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Barkat+Biryani+House+Wagholi+Pune",
+      "business_type": "restaurant",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "royal-biryani-house-wagholi",
+      "name": "Royal Biryani House",
+      "normalized_name": "royal biryani house",
+      "address": null,
+      "locality": "Wagholi",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5791,
+      "longitude": 73.97625,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Royal+Biryani+House+Wagholi+Pune",
+      "business_type": "restaurant",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "national-360-bavdhan",
+      "name": "National 360",
+      "normalized_name": "national 360",
+      "address": null,
+      "locality": "Bavdhan",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.51455,
+      "longitude": 73.7699,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=National+360+Bavdhan+Pune",
+      "business_type": "restaurant",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "devansh-milk-pimple-gurav",
+      "name": "Devansh Milk and Milk Products",
+      "normalized_name": "devansh milk and milk products",
+      "address": null,
+      "locality": "Pimple Gurav",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5873,
+      "longitude": 73.81435,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Devansh+Milk+and+Milk+Products+Pimple+Gurav+Pune",
+      "business_type": "dairy",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "sangeeta-food-products-solapur",
+      "name": "Sangeeta Food Products",
+      "normalized_name": "sangeeta food products",
+      "address": null,
+      "locality": "Madde Wasti",
+      "district": "Solapur",
+      "city": "Solapur",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 17.6563,
+      "longitude": 75.89965,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sangeeta+Food+Products+Madde+Wasti+Solapur",
+      "business_type": "manufacturer",
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30"
+    },
+    {
+      "id": "dominos-vile-parle-west",
+      "name": "Domino's Pizza",
+      "normalized_name": "domino s pizza",
+      "address": "406, S.V. Road, Vile Parle West",
+      "locality": "Vile Parle West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400056",
+      "latitude": 19.10165,
+      "longitude": 72.84225,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Dominos+Pizza+Vile+Parle+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "dominos-borivali-west",
+      "name": "Domino's Pizza",
+      "normalized_name": "domino s pizza",
+      "address": null,
+      "locality": "Borivali West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.2263,
+      "longitude": 72.8516,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Dominos+Pizza+Borivali+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "dominos-r-city-ghatkopar",
+      "name": "Domino's Pizza",
+      "normalized_name": "domino s pizza",
+      "address": "R City Mall, LBS Road, Amrut Nagar",
+      "locality": "Ghatkopar West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400086",
+      "latitude": 19.0851,
+      "longitude": 72.91115,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Dominos+Pizza+R+City+Mall+Ghatkopar+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "dominos-malkapur-karad",
+      "name": "Domino's Pizza",
+      "normalized_name": "domino s pizza",
+      "address": "Karad",
+      "locality": "Malkapur",
+      "district": "Satara",
+      "city": "Karad",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 17.2917,
+      "longitude": 74.1801,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Dominos+Pizza+Malkapur+Karad+Satara+Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "hotel-sayali-satpur",
+      "name": "Hotel Sayali Restaurant and Bar",
+      "normalized_name": "hotel sayali restaurant and bar",
+      "address": null,
+      "locality": "Satpur",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.9979,
+      "longitude": 73.74315,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Sayali+Restaurant+and+Bar+Satpur+Nashik",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "hotel-chhote-miyan-nashik",
+      "name": "Hotel Chhote Miyan",
+      "normalized_name": "hotel chhote miyan",
+      "address": null,
+      "locality": "College Road",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 20.0011,
+      "longitude": 73.78845,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Chhote+Miyan+College+Road+Nashik",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "mani-mark-panchavati",
+      "name": "Mani Mark",
+      "normalized_name": "mani mark",
+      "address": "Panchavati",
+      "locality": "Peth Road",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 20.00565,
+      "longitude": 73.79725,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mani+Mark+Peth+Road+Panchavati+Nashik",
+      "business_type": "other",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "abhishek-bakery-and-sweets-cidco",
+      "name": "Abhishek Bakery and Sweets",
+      "normalized_name": "abhishek bakery and sweets",
+      "address": null,
+      "locality": "CIDCO",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.9739,
+      "longitude": 73.7649,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Abhishek+Bakery+and+Sweets+CIDCO+Nashik",
+      "business_type": "bakery",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "mohanlal-namkeen-dindori",
+      "name": "Mohanlal Namkeen",
+      "normalized_name": "mohanlal namkeen",
+      "address": null,
+      "locality": "Dindori",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 20.1664,
+      "longitude": 73.8101,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mohanlal+Namkeen+Dindori+Nashik",
+      "business_type": "manufacturer",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "mumbai-metro-dhaba-bhandup",
+      "name": "Mumbai Metro Dhaba",
+      "normalized_name": "mumbai metro dhaba",
+      "address": "Shop 02, Rajiv Gandhi Nagar, Mulund Goregaon Link Road, near Fortis Hospital",
+      "locality": "Bhandup",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400078",
+      "latitude": 19.1516,
+      "longitude": 72.9406,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai+Metro+Dhaba+Bhandup+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "gulshan-da-punjabi-dhaba-bhandup",
+      "name": "Gulshan-Da-Punjabi Dhaba",
+      "normalized_name": "gulshan da punjabi dhaba",
+      "address": null,
+      "locality": "Bhandup",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.14755,
+      "longitude": 72.9388,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Gulshan-Da-Punjabi+Dhaba+Bhandup+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30"
     }
   ],
   "cases": [
     {
-      "id": "case-001",
-      "establishment_id": "est-001",
+      "id": "case-flint-waarsa-nariman-point",
+      "establishment_id": "flint-waarsa-nariman-point",
       "case_type": "licence_suspension",
       "status": "licence_suspended",
-      "inspection_date": "2026-07-14",
-      "action_date": "2026-07-15",
-      "summary": "Source reported that FDA inspectors cited poor kitchen hygiene and suspended the food licence pending compliance.",
+      "inspection_date": "2026-06-27",
+      "action_date": "2026-06-27",
+      "summary": "The Indian Express reported that FDA inspectors found misbranded food products during an inspection and collected five samples for laboratory analysis. Products worth ₹11,350 were seized for incorrect labelling and expired food worth ₹16,201 was destroyed.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-07-16T10:00:00Z",
-      "updated_at": "2026-08-02T12:00:00Z",
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-001a",
+          "id": "case-flint-waarsa-nariman-point-act-inspect",
           "action_type": "inspection",
-          "action_date": "2026-07-14",
-          "description": "Inspection conducted at the premises."
+          "action_date": "2026-06-27",
+          "description": "Inspection reported by the source."
         },
         {
-          "id": "act-001b",
+          "id": "case-flint-waarsa-nariman-point-act-main",
           "action_type": "licence_suspended",
-          "action_date": "2026-07-15",
-          "description": "Food licence suspended as reported by the source."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-001a",
-          "violation_type": "poor_hygiene",
-          "description": "FDA reported poor kitchen hygiene during inspection."
-        },
-        {
-          "id": "vio-001b",
-          "violation_type": "pest_infestation",
-          "description": "Source reported signs of pest infestation in the storage area."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-001a",
-          "source_name": "Indian Express",
-          "source_type": "indian_express",
-          "title": "Mock article: Harbour area eatery licence suspended after FDA inspection",
-          "url": "https://example.com/mock/harbor-spice-suspension",
-          "published_at": "2026-07-16",
-          "is_primary": false
-        }
-      ],
-      "status_history": [
-        {
-          "id": "hist-001a",
-          "status": "inspected",
-          "effective_date": "2026-07-14",
-          "notes": "Inspection recorded."
-        },
-        {
-          "id": "hist-001b",
-          "status": "licence_suspended",
-          "effective_date": "2026-07-15",
-          "notes": "Licence suspended as reported."
-        }
-      ]
-    },
-    {
-      "id": "case-002",
-      "establishment_id": "est-002",
-      "case_type": "notice",
-      "status": "notice_issued",
-      "inspection_date": "2026-07-20",
-      "action_date": "2026-07-20",
-      "summary": "Source reported an improvement notice after expired packaged items were found during inspection.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-20T10:00:00Z",
-      "updated_at": "2026-07-22T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-002a",
-          "action_type": "inspection",
-          "action_date": "2026-07-20",
-          "description": null
-        },
-        {
-          "id": "act-002b",
-          "action_type": "improvement_notice",
-          "action_date": "2026-07-20",
-          "description": "Improvement notice issued."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-002a",
-          "violation_type": "expired_food",
-          "description": "Source reported expired packaged food items on display."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-002a",
-          "source_name": "Hindustan Times",
-          "source_type": "hindustan_times",
-          "title": "Mock article: Pune bakery issued notice after FDA check",
-          "url": "https://example.com/mock/deccan-bakery-notice",
-          "published_at": "2026-07-21",
-          "is_primary": false
-        }
-      ],
-      "status_history": [
-        {
-          "id": "hist-002a",
-          "status": "inspected",
-          "effective_date": "2026-07-20",
-          "notes": null
-        },
-        {
-          "id": "hist-002b",
-          "status": "notice_issued",
-          "effective_date": "2026-07-20",
-          "notes": null
-        }
-      ]
-    },
-    {
-      "id": "case-003",
-      "establishment_id": "est-003",
-      "case_type": "seizure",
-      "status": "seizure",
-      "inspection_date": "2026-07-10",
-      "action_date": "2026-07-10",
-      "summary": "Source reported seizure of dairy products following alleged adulteration findings.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-10T10:00:00Z",
-      "updated_at": "2026-07-11T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-003a",
-          "action_type": "seizure",
-          "action_date": "2026-07-10",
-          "description": "Seizure of stock reported."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-003a",
-          "violation_type": "adulteration",
-          "description": "Source reported alleged adulteration in dairy samples."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-003a",
-          "source_name": "Times of India",
-          "source_type": "times_of_india",
-          "title": "Mock article: Nashik dairy stock seized after FDA action",
-          "url": "https://example.com/mock/godavari-dairy-seizure",
-          "published_at": "2026-07-11",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-004",
-      "establishment_id": "est-004",
-      "case_type": "sealing",
-      "status": "sealed",
-      "inspection_date": "2026-08-01",
-      "action_date": "2026-08-02",
-      "summary": "Source reported the premises were sealed after a raid cited unlicensed kitchen operations.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-08-01T10:00:00Z",
-      "updated_at": "2026-08-05T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-004a",
-          "action_type": "inspection",
-          "action_date": "2026-08-01",
-          "description": "Raid / inspection."
-        },
-        {
-          "id": "act-004b",
-          "action_type": "business_sealed",
-          "action_date": "2026-08-02",
-          "description": "Premises sealed as reported."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-004a",
-          "violation_type": "unlicensed_operation",
-          "description": "Source reported unlicensed kitchen operation."
-        },
-        {
-          "id": "vio-004b",
-          "violation_type": "missing_records",
-          "description": "Source reported missing food safety records."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-004a",
-          "source_name": "Mid-Day",
-          "source_type": "mid_day",
-          "title": "Mock article: Thane hotel sealed after FDA raid",
-          "url": "https://example.com/mock/thane-central-sealed",
-          "published_at": "2026-08-03",
-          "is_primary": false
-        }
-      ],
-      "status_history": [
-        {
-          "id": "hist-004a",
-          "status": "inspected",
-          "effective_date": "2026-08-01",
-          "notes": "Raid conducted."
-        },
-        {
-          "id": "hist-004b",
-          "status": "sealed",
-          "effective_date": "2026-08-02",
-          "notes": "Business sealed."
-        }
-      ]
-    },
-    {
-      "id": "case-005",
-      "establishment_id": "est-005",
-      "case_type": "licence_cancellation",
-      "status": "licence_cancelled",
-      "inspection_date": "2026-07-27",
-      "action_date": "2026-07-28",
-      "summary": "Source reported licence cancellation after repeated hygiene violations at a cloud kitchen.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-28T10:00:00Z",
-      "updated_at": "2026-07-29T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-005a",
-          "action_type": "licence_cancelled",
-          "action_date": "2026-07-28",
-          "description": "Licence cancelled as reported."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-005a",
-          "violation_type": "poor_hygiene",
-          "description": "FDA reported poor hygiene conditions."
-        },
-        {
-          "id": "vio-005b",
-          "violation_type": "waste_management",
-          "description": "Source reported improper waste disposal."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-005a",
-          "source_name": "PTI",
-          "source_type": "pti",
-          "title": "Mock article: Nagpur cloud kitchen licence cancelled",
-          "url": "https://example.com/mock/orange-city-cancellation",
-          "published_at": "2026-07-29",
-          "is_primary": false
-        }
-      ],
-      "status_history": [
-        {
-          "id": "hist-005a",
-          "status": "inspected",
-          "effective_date": "2026-07-27",
-          "notes": null
-        },
-        {
-          "id": "hist-005b",
-          "status": "licence_cancelled",
-          "effective_date": "2026-07-28",
-          "notes": null
-        }
-      ]
-    },
-    {
-      "id": "case-006",
-      "establishment_id": "est-006",
-      "case_type": "inspection",
-      "status": "inspected",
-      "inspection_date": "2026-06-15",
-      "action_date": "2026-06-15",
-      "summary": "Source reported an inspection citing improper cold storage of seafood.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-06-15T10:00:00Z",
-      "updated_at": "2026-06-16T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-006a",
-          "action_type": "inspection",
-          "action_date": "2026-06-15",
-          "description": null
-        },
-        {
-          "id": "act-006b",
-          "action_type": "warning",
-          "action_date": "2026-06-15",
-          "description": "Warning issued as reported."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-006a",
-          "violation_type": "temperature_control",
-          "description": "Source reported improper temperature control for seafood storage."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-006a",
-          "source_name": "Other News",
-          "source_type": "other_news",
-          "title": "Mock article: Konkan fish stall inspected",
-          "url": "https://example.com/mock/konkan-fish-inspection",
-          "published_at": "2026-06-16",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-007",
-      "establishment_id": "est-007",
-      "case_type": "licence_suspension",
-      "status": "licence_suspended",
-      "inspection_date": "2026-07-05",
-      "action_date": "2026-07-06",
-      "summary": "Source reported suspension after labelling and storage issues were cited at a spice manufacturing unit.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-05T10:00:00Z",
-      "updated_at": "2026-07-08T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-007a",
-          "action_type": "inspection",
-          "action_date": "2026-07-05",
-          "description": null
-        },
-        {
-          "id": "act-007b",
-          "action_type": "licence_suspended",
-          "action_date": "2026-07-06",
+          "action_date": "2026-06-27",
           "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-007a",
+          "id": "case-flint-waarsa-nariman-point-vio-1",
           "violation_type": "labelling",
-          "description": "Source reported incorrect or missing product labelling."
+          "description": "FDA reported misbranded food products"
         },
         {
-          "id": "vio-007b",
-          "violation_type": "improper_storage",
-          "description": "Source reported improper storage of raw materials."
+          "id": "case-flint-waarsa-nariman-point-vio-2",
+          "violation_type": "other",
+          "description": "products seized for incorrect labelling"
+        },
+        {
+          "id": "case-flint-waarsa-nariman-point-vio-3",
+          "violation_type": "expired_food",
+          "description": "expired food items destroyed"
         }
       ],
       "sources": [
         {
-          "id": "src-007a",
-          "source_name": "Indian Express",
+          "id": "case-flint-waarsa-nariman-point-src-1",
+          "source_name": "The Indian Express",
           "source_type": "indian_express",
-          "title": "Mock article: Aurangabad spice unit licence suspended",
-          "url": "https://example.com/mock/aurangabad-spice-suspension",
-          "published_at": "2026-07-07",
+          "title": "Rats, cockroaches, rotting food: FDA suspends six Mumbai eateries in hygiene crackdown",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-six-mumbai-eateries-hygiene-crackdown-10764532/",
+          "published_at": "2026-06-30",
           "is_primary": false
         }
       ],
       "status_history": [
         {
-          "id": "hist-007a",
+          "id": "case-flint-waarsa-nariman-point-hist-1",
           "status": "inspected",
-          "effective_date": "2026-07-05",
-          "notes": null
+          "effective_date": "2026-06-27",
+          "notes": "Inspection"
         },
         {
-          "id": "hist-007b",
-          "status": "licence_suspended",
-          "effective_date": "2026-07-06",
-          "notes": null
+          "id": "case-flint-waarsa-nariman-point-hist-2",
+          "status": "other",
+          "effective_date": "2026-06-30",
+          "notes": "Licence suspension reported"
         }
       ]
     },
     {
-      "id": "case-008",
-      "establishment_id": "est-008",
-      "case_type": "raid",
-      "status": "inspected",
-      "inspection_date": "2026-08-03",
-      "action_date": "2026-08-03",
-      "summary": "Source reported a raid citing employee medical record gaps.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-08-03T10:00:00Z",
-      "updated_at": "2026-08-03T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-008a",
-          "action_type": "inspection",
-          "action_date": "2026-08-03",
-          "description": "Raid reported."
-        },
-        {
-          "id": "act-008b",
-          "action_type": "notice",
-          "action_date": "2026-08-03",
-          "description": "Notice issued as reported."
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-008a",
-          "violation_type": "employee_medical_records",
-          "description": "Source reported missing employee medical records."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-008a",
-          "source_name": "Hindustan Times",
-          "source_type": "hindustan_times",
-          "title": "Mock article: Kolhapur eatery raided",
-          "url": "https://example.com/mock/kolhapur-misal-raid",
-          "published_at": "2026-08-04",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-009",
-      "establishment_id": "est-009",
-      "case_type": "notice",
-      "status": "notice_issued",
-      "inspection_date": "2026-07-18",
-      "action_date": "2026-07-18",
-      "summary": "Source reported a notice for food safety violations related to storage of grains.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-18T10:00:00Z",
-      "updated_at": "2026-07-19T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-009a",
-          "action_type": "notice",
-          "action_date": "2026-07-18",
-          "description": null
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-009a",
-          "violation_type": "food_safety_violation",
-          "description": "Source reported food safety storage violations."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-009a",
-          "source_name": "Times of India",
-          "source_type": "times_of_india",
-          "title": "Mock article: Solapur retailer issued notice",
-          "url": "https://example.com/mock/solapur-grain-notice",
-          "published_at": "2026-07-19",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-010",
-      "establishment_id": "est-010",
+      "id": "case-mk-bakery-borivali-east",
+      "establishment_id": "mk-bakery-borivali-east",
       "case_type": "licence_suspension",
       "status": "licence_suspended",
-      "inspection_date": "2026-07-25",
-      "action_date": "2026-07-26",
-      "summary": "Source reported licence suspension after water quality and hygiene findings.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-25T10:00:00Z",
-      "updated_at": "2026-08-01T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-010a",
-          "action_type": "inspection",
-          "action_date": "2026-07-25",
-          "description": null
-        },
-        {
-          "id": "act-010b",
-          "action_type": "licence_suspended",
-          "action_date": "2026-07-26",
-          "description": null
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-010a",
-          "violation_type": "water_quality",
-          "description": "Source reported water quality concerns raised during inspection."
-        },
-        {
-          "id": "vio-010b",
-          "violation_type": "poor_hygiene",
-          "description": "FDA reported poor kitchen hygiene."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-010a",
-          "source_name": "Indian Express",
-          "source_type": "indian_express",
-          "title": "Mock article: Andheri cafe licence suspended",
-          "url": "https://example.com/mock/andheri-lane-suspension",
-          "published_at": "2026-07-27",
-          "is_primary": false
-        },
-        {
-          "id": "src-010b",
-          "source_name": "Mid-Day",
-          "source_type": "mid_day",
-          "title": "Mock article: Follow-up on Andheri cafe action",
-          "url": "https://example.com/mock/andheri-lane-followup",
-          "published_at": "2026-07-28",
-          "is_primary": false
-        }
-      ],
-      "status_history": [
-        {
-          "id": "hist-010a",
-          "status": "inspected",
-          "effective_date": "2026-07-25",
-          "notes": null
-        },
-        {
-          "id": "hist-010b",
-          "status": "licence_suspended",
-          "effective_date": "2026-07-26",
-          "notes": null
-        }
-      ]
-    },
-    {
-      "id": "case-011",
-      "establishment_id": "est-011",
-      "case_type": "inspection",
-      "status": "inspected",
       "inspection_date": "2026-06-28",
       "action_date": "2026-06-28",
-      "summary": "Source reported inspection findings related to pest control gaps.",
+      "summary": "The Indian Express reported that FDA inspectors found food production continuing during renovation and described the premises as unhygienic. Two food samples were collected and products worth ₹8,100 were seized for labelling violations.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-06-28T10:00:00Z",
-      "updated_at": "2026-06-29T10:00:00Z",
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-011a",
+          "id": "case-mk-bakery-borivali-east-act-inspect",
           "action_type": "inspection",
+          "action_date": "2026-06-28",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-mk-bakery-borivali-east-act-main",
+          "action_type": "licence_suspended",
           "action_date": "2026-06-28",
           "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-011a",
-          "violation_type": "pest_infestation",
-          "description": "Source reported pest control gaps identified during inspection."
+          "id": "case-mk-bakery-borivali-east-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "premises reported unhygienic"
+        },
+        {
+          "id": "case-mk-bakery-borivali-east-vio-2",
+          "violation_type": "labelling",
+          "description": "products seized for labelling violations"
         }
       ],
       "sources": [
         {
-          "id": "src-011a",
-          "source_name": "Other News",
-          "source_type": "other_news",
-          "title": "Mock article: Satara bakery inspected",
-          "url": "https://example.com/mock/satara-bakery-inspection",
-          "published_at": "2026-06-29",
+          "id": "case-mk-bakery-borivali-east-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Rats, cockroaches, rotting food: FDA suspends six Mumbai eateries in hygiene crackdown",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-six-mumbai-eateries-hygiene-crackdown-10764532/",
+          "published_at": "2026-06-30",
           "is_primary": false
         }
       ],
-      "status_history": []
+      "status_history": [
+        {
+          "id": "case-mk-bakery-borivali-east-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-28",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-mk-bakery-borivali-east-hist-2",
+          "status": "other",
+          "effective_date": "2026-06-30",
+          "notes": "Licence suspension reported"
+        }
+      ]
     },
     {
-      "id": "case-012",
-      "establishment_id": "est-012",
-      "case_type": "sealing",
-      "status": "sealed",
-      "inspection_date": "2026-07-12",
-      "action_date": "2026-07-13",
-      "summary": "Source reported sealing of a food manufacturing unit after adulteration allegations.",
+      "id": "case-hotel-shree-krishna-bhandup",
+      "establishment_id": "hotel-shree-krishna-bhandup",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-06-28",
+      "action_date": "2026-06-28",
+      "summary": "The Indian Express reported multiple deficiencies at Hotel Shree Krishna, including refrigerators without temperature displays, a rusted and leaking kitchen refrigerator and poor overall hygiene.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-07-12T10:00:00Z",
-      "updated_at": "2026-07-14T10:00:00Z",
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-012a",
-          "action_type": "business_sealed",
-          "action_date": "2026-07-13",
-          "description": "Unit sealed as reported."
+          "id": "case-hotel-shree-krishna-bhandup-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-06-28",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-hotel-shree-krishna-bhandup-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-06-28",
+          "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-012a",
-          "violation_type": "adulteration",
-          "description": "Source reported alleged adulteration in packaged foods."
+          "id": "case-hotel-shree-krishna-bhandup-vio-1",
+          "violation_type": "temperature_control",
+          "description": "refrigerators lacked temperature display systems"
+        },
+        {
+          "id": "case-hotel-shree-krishna-bhandup-vio-2",
+          "violation_type": "improper_storage",
+          "description": "rusted and leaking kitchen refrigerator"
+        },
+        {
+          "id": "case-hotel-shree-krishna-bhandup-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "poor overall hygiene standards"
         }
       ],
       "sources": [
         {
-          "id": "src-012a",
-          "source_name": "PTI",
-          "source_type": "pti",
-          "title": "Mock article: Jalgaon food unit sealed",
-          "url": "https://example.com/mock/jalgaon-fresh-sealed",
+          "id": "case-hotel-shree-krishna-bhandup-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Rats, cockroaches, rotting food: FDA suspends six Mumbai eateries in hygiene crackdown",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-six-mumbai-eateries-hygiene-crackdown-10764532/",
+          "published_at": "2026-06-30",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-shree-krishna-bhandup-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-28",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-hotel-shree-krishna-bhandup-hist-2",
+          "status": "other",
+          "effective_date": "2026-06-30",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-hotel-gopal-krishna-santacruz",
+      "establishment_id": "hotel-gopal-krishna-santacruz",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-06-28",
+      "action_date": "2026-06-28",
+      "summary": "The Indian Express reported that inspectors found a rat inside Hotel Gopal Krishna, a foul smell from the kitchen and garbage accumulation in drainage lines, along with other food-safety violations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-06-28",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-06-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "rat found inside premises"
+        },
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-vio-2",
+          "violation_type": "waste_management",
+          "description": "garbage accumulation in drainage lines"
+        },
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-vio-3",
+          "violation_type": "other",
+          "description": "foul smell from kitchen"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Rats, cockroaches, rotting food: FDA suspends six Mumbai eateries in hygiene crackdown",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-six-mumbai-eateries-hygiene-crackdown-10764532/",
+          "published_at": "2026-06-30",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-28",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-hotel-gopal-krishna-santacruz-hist-2",
+          "status": "other",
+          "effective_date": "2026-06-30",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-karak-enterprises-andheri-east",
+      "establishment_id": "karak-enterprises-andheri-east",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-06-28",
+      "action_date": "2026-06-28",
+      "summary": "The Indian Express reported a heavy cockroach infestation, absence of insect-proof mesh, missing mandatory employee medical examinations, peeling walls and ceilings and refrigeration equipment unable to maintain safe food temperatures.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-karak-enterprises-andheri-east-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-06-28",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-karak-enterprises-andheri-east-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-06-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-karak-enterprises-andheri-east-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "heavy cockroach infestation"
+        },
+        {
+          "id": "case-karak-enterprises-andheri-east-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "peeling walls and ceilings"
+        },
+        {
+          "id": "case-karak-enterprises-andheri-east-vio-3",
+          "violation_type": "employee_medical_records",
+          "description": "mandatory medical examinations not conducted"
+        },
+        {
+          "id": "case-karak-enterprises-andheri-east-vio-4",
+          "violation_type": "temperature_control",
+          "description": "refrigeration equipment unable to maintain safe food temperatures"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-karak-enterprises-andheri-east-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Rats, cockroaches, rotting food: FDA suspends six Mumbai eateries in hygiene crackdown",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-six-mumbai-eateries-hygiene-crackdown-10764532/",
+          "published_at": "2026-06-30",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-karak-enterprises-andheri-east-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-28",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-karak-enterprises-andheri-east-hist-2",
+          "status": "other",
+          "effective_date": "2026-06-30",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-ace-clubs-resorts-bandra-west",
+      "establishment_id": "ace-clubs-resorts-bandra-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-06-28",
+      "action_date": "2026-06-28",
+      "summary": "The Indian Express reported that FDA inspectors found the establishment had failed to maintain prescribed hygiene standards and lacked mandatory food testing records and statutory documentation.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-30T12:00:00+05:30",
+      "updated_at": "2026-06-30T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-06-28",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-06-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "failed to maintain prescribed hygiene standards"
+        },
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-vio-2",
+          "violation_type": "missing_records",
+          "description": "lacked mandatory food testing records and statutory documentation"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Rats, cockroaches, rotting food: FDA suspends six Mumbai eateries in hygiene crackdown",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-six-mumbai-eateries-hygiene-crackdown-10764532/",
+          "published_at": "2026-06-30",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-28",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-ace-clubs-resorts-bandra-west-hist-2",
+          "status": "other",
+          "effective_date": "2026-06-30",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-k-rustom-churchgate",
+      "establishment_id": "k-rustom-churchgate",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-07",
+      "action_date": "2026-07-08",
+      "summary": "The Indian Express reported that FDA inspectors found live rats, houseflies, expired food products and lapses in cold-chain maintenance during the inspection. The food business licence was suspended under the Food Safety and Standards Act.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-08T12:00:00+05:30",
+      "updated_at": "2026-07-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-k-rustom-churchgate-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-07",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-k-rustom-churchgate-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-k-rustom-churchgate-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "live rats and houseflies"
+        },
+        {
+          "id": "case-k-rustom-churchgate-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired food products"
+        },
+        {
+          "id": "case-k-rustom-churchgate-vio-3",
+          "violation_type": "temperature_control",
+          "description": "cold-chain maintenance lapses"
+        },
+        {
+          "id": "case-k-rustom-churchgate-vio-4",
+          "violation_type": "missing_records",
+          "description": "mandatory food safety records not maintained"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-k-rustom-churchgate-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "FDA suspends licence of iconic Mumbai ice cream outlet K Rustom over food safety violations",
+          "url": "https://indianexpress.com/article/cities/mumbai/k-rustom-ice-cream-mumbai-licence-suspended-hygiene-violations-rats-10777888/",
+          "published_at": "2026-07-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-k-rustom-churchgate-src-2",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/rats-flies-at-mumbais-iconic-k-rustom-ice-cream-shop-food-licence-suspended/articleshow/132270700.cms",
+          "published_at": "2026-07-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-k-rustom-churchgate-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-07",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-k-rustom-churchgate-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-08",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-shalimar-hospitality-bhendi-bazaar",
+      "establishment_id": "shalimar-hospitality-bhendi-bazaar",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-13",
+      "action_date": "2026-07-14",
+      "summary": "The Indian Express reported that a reinspection found 25 deficiencies first flagged in April had not been rectified. The FDA suspended the licence on July 14.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-14T12:00:00+05:30",
+      "updated_at": "2026-07-14T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-14",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "wet and slippery kitchen floors"
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-vio-2",
+          "violation_type": "missing_records",
+          "description": "raw material and edible oil quality records absent"
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-vio-3",
+          "violation_type": "water_quality",
+          "description": "drinking water quality testing absent"
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-vio-4",
+          "violation_type": "other",
+          "description": "vegetarian and non-vegetarian food not adequately segregated"
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-vio-5",
+          "violation_type": "pest_infestation",
+          "description": "open windows without insect-proof mesh"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "After K Rustom, FDA suspends licences of Mumbai’s iconic Shalimar, Noor Mohammadi over alleged hygiene lapses",
+          "url": "https://indianexpress.com/article/cities/mumbai/shalimar-noor-mohammadi-mumbai-fda-licence-suspended-hygiene-lapses-10786401/",
           "published_at": "2026-07-14",
           "is_primary": false
         }
       ],
       "status_history": [
         {
-          "id": "hist-012a",
+          "id": "case-shalimar-hospitality-bhendi-bazaar-hist-1",
           "status": "inspected",
-          "effective_date": "2026-07-12",
-          "notes": null
+          "effective_date": "2026-04-16",
+          "notes": "Initial inspection"
         },
         {
-          "id": "hist-012b",
-          "status": "sealed",
+          "id": "case-shalimar-hospitality-bhendi-bazaar-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-04-28",
+          "notes": "Improvement notice"
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-hist-3",
+          "status": "inspected",
           "effective_date": "2026-07-13",
-          "notes": null
+          "notes": "Reinspection"
+        },
+        {
+          "id": "case-shalimar-hospitality-bhendi-bazaar-hist-4",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-14",
+          "notes": "Licence suspended"
         }
       ]
     },
     {
-      "id": "case-013",
-      "establishment_id": "est-013",
-      "case_type": "notice",
-      "status": "notice_issued",
-      "inspection_date": "2026-08-06",
-      "action_date": "2026-08-06",
-      "summary": "Source reported an improvement notice for waste management issues.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-08-06T10:00:00Z",
-      "updated_at": "2026-08-07T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-013a",
-          "action_type": "improvement_notice",
-          "action_date": "2026-08-06",
-          "description": null
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-013a",
-          "violation_type": "waste_management",
-          "description": "Source reported improper waste management practices."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-013a",
-          "source_name": "Hindustan Times",
-          "source_type": "hindustan_times",
-          "title": "Mock article: Alibag kitchen issued notice",
-          "url": "https://example.com/mock/raigad-coastal-notice",
-          "published_at": "2026-08-07",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-014",
-      "establishment_id": "est-014",
-      "case_type": "seizure",
-      "status": "seizure",
-      "inspection_date": "2026-07-02",
-      "action_date": "2026-07-02",
-      "summary": "Source reported seizure of sweets with alleged expired ingredients.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-02T10:00:00Z",
-      "updated_at": "2026-07-03T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-014a",
-          "action_type": "seizure",
-          "action_date": "2026-07-02",
-          "description": null
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-014a",
-          "violation_type": "expired_food",
-          "description": "Source reported expired ingredients used in sweets."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-014a",
-          "source_name": "Times of India",
-          "source_type": "times_of_india",
-          "title": "Mock article: Amravati sweets seized",
-          "url": "https://example.com/mock/amravati-sweets-seizure",
-          "published_at": "2026-07-03",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-015",
-      "establishment_id": "est-015",
+      "id": "case-noor-mohammadi-bhendi-bazaar",
+      "establishment_id": "noor-mohammadi-bhendi-bazaar",
       "case_type": "licence_suspension",
       "status": "licence_suspended",
-      "inspection_date": "2026-07-30",
-      "action_date": "2026-08-01",
-      "summary": "Source reported a multi-day sequence ending in licence suspension after hygiene findings.",
+      "inspection_date": "2026-07-13",
+      "action_date": "2026-07-14",
+      "summary": "The Indian Express reported that inspectors found grease on kitchen floors, open windows near the kebab section, unhygienic raw-material storage, old and unclean utensils and missing records. The licence was suspended with immediate effect.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-07-30T10:00:00Z",
-      "updated_at": "2026-08-04T10:00:00Z",
+      "created_at": "2026-07-14T12:00:00+05:30",
+      "updated_at": "2026-07-14T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-015a",
+          "id": "case-noor-mohammadi-bhendi-bazaar-act-inspect",
           "action_type": "inspection",
-          "action_date": "2026-07-30",
-          "description": null
+          "action_date": "2026-07-13",
+          "description": "Inspection reported by the source."
         },
         {
-          "id": "act-015b",
-          "action_type": "notice",
-          "action_date": "2026-07-31",
-          "description": "Notice issued."
-        },
-        {
-          "id": "act-015c",
+          "id": "case-noor-mohammadi-bhendi-bazaar-act-main",
           "action_type": "licence_suspended",
-          "action_date": "2026-08-01",
-          "description": "Licence suspended."
+          "action_date": "2026-07-14",
+          "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-015a",
+          "id": "case-noor-mohammadi-bhendi-bazaar-vio-1",
           "violation_type": "poor_hygiene",
-          "description": "FDA reported poor kitchen hygiene during inspection."
+          "description": "thick grease on kitchen floors"
         },
         {
-          "id": "vio-015b",
+          "id": "case-noor-mohammadi-bhendi-bazaar-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "flies, insects and crows could enter through open windows"
+        },
+        {
+          "id": "case-noor-mohammadi-bhendi-bazaar-vio-3",
           "violation_type": "improper_storage",
-          "description": "Source reported improper food storage."
+          "description": "unhygienic storage of raw materials"
+        },
+        {
+          "id": "case-noor-mohammadi-bhendi-bazaar-vio-4",
+          "violation_type": "missing_records",
+          "description": "supplier and drinking water testing records absent"
+        },
+        {
+          "id": "case-noor-mohammadi-bhendi-bazaar-vio-5",
+          "violation_type": "other",
+          "description": "old and unclean utensils"
+        },
+        {
+          "id": "case-noor-mohammadi-bhendi-bazaar-vio-6",
+          "violation_type": "other",
+          "description": "inadequate drainage arrangements"
         }
       ],
       "sources": [
         {
-          "id": "src-015a",
-          "source_name": "Indian Express",
+          "id": "case-noor-mohammadi-bhendi-bazaar-src-1",
+          "source_name": "The Indian Express",
           "source_type": "indian_express",
-          "title": "Mock article: Navi Mumbai diner licence suspended",
-          "url": "https://example.com/mock/navi-mumbai-diner",
-          "published_at": "2026-08-02",
+          "title": "After K Rustom, FDA suspends licences of Mumbai’s iconic Shalimar, Noor Mohammadi over alleged hygiene lapses",
+          "url": "https://indianexpress.com/article/cities/mumbai/shalimar-noor-mohammadi-mumbai-fda-licence-suspended-hygiene-lapses-10786401/",
+          "published_at": "2026-07-14",
+          "is_primary": false
+        },
+        {
+          "id": "case-noor-mohammadi-bhendi-bazaar-src-2",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "Hindustan Times",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-licences-of-3-prominent-bhendi-bazar-mughlai-restaurants-101784056497750-amp.html",
+          "published_at": "2026-07-14",
           "is_primary": false
         }
       ],
       "status_history": [
         {
-          "id": "hist-015a",
+          "id": "case-noor-mohammadi-bhendi-bazaar-hist-1",
           "status": "inspected",
-          "effective_date": "2026-07-30",
-          "notes": "Day 1 inspection."
+          "effective_date": "2026-07-13",
+          "notes": "Inspection"
         },
         {
-          "id": "hist-015b",
-          "status": "notice_issued",
-          "effective_date": "2026-07-31",
-          "notes": "Day 2 notice."
-        },
-        {
-          "id": "hist-015c",
+          "id": "case-noor-mohammadi-bhendi-bazaar-hist-2",
           "status": "licence_suspended",
-          "effective_date": "2026-08-01",
-          "notes": "Day 3 licence suspended."
+          "effective_date": "2026-07-14",
+          "notes": "Licence suspended"
         }
       ]
     },
     {
-      "id": "case-016",
-      "establishment_id": "est-016",
-      "case_type": "inspection",
-      "status": "inspected",
-      "inspection_date": "2026-06-20",
-      "action_date": "2026-06-20",
-      "summary": "Source reported inspection of a kirana store; location marked as district-level only.",
+      "id": "case-rehmania-umarkhadi",
+      "establishment_id": "rehmania-umarkhadi",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-13",
+      "action_date": "2026-07-13",
+      "summary": "The Indian Express reported that inspectors found inadequate storage arrangements, rusted equipment, peeling surfaces, doors without insect-proofing and missing mandatory records. The licence was suspended under the Food Safety and Standards Act.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-06-20T10:00:00Z",
-      "updated_at": "2026-06-21T10:00:00Z",
+      "created_at": "2026-07-14T12:00:00+05:30",
+      "updated_at": "2026-07-14T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-016a",
+          "id": "case-rehmania-umarkhadi-act-inspect",
           "action_type": "inspection",
-          "action_date": "2026-06-20",
+          "action_date": "2026-07-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-rehmania-umarkhadi-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-13",
           "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-016a",
-          "violation_type": "labelling",
-          "description": "Source reported labelling issues on packaged goods."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-016a",
-          "source_name": "Other News",
-          "source_type": "other_news",
-          "title": "Mock article: Wardha store inspected",
-          "url": "https://example.com/mock/wardha-kirana",
-          "published_at": "2026-06-21",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-017",
-      "establishment_id": "est-017",
-      "case_type": "raid",
-      "status": "notice_issued",
-      "inspection_date": "2026-08-08",
-      "action_date": "2026-08-08",
-      "summary": "Source reported a raid and notice related to milk adulteration allegations.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-08-08T10:00:00Z",
-      "updated_at": "2026-08-09T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-017a",
-          "action_type": "inspection",
-          "action_date": "2026-08-08",
-          "description": "Raid reported."
+          "id": "case-rehmania-umarkhadi-vio-1",
+          "violation_type": "improper_storage",
+          "description": "inadequate storage of food, chemicals and packaging materials"
         },
         {
-          "id": "act-017b",
-          "action_type": "notice",
-          "action_date": "2026-08-08",
-          "description": null
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-017a",
-          "violation_type": "adulteration",
-          "description": "Source reported alleged milk adulteration."
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-017a",
-          "source_name": "Mid-Day",
-          "source_type": "mid_day",
-          "title": "Mock article: Sangli milk depot raided",
-          "url": "https://example.com/mock/sangli-milk-raid",
-          "published_at": "2026-08-09",
-          "is_primary": false
-        }
-      ],
-      "status_history": []
-    },
-    {
-      "id": "case-018",
-      "establishment_id": "est-018",
-      "case_type": "licence_cancellation",
-      "status": "licence_cancelled",
-      "inspection_date": "2026-07-22",
-      "action_date": "2026-07-24",
-      "summary": "Source reported licence cancellation after inspection, notice, and follow-up action.",
-      "verification_status": "reported",
-      "confidence_score": null,
-      "created_at": "2026-07-22T10:00:00Z",
-      "updated_at": "2026-07-27T10:00:00Z",
-      "actions": [
-        {
-          "id": "act-018a",
-          "action_type": "inspection",
-          "action_date": "2026-07-22",
-          "description": null
+          "id": "case-rehmania-umarkhadi-vio-2",
+          "violation_type": "other",
+          "description": "rusted equipment and peeling plaster/paint"
         },
         {
-          "id": "act-018b",
-          "action_type": "notice",
-          "action_date": "2026-07-23",
-          "description": null
-        },
-        {
-          "id": "act-018c",
-          "action_type": "licence_cancelled",
-          "action_date": "2026-07-24",
-          "description": null
-        }
-      ],
-      "violations": [
-        {
-          "id": "vio-018a",
-          "violation_type": "poor_hygiene",
-          "description": "FDA reported poor kitchen hygiene."
-        },
-        {
-          "id": "vio-018b",
+          "id": "case-rehmania-umarkhadi-vio-3",
           "violation_type": "pest_infestation",
-          "description": "Source reported pest infestation."
+          "description": "doors lacked insect-proofing"
+        },
+        {
+          "id": "case-rehmania-umarkhadi-vio-4",
+          "violation_type": "missing_records",
+          "description": "mandatory food safety and drinking water quality records absent"
         }
       ],
       "sources": [
         {
-          "id": "src-018a",
-          "source_name": "Indian Express",
+          "id": "case-rehmania-umarkhadi-src-1",
+          "source_name": "The Indian Express",
           "source_type": "indian_express",
-          "title": "Mock article: Bandra kitchen licence cancelled",
-          "url": "https://example.com/mock/bandra-kitchen-cancellation",
+          "title": "After K Rustom, FDA suspends licences of Mumbai’s iconic Shalimar, Noor Mohammadi over alleged hygiene lapses",
+          "url": "https://indianexpress.com/article/cities/mumbai/shalimar-noor-mohammadi-mumbai-fda-licence-suspended-hygiene-lapses-10786401/",
+          "published_at": "2026-07-14",
+          "is_primary": false
+        },
+        {
+          "id": "case-rehmania-umarkhadi-src-2",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-cracks-down-on-mumbai-eateries-suspends-licences-of-3-over-hygiene-violations/articleshow/132398352.cms",
+          "published_at": "2026-07-14",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-rehmania-umarkhadi-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-rehmania-umarkhadi-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-13",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-parsi-dairy-farm-marine-lines",
+      "establishment_id": "parsi-dairy-farm-marine-lines",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-14",
+      "action_date": "2026-07-14",
+      "summary": "The Indian Express reported that the Marine Lines-based Parsi Dairy Farm's FSSAI licence was suspended after an FDA inspection found fungal growth, raw material stored directly on the floor and no protected Raw Milk Reception Dock.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-17T12:00:00+05:30",
+      "updated_at": "2026-07-17T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-14",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-14",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "fungal growth on storage and production area walls"
+        },
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-vio-2",
+          "violation_type": "improper_storage",
+          "description": "raw material stored directly on floor next to fungus-affected walls"
+        },
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-vio-3",
+          "violation_type": "other",
+          "description": "no protected Raw Milk Reception Dock"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "‘Hygiene, safety lapses in production area’: FDA suspends licence of South Mumbai’s iconic 110-year-old Parsi Dairy Farm",
+          "url": "https://indianexpress.com/article/cities/mumbai/hygiene-safety-lapses-in-production-area-fda-suspends-licence-of-south-mumbais-iconic-110-year-old-parsi-dairy-farm-10790060/",
+          "published_at": "2026-07-17",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-parsi-dairy-farm-marine-lines-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-14",
+          "notes": "Inspection"
+        }
+      ]
+    },
+    {
+      "id": "case-bristol-bakery-mahim",
+      "establishment_id": "bristol-bakery-mahim",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-25",
+      "summary": "Hindustan Times reported that Maharashtra FDA suspended the licence of Bristol Bakery among five Mumbai bakeries. FDA-released video showed cockroaches in bread-making ovens and a freezer, and inspectors reported pest infestation and other hygiene lapses.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-bristol-bakery-mahim-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-25",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-bristol-bakery-mahim-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "cockroaches, flies and insects in kitchen"
+        },
+        {
+          "id": "case-bristol-bakery-mahim-vio-2",
+          "violation_type": "temperature_control",
+          "description": "inaccurate temperature records"
+        },
+        {
+          "id": "case-bristol-bakery-mahim-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "food prepared during painting work with inadequate cleaning and sanitisation"
+        },
+        {
+          "id": "case-bristol-bakery-mahim-vio-4",
+          "violation_type": "employee_medical_records",
+          "description": "incomplete or missing medical fitness records"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-bristol-bakery-mahim-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends licence of Jimmy Boy Mahim, 4 other bakeries",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-licence-of-jimmy-boy-mahim-4-other-bakeries-101784919403759.html",
           "published_at": "2026-07-25",
           "is_primary": false
         }
       ],
       "status_history": [
         {
-          "id": "hist-018a",
-          "status": "inspected",
-          "effective_date": "2026-07-22",
-          "notes": null
-        },
-        {
-          "id": "hist-018b",
-          "status": "notice_issued",
-          "effective_date": "2026-07-23",
-          "notes": null
-        },
-        {
-          "id": "hist-018c",
-          "status": "licence_cancelled",
-          "effective_date": "2026-07-24",
-          "notes": null
+          "id": "case-bristol-bakery-mahim-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-25",
+          "notes": "Licence suspended"
         }
       ]
     },
     {
-      "id": "case-019",
-      "establishment_id": "est-019",
-      "case_type": "other",
-      "status": "other",
-      "inspection_date": "2026-06-10",
-      "action_date": "2026-06-11",
-      "summary": "Source reported enforcement action related to missing records at a hotel kitchen.",
+      "id": "case-anmol-bakery-koldongari",
+      "establishment_id": "anmol-bakery-koldongari",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-25",
+      "summary": "Hindustan Times reported that FDA suspended the licence of Anmol Bakery & Stores in Koldongari, Andheri East, as part of a five-bakery enforcement action.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-06-10T10:00:00Z",
-      "updated_at": "2026-06-12T10:00:00Z",
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-019a",
-          "action_type": "warning",
-          "action_date": "2026-06-11",
-          "description": "Warning recorded as reported."
+          "id": "case-anmol-bakery-koldongari-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-25",
+          "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-019a",
-          "violation_type": "missing_records",
-          "description": "Source reported missing food safety records."
+          "id": "case-anmol-bakery-koldongari-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported violations related to hygiene, food handling and licensing conditions"
         }
       ],
       "sources": [
         {
-          "id": "src-019a",
-          "source_name": "Other News",
+          "id": "case-anmol-bakery-koldongari-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends licence of Jimmy Boy Mahim, 4 other bakeries",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-licence-of-jimmy-boy-mahim-4-other-bakeries-101784919403759.html",
+          "published_at": "2026-07-25",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-anmol-bakery-koldongari-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-25",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-new-maharashtra-bakery-chembur",
+      "establishment_id": "new-maharashtra-bakery-chembur",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-25",
+      "summary": "Hindustan Times reported that FDA suspended the licence of New Maharashtra Bakery & Stores at Vashi Naka, Chembur.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-new-maharashtra-bakery-chembur-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-25",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-new-maharashtra-bakery-chembur-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported violations related to hygiene, food handling and licensing conditions"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-new-maharashtra-bakery-chembur-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends licence of Jimmy Boy Mahim, 4 other bakeries",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-licence-of-jimmy-boy-mahim-4-other-bakeries-101784919403759.html",
+          "published_at": "2026-07-25",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-new-maharashtra-bakery-chembur-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-25",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-saba-bakery-goregaon",
+      "establishment_id": "saba-bakery-goregaon",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-25",
+      "summary": "Hindustan Times reported that FDA suspended the licence of Saba Bakery & Stores on Aarey Road, Goregaon.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-saba-bakery-goregaon-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-25",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-saba-bakery-goregaon-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported violations related to hygiene, food handling and licensing conditions"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-saba-bakery-goregaon-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends licence of Jimmy Boy Mahim, 4 other bakeries",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-licence-of-jimmy-boy-mahim-4-other-bakeries-101784919403759.html",
+          "published_at": "2026-07-25",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-saba-bakery-goregaon-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-25",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-unnati-bakery-dahisar",
+      "establishment_id": "unnati-bakery-dahisar",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-25",
+      "summary": "Hindustan Times reported that FDA suspended the licence of Unnati Bakery on Laxman Tawde Road, Dahisar.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-25T12:00:00+05:30",
+      "updated_at": "2026-07-25T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-unnati-bakery-dahisar-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-25",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-unnati-bakery-dahisar-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported violations related to hygiene, food handling and licensing conditions"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-unnati-bakery-dahisar-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends licence of Jimmy Boy Mahim, 4 other bakeries",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-licence-of-jimmy-boy-mahim-4-other-bakeries-101784919403759.html",
+          "published_at": "2026-07-25",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnati-bakery-dahisar-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-25",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-cricket-club-of-india-churchgate",
+      "establishment_id": "cricket-club-of-india-churchgate",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Hindustan Times reported that FDA inspectors found live cockroaches and flies, spoiled vegetables and expired food, poor waste disposal and other kitchen hygiene deficiencies during the July 27 inspection.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-cricket-club-of-india-churchgate-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-27",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-cricket-club-of-india-churchgate-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "live cockroaches and flies"
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-vio-2",
+          "violation_type": "expired_food",
+          "description": "spoiled vegetables and expired food"
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "dirt, grease, sludge and stagnant water"
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-vio-4",
+          "violation_type": "improper_storage",
+          "description": "water leaking onto food in cold storage"
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-vio-5",
+          "violation_type": "other",
+          "description": "clogged drains and inadequate food labelling"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-cricket-club-of-india-churchgate-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "CCI, Willingdon, MIG among top Mumbai clubs to lose food licences over poor hygiene",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-food-licences-of-top-clubs-like-cci-willingdon-mig-101785265803743.html",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-src-2",
+          "source_name": "BusinessToday",
           "source_type": "other_news",
-          "title": "Mock article: Ahmednagar hotel kitchen warned",
-          "url": "https://example.com/mock/ahmednagar-inn",
-          "published_at": "2026-06-12",
+          "title": "BusinessToday",
+          "url": "https://www.businesstoday.in/amp/india/story/fda-suspends-food-licences-of-five-mumbai-clubs-over-major-hygiene-food-safety-violations-545824-2026-07-28",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-cricket-club-of-india-churchgate-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-cricket-club-of-india-churchgate-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-28",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-willingdon-sports-club-tardeo",
+      "establishment_id": "willingdon-sports-club-tardeo",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Hindustan Times reported that FDA inspectors found poor kitchen hygiene, drainage and infrastructure issues, inadequate temperature monitoring and outdated food-testing records.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-willingdon-sports-club-tardeo-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-27",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-willingdon-sports-club-tardeo-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-willingdon-sports-club-tardeo-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "dirty floors and poorly maintained drainage"
+        },
+        {
+          "id": "case-willingdon-sports-club-tardeo-vio-2",
+          "violation_type": "other",
+          "description": "damaged ceilings"
+        },
+        {
+          "id": "case-willingdon-sports-club-tardeo-vio-3",
+          "violation_type": "temperature_control",
+          "description": "inadequate temperature monitoring"
+        },
+        {
+          "id": "case-willingdon-sports-club-tardeo-vio-4",
+          "violation_type": "missing_records",
+          "description": "outdated food testing records and no cleaning schedules"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-willingdon-sports-club-tardeo-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "CCI, Willingdon, MIG among top Mumbai clubs to lose food licences over poor hygiene",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-food-licences-of-top-clubs-like-cci-willingdon-mig-101785265803743.html",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-willingdon-sports-club-tardeo-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-willingdon-sports-club-tardeo-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-28",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-mig-cricket-club-bandra",
+      "establishment_id": "mig-cricket-club-bandra",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Hindustan Times reported that FDA found severe unsanitary conditions and insect infestation at the MIG Cricket Club kitchen. It also reported that the catering agency operating there lacked a valid food licence.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-mig-cricket-club-bandra-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-27",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-mig-cricket-club-bandra-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mig-cricket-club-bandra-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "live cockroaches and spider webs"
+        },
+        {
+          "id": "case-mig-cricket-club-bandra-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "severe unsanitary conditions"
+        },
+        {
+          "id": "case-mig-cricket-club-bandra-vio-3",
+          "violation_type": "unlicensed_operation",
+          "description": "catering agency operating without valid food licence"
+        },
+        {
+          "id": "case-mig-cricket-club-bandra-vio-4",
+          "violation_type": "improper_storage",
+          "description": "food storage norms not followed"
+        },
+        {
+          "id": "case-mig-cricket-club-bandra-vio-5",
+          "violation_type": "employee_medical_records",
+          "description": "mandatory medical records absent"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mig-cricket-club-bandra-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "CCI, Willingdon, MIG among top Mumbai clubs to lose food licences over poor hygiene",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-food-licences-of-top-clubs-like-cci-willingdon-mig-101785265803743.html",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mig-cricket-club-bandra-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-mig-cricket-club-bandra-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-28",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-rk-juhu-gymkhana-juhu",
+      "establishment_id": "rk-juhu-gymkhana-juhu",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Hindustan Times reported that FDA inspectors found kitchen sinks in poor condition and food-handling personnel without caps, gloves or aprons.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-27",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "kitchen sinks in poor condition"
+        },
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-vio-2",
+          "violation_type": "other",
+          "description": "food handlers not wearing caps, gloves or aprons"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "CCI, Willingdon, MIG among top Mumbai clubs to lose food licences over poor hygiene",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-food-licences-of-top-clubs-like-cci-willingdon-mig-101785265803743.html",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-rk-juhu-gymkhana-juhu-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-28",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-aparna-juhu-gymkhana-juhu",
+      "establishment_id": "aparna-juhu-gymkhana-juhu",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Hindustan Times reported rusted cooking equipment, flies and hygiene lapses involving food handlers at Aparna Juhu Gymkhana.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-27",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "rusted cooking equipment and insects"
+        },
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "flies in kitchen"
+        },
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-vio-3",
+          "violation_type": "other",
+          "description": "equipment not sterilized"
+        },
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-vio-4",
+          "violation_type": "other",
+          "description": "food handlers not wearing gloves, caps or aprons"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "CCI, Willingdon, MIG among top Mumbai clubs to lose food licences over poor hygiene",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-food-licences-of-top-clubs-like-cci-willingdon-mig-101785265803743.html",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-aparna-juhu-gymkhana-juhu-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-28",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-goregaon-sports-club-malad",
+      "establishment_id": "goregaon-sports-club-malad",
+      "case_type": "closure",
+      "status": "other",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Hindustan Times reported that FDA directed the restaurant at Goregaon Sports Club to stop food operations after finding it was operating without a valid food licence or registration.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-29T12:00:00+05:30",
+      "updated_at": "2026-07-29T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-goregaon-sports-club-malad-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-27",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-goregaon-sports-club-malad-act-main",
+          "action_type": "other",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-goregaon-sports-club-malad-vio-1",
+          "violation_type": "unlicensed_operation",
+          "description": "FDA reported food business operating without valid licence or registration"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-goregaon-sports-club-malad-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "CCI, Willingdon, MIG among top Mumbai clubs to lose food licences over poor hygiene",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-food-licences-of-top-clubs-like-cci-willingdon-mig-101785265803743.html",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-goregaon-sports-club-malad-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-goregaon-sports-club-malad-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-07-28",
+          "notes": "Stop-business notice"
+        }
+      ]
+    },
+    {
+      "id": "case-poornima-fort",
+      "establishment_id": "poornima-fort",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-23",
+      "action_date": "2026-07-28",
+      "summary": "The Indian Express reported that FDA suspended Poornima Restaurant's FSSAI licence after an inspection found fungal growth on vegetables and bananas and multiple kitchen hygiene and storage violations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-28T12:00:00+05:30",
+      "updated_at": "2026-07-28T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-poornima-fort-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-23",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-poornima-fort-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-poornima-fort-vio-1",
+          "violation_type": "other",
+          "description": "fungal growth on stored raw vegetables"
+        },
+        {
+          "id": "case-poornima-fort-vio-2",
+          "violation_type": "improper_storage",
+          "description": "raw, contaminated and cooked food stored together"
+        },
+        {
+          "id": "case-poornima-fort-vio-3",
+          "violation_type": "other",
+          "description": "non-food-grade plastic drums"
+        },
+        {
+          "id": "case-poornima-fort-vio-4",
+          "violation_type": "temperature_control",
+          "description": "refrigeration doors not closing properly"
+        },
+        {
+          "id": "case-poornima-fort-vio-5",
+          "violation_type": "pest_infestation",
+          "description": "fish infestation and lack of cockroach traps"
+        },
+        {
+          "id": "case-poornima-fort-vio-6",
+          "violation_type": "waste_management",
+          "description": "stagnant sewage and unclean drains"
+        },
+        {
+          "id": "case-poornima-fort-vio-7",
+          "violation_type": "poor_hygiene",
+          "description": "peeling paint and rust"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-poornima-fort-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "FDA suspends license of Mumbai’s six-decade-old Udupi eatery Poornima Restaurant",
+          "url": "https://indianexpress.com/article/cities/mumbai/fda-suspends-license-mumbais-six-decade-old-udupi-eatery-poornima-restaurant-10806651/",
+          "published_at": "2026-07-28",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-poornima-fort-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-23",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-poornima-fort-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-28",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-kamal-caterers-bmc-headquarters",
+      "establishment_id": "kamal-caterers-bmc-headquarters",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-22",
+      "action_date": "2026-07-22",
+      "summary": "Hindustan Times reported that FDA suspended the Food Registration Certificate of Kamal Caterers after a reinspection found all 31 deficiencies identified earlier remained unrectified.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-24T12:00:00+05:30",
+      "updated_at": "2026-07-24T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-22",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-22",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "fly infestation in kitchen"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "poor hygiene in food handling areas"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-vio-3",
+          "violation_type": "temperature_control",
+          "description": "faulty temperature control"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-vio-4",
+          "violation_type": "missing_records",
+          "description": "hygiene logs, food safety audit records and statutory documents absent"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-vio-5",
+          "violation_type": "employee_medical_records",
+          "description": "medical fitness and FoSTaC training certificates missing"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-vio-6",
+          "violation_type": "other",
+          "description": "equipment maintenance issues"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends BMC HQ canteen licence over food safety lapses",
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/fda-suspends-bmc-hq-canteen-licence-over-food-safety-lapses-101784832106158.html",
+          "published_at": "2026-07-24",
+          "is_primary": false
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-src-2",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mid-Day",
+          "url": "https://www.mid-day.com/mumbai/mumbai-news/article/mumbai-fda-raids-fda-raids-bmc-headquarters-canteen-suspends-its-registration-over-food-safety-violations-23641262",
+          "published_at": "2026-07-24",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-08",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-06-09",
+          "notes": "Improvement notice"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-hist-3",
+          "status": "inspected",
+          "effective_date": "2026-07-22",
+          "notes": "Reinspection"
+        },
+        {
+          "id": "case-kamal-caterers-bmc-headquarters-hist-4",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-22",
+          "notes": "Registration suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-stany-caterers-kem-parel",
+      "establishment_id": "stany-caterers-kem-parel",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-15",
+      "action_date": "2026-07-18",
+      "summary": "PTI reported that Maharashtra FDA suspended the licence of the KEM Hospital canteen operated by M/s Stany Caterers after a July 15 inspection found unhygienic conditions and food-safety violations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-18T12:00:00+05:30",
+      "updated_at": "2026-07-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-stany-caterers-kem-parel-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-15",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-stany-caterers-kem-parel-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-stany-caterers-kem-parel-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic conditions"
+        },
+        {
+          "id": "case-stany-caterers-kem-parel-vio-2",
+          "violation_type": "food_safety_violation",
+          "description": "violations of Food Safety and Standards Act and related regulations"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-stany-caterers-kem-parel-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends Mumbai's KEM Hospital canteen licence over food safety lapses",
+          "url": "https://www.hindustantimes.com/india-news/fda-suspends-mumbai-kem-hospital-canteen-licence-over-food-safety-lapses-101784359130418.html",
+          "published_at": "2026-07-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-stany-caterers-kem-parel-src-2",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mid-Day",
+          "url": "https://www.mid-day.com/mumbai/mumbai-news/article/mumbai-fda-suspends-kem-hospital-canteen-licence-over-hygiene-violations-halts-operations-23640402",
+          "published_at": "2026-07-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-stany-caterers-kem-parel-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-15",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-stany-caterers-kem-parel-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-kondhwa-cafe-salunke-vihar",
+      "establishment_id": "kondhwa-cafe-salunke-vihar",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-09",
+      "action_date": "2026-07-11",
+      "summary": "Hindustan Times reported that FDA inspected a cafe on Salunke Vihar Road after a complaint and found expired milk products and other expired food items. The food licence was suspended and the cafe was ordered to remain closed.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-11T12:00:00+05:30",
+      "updated_at": "2026-07-11T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-07-09",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-11",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-vio-1",
+          "violation_type": "expired_food",
+          "description": "expired milk products and other food items found"
+        },
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "hygiene standards violations"
+        },
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "other mandatory food-safety requirements violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends Kondhwa cafe’s licence for allegedly serving expired food products",
+          "url": "https://www.hindustantimes.com/cities/pune-news/fda-suspends-kondhwa-cafe-s-licence-for-allegedly-serving-expired-food-products-101783707352253.html",
+          "published_at": "2026-07-11",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-09",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-kondhwa-cafe-salunke-vihar-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-11",
+          "notes": "Licence suspended and closure ordered"
+        }
+      ]
+    },
+    {
+      "id": "case-guru-nanak-dairy-pune",
+      "establishment_id": "guru-nanak-dairy-pune",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-06-18",
+      "summary": "The Indian Express reported that FDA suspended Guru Nanak Dairy's retail licence after three Pune families allegedly fell ill after consuming malai pedas purchased from the establishment. The manufacturing unit was inspected and further action was stated to depend on laboratory findings.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-18T12:00:00+05:30",
+      "updated_at": "2026-06-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-guru-nanak-dairy-pune-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-06-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-guru-nanak-dairy-pune-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA suspended retail licence following suspected food-poisoning complaint"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-guru-nanak-dairy-pune-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "FDA suspends Guru Nanak Dairy licence after suspected food-poisoning",
+          "url": "https://indianexpress.com/article/cities/pune/fda-suspends-guru-nanak-dairy-licence-after-suspected-food-poisoning-10745015/",
+          "published_at": "2026-06-18",
           "is_primary": false
         }
       ],
       "status_history": []
     },
     {
-      "id": "case-020",
-      "establishment_id": "est-020",
-      "case_type": "sealing",
-      "status": "sealed",
-      "inspection_date": "2026-08-10",
-      "action_date": "2026-08-10",
-      "summary": "Source reported sealing of a food court unit after a hygiene inspection.",
+      "id": "case-sppu-refectory-mess-pune",
+      "establishment_id": "sppu-refectory-mess-pune",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-06-16",
+      "action_date": "2026-06-17",
+      "summary": "The Indian Express reported that FDA inspected the SPPU Refectory Mess on June 16 and suspended its licence on June 17 after finding multiple food-safety and hygiene violations.",
       "verification_status": "reported",
       "confidence_score": null,
-      "created_at": "2026-08-10T10:00:00Z",
-      "updated_at": "2026-08-11T10:00:00Z",
+      "created_at": "2026-06-18T12:00:00+05:30",
+      "updated_at": "2026-06-18T12:00:00+05:30",
       "actions": [
         {
-          "id": "act-020a",
-          "action_type": "business_sealed",
-          "action_date": "2026-08-10",
-          "description": "Unit sealed as reported."
+          "id": "case-sppu-refectory-mess-pune-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-06-16",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-06-17",
+          "description": null
         }
       ],
       "violations": [
         {
-          "id": "vio-020a",
+          "id": "case-sppu-refectory-mess-pune-vio-1",
           "violation_type": "poor_hygiene",
-          "description": "FDA reported poor hygiene conditions."
+          "description": "poor personal hygiene"
         },
         {
-          "id": "vio-020b",
-          "violation_type": "temperature_control",
-          "description": "Source reported temperature control failures."
+          "id": "case-sppu-refectory-mess-pune-vio-2",
+          "violation_type": "employee_medical_records",
+          "description": "no medical fitness certificates"
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-vio-3",
+          "violation_type": "water_quality",
+          "description": "no water-testing records"
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-vio-4",
+          "violation_type": "pest_infestation",
+          "description": "no pest-control reports"
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-vio-5",
+          "violation_type": "other",
+          "description": "no aprons, gloves or headgear"
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-vio-6",
+          "violation_type": "other",
+          "description": "food stored in uncovered vessels"
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-vio-7",
+          "violation_type": "other",
+          "description": "rusted metallic vessels"
         }
       ],
       "sources": [
         {
-          "id": "src-020a",
+          "id": "case-sppu-refectory-mess-pune-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "FDA suspends SPPU mess licence after inspection finds severe violations",
+          "url": "https://indianexpress.com/article/cities/pune/fda-suspends-sppu-mess-licence-after-inspection-finds-severe-violations-10745013/",
+          "published_at": "2026-06-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-sppu-refectory-mess-pune-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-06-16",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-sppu-refectory-mess-pune-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-06-17",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-hotel-grand-purandar-sinhagad",
+      "establishment_id": "hotel-grand-purandar-sinhagad",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Times of India reported that FDA suspended the licence of Hotel Grand Purandar after inspections during the July 1-3 enforcement drive found severe unhygienic conditions, food-safety violations and expired stock.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported severe unhygienic conditions"
+        },
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired stock reported"
+        },
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "food safety norms violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Pune FDA suspends licences of 10 eateries in hygiene & safety crackdown across three districts",
+          "url": "https://timesofindia.indiatimes.com/city/pune/pune-fda-suspends-licences-of-10-eateries-in-hygiene-safety-crackdown-across-three-districts/articleshow/132170089.cms",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-hotel-grand-purandar-sinhagad-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-crown-bakers-sinhagad",
+      "establishment_id": "crown-bakers-sinhagad",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Times of India reported that FDA suspended the licence of Crown Bakers during the July 1-3 Pune division enforcement drive.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-crown-bakers-sinhagad-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-crown-bakers-sinhagad-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported severe unhygienic conditions"
+        },
+        {
+          "id": "case-crown-bakers-sinhagad-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired stock reported"
+        },
+        {
+          "id": "case-crown-bakers-sinhagad-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "food safety norms violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-crown-bakers-sinhagad-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Pune FDA suspends licences of 10 eateries in hygiene & safety crackdown across three districts",
+          "url": "https://timesofindia.indiatimes.com/city/pune/pune-fda-suspends-licences-of-10-eateries-in-hygiene-safety-crackdown-across-three-districts/articleshow/132170089.cms",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-crown-bakers-sinhagad-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-crown-bakers-sinhagad-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-agrotis-catering-ambegaon",
+      "establishment_id": "agrotis-catering-ambegaon",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Times of India reported that FDA suspended the licence of Agrotis Catering Pvt Ltd in Ambegaon during a three-day inspection drive.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-agrotis-catering-ambegaon-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-agrotis-catering-ambegaon-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported severe unhygienic conditions"
+        },
+        {
+          "id": "case-agrotis-catering-ambegaon-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired stock reported"
+        },
+        {
+          "id": "case-agrotis-catering-ambegaon-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "food safety norms violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-agrotis-catering-ambegaon-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Pune FDA suspends licences of 10 eateries in hygiene & safety crackdown across three districts",
+          "url": "https://timesofindia.indiatimes.com/city/pune/pune-fda-suspends-licences-of-10-eateries-in-hygiene-safety-crackdown-across-three-districts/articleshow/132170089.cms",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-agrotis-catering-ambegaon-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-agrotis-catering-ambegaon-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-barkat-biryani-house-wagholi",
+      "establishment_id": "barkat-biryani-house-wagholi",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Times of India reported that FDA suspended the licence of Barkat Biryani House in Wagholi during the July 1-3 enforcement drive.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-barkat-biryani-house-wagholi-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-barkat-biryani-house-wagholi-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported severe unhygienic conditions"
+        },
+        {
+          "id": "case-barkat-biryani-house-wagholi-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired stock reported"
+        },
+        {
+          "id": "case-barkat-biryani-house-wagholi-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "food safety norms violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-barkat-biryani-house-wagholi-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Pune FDA suspends licences of 10 eateries in hygiene & safety crackdown across three districts",
+          "url": "https://timesofindia.indiatimes.com/city/pune/pune-fda-suspends-licences-of-10-eateries-in-hygiene-safety-crackdown-across-three-districts/articleshow/132170089.cms",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-barkat-biryani-house-wagholi-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-barkat-biryani-house-wagholi-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-royal-biryani-house-wagholi",
+      "establishment_id": "royal-biryani-house-wagholi",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Times of India reported that FDA suspended the licence of Royal Biryani House in Wagholi during the July 1-3 enforcement drive.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-royal-biryani-house-wagholi-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-royal-biryani-house-wagholi-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported severe unhygienic conditions"
+        },
+        {
+          "id": "case-royal-biryani-house-wagholi-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired stock reported"
+        },
+        {
+          "id": "case-royal-biryani-house-wagholi-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "food safety norms violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-royal-biryani-house-wagholi-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Pune FDA suspends licences of 10 eateries in hygiene & safety crackdown across three districts",
+          "url": "https://timesofindia.indiatimes.com/city/pune/pune-fda-suspends-licences-of-10-eateries-in-hygiene-safety-crackdown-across-three-districts/articleshow/132170089.cms",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-royal-biryani-house-wagholi-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-royal-biryani-house-wagholi-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-national-360-bavdhan",
+      "establishment_id": "national-360-bavdhan",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Times of India reported that FDA suspended the licence of National 360 in Bavdhan during the July 1-3 enforcement drive.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-national-360-bavdhan-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-national-360-bavdhan-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported severe unhygienic conditions"
+        },
+        {
+          "id": "case-national-360-bavdhan-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired stock reported"
+        },
+        {
+          "id": "case-national-360-bavdhan-vio-3",
+          "violation_type": "food_safety_violation",
+          "description": "food safety norms violated"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-national-360-bavdhan-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Pune FDA suspends licences of 10 eateries in hygiene & safety crackdown across three districts",
+          "url": "https://timesofindia.indiatimes.com/city/pune/pune-fda-suspends-licences-of-10-eateries-in-hygiene-safety-crackdown-across-three-districts/articleshow/132170089.cms",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-national-360-bavdhan-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-national-360-bavdhan-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-devansh-milk-pimple-gurav",
+      "establishment_id": "devansh-milk-pimple-gurav",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Hindustan Times reported that FDA suspended the food licence of Devansh Milk and Milk Products after seizing 230 kg of ghee and other food products worth ₹90,500 over suspected adulteration and missing mandatory labels.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-devansh-milk-pimple-gurav-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-devansh-milk-pimple-gurav-vio-1",
+          "violation_type": "adulteration",
+          "description": "230 kg of ghee and other food products seized on suspicion of adulteration"
+        },
+        {
+          "id": "case-devansh-milk-pimple-gurav-vio-2",
+          "violation_type": "labelling",
+          "description": "products sold without mandatory labels"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-devansh-milk-pimple-gurav-src-1",
           "source_name": "Hindustan Times",
           "source_type": "hindustan_times",
-          "title": "Mock article: Pimpri food court unit sealed",
-          "url": "https://example.com/mock/pimpri-food-court",
-          "published_at": "2026-08-11",
+          "title": "FDA suspends licences of seven Pune eateries for food safety violations",
+          "url": "https://www.hindustantimes.com/cities/pune-news/fda-suspends-licences-of-seven-pune-eateries-for-food-safety-violations-101783106703239.html",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-devansh-milk-pimple-gurav-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Enforcement drive"
+        },
+        {
+          "id": "case-devansh-milk-pimple-gurav-hist-2",
+          "status": "other",
+          "effective_date": "2026-07-04",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-sangeeta-food-products-solapur",
+      "establishment_id": "sangeeta-food-products-solapur",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-07-04",
+      "summary": "Hindustan Times reported that FDA seized 160 kg of namkeen worth ₹32,000 from Sangeeta Food Products over labelling irregularities and suspected adulteration.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-04T12:00:00+05:30",
+      "updated_at": "2026-07-04T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-sangeeta-food-products-solapur-act-main",
+          "action_type": "seizure",
+          "action_date": "2026-07-04",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-sangeeta-food-products-solapur-vio-1",
+          "violation_type": "labelling",
+          "description": "labelling irregularities"
+        },
+        {
+          "id": "case-sangeeta-food-products-solapur-vio-2",
+          "violation_type": "adulteration",
+          "description": "suspected adulteration"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-sangeeta-food-products-solapur-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA suspends licences of seven Pune eateries for food safety violations",
+          "url": "https://www.hindustantimes.com/cities/pune-news/fda-suspends-licences-of-seven-pune-eateries-for-food-safety-violations-101783106703239.html",
+          "published_at": "2026-07-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-sangeeta-food-products-solapur-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-01",
+          "notes": "Enforcement drive"
+        },
+        {
+          "id": "case-sangeeta-food-products-solapur-hist-2",
+          "status": "seizure",
+          "effective_date": "2026-07-04",
+          "notes": "Seizure reported"
+        }
+      ]
+    },
+    {
+      "id": "case-dominos-vile-parle-west",
+      "establishment_id": "dominos-vile-parle-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-11",
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the Vile Parle West Domino's licence after its August 11 inspection found deficiencies in licence display, potable water, storage, pest control and hygiene facilities.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-dominos-vile-parle-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-11",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-dominos-vile-parle-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-dominos-vile-parle-west-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "deficiencies in FSSAI licence display, potable water, food storage, pest control and hygiene facilities"
+        },
+        {
+          "id": "case-dominos-vile-parle-west-vio-2",
+          "violation_type": "temperature_control",
+          "description": "frozen food temperature monitoring deficient"
+        },
+        {
+          "id": "case-dominos-vile-parle-west-vio-3",
+          "violation_type": "pest_infestation",
+          "description": "rodent and pest prevention measures deficient"
+        },
+        {
+          "id": "case-dominos-vile-parle-west-vio-4",
+          "violation_type": "poor_hygiene",
+          "description": "hand-washing and hygiene facilities deficient"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-dominos-vile-parle-west-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-dominos-vile-parle-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-11",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-dominos-vile-parle-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-12",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-dominos-borivali-west",
+      "establishment_id": "dominos-borivali-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-11",
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the Borivali West Domino's licence after inspectors found 15% non-compliance and deficiencies involving storage, temperature monitoring, testing, cleanliness, pest control and food segregation.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-dominos-borivali-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-11",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-dominos-borivali-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-dominos-borivali-west-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "15% non-compliance reported"
+        },
+        {
+          "id": "case-dominos-borivali-west-vio-2",
+          "violation_type": "improper_storage",
+          "description": "food storage deficiencies"
+        },
+        {
+          "id": "case-dominos-borivali-west-vio-3",
+          "violation_type": "temperature_control",
+          "description": "temperature monitoring deficiencies"
+        },
+        {
+          "id": "case-dominos-borivali-west-vio-4",
+          "violation_type": "missing_records",
+          "description": "food testing deficiencies"
+        },
+        {
+          "id": "case-dominos-borivali-west-vio-5",
+          "violation_type": "poor_hygiene",
+          "description": "cleanliness deficiencies"
+        },
+        {
+          "id": "case-dominos-borivali-west-vio-6",
+          "violation_type": "pest_infestation",
+          "description": "pest-control deficiencies"
+        },
+        {
+          "id": "case-dominos-borivali-west-vio-7",
+          "violation_type": "other",
+          "description": "raw/cooked and vegetarian/non-vegetarian segregation deficiencies"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-dominos-borivali-west-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-dominos-borivali-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-11",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-dominos-borivali-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-12",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-dominos-r-city-ghatkopar",
+      "establishment_id": "dominos-r-city-ghatkopar",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-11",
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA found deficiencies in cleanliness, sanitation scheduling, pest control, FIFO/FEFO practices and temperature control at the R-City Mall outlet.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-dominos-r-city-ghatkopar-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-11",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-dominos-r-city-ghatkopar-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "cleanliness deficiencies"
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "pest-control deficiencies"
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-vio-3",
+          "violation_type": "missing_records",
+          "description": "calibration, preventive maintenance, food and water testing and food safety records absent"
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-vio-4",
+          "violation_type": "improper_storage",
+          "description": "FIFO/FEFO practices not followed"
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-vio-5",
+          "violation_type": "temperature_control",
+          "description": "food storage temperature control deficiencies"
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-vio-6",
+          "violation_type": "labelling",
+          "description": "food-grade certificates absent"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-dominos-r-city-ghatkopar-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-dominos-r-city-ghatkopar-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-11",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-dominos-r-city-ghatkopar-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-12",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-dominos-malkapur-karad",
+      "establishment_id": "dominos-malkapur-karad",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-11",
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the Domino's outlet operated by Jubilant FoodWorks at Malkapur after inspectors found about 40% non-compliance, including deficiencies in basic facilities, equipment, cleanliness and pest control.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-dominos-malkapur-karad-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-11",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-dominos-malkapur-karad-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-dominos-malkapur-karad-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "about 40% non-compliance"
+        },
+        {
+          "id": "case-dominos-malkapur-karad-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "deficiencies in cleanliness and basic facilities"
+        },
+        {
+          "id": "case-dominos-malkapur-karad-vio-3",
+          "violation_type": "pest_infestation",
+          "description": "pest-control deficiencies"
+        },
+        {
+          "id": "case-dominos-malkapur-karad-vio-4",
+          "violation_type": "other",
+          "description": "equipment deficiencies"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-dominos-malkapur-karad-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-dominos-malkapur-karad-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-11",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-dominos-malkapur-karad-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-12",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-hotel-sayali-satpur",
+      "establishment_id": "hotel-sayali-satpur",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Hotel Sayali Restaurant and Bar in Satpur as part of its intensified food-safety crackdown.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-sayali-satpur-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-sayali-satpur-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited deficiencies related to cleanliness, food storage, water, equipment and pest control"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-sayali-satpur-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-hotel-chhote-miyan-nashik",
+      "establishment_id": "hotel-chhote-miyan-nashik",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Hotel Chhote Miyan on College Road as part of its intensified food-safety crackdown.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-chhote-miyan-nashik-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-chhote-miyan-nashik-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited deficiencies related to cleanliness, food storage, water, equipment and pest control"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-chhote-miyan-nashik-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-mani-mark-panchavati",
+      "establishment_id": "mani-mark-panchavati",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Mani Mark on Peth Road in Panchavati.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-mani-mark-panchavati-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mani-mark-panchavati-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited deficiencies related to cleanliness, food storage, water, equipment and pest control"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mani-mark-panchavati-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-abhishek-bakery-and-sweets-cidco",
+      "establishment_id": "abhishek-bakery-and-sweets-cidco",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Abhishek Bakery and Sweets in CIDCO.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-abhishek-bakery-and-sweets-cidco-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-abhishek-bakery-and-sweets-cidco-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited deficiencies related to cleanliness, food storage, water, equipment and pest control"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-abhishek-bakery-and-sweets-cidco-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-mohanlal-namkeen-dindori",
+      "establishment_id": "mohanlal-namkeen-dindori",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Mohanlal Namkeen in Dindori.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-mohanlal-namkeen-dindori-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mohanlal-namkeen-dindori-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited deficiencies related to cleanliness, food storage, water, equipment and pest control"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mohanlal-namkeen-dindori-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-mumbai-metro-dhaba-bhandup",
+      "establishment_id": "mumbai-metro-dhaba-bhandup",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Mumbai Metro Dhaba in Mulund/Bhandup after inspections found shortcomings in basic facilities, cleanliness, water, ventilation, pest control and food storage.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-mumbai-metro-dhaba-bhandup-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbai-metro-dhaba-bhandup-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited shortcomings in basic facilities, cleanliness, water, ventilation, pest control and food storage"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbai-metro-dhaba-bhandup-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-gulshan-da-punjabi-dhaba-bhandup",
+      "establishment_id": "gulshan-da-punjabi-dhaba-bhandup",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Times of India reported that FDA suspended the licence of Gulshan-Da-Punjabi Dhaba in Bhandup after inspections found shortcomings in basic facilities, cleanliness, water, ventilation, pest control and food storage.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-12T12:00:00+05:30",
+      "updated_at": "2026-08-12T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-gulshan-da-punjabi-dhaba-bhandup-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-gulshan-da-punjabi-dhaba-bhandup-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA cited shortcomings in basic facilities, cleanliness, water, ventilation, pest control and food storage"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-gulshan-da-punjabi-dhaba-bhandup-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Maharashtra FDA suspends licences of 4 outlets of leading pizza chain over food safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/maharashtra-fda-suspends-licences-of-4-outlets-of-leading-pizza-chain-over-food-safety-violations/articleshow/133187057.cms",
+          "published_at": "2026-08-12",
           "is_primary": false
         }
       ],

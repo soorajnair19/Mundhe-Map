@@ -1,4 +1,6 @@
 import type { StyleSpecification } from "maplibre-gl";
+import maharashtraBoundary from "@/data/geo/maharashtra.json";
+import maharashtraMask from "@/data/geo/maharashtra-mask.json";
 
 /** Approximate bounding box for Maharashtra (lng/lat). */
 export const MAHARASHTRA_BOUNDS: [[number, number], [number, number]] = [
@@ -6,10 +8,10 @@ export const MAHARASHTRA_BOUNDS: [[number, number], [number, number]] = [
   [80.9, 22.1],
 ];
 
-/** Hard pan limit — keeps the camera inside / near Maharashtra only. */
+/** Hard pan limit — keeps the camera inside Maharashtra only. */
 export const MAHARASHTRA_MAX_BOUNDS: [[number, number], [number, number]] = [
-  [71.8, 15.0],
-  [81.6, 22.7],
+  [72.4, 15.4],
+  [81.1, 22.3],
 ];
 
 export const MAHARASHTRA_CENTER: [number, number] = [75.85, 18.95];
@@ -21,12 +23,12 @@ export const MAHARASHTRA_MIN_ZOOM = 5.8;
 export const MAHARASHTRA_MAX_ZOOM = 14;
 
 /**
- * Raster basemap (Carto light). Prefer this over vector style JSON for MapLibre v6,
- * where legacy vector style expressions can abort load and leave a blank canvas.
+ * Raster basemap clipped to Maharashtra via an opaque mask + solid black outline.
+ * These layers live in the style so they appear on first paint.
  */
 export const MAP_STYLE: StyleSpecification = {
   version: 8,
-  name: "Carto Light Raster",
+  name: "Maharashtra only",
   sources: {
     "carto-light": {
       type: "raster",
@@ -39,6 +41,14 @@ export const MAP_STYLE: StyleSpecification = {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     },
+    "maharashtra-mask": {
+      type: "geojson",
+      data: maharashtraMask as GeoJSON.GeoJSON,
+    },
+    "maharashtra-boundary": {
+      type: "geojson",
+      data: maharashtraBoundary as GeoJSON.GeoJSON,
+    },
   },
   layers: [
     {
@@ -47,6 +57,29 @@ export const MAP_STYLE: StyleSpecification = {
       source: "carto-light",
       minzoom: 0,
       maxzoom: 20,
+    },
+    {
+      id: "maharashtra-mask-fill",
+      type: "fill",
+      source: "maharashtra-mask",
+      paint: {
+        "fill-color": "#e8ece9",
+        "fill-opacity": 1,
+      },
+    },
+    {
+      id: "maharashtra-boundary-line",
+      type: "line",
+      source: "maharashtra-boundary",
+      layout: {
+        "line-cap": "round",
+        "line-join": "round",
+      },
+      paint: {
+        "line-color": "#000000",
+        "line-width": 4,
+        "line-opacity": 1,
+      },
     },
   ],
 };

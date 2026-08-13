@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "import-csv": "node scripts/import-csv.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.2.0",

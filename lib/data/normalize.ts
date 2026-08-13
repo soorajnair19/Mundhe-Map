@@ -48,3 +48,18 @@ export function formatDisplayDate(isoDate: string | null): string {
     year: "numeric",
   });
 }
+
+export function formatDisplayDateTime(isoDate: string | null): string {
+  if (!isoDate) return "—";
+  const date = new Date(isoDate);
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Kolkata",
+  });
+}

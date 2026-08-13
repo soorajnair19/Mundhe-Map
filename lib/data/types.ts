@@ -95,6 +95,7 @@ export interface Establishment {
   latitude: number;
   longitude: number;
   location_accuracy: LocationAccuracy;
+  maps_url: string | null;
   business_type: BusinessType;
   created_at: string;
   updated_at: string;
