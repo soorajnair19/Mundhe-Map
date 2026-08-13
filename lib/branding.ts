@@ -7,7 +7,4 @@ export const PRODUCT_DESCRIPTION =
   "An independent map of publicly reported food-safety enforcement actions in Maharashtra.";
 
 export const DISCLAIMER =
-  "Mundhe Map is an independent project that aggregates publicly available information about food-safety enforcement actions. Information is attributed to the cited source and may change as official proceedings develop.";
-
-export const DISCLAIMER_AFFILIATION =
-  "Mundhe Map is not affiliated with the Maharashtra Food and Drug Administration or Tukaram Mundhe.";
+  "Independent map of publicly reported food-safety enforcement actions. Sources are cited and details may change. Not affiliated with the Maharashtra FDA or Tukaram Mundhe.";

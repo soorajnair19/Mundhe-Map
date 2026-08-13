@@ -15,8 +15,8 @@ export function StatsBar({ stats }: StatsBarProps) {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-2.5 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center">
-      <div className="min-w-0">
+    <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+      <div className="min-w-0 shrink-0">
         <h1 className="text-lg font-medium leading-none text-[var(--ink)] md:text-xl">
           {PRODUCT_NAME}
         </h1>
@@ -27,7 +27,7 @@ export function StatsBar({ stats }: StatsBarProps) {
       </div>
 
       <div
-        className="grid w-full max-w-lg grid-cols-4 gap-1.5 justify-self-center md:w-[28rem] md:gap-2"
+        className="grid w-full max-w-lg grid-cols-4 gap-1.5 sm:ml-auto sm:w-[min(100%,28rem)] sm:gap-2"
         role="group"
         aria-label="Case statistics"
       >
@@ -45,9 +45,6 @@ export function StatsBar({ stats }: StatsBarProps) {
           </div>
         ))}
       </div>
-
-      {/* Balances the title column so KPIs stay visually centered on md+ */}
-      <div className="hidden md:block" aria-hidden />
     </div>
   );
 }
