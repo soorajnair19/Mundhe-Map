@@ -40,12 +40,12 @@ export const MAP_STYLE: StyleSpecification = {
   version: 8,
   name: "Maharashtra only",
   sources: {
-    "carto-light": {
+    "carto-voyager": {
       type: "raster",
       tiles: [
-        "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
-        "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
-        "https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+        "https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
+        "https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
+        "https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
       ],
       tileSize: 256,
       attribution:
@@ -62,9 +62,9 @@ export const MAP_STYLE: StyleSpecification = {
   },
   layers: [
     {
-      id: "carto-light",
+      id: "carto-voyager",
       type: "raster",
-      source: "carto-light",
+      source: "carto-voyager",
       minzoom: 0,
       maxzoom: 20,
     },
@@ -73,7 +73,7 @@ export const MAP_STYLE: StyleSpecification = {
       type: "fill",
       source: "maharashtra-mask",
       paint: {
-        "fill-color": "#e8ece9",
+        "fill-color": "#fbf8f3",
         "fill-opacity": 1,
       },
     },
