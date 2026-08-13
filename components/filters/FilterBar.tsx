@@ -12,13 +12,16 @@ interface FilterBarProps {
   onChange: (next: CaseFilters) => void;
 }
 
+const SELECT_CLASS =
+  "filter-select rounded-md border border-[var(--border)] py-2 text-sm normal-case tracking-normal text-[var(--ink)]";
+
 export function FilterBar({ filters, districts, onChange }: FilterBarProps) {
   return (
     <div className="flex flex-wrap items-end gap-3 border-b border-[var(--border)] bg-[var(--surface)] px-4 py-3 md:px-6">
       <label className="flex min-w-[140px] flex-col gap-1 text-[11px] uppercase tracking-[0.12em] text-[var(--muted)]">
         Date
         <select
-          className="rounded-md border border-[var(--border)] bg-[var(--panel)] px-2.5 py-2 text-sm normal-case tracking-normal text-[var(--ink)]"
+          className={SELECT_CLASS}
           value={filters.datePreset}
           onChange={(event) =>
             onChange({
@@ -40,7 +43,7 @@ export function FilterBar({ filters, districts, onChange }: FilterBarProps) {
       <label className="flex min-w-[160px] flex-col gap-1 text-[11px] uppercase tracking-[0.12em] text-[var(--muted)]">
         District
         <select
-          className="rounded-md border border-[var(--border)] bg-[var(--panel)] px-2.5 py-2 text-sm normal-case tracking-normal text-[var(--ink)]"
+          className={SELECT_CLASS}
           value={filters.district ?? ""}
           onChange={(event) =>
             onChange({
@@ -61,7 +64,7 @@ export function FilterBar({ filters, districts, onChange }: FilterBarProps) {
       <label className="flex min-w-[180px] flex-col gap-1 text-[11px] uppercase tracking-[0.12em] text-[var(--muted)]">
         Action
         <select
-          className="rounded-md border border-[var(--border)] bg-[var(--panel)] px-2.5 py-2 text-sm normal-case tracking-normal text-[var(--ink)]"
+          className={SELECT_CLASS}
           value={filters.action ?? ""}
           onChange={(event) =>
             onChange({

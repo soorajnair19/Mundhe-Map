@@ -10,13 +10,13 @@ export function StatsBar({ stats }: StatsBarProps) {
   const items = [
     { label: "Cases", value: stats.totalCases },
     { label: "Licence actions", value: stats.licenceActions },
-    { label: "Sealed", value: stats.sealed },
-    { label: "Districts", value: stats.districtsAffected },
+    { label: "Notices", value: stats.notices },
+    { label: "Seizures", value: stats.seizures },
   ];
 
   return (
     <header className="border-b border-[var(--border)] bg-[var(--panel)]/95 px-4 py-4 backdrop-blur-sm md:px-6">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--accent)]">
             Independent tracker
@@ -26,6 +26,12 @@ export function StatsBar({ stats }: StatsBarProps) {
           </h1>
           <p className="mt-2 max-w-xl text-sm text-[var(--muted)]">
             {PRODUCT_TAGLINE}
+          </p>
+          <p className="mt-3 text-xs text-[var(--muted)]">
+            Last updated{" "}
+            {formatDisplayDateTime(process.env.NEXT_PUBLIC_BUILD_TIME ?? null)}
+            <span className="mx-2 text-[var(--border-strong)]">·</span>
+            Counts follow active filters
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -44,12 +50,6 @@ export function StatsBar({ stats }: StatsBarProps) {
           ))}
         </div>
       </div>
-      <p className="mt-3 text-xs text-[var(--muted)]">
-        Last updated{" "}
-        {stats.lastUpdated ? formatDisplayDateTime(stats.lastUpdated) : "—"}
-        <span className="mx-2 text-[var(--border-strong)]">·</span>
-        Counts follow active filters
-      </p>
     </header>
   );
 }

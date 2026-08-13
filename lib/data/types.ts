@@ -179,8 +179,8 @@ export interface CaseFilters {
 export interface CaseStats {
   totalCases: number;
   licenceActions: number;
+  notices: number;
+  seizures: number;
   sealed: number;
-  inspections: number;
-  districtsAffected: number;
   lastUpdated: string | null;
 }

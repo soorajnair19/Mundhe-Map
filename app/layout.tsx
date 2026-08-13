@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, IBM_Plex_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import {
   PRODUCT_DESCRIPTION,
   PRODUCT_NAME,
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full font-[family-name:var(--font-body)]">
         {children}
+        <Analytics />
       </body>
     </html>
   );

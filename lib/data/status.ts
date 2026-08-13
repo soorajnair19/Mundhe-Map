@@ -34,7 +34,7 @@ export const MARKER_STYLES: Record<
 > = {
   suspended: { color: "#E07020", shape: "square", label: "Licence suspended" },
   cancelled: { color: "#8B1E1E", shape: "diamond", label: "Licence cancelled" },
-  sealed: { color: "#1F3A5F", shape: "triangle", label: "Sealed" },
+  sealed: { color: "#E11D2E", shape: "triangle", label: "Sealed" },
   notice: { color: "#A15C07", shape: "circle", label: "Notice" },
   inspection: { color: "#3D5A80", shape: "circle", label: "Inspection" },
   seizure: { color: "#5C4B8A", shape: "square", label: "Seizure" },

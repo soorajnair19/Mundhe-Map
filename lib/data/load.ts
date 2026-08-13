@@ -21,7 +21,14 @@ const LICENCE_ACTIONS = new Set<string>([
 
 const SEALED_STATUSES = new Set(["sealed", "sealing", "business_sealed"]);
 
-const INSPECTION_TYPES = new Set(["inspection", "raid"]);
+const SEIZURE_ACTIONS = new Set(["seizure"]);
+
+const NOTICE_ACTIONS = new Set([
+  "notice",
+  "notice_issued",
+  "improvement_notice",
+  "closure",
+]);
 
 export const DEFAULT_FILTERS: CaseFilters = {
   datePreset: "all",
@@ -158,42 +165,61 @@ export function filterMapCases(
   });
 }
 
+function matchesSet(mapCase: MapCase, values: Set<string>): boolean {
+  return (
+    values.has(mapCase.case.case_type) ||
+    values.has(mapCase.case.status) ||
+    mapCase.case.actions.some((action) => values.has(action.action_type))
+  );
+}
+
+/** One primary outcome per case so KPI tiles can add up to the case total. */
+function primaryOutcome(
+  mapCase: MapCase,
+): "sealed" | "licence" | "seizure" | "notice" | "other" {
+  if (matchesSet(mapCase, SEALED_STATUSES)) return "sealed";
+  if (matchesSet(mapCase, LICENCE_ACTIONS)) return "licence";
+  if (matchesSet(mapCase, SEIZURE_ACTIONS)) return "seizure";
+  if (matchesSet(mapCase, NOTICE_ACTIONS)) return "notice";
+  return "other";
+}
+
 export function computeStats(cases: MapCase[]): CaseStats {
-  const districts = new Set(cases.map((item) => item.establishment.district));
   let lastUpdated: string | null = null;
+  let licenceActions = 0;
+  let notices = 0;
+  let seizures = 0;
+  let sealed = 0;
 
   for (const item of cases) {
     if (!lastUpdated || item.case.updated_at > lastUpdated) {
       lastUpdated = item.case.updated_at;
     }
+
+    switch (primaryOutcome(item)) {
+      case "licence":
+        licenceActions += 1;
+        break;
+      case "notice":
+        notices += 1;
+        break;
+      case "seizure":
+        seizures += 1;
+        break;
+      case "sealed":
+        sealed += 1;
+        break;
+      default:
+        break;
+    }
   }
 
   return {
     totalCases: cases.length,
-    licenceActions: cases.filter(
-      (item) =>
-        LICENCE_ACTIONS.has(item.case.case_type) ||
-        LICENCE_ACTIONS.has(item.case.status) ||
-        item.case.actions.some((action) =>
-          LICENCE_ACTIONS.has(action.action_type),
-        ),
-    ).length,
-    sealed: cases.filter(
-      (item) =>
-        SEALED_STATUSES.has(item.case.case_type) ||
-        SEALED_STATUSES.has(item.case.status) ||
-        item.case.actions.some((action) =>
-          SEALED_STATUSES.has(action.action_type),
-        ),
-    ).length,
-    inspections: cases.filter(
-      (item) =>
-        INSPECTION_TYPES.has(item.case.case_type) ||
-        item.case.actions.some((action) =>
-          INSPECTION_TYPES.has(action.action_type),
-        ),
-    ).length,
-    districtsAffected: districts.size,
+    licenceActions,
+    notices,
+    seizures,
+    sealed,
     lastUpdated,
   };
 }
