@@ -8,7 +8,7 @@ import {
   formatStatus,
 } from "@/lib/data/normalize";
 import { pinAccent } from "@/lib/data/status";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import { StatusIcon } from "@/components/status/StatusIcon";
 
 interface CaseDetailPanelProps {
@@ -67,10 +67,7 @@ function PanelContent({
     >
       <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
         <div>
-          <p className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-            Enforcement case
-          </p>
-          <h2 className="mt-1 font-[family-name:var(--font-display)] text-2xl leading-tight text-[var(--ink)]">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl leading-tight text-[var(--ink)]">
             {establishment.name}
           </h2>
           <p className="mt-1 text-sm text-[var(--muted)]">
@@ -83,10 +80,10 @@ function PanelContent({
         <button
           type="button"
           onClick={onClose}
-          className="rounded-md border border-[var(--border)] px-2.5 py-1 text-sm text-[var(--ink)] transition hover:bg-[var(--surface)]"
+          className="-mr-1.5 rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)]"
           aria-label="Close panel"
         >
-          Esc
+          <X size={18} strokeWidth={2} />
         </button>
       </div>
 
@@ -211,32 +208,21 @@ function PanelContent({
           </section>
         ) : null}
 
-        <section className="border-t border-[var(--border)] pt-4 text-xs text-[var(--muted)]">
-          <p>
-            Verification: {formatLabel(enforcementCase.verification_status)}
+        <section className="flex items-center justify-between gap-3 border-t border-[var(--border)] pt-4">
+          <p className="text-xs text-[var(--muted)]">
+            {formatLabel(enforcementCase.verification_status)} -{" "}
+            {formatDisplayDate(enforcementCase.updated_at)}
           </p>
-          <p className="mt-1">
-            Last updated {formatDisplayDate(enforcementCase.updated_at)}
-          </p>
-          {establishment.location_accuracy !== "exact" ? (
-            <p className="mt-1">
-              Location accuracy: {formatLabel(establishment.location_accuracy)}
-              . Pin is placed at neighbourhood / city level, not the exact
-              doorway.
-            </p>
-          ) : null}
           {establishment.maps_url ? (
-            <p className="mt-2">
-              <a
-                href={establishment.maps_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-0.5 text-[var(--case-accent-ink)] underline-offset-2 hover:underline"
-              >
-                Open Map
-                <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
-              </a>
-            </p>
+            <a
+              href={establishment.maps_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--case-accent-ink)] underline-offset-2 hover:underline"
+            >
+              Open Map
+              <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
+            </a>
           ) : null}
         </section>
       </div>
