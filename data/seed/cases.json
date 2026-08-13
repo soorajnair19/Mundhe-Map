@@ -863,6 +863,24 @@
       "business_type": "other",
       "created_at": "2026-08-08T12:00:00+05:30",
       "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "blinkit-malad-west",
+      "name": "Blink Commerce Pvt Ltd (Blinkit)",
+      "normalized_name": "blink commerce pvt ltd blinkit",
+      "address": "Sarvodaya Bhuvan, Ramchandra Lane",
+      "locality": "Malad West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.189688,
+      "longitude": 72.839688,
+      "location_accuracy": "exact",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit+Sarvodaya+Bhuvan+Ramchandra+Lane+Malad+West+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-11T12:00:00+05:30",
+      "updated_at": "2026-08-11T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -3991,6 +4009,104 @@
           "status": "notice_issued",
           "effective_date": "2026-08-08",
           "notes": "Stop-operations notices reported"
+        }
+      ]
+    },
+    {
+      "id": "case-blinkit-malad-west",
+      "establishment_id": "blinkit-malad-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-07",
+      "action_date": "2026-08-11",
+      "summary": "Mint reported that Maharashtra FDA suspended the food licence of Blink Commerce Pvt Ltd's Malad West warehouse after an August 7 inspection found expired and tampered products, improper storage and a large-scale cockroach infestation.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-11T12:00:00+05:30",
+      "updated_at": "2026-08-11T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-blinkit-malad-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-07",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-blinkit-malad-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-11",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-blinkit-malad-west-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "large-scale cockroach infestation in stocks of fresh fruits and vegetables, with inadequate pest and rodent control"
+        },
+        {
+          "id": "case-blinkit-malad-west-vio-2",
+          "violation_type": "expired_food",
+          "description": "expired, damaged and tampered packaged food stored alongside fresh stock in cold rooms"
+        },
+        {
+          "id": "case-blinkit-malad-west-vio-3",
+          "violation_type": "improper_storage",
+          "description": "food items stored on rusted racks or directly on the floor"
+        },
+        {
+          "id": "case-blinkit-malad-west-vio-4",
+          "violation_type": "poor_hygiene",
+          "description": "warehouse reported in severely unhygienic condition"
+        },
+        {
+          "id": "case-blinkit-malad-west-vio-5",
+          "violation_type": "waste_management",
+          "description": "poor waste management practices"
+        },
+        {
+          "id": "case-blinkit-malad-west-vio-6",
+          "violation_type": "employee_medical_records",
+          "description": "fitness and health check-up records for food handlers missing"
+        },
+        {
+          "id": "case-blinkit-malad-west-vio-7",
+          "violation_type": "other",
+          "description": "workers lacked proper protective gear"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-blinkit-malad-west-src-1",
+          "source_name": "Mint",
+          "source_type": "other_news",
+          "title": "Blinkit warehouse licence suspended in Mumbai over expired food, cockroach infestation",
+          "url": "https://www.livemint.com/news/india/blinkit-warehouse-licence-suspended-in-mumbai-over-expired-food-cockroach-infestation-11786426843668.html",
+          "published_at": "2026-08-11",
+          "is_primary": false
+        },
+        {
+          "id": "case-blinkit-malad-west-src-2",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-blinkits-malad-warehouse-licence-over-hygiene-violations/articleshow/133118059.cms",
+          "published_at": "2026-08-11",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-blinkit-malad-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-07",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-blinkit-malad-west-hist-2",
+          "status": "other",
+          "effective_date": "2026-08-11",
+          "notes": "Licence suspension reported"
         }
       ]
     }
