@@ -8,6 +8,7 @@ import {
   formatStatus,
 } from "@/lib/data/normalize";
 import { pinAccent } from "@/lib/data/status";
+import { ArrowUpRight } from "lucide-react";
 import { StatusIcon } from "@/components/status/StatusIcon";
 
 interface CaseDetailPanelProps {
@@ -21,15 +22,15 @@ export function CaseDetailPanel({ mapCase, onClose }: CaseDetailPanelProps) {
   return (
     <>
       <div
-        className={`fixed inset-0 z-30 bg-[rgba(15,23,22,0.28)] transition-opacity duration-200 md:hidden ${
+        className={`fixed inset-0 z-40 bg-[rgba(15,23,22,0.28)] transition-opacity duration-200 md:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={onClose}
         aria-hidden={!open}
       />
       <aside
-        className={`fixed inset-y-0 right-0 z-40 flex w-full max-w-[420px] flex-col border-l border-[var(--border)] bg-[var(--panel)] shadow-[-12px_0_40px_rgba(15,23,22,0.08)] transition-transform duration-300 ease-out md:absolute md:top-0 md:bottom-0 ${
-          open ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[420px] flex-col border-l border-[var(--border)] bg-[var(--panel)] shadow-[-12px_0_40px_rgba(15,23,22,0.08)] transition-transform duration-300 ease-out ${
+          open ? "translate-x-0" : "pointer-events-none translate-x-full"
         }`}
         aria-hidden={!open}
         aria-label="Case details"
@@ -230,9 +231,10 @@ function PanelContent({
                 href={establishment.maps_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--case-accent-ink)] underline-offset-2 hover:underline"
+                className="inline-flex items-center gap-0.5 text-[var(--case-accent-ink)] underline-offset-2 hover:underline"
               >
-                Open map search
+                Open Map
+                <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
               </a>
             </p>
           ) : null}
