@@ -1,6 +1,6 @@
 import type { CaseStats } from "@/lib/data/types";
 import { formatDisplayDateTime } from "@/lib/data/normalize";
-import { PRODUCT_NAME, PRODUCT_TAGLINE } from "@/lib/branding";
+import { PRODUCT_NAME } from "@/lib/branding";
 
 interface StatsBarProps {
   stats: CaseStats;
@@ -15,41 +15,39 @@ export function StatsBar({ stats }: StatsBarProps) {
   ];
 
   return (
-    <header className="border-b border-[var(--border)] bg-[var(--panel)]/95 px-4 py-4 backdrop-blur-sm md:px-6">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--accent)]">
-            Independent tracker
-          </p>
-          <h1 className="mt-1 font-[family-name:var(--font-display)] text-3xl leading-none text-[var(--ink)] md:text-4xl">
-            {PRODUCT_NAME}
-          </h1>
-          <p className="mt-2 max-w-xl text-sm text-[var(--muted)]">
-            {PRODUCT_TAGLINE}
-          </p>
-          <p className="mt-3 text-xs text-[var(--muted)]">
-            Last updated{" "}
-            {formatDisplayDateTime(process.env.NEXT_PUBLIC_BUILD_TIME ?? null)}
-            <span className="mx-2 text-[var(--border-strong)]">·</span>
-            Counts follow active filters
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {items.map((item) => (
-            <div
-              key={item.label}
-              className="min-w-[108px] rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2.5"
-            >
-              <p className="font-[family-name:var(--font-display)] text-2xl leading-none text-[var(--ink)]">
-                {item.value}
-              </p>
-              <p className="mt-1.5 text-[10px] uppercase tracking-[0.12em] text-[var(--muted)]">
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
+    <div className="grid grid-cols-1 gap-2.5 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center">
+      <div className="min-w-0">
+        <h1 className="text-lg font-medium leading-none text-[var(--ink)] md:text-xl">
+          {PRODUCT_NAME}
+        </h1>
+        <p className="mt-1.5 text-xs text-[var(--muted)]">
+          Updated{" "}
+          {formatDisplayDateTime(process.env.NEXT_PUBLIC_BUILD_TIME ?? null)}
+        </p>
       </div>
-    </header>
+
+      <div
+        className="grid w-full max-w-lg grid-cols-4 gap-1.5 justify-self-center md:w-[28rem] md:gap-2"
+        role="group"
+        aria-label="Case statistics"
+      >
+        {items.map((item) => (
+          <div
+            key={item.label}
+            className="min-w-0 rounded-md border border-[var(--border)] bg-[var(--surface)] px-2 py-2 sm:px-2.5 sm:py-2.5"
+          >
+            <p className="text-base font-medium leading-none tabular-nums text-[var(--ink)] sm:text-lg">
+              {item.value}
+            </p>
+            <p className="mt-1 text-[10px] leading-tight text-[var(--muted)] sm:text-xs">
+              {item.label}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Balances the title column so KPIs stay visually centered on md+ */}
+      <div className="hidden md:block" aria-hidden />
+    </div>
   );
 }

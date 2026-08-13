@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Sans } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import {
   PRODUCT_DESCRIPTION,
@@ -7,12 +7,6 @@ import {
   PRODUCT_TAGLINE,
 } from "@/lib/branding";
 import "./globals.css";
-
-const display = Fraunces({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
 
 const body = IBM_Plex_Sans({
   variable: "--font-body",
@@ -27,10 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${display.variable} ${body.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${body.variable} h-full antialiased`}>
       <body className="min-h-full font-[family-name:var(--font-body)]">
         {children}
         <Analytics />

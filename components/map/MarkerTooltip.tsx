@@ -29,7 +29,7 @@ export function MarkerTooltip({
       style={{ left: x, top: y }}
       role="tooltip"
     >
-      <p className="font-[family-name:var(--font-display)] text-[15px] leading-tight text-[var(--ink)]">
+      <p className="text-[15px] font-medium leading-tight text-[var(--ink)]">
         {name}
       </p>
       <p className="mt-1 text-xs text-[var(--muted)]">

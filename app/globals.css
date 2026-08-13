@@ -2,14 +2,14 @@
 @import "maplibre-gl/dist/maplibre-gl.css";
 
 :root {
-  --surface: #e8ece9;
-  --panel: #f7f8f6;
-  --map-canvas: #d9e0db;
+  --surface: #f4f5f4;
+  --panel: #ffffff;
+  --map-canvas: #e4e8e5;
   --ink: #14201c;
   --muted: #5c6b64;
   --accent: #0f6e56;
-  --border: #cfd8d2;
-  --border-strong: #9aaba2;
+  --border: #e2e6e3;
+  --border-strong: #b8c2bc;
   --background: var(--surface);
   --foreground: var(--ink);
 }
@@ -18,7 +18,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-body);
-  --font-display: var(--font-display);
 }
 
 * {

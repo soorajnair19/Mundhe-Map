@@ -67,7 +67,7 @@ function PanelContent({
     >
       <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
         <div>
-          <h2 className="font-[family-name:var(--font-display)] text-2xl leading-tight text-[var(--ink)]">
+          <h2 className="text-xl font-medium leading-tight text-[var(--ink)]">
             {establishment.name}
           </h2>
           <p className="mt-1 text-sm text-[var(--muted)]">
@@ -97,9 +97,7 @@ function PanelContent({
         </div>
 
         <section>
-          <h3 className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-            Action
-          </h3>
+          <h3 className="text-xs text-[var(--muted)]">Action</h3>
           <p className="mt-2 text-sm text-[var(--ink)]">
             {formatLabel(enforcementCase.case_type)}
           </p>
@@ -121,9 +119,7 @@ function PanelContent({
 
         {enforcementCase.summary ? (
           <section>
-            <h3 className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-              Summary
-            </h3>
+            <h3 className="text-xs text-[var(--muted)]">Summary</h3>
             <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
               {enforcementCase.summary}
             </p>
@@ -132,9 +128,7 @@ function PanelContent({
 
         {enforcementCase.violations.length > 0 ? (
           <section>
-            <h3 className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-              Why?
-            </h3>
+            <h3 className="text-xs text-[var(--muted)]">Why?</h3>
             <ul className="mt-2 space-y-2">
               {enforcementCase.violations.map((violation) => (
                 <li
@@ -150,9 +144,7 @@ function PanelContent({
 
         {showTimeline ? (
           <section>
-            <h3 className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-              Timeline
-            </h3>
+            <h3 className="text-xs text-[var(--muted)]">Timeline</h3>
             <ol className="mt-3 space-y-3 border-l border-[var(--border)] pl-5">
               {history.map((event) => (
                 <li key={event.id} className="relative">
@@ -180,9 +172,7 @@ function PanelContent({
 
         {enforcementCase.sources.length > 0 ? (
           <section>
-            <h3 className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-              Sources
-            </h3>
+            <h3 className="text-xs text-[var(--muted)]">Sources</h3>
             <ul className="mt-3 space-y-3">
               {enforcementCase.sources.map((source) => (
                 <li key={source.id} className="text-sm">

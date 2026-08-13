@@ -9,6 +9,7 @@ import type {
   SeedDataset,
   VerificationStatus,
 } from "@/lib/data/types";
+import { statusToMarkerKind, type MarkerKind } from "@/lib/data/status";
 
 const dataset = seed as SeedDataset;
 
@@ -30,12 +31,22 @@ const NOTICE_ACTIONS = new Set([
   "closure",
 ]);
 
+const LEGEND_KINDS = new Set<string>([
+  "suspended",
+  "cancelled",
+  "sealed",
+  "notice",
+  "seizure",
+  "other",
+]);
+
 export const DEFAULT_FILTERS: CaseFilters = {
   datePreset: "all",
   from: null,
   to: null,
   district: null,
   action: null,
+  markerKind: null,
   verification: null,
 };
 
@@ -156,6 +167,13 @@ export function filterMapCases(
       return false;
     }
 
+    if (
+      filters.markerKind &&
+      statusToMarkerKind(mapCase.case.status) !== filters.markerKind
+    ) {
+      return false;
+    }
+
     const eventDate = caseEventDate(mapCase);
     if (from && eventDate && eventDate < from) return false;
     if (to && eventDate && eventDate > to) return false;
@@ -258,6 +276,10 @@ export function parseFiltersFromSearchParams(
     to: read("to"),
     district: read("district"),
     action: read("action") as ActionType | CaseType | null,
+    markerKind: (() => {
+      const kind = read("kind");
+      return kind && LEGEND_KINDS.has(kind) ? kind : null;
+    })(),
     verification: read("verification") as VerificationStatus | null,
   };
 }
@@ -269,9 +291,19 @@ export function filtersToSearchParams(filters: CaseFilters): URLSearchParams {
   if (filters.to) params.set("to", filters.to);
   if (filters.district) params.set("district", filters.district);
   if (filters.action) params.set("action", filters.action);
+  if (filters.markerKind) params.set("kind", filters.markerKind);
   if (filters.verification) params.set("verification", filters.verification);
   return params;
 }
+
+export const LEGEND_FILTER_KINDS = [
+  "suspended",
+  "cancelled",
+  "sealed",
+  "notice",
+  "seizure",
+  "other",
+] as const satisfies readonly MarkerKind[];
 
 export const ACTION_FILTER_OPTIONS: {
   value: ActionType | CaseType;

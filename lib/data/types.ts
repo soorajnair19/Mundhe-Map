@@ -173,6 +173,8 @@ export interface CaseFilters {
   to: string | null;
   district: string | null;
   action: ActionType | CaseType | null;
+  /** Marker kind from the legend filter (`suspended`, `notice`, …). */
+  markerKind: string | null;
   verification: VerificationStatus | null;
 }
 
