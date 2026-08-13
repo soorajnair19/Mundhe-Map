@@ -1,0 +1,1396 @@
+{
+  "establishments": [
+    {
+      "id": "est-001",
+      "name": "Harbor Spice Kitchen",
+      "normalized_name": "harbor spice kitchen",
+      "address": "12 Marine Drive",
+      "locality": "Churchgate",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400020",
+      "latitude": 18.9432,
+      "longitude": 72.8235,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-07-16T10:00:00Z",
+      "updated_at": "2026-08-02T12:00:00Z"
+    },
+    {
+      "id": "est-002",
+      "name": "Deccan Bakery House",
+      "normalized_name": "deccan bakery house",
+      "address": "FC Road",
+      "locality": "Shivajinagar",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411005",
+      "latitude": 18.5285,
+      "longitude": 73.8472,
+      "location_accuracy": "approximate",
+      "business_type": "bakery",
+      "created_at": "2026-07-20T10:00:00Z",
+      "updated_at": "2026-07-22T10:00:00Z"
+    },
+    {
+      "id": "est-003",
+      "name": "Godavari Dairy Mart",
+      "normalized_name": "godavari dairy mart",
+      "address": "College Road",
+      "locality": "College Road",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": "422005",
+      "latitude": 19.9975,
+      "longitude": 73.7898,
+      "location_accuracy": "approximate",
+      "business_type": "dairy",
+      "created_at": "2026-07-10T10:00:00Z",
+      "updated_at": "2026-07-11T10:00:00Z"
+    },
+    {
+      "id": "est-004",
+      "name": "Thane Central Hotel",
+      "normalized_name": "thane central hotel",
+      "address": "Gokhale Road",
+      "locality": "Thane West",
+      "district": "Thane",
+      "city": "Thane",
+      "state": "Maharashtra",
+      "pincode": "400601",
+      "latitude": 19.2183,
+      "longitude": 72.9781,
+      "location_accuracy": "approximate",
+      "business_type": "hotel",
+      "created_at": "2026-08-01T10:00:00Z",
+      "updated_at": "2026-08-05T10:00:00Z"
+    },
+    {
+      "id": "est-005",
+      "name": "Orange City Cloud Kitchen",
+      "normalized_name": "orange city cloud kitchen",
+      "address": "Sitabuldi",
+      "locality": "Sitabuldi",
+      "district": "Nagpur",
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "pincode": "440012",
+      "latitude": 21.1498,
+      "longitude": 79.0882,
+      "location_accuracy": "approximate",
+      "business_type": "cloud_kitchen",
+      "created_at": "2026-07-28T10:00:00Z",
+      "updated_at": "2026-07-29T10:00:00Z"
+    },
+    {
+      "id": "est-006",
+      "name": "Konkan Fish Stall",
+      "normalized_name": "konkan fish stall",
+      "address": "Malvan Market",
+      "locality": "Malvan",
+      "district": "Sindhudurg",
+      "city": "Malvan",
+      "state": "Maharashtra",
+      "pincode": "416606",
+      "latitude": 16.0594,
+      "longitude": 73.4703,
+      "location_accuracy": "approximate",
+      "business_type": "retailer",
+      "created_at": "2026-06-15T10:00:00Z",
+      "updated_at": "2026-06-16T10:00:00Z"
+    },
+    {
+      "id": "est-007",
+      "name": "Aurangabad Spice Works",
+      "normalized_name": "aurangabad spice works",
+      "address": "MIDC Waluj",
+      "locality": "Waluj",
+      "district": "Chhatrapati Sambhajinagar",
+      "city": "Chhatrapati Sambhajinagar",
+      "state": "Maharashtra",
+      "pincode": "431136",
+      "latitude": 19.833,
+      "longitude": 75.233,
+      "location_accuracy": "approximate",
+      "business_type": "manufacturer",
+      "created_at": "2026-07-05T10:00:00Z",
+      "updated_at": "2026-07-08T10:00:00Z"
+    },
+    {
+      "id": "est-008",
+      "name": "Kolhapur Misal Corner",
+      "normalized_name": "kolhapur misal corner",
+      "address": "Laxmipuri",
+      "locality": "Laxmipuri",
+      "district": "Kolhapur",
+      "city": "Kolhapur",
+      "state": "Maharashtra",
+      "pincode": "416002",
+      "latitude": 16.705,
+      "longitude": 74.2433,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-08-03T10:00:00Z",
+      "updated_at": "2026-08-03T10:00:00Z"
+    },
+    {
+      "id": "est-009",
+      "name": "Solapur Grain Retail",
+      "normalized_name": "solapur grain retail",
+      "address": "Mangalwar Peth",
+      "locality": "Mangalwar Peth",
+      "district": "Solapur",
+      "city": "Solapur",
+      "state": "Maharashtra",
+      "pincode": "413002",
+      "latitude": 17.6599,
+      "longitude": 75.9064,
+      "location_accuracy": "approximate",
+      "business_type": "retailer",
+      "created_at": "2026-07-18T10:00:00Z",
+      "updated_at": "2026-07-19T10:00:00Z"
+    },
+    {
+      "id": "est-010",
+      "name": "Andheri Lane Cafe",
+      "normalized_name": "andheri lane cafe",
+      "address": "Lokhandwala",
+      "locality": "Andheri West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400053",
+      "latitude": 19.1364,
+      "longitude": 72.8277,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-07-25T10:00:00Z",
+      "updated_at": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": "est-011",
+      "name": "Satara Hill Bakery",
+      "normalized_name": "satara hill bakery",
+      "address": "Powai Naka",
+      "locality": "Satara",
+      "district": "Satara",
+      "city": "Satara",
+      "state": "Maharashtra",
+      "pincode": "415001",
+      "latitude": 17.6805,
+      "longitude": 74.0183,
+      "location_accuracy": "approximate",
+      "business_type": "bakery",
+      "created_at": "2026-06-28T10:00:00Z",
+      "updated_at": "2026-06-29T10:00:00Z"
+    },
+    {
+      "id": "est-012",
+      "name": "Jalgaon Fresh Foods",
+      "normalized_name": "jalgaon fresh foods",
+      "address": "MJ College Road",
+      "locality": "Jalgaon",
+      "district": "Jalgaon",
+      "city": "Jalgaon",
+      "state": "Maharashtra",
+      "pincode": "425001",
+      "latitude": 21.0077,
+      "longitude": 75.5626,
+      "location_accuracy": "approximate",
+      "business_type": "manufacturer",
+      "created_at": "2026-07-12T10:00:00Z",
+      "updated_at": "2026-07-14T10:00:00Z"
+    },
+    {
+      "id": "est-013",
+      "name": "Raigad Coastal Kitchen",
+      "normalized_name": "raigad coastal kitchen",
+      "address": "Alibag Market",
+      "locality": "Alibag",
+      "district": "Raigad",
+      "city": "Alibag",
+      "state": "Maharashtra",
+      "pincode": "402201",
+      "latitude": 18.6414,
+      "longitude": 72.8722,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-08-06T10:00:00Z",
+      "updated_at": "2026-08-07T10:00:00Z"
+    },
+    {
+      "id": "est-014",
+      "name": "Amravati Sweets",
+      "normalized_name": "amravati sweets",
+      "address": "Rajapeth",
+      "locality": "Rajapeth",
+      "district": "Amravati",
+      "city": "Amravati",
+      "state": "Maharashtra",
+      "pincode": "444601",
+      "latitude": 20.9374,
+      "longitude": 77.7796,
+      "location_accuracy": "approximate",
+      "business_type": "retailer",
+      "created_at": "2026-07-02T10:00:00Z",
+      "updated_at": "2026-07-03T10:00:00Z"
+    },
+    {
+      "id": "est-015",
+      "name": "Navi Mumbai Diner",
+      "normalized_name": "navi mumbai diner",
+      "address": "Sector 17",
+      "locality": "Vashi",
+      "district": "Thane",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400703",
+      "latitude": 19.0771,
+      "longitude": 72.9987,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-07-30T10:00:00Z",
+      "updated_at": "2026-08-04T10:00:00Z"
+    },
+    {
+      "id": "est-016",
+      "name": "Wardha Kirana Store",
+      "normalized_name": "wardha kirana store",
+      "address": "Bajaj Chowk",
+      "locality": "Wardha",
+      "district": "Wardha",
+      "city": "Wardha",
+      "state": "Maharashtra",
+      "pincode": "442001",
+      "latitude": 20.7453,
+      "longitude": 78.6022,
+      "location_accuracy": "district_only",
+      "business_type": "retailer",
+      "created_at": "2026-06-20T10:00:00Z",
+      "updated_at": "2026-06-21T10:00:00Z"
+    },
+    {
+      "id": "est-017",
+      "name": "Sangli Milk Depot",
+      "normalized_name": "sangli milk depot",
+      "address": "Station Road",
+      "locality": "Sangli",
+      "district": "Sangli",
+      "city": "Sangli",
+      "state": "Maharashtra",
+      "pincode": "416416",
+      "latitude": 16.8524,
+      "longitude": 74.5815,
+      "location_accuracy": "approximate",
+      "business_type": "dairy",
+      "created_at": "2026-08-08T10:00:00Z",
+      "updated_at": "2026-08-09T10:00:00Z"
+    },
+    {
+      "id": "est-018",
+      "name": "Bandra Kitchen Collective",
+      "normalized_name": "bandra kitchen collective",
+      "address": "Linking Road",
+      "locality": "Bandra West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400050",
+      "latitude": 19.0596,
+      "longitude": 72.8295,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-07-22T10:00:00Z",
+      "updated_at": "2026-07-27T10:00:00Z"
+    },
+    {
+      "id": "est-019",
+      "name": "Ahmednagar Inn Kitchen",
+      "normalized_name": "ahmednagar inn kitchen",
+      "address": "Savedi",
+      "locality": "Savedi",
+      "district": "Ahmednagar",
+      "city": "Ahmednagar",
+      "state": "Maharashtra",
+      "pincode": "414003",
+      "latitude": 19.0948,
+      "longitude": 74.748,
+      "location_accuracy": "approximate",
+      "business_type": "hotel",
+      "created_at": "2026-06-10T10:00:00Z",
+      "updated_at": "2026-06-12T10:00:00Z"
+    },
+    {
+      "id": "est-020",
+      "name": "Pimpri Food Court Unit",
+      "normalized_name": "pimpri food court unit",
+      "address": "Pimpri Market",
+      "locality": "Pimpri",
+      "district": "Pune",
+      "city": "Pimpri-Chinchwad",
+      "state": "Maharashtra",
+      "pincode": "411017",
+      "latitude": 18.6298,
+      "longitude": 73.7997,
+      "location_accuracy": "approximate",
+      "business_type": "restaurant",
+      "created_at": "2026-08-10T10:00:00Z",
+      "updated_at": "2026-08-11T10:00:00Z"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-001",
+      "establishment_id": "est-001",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-14",
+      "action_date": "2026-07-15",
+      "summary": "Source reported that FDA inspectors cited poor kitchen hygiene and suspended the food licence pending compliance.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-16T10:00:00Z",
+      "updated_at": "2026-08-02T12:00:00Z",
+      "actions": [
+        {
+          "id": "act-001a",
+          "action_type": "inspection",
+          "action_date": "2026-07-14",
+          "description": "Inspection conducted at the premises."
+        },
+        {
+          "id": "act-001b",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-15",
+          "description": "Food licence suspended as reported by the source."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-001a",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported poor kitchen hygiene during inspection."
+        },
+        {
+          "id": "vio-001b",
+          "violation_type": "pest_infestation",
+          "description": "Source reported signs of pest infestation in the storage area."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-001a",
+          "source_name": "Indian Express",
+          "source_type": "indian_express",
+          "title": "Mock article: Harbour area eatery licence suspended after FDA inspection",
+          "url": "https://example.com/mock/harbor-spice-suspension",
+          "published_at": "2026-07-16",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-001a",
+          "status": "inspected",
+          "effective_date": "2026-07-14",
+          "notes": "Inspection recorded."
+        },
+        {
+          "id": "hist-001b",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-15",
+          "notes": "Licence suspended as reported."
+        }
+      ]
+    },
+    {
+      "id": "case-002",
+      "establishment_id": "est-002",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-07-20",
+      "action_date": "2026-07-20",
+      "summary": "Source reported an improvement notice after expired packaged items were found during inspection.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-20T10:00:00Z",
+      "updated_at": "2026-07-22T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-002a",
+          "action_type": "inspection",
+          "action_date": "2026-07-20",
+          "description": null
+        },
+        {
+          "id": "act-002b",
+          "action_type": "improvement_notice",
+          "action_date": "2026-07-20",
+          "description": "Improvement notice issued."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-002a",
+          "violation_type": "expired_food",
+          "description": "Source reported expired packaged food items on display."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-002a",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "Mock article: Pune bakery issued notice after FDA check",
+          "url": "https://example.com/mock/deccan-bakery-notice",
+          "published_at": "2026-07-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-002a",
+          "status": "inspected",
+          "effective_date": "2026-07-20",
+          "notes": null
+        },
+        {
+          "id": "hist-002b",
+          "status": "notice_issued",
+          "effective_date": "2026-07-20",
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "case-003",
+      "establishment_id": "est-003",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": "2026-07-10",
+      "action_date": "2026-07-10",
+      "summary": "Source reported seizure of dairy products following alleged adulteration findings.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-10T10:00:00Z",
+      "updated_at": "2026-07-11T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-003a",
+          "action_type": "seizure",
+          "action_date": "2026-07-10",
+          "description": "Seizure of stock reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-003a",
+          "violation_type": "adulteration",
+          "description": "Source reported alleged adulteration in dairy samples."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-003a",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Mock article: Nashik dairy stock seized after FDA action",
+          "url": "https://example.com/mock/godavari-dairy-seizure",
+          "published_at": "2026-07-11",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-004",
+      "establishment_id": "est-004",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-01",
+      "action_date": "2026-08-02",
+      "summary": "Source reported the premises were sealed after a raid cited unlicensed kitchen operations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-01T10:00:00Z",
+      "updated_at": "2026-08-05T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-004a",
+          "action_type": "inspection",
+          "action_date": "2026-08-01",
+          "description": "Raid / inspection."
+        },
+        {
+          "id": "act-004b",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-02",
+          "description": "Premises sealed as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-004a",
+          "violation_type": "unlicensed_operation",
+          "description": "Source reported unlicensed kitchen operation."
+        },
+        {
+          "id": "vio-004b",
+          "violation_type": "missing_records",
+          "description": "Source reported missing food safety records."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-004a",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mock article: Thane hotel sealed after FDA raid",
+          "url": "https://example.com/mock/thane-central-sealed",
+          "published_at": "2026-08-03",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-004a",
+          "status": "inspected",
+          "effective_date": "2026-08-01",
+          "notes": "Raid conducted."
+        },
+        {
+          "id": "hist-004b",
+          "status": "sealed",
+          "effective_date": "2026-08-02",
+          "notes": "Business sealed."
+        }
+      ]
+    },
+    {
+      "id": "case-005",
+      "establishment_id": "est-005",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": "2026-07-27",
+      "action_date": "2026-07-28",
+      "summary": "Source reported licence cancellation after repeated hygiene violations at a cloud kitchen.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-28T10:00:00Z",
+      "updated_at": "2026-07-29T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-005a",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-07-28",
+          "description": "Licence cancelled as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-005a",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported poor hygiene conditions."
+        },
+        {
+          "id": "vio-005b",
+          "violation_type": "waste_management",
+          "description": "Source reported improper waste disposal."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-005a",
+          "source_name": "PTI",
+          "source_type": "pti",
+          "title": "Mock article: Nagpur cloud kitchen licence cancelled",
+          "url": "https://example.com/mock/orange-city-cancellation",
+          "published_at": "2026-07-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-005a",
+          "status": "inspected",
+          "effective_date": "2026-07-27",
+          "notes": null
+        },
+        {
+          "id": "hist-005b",
+          "status": "licence_cancelled",
+          "effective_date": "2026-07-28",
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "case-006",
+      "establishment_id": "est-006",
+      "case_type": "inspection",
+      "status": "inspected",
+      "inspection_date": "2026-06-15",
+      "action_date": "2026-06-15",
+      "summary": "Source reported an inspection citing improper cold storage of seafood.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-15T10:00:00Z",
+      "updated_at": "2026-06-16T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-006a",
+          "action_type": "inspection",
+          "action_date": "2026-06-15",
+          "description": null
+        },
+        {
+          "id": "act-006b",
+          "action_type": "warning",
+          "action_date": "2026-06-15",
+          "description": "Warning issued as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-006a",
+          "violation_type": "temperature_control",
+          "description": "Source reported improper temperature control for seafood storage."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-006a",
+          "source_name": "Other News",
+          "source_type": "other_news",
+          "title": "Mock article: Konkan fish stall inspected",
+          "url": "https://example.com/mock/konkan-fish-inspection",
+          "published_at": "2026-06-16",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-007",
+      "establishment_id": "est-007",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-05",
+      "action_date": "2026-07-06",
+      "summary": "Source reported suspension after labelling and storage issues were cited at a spice manufacturing unit.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-05T10:00:00Z",
+      "updated_at": "2026-07-08T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-007a",
+          "action_type": "inspection",
+          "action_date": "2026-07-05",
+          "description": null
+        },
+        {
+          "id": "act-007b",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-06",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-007a",
+          "violation_type": "labelling",
+          "description": "Source reported incorrect or missing product labelling."
+        },
+        {
+          "id": "vio-007b",
+          "violation_type": "improper_storage",
+          "description": "Source reported improper storage of raw materials."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-007a",
+          "source_name": "Indian Express",
+          "source_type": "indian_express",
+          "title": "Mock article: Aurangabad spice unit licence suspended",
+          "url": "https://example.com/mock/aurangabad-spice-suspension",
+          "published_at": "2026-07-07",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-007a",
+          "status": "inspected",
+          "effective_date": "2026-07-05",
+          "notes": null
+        },
+        {
+          "id": "hist-007b",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-06",
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "case-008",
+      "establishment_id": "est-008",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": "2026-08-03",
+      "action_date": "2026-08-03",
+      "summary": "Source reported a raid citing employee medical record gaps.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-03T10:00:00Z",
+      "updated_at": "2026-08-03T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-008a",
+          "action_type": "inspection",
+          "action_date": "2026-08-03",
+          "description": "Raid reported."
+        },
+        {
+          "id": "act-008b",
+          "action_type": "notice",
+          "action_date": "2026-08-03",
+          "description": "Notice issued as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-008a",
+          "violation_type": "employee_medical_records",
+          "description": "Source reported missing employee medical records."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-008a",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "Mock article: Kolhapur eatery raided",
+          "url": "https://example.com/mock/kolhapur-misal-raid",
+          "published_at": "2026-08-04",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-009",
+      "establishment_id": "est-009",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-07-18",
+      "action_date": "2026-07-18",
+      "summary": "Source reported a notice for food safety violations related to storage of grains.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-18T10:00:00Z",
+      "updated_at": "2026-07-19T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-009a",
+          "action_type": "notice",
+          "action_date": "2026-07-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-009a",
+          "violation_type": "food_safety_violation",
+          "description": "Source reported food safety storage violations."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-009a",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Mock article: Solapur retailer issued notice",
+          "url": "https://example.com/mock/solapur-grain-notice",
+          "published_at": "2026-07-19",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-010",
+      "establishment_id": "est-010",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-25",
+      "action_date": "2026-07-26",
+      "summary": "Source reported licence suspension after water quality and hygiene findings.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-25T10:00:00Z",
+      "updated_at": "2026-08-01T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-010a",
+          "action_type": "inspection",
+          "action_date": "2026-07-25",
+          "description": null
+        },
+        {
+          "id": "act-010b",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-26",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-010a",
+          "violation_type": "water_quality",
+          "description": "Source reported water quality concerns raised during inspection."
+        },
+        {
+          "id": "vio-010b",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported poor kitchen hygiene."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-010a",
+          "source_name": "Indian Express",
+          "source_type": "indian_express",
+          "title": "Mock article: Andheri cafe licence suspended",
+          "url": "https://example.com/mock/andheri-lane-suspension",
+          "published_at": "2026-07-27",
+          "is_primary": false
+        },
+        {
+          "id": "src-010b",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mock article: Follow-up on Andheri cafe action",
+          "url": "https://example.com/mock/andheri-lane-followup",
+          "published_at": "2026-07-28",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-010a",
+          "status": "inspected",
+          "effective_date": "2026-07-25",
+          "notes": null
+        },
+        {
+          "id": "hist-010b",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-26",
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "case-011",
+      "establishment_id": "est-011",
+      "case_type": "inspection",
+      "status": "inspected",
+      "inspection_date": "2026-06-28",
+      "action_date": "2026-06-28",
+      "summary": "Source reported inspection findings related to pest control gaps.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-28T10:00:00Z",
+      "updated_at": "2026-06-29T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-011a",
+          "action_type": "inspection",
+          "action_date": "2026-06-28",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-011a",
+          "violation_type": "pest_infestation",
+          "description": "Source reported pest control gaps identified during inspection."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-011a",
+          "source_name": "Other News",
+          "source_type": "other_news",
+          "title": "Mock article: Satara bakery inspected",
+          "url": "https://example.com/mock/satara-bakery-inspection",
+          "published_at": "2026-06-29",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-012",
+      "establishment_id": "est-012",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-07-12",
+      "action_date": "2026-07-13",
+      "summary": "Source reported sealing of a food manufacturing unit after adulteration allegations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-12T10:00:00Z",
+      "updated_at": "2026-07-14T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-012a",
+          "action_type": "business_sealed",
+          "action_date": "2026-07-13",
+          "description": "Unit sealed as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-012a",
+          "violation_type": "adulteration",
+          "description": "Source reported alleged adulteration in packaged foods."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-012a",
+          "source_name": "PTI",
+          "source_type": "pti",
+          "title": "Mock article: Jalgaon food unit sealed",
+          "url": "https://example.com/mock/jalgaon-fresh-sealed",
+          "published_at": "2026-07-14",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-012a",
+          "status": "inspected",
+          "effective_date": "2026-07-12",
+          "notes": null
+        },
+        {
+          "id": "hist-012b",
+          "status": "sealed",
+          "effective_date": "2026-07-13",
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "case-013",
+      "establishment_id": "est-013",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-06",
+      "action_date": "2026-08-06",
+      "summary": "Source reported an improvement notice for waste management issues.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-06T10:00:00Z",
+      "updated_at": "2026-08-07T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-013a",
+          "action_type": "improvement_notice",
+          "action_date": "2026-08-06",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-013a",
+          "violation_type": "waste_management",
+          "description": "Source reported improper waste management practices."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-013a",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "Mock article: Alibag kitchen issued notice",
+          "url": "https://example.com/mock/raigad-coastal-notice",
+          "published_at": "2026-08-07",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-014",
+      "establishment_id": "est-014",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": "2026-07-02",
+      "action_date": "2026-07-02",
+      "summary": "Source reported seizure of sweets with alleged expired ingredients.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-02T10:00:00Z",
+      "updated_at": "2026-07-03T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-014a",
+          "action_type": "seizure",
+          "action_date": "2026-07-02",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-014a",
+          "violation_type": "expired_food",
+          "description": "Source reported expired ingredients used in sweets."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-014a",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Mock article: Amravati sweets seized",
+          "url": "https://example.com/mock/amravati-sweets-seizure",
+          "published_at": "2026-07-03",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-015",
+      "establishment_id": "est-015",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-30",
+      "action_date": "2026-08-01",
+      "summary": "Source reported a multi-day sequence ending in licence suspension after hygiene findings.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-30T10:00:00Z",
+      "updated_at": "2026-08-04T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-015a",
+          "action_type": "inspection",
+          "action_date": "2026-07-30",
+          "description": null
+        },
+        {
+          "id": "act-015b",
+          "action_type": "notice",
+          "action_date": "2026-07-31",
+          "description": "Notice issued."
+        },
+        {
+          "id": "act-015c",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-01",
+          "description": "Licence suspended."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-015a",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported poor kitchen hygiene during inspection."
+        },
+        {
+          "id": "vio-015b",
+          "violation_type": "improper_storage",
+          "description": "Source reported improper food storage."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-015a",
+          "source_name": "Indian Express",
+          "source_type": "indian_express",
+          "title": "Mock article: Navi Mumbai diner licence suspended",
+          "url": "https://example.com/mock/navi-mumbai-diner",
+          "published_at": "2026-08-02",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-015a",
+          "status": "inspected",
+          "effective_date": "2026-07-30",
+          "notes": "Day 1 inspection."
+        },
+        {
+          "id": "hist-015b",
+          "status": "notice_issued",
+          "effective_date": "2026-07-31",
+          "notes": "Day 2 notice."
+        },
+        {
+          "id": "hist-015c",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-01",
+          "notes": "Day 3 licence suspended."
+        }
+      ]
+    },
+    {
+      "id": "case-016",
+      "establishment_id": "est-016",
+      "case_type": "inspection",
+      "status": "inspected",
+      "inspection_date": "2026-06-20",
+      "action_date": "2026-06-20",
+      "summary": "Source reported inspection of a kirana store; location marked as district-level only.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-20T10:00:00Z",
+      "updated_at": "2026-06-21T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-016a",
+          "action_type": "inspection",
+          "action_date": "2026-06-20",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-016a",
+          "violation_type": "labelling",
+          "description": "Source reported labelling issues on packaged goods."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-016a",
+          "source_name": "Other News",
+          "source_type": "other_news",
+          "title": "Mock article: Wardha store inspected",
+          "url": "https://example.com/mock/wardha-kirana",
+          "published_at": "2026-06-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-017",
+      "establishment_id": "est-017",
+      "case_type": "raid",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-08",
+      "action_date": "2026-08-08",
+      "summary": "Source reported a raid and notice related to milk adulteration allegations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T10:00:00Z",
+      "updated_at": "2026-08-09T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-017a",
+          "action_type": "inspection",
+          "action_date": "2026-08-08",
+          "description": "Raid reported."
+        },
+        {
+          "id": "act-017b",
+          "action_type": "notice",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-017a",
+          "violation_type": "adulteration",
+          "description": "Source reported alleged milk adulteration."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-017a",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mock article: Sangli milk depot raided",
+          "url": "https://example.com/mock/sangli-milk-raid",
+          "published_at": "2026-08-09",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-018",
+      "establishment_id": "est-018",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": "2026-07-22",
+      "action_date": "2026-07-24",
+      "summary": "Source reported licence cancellation after inspection, notice, and follow-up action.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-07-22T10:00:00Z",
+      "updated_at": "2026-07-27T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-018a",
+          "action_type": "inspection",
+          "action_date": "2026-07-22",
+          "description": null
+        },
+        {
+          "id": "act-018b",
+          "action_type": "notice",
+          "action_date": "2026-07-23",
+          "description": null
+        },
+        {
+          "id": "act-018c",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-07-24",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-018a",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported poor kitchen hygiene."
+        },
+        {
+          "id": "vio-018b",
+          "violation_type": "pest_infestation",
+          "description": "Source reported pest infestation."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-018a",
+          "source_name": "Indian Express",
+          "source_type": "indian_express",
+          "title": "Mock article: Bandra kitchen licence cancelled",
+          "url": "https://example.com/mock/bandra-kitchen-cancellation",
+          "published_at": "2026-07-25",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "hist-018a",
+          "status": "inspected",
+          "effective_date": "2026-07-22",
+          "notes": null
+        },
+        {
+          "id": "hist-018b",
+          "status": "notice_issued",
+          "effective_date": "2026-07-23",
+          "notes": null
+        },
+        {
+          "id": "hist-018c",
+          "status": "licence_cancelled",
+          "effective_date": "2026-07-24",
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "case-019",
+      "establishment_id": "est-019",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": "2026-06-10",
+      "action_date": "2026-06-11",
+      "summary": "Source reported enforcement action related to missing records at a hotel kitchen.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-06-10T10:00:00Z",
+      "updated_at": "2026-06-12T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-019a",
+          "action_type": "warning",
+          "action_date": "2026-06-11",
+          "description": "Warning recorded as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-019a",
+          "violation_type": "missing_records",
+          "description": "Source reported missing food safety records."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-019a",
+          "source_name": "Other News",
+          "source_type": "other_news",
+          "title": "Mock article: Ahmednagar hotel kitchen warned",
+          "url": "https://example.com/mock/ahmednagar-inn",
+          "published_at": "2026-06-12",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    },
+    {
+      "id": "case-020",
+      "establishment_id": "est-020",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-10",
+      "action_date": "2026-08-10",
+      "summary": "Source reported sealing of a food court unit after a hygiene inspection.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-10T10:00:00Z",
+      "updated_at": "2026-08-11T10:00:00Z",
+      "actions": [
+        {
+          "id": "act-020a",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-10",
+          "description": "Unit sealed as reported."
+        }
+      ],
+      "violations": [
+        {
+          "id": "vio-020a",
+          "violation_type": "poor_hygiene",
+          "description": "FDA reported poor hygiene conditions."
+        },
+        {
+          "id": "vio-020b",
+          "violation_type": "temperature_control",
+          "description": "Source reported temperature control failures."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-020a",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "Mock article: Pimpri food court unit sealed",
+          "url": "https://example.com/mock/pimpri-food-court",
+          "published_at": "2026-08-11",
+          "is_primary": false
+        }
+      ],
+      "status_history": []
+    }
+  ]
+}

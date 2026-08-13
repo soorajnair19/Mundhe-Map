@@ -1,26 +1,113 @@
 @import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --surface: #e8ece9;
+  --panel: #f7f8f6;
+  --map-canvas: #d9e0db;
+  --ink: #14201c;
+  --muted: #5c6b64;
+  --accent: #0f6e56;
+  --border: #cfd8d2;
+  --border-strong: #9aaba2;
+  --background: var(--surface);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body), "IBM Plex Sans", sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-100% + 4px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}
+
+.maplibregl-ctrl-group {
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+.maplibregl-marker {
+  z-index: 5 !important;
+}
+
+.map-case-pin {
+  --pin-color: #0f6e56;
+  position: relative;
+  display: flex;
+  width: 28px;
+  height: 36px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0 3px 6px rgba(15, 32, 28, 0.35));
+  transform: translateZ(0);
+}
+
+.map-case-pin__head {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  background: var(--pin-color);
+}
+
+.map-case-pin__point {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--pin-color);
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.map-case-pin.is-selected {
+  z-index: 6;
+  transform: scale(1.2);
+}
+
+.map-case-pin.is-selected .map-case-pin__head {
+  width: 26px;
+  height: 26px;
+  border-width: 4px;
+}
+
+.map-case-pin:hover {
+  transform: scale(1.12);
 }

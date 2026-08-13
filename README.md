@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mundhe Map
 
-## Getting Started
+Independent, public-interest map of food-safety enforcement actions across Maharashtra.
 
-First, run the development server:
+> **This V1 build uses mock seed data** for UI development. Do not treat establishments, violations, dates, or outcomes in `data/seed/cases.json` as real enforcement records.
+
+## Stack
+
+- Next.js (App Router) + TypeScript + Tailwind CSS
+- MapLibre GL JS (clustered markers)
+- Local JSON seed file (no admin UI, no Supabase in this phase)
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What V1 includes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Maharashtra map with clustered enforcement points
+- Hover tooltip and click → right detail panel
+- Optional timeline when a case has 2+ status history events
+- Source links on every case
+- Filters (date preset, district, action) via URL query params
+- Live stats driven by the filtered dataset
+- Independent-project disclaimer in the footer
 
-## Learn More
+## Replacing mock data with real cases
 
-To learn more about Next.js, take a look at the following resources:
+1. Keep the same shape as [`data/seed/cases.json`](data/seed/cases.json):
+   - `establishments[]`
+   - `cases[]` with nested `actions`, `violations`, `sources`, and optional `status_history`
+2. Prefer source-attributed wording in `summary` and violation `description` fields.
+3. Use `null` for unknown fields — do not invent coordinates, dates, or outcomes.
+4. Set `location_accuracy` to `exact`, `approximate`, `district_only`, or `unknown`.
+5. Only include `status_history` when you have multiple dated events for that place.
+6. Restart or refresh the app after updating the JSON file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Types live in [`lib/data/types.ts`](lib/data/types.ts). Branding strings (including the product name) live in [`lib/branding.ts`](lib/branding.ts).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Data access layer
 
-## Deploy on Vercel
+UI components read through [`lib/data/load.ts`](lib/data/load.ts). When you later move to Supabase, replace the seed import inside that module without rewriting map/panel components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Out of scope (for now)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Admin / review UI
+- Automated ingestion / LLM extraction
+- User accounts and public edits
+- SEO case pages and analytics views
