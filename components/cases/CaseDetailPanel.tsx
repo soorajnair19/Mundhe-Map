@@ -1,12 +1,13 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import type { MapCase } from "@/lib/data/types";
 import {
   formatDisplayDate,
   formatLabel,
   formatStatus,
 } from "@/lib/data/normalize";
-import { MARKER_STYLES, statusToMarkerKind } from "@/lib/data/status";
+import { pinAccent } from "@/lib/data/status";
 
 interface CaseDetailPanelProps {
   mapCase: MapCase | null;
@@ -46,15 +47,22 @@ function PanelContent({
   onClose: () => void;
 }) {
   const { case: enforcementCase, establishment } = mapCase;
-  const kind = statusToMarkerKind(enforcementCase.status);
-  const style = MARKER_STYLES[kind];
+  const accent = pinAccent(enforcementCase.status);
   const history = [...enforcementCase.status_history].sort((a, b) =>
     a.effective_date.localeCompare(b.effective_date),
   );
   const showTimeline = history.length >= 2;
 
   return (
-    <div className="flex h-full flex-col">
+    <div
+      className="flex h-full flex-col"
+      style={
+        {
+          "--case-accent": accent.pin,
+          "--case-accent-ink": accent.ink,
+        } as CSSProperties
+      }
+    >
       <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
         <div>
           <p className="text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
@@ -83,7 +91,7 @@ function PanelContent({
       <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
         <div
           className="inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-xs font-semibold tracking-wide text-white"
-          style={{ backgroundColor: style.color }}
+          style={{ backgroundColor: accent.pin }}
         >
           <span
             className="inline-block h-2 w-2 rounded-[1px] bg-white/90"
@@ -135,7 +143,7 @@ function PanelContent({
               {enforcementCase.violations.map((violation) => (
                 <li
                   key={violation.id}
-                  className="border-l-2 border-[var(--accent)] pl-3 text-sm leading-relaxed text-[var(--ink)]"
+                  className="border-l-2 border-[var(--case-accent)] pl-3 text-sm leading-relaxed text-[var(--ink)]"
                 >
                   {violation.description}
                 </li>
@@ -152,7 +160,7 @@ function PanelContent({
             <ol className="mt-3 space-y-3 border-l border-[var(--border)] pl-4">
               {history.map((event) => (
                 <li key={event.id} className="relative">
-                  <span className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
+                  <span className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full bg-[var(--case-accent)]" />
                   <p className="text-xs text-[var(--muted)]">
                     {formatDisplayDate(event.effective_date)}
                   </p>
@@ -183,7 +191,7 @@ function PanelContent({
                     href={source.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-0.5 block text-[var(--accent)] underline-offset-2 hover:underline"
+                    className="mt-0.5 block text-[var(--case-accent-ink)] underline-offset-2 hover:underline"
                   >
                     {source.title}
                   </a>
@@ -218,7 +226,7 @@ function PanelContent({
                 href={establishment.maps_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--accent)] underline-offset-2 hover:underline"
+                className="text-[var(--case-accent-ink)] underline-offset-2 hover:underline"
               >
                 Open map search
               </a>

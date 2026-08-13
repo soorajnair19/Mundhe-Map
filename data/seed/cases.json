@@ -845,6 +845,24 @@
       "business_type": "restaurant",
       "created_at": "2026-08-12T12:00:00+05:30",
       "updated_at": "2026-08-12T12:00:00+05:30"
+    },
+    {
+      "id": "iit-bombay-hostel-messes",
+      "name": "IIT Bombay Hostel Messes",
+      "normalized_name": "iit bombay hostel messes",
+      "address": "Hostels 1 and 2, IIT Bombay",
+      "locality": "Powai",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400076",
+      "latitude": 19.132062,
+      "longitude": 72.913687,
+      "location_accuracy": "exact",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=IIT+Bombay+Powai+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -3917,6 +3935,64 @@
         }
       ],
       "status_history": []
+    },
+    {
+      "id": "case-iit-bombay-hostel-messes",
+      "establishment_id": "iit-bombay-hostel-messes",
+      "case_type": "closure",
+      "status": "notice_issued",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "Times of India reported that FDA directed two mess facilities in IIT Bombay Hostels 1 and 2 to stop operations after inspectors found they were functioning without the required licences and registrations. The caterer operating messes in Hostels 12, 13 and 14 was served a notice recommending corrective measures.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-iit-bombay-hostel-messes-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-iit-bombay-hostel-messes-vio-1",
+          "violation_type": "unlicensed_operation",
+          "description": "Hostel 1 and 2 messes operating without required licences and registrations"
+        },
+        {
+          "id": "case-iit-bombay-hostel-messes-vio-2",
+          "violation_type": "food_safety_violation",
+          "description": "deficiencies found at Hostel 12, 13 and 14 messes"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-iit-bombay-hostel-messes-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "FDA orders 2 IIT-Bombay messes to shut, suspends licences of multiple restaurants",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-orders-2-iit-bombay-messes-to-shut-suspends-licences-of-multiple-restaurants/articleshow/133039891.cms",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-iit-bombay-hostel-messes-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-iit-bombay-hostel-messes-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-08",
+          "notes": "Stop-operations notices reported"
+        }
+      ]
     }
   ]
 }

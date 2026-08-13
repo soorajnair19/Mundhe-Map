@@ -6,6 +6,7 @@ interface MarkerTooltipProps {
   district: string;
   statusLabel: string;
   dateLabel: string;
+  accent: string;
 }
 
 export function MarkerTooltip({
@@ -16,6 +17,7 @@ export function MarkerTooltip({
   district,
   statusLabel,
   dateLabel,
+  accent,
 }: MarkerTooltipProps) {
   return (
     <div
@@ -29,7 +31,10 @@ export function MarkerTooltip({
       <p className="mt-1 text-xs text-[var(--muted)]">
         {locality}, {district}
       </p>
-      <p className="mt-2 text-xs font-medium tracking-wide text-[var(--accent)]">
+      <p
+        className="mt-2 text-xs font-medium tracking-wide"
+        style={{ color: accent }}
+      >
         {statusLabel}
       </p>
       <p className="text-xs text-[var(--muted)]">{dateLabel}</p>

@@ -9,7 +9,7 @@ import {
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { MapCase } from "@/lib/data/types";
-import { statusToMarkerKind, MARKER_STYLES } from "@/lib/data/status";
+import { statusToMarkerKind, MARKER_STYLES, pinAccent } from "@/lib/data/status";
 import {
   formatMonthYear,
   formatStatus,
@@ -219,6 +219,7 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
           dateLabel={formatMonthYear(
             hoverCase.case.action_date ?? hoverCase.case.inspection_date,
           )}
+          accent={pinAccent(hoverCase.case.status).ink}
         />
       )}
     </div>

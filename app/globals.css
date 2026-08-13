@@ -61,7 +61,7 @@ body {
 }
 
 .map-case-pin {
-  --pin-color: #0f6e56;
+  --pin-color: #e07020;
   position: relative;
   display: flex;
   width: 28px;
