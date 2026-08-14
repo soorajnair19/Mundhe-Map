@@ -47,6 +47,7 @@ const LOCALITY_COORDS = {
   "wagholi|pune": [18.58, 73.983],
   "bavdhan|pune": [18.515, 73.778],
   "pimple gurav|pune": [18.59, 73.813],
+  "camp|pune": [18.5158, 73.879],
   "madde wasti|solapur": [17.6599, 75.9064],
   "satpur|nashik": [19.997, 73.74],
   "college road|nashik": [19.9975, 73.7898],

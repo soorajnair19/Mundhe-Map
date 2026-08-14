@@ -881,6 +881,24 @@
       "business_type": "other",
       "created_at": "2026-08-11T12:00:00+05:30",
       "updated_at": "2026-08-11T12:00:00+05:30"
+    },
+    {
+      "id": "burger-king-camp-pune",
+      "name": "Burger King",
+      "normalized_name": "burger king",
+      "address": "East Street",
+      "locality": "Camp",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.506812,
+      "longitude": 73.879187,
+      "location_accuracy": "exact",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Burger+King+East+Street+Camp+Pune",
+      "business_type": "restaurant",
+      "created_at": "2026-08-14T12:00:00+05:30",
+      "updated_at": "2026-08-14T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -4107,6 +4125,73 @@
           "status": "other",
           "effective_date": "2026-08-11",
           "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-burger-king-camp-pune",
+      "establishment_id": "burger-king-camp-pune",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-14",
+      "summary": "India Today reported that FDA sealed the East Street Burger King outlet in Pune's Camp area and suspended its food licence after finding serious hygiene deficiencies. The Free Press Journal listed the outlet among 16 Pune-division establishments whose licences were suspended during an August 11-14 inspection drive.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-14T12:00:00+05:30",
+      "updated_at": "2026-08-14T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-burger-king-camp-pune-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-14",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-burger-king-camp-pune-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic conditions reported"
+        },
+        {
+          "id": "case-burger-king-camp-pune-vio-2",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported food safety and hygiene deficiencies"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-burger-king-camp-pune-src-1",
+          "source_name": "India Today",
+          "source_type": "other_news",
+          "title": "Pune Camp Burger King sealed as FDA steps up food safety crackdown across Maharashtra",
+          "url": "https://www.indiatoday.in/india/story/pune-camp-burger-king-sealed-as-fda-steps-up-food-safety-crackdown-across-maharashtra-2971466-2026-08-14",
+          "published_at": "2026-08-14",
+          "is_primary": false
+        },
+        {
+          "id": "case-burger-king-camp-pune-src-2",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Free Press Journal",
+          "url": "https://www.freepressjournal.in/pune/pune-camps-iconic-burger-king-among-16-establishments-face-fda-action-all-you-need-to-know",
+          "published_at": "2026-08-14",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-burger-king-camp-pune-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-11",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-burger-king-camp-pune-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-14",
+          "notes": "Licence suspended"
         }
       ]
     }
