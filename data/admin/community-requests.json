@@ -1,0 +1,76 @@
+[
+  {
+    "id": "req-hotel-xyz-andheri",
+    "status": "pending",
+    "place_name": "Hotel XYZ",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+XYZ+Andheri+West+Mumbai",
+    "address": null,
+    "locality": "Andheri West",
+    "city": "Mumbai",
+    "concern": "The kitchen appears to have poor hygiene and should be inspected.",
+    "evidence": [],
+    "submitted_at": "2026-08-14T10:12:00+05:30",
+    "submitter": null,
+    "similar_report_count": 6,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null
+  },
+  {
+    "id": "req-chaitanya-sweets-thane",
+    "status": "pending",
+    "place_name": "Chaitanya Sweets",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Chaitanya+Sweets+Naupada+Thane",
+    "address": "Gokhale Road",
+    "locality": "Naupada",
+    "city": "Thane",
+    "concern": "Several customers say sweets were sold past the printed date and stored without refrigeration.",
+    "evidence": [
+      {
+        "id": "req-chaitanya-sweets-thane-ev-1",
+        "label": "Photo of display counter",
+        "url": "https://www.google.com/maps/search/?api=1&query=Chaitanya+Sweets+Thane"
+      }
+    ],
+    "submitted_at": "2026-08-13T18:44:00+05:30",
+    "submitter": "Neighbourhood resident",
+    "similar_report_count": 2,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null
+  },
+  {
+    "id": "req-cloud-kitchen-kothrud",
+    "status": "pending",
+    "place_name": "FastBox Cloud Kitchen",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Kothrud+Pune+cloud+kitchen",
+    "address": null,
+    "locality": "Kothrud",
+    "city": "Pune",
+    "concern": "Delivery-only kitchen operating from a residential building. No visible FSSAI display and strong sewage smell near the entrance.",
+    "evidence": [],
+    "submitted_at": "2026-08-12T21:05:00+05:30",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null
+  },
+  {
+    "id": "req-fish-market-stall-alibag",
+    "status": "pending",
+    "place_name": "Coastal Catch Stall",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Alibag+fish+market",
+    "address": "Alibag fish market",
+    "locality": "Alibag",
+    "city": "Alibag",
+    "concern": "Fish kept in the open without ice through the afternoon. Requesting an inspection of storage practice.",
+    "evidence": [],
+    "submitted_at": "2026-08-11T08:30:00+05:30",
+    "submitter": "Local vendor",
+    "similar_report_count": 3,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null
+  }
+]

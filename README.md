@@ -25,7 +25,7 @@ Leave unknowns blank in the data. Do not invent coordinates, dates, or outcomes.
 
 Mundhe Map is a reader, not a reporting platform. There is no public submission form, no official FDA feed, and no claim of completeness. Coverage is only as good as what has been published and entered.
 
-Not in this version: admin review, automated ingestion, user accounts, or per-case SEO pages.
+Not in this version: automated ingestion, user accounts, a public requests form, or per-case SEO pages.
 
 ## Run it locally
 
@@ -35,6 +35,10 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## Admin
+
+Copy [`.env.example`](.env.example) to `.env.local` and set `ADMIN_PIN` (4 digits) and `ADMIN_SESSION_SECRET`. Open [http://localhost:3000/admin](http://localhost:3000/admin). Review actions are stored in local mock state for this version and reset when the server restarts. They do not change the public map.
 
 ## Add or update cases
 

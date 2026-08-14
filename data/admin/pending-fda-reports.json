@@ -1,0 +1,364 @@
+[
+  {
+    "id": "fda-k-rustom-churchgate",
+    "review_status": "pending",
+    "queued_at": "2026-08-12T09:40:00+05:30",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-k-rustom-churchgate",
+      "name": "K Rustom & Co",
+      "normalized_name": "k rustom co",
+      "address": "Stadium House, Veer Nariman Road",
+      "locality": "Churchgate",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400020",
+      "latitude": 18.934812,
+      "longitude": 72.827188,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=K+Rustom+Churchgate+Mumbai",
+      "business_type": "retailer",
+      "created_at": "2026-08-12T09:40:00+05:30",
+      "updated_at": "2026-08-12T09:40:00+05:30"
+    },
+    "case": {
+      "id": "case-k-rustom-churchgate-pending",
+      "establishment_id": "est-k-rustom-churchgate",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-07-07",
+      "action_date": "2026-07-08",
+      "summary": "FDA inspectors reportedly found live rats, houseflies, expired food products and cold-chain lapses.",
+      "verification_status": "reported",
+      "confidence_score": 0.82,
+      "created_at": "2026-08-12T09:40:00+05:30",
+      "updated_at": "2026-08-12T09:40:00+05:30",
+      "actions": [
+        {
+          "id": "case-k-rustom-churchgate-pending-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-07-07",
+          "description": "Inspection reported by news sources."
+        },
+        {
+          "id": "case-k-rustom-churchgate-pending-act-2",
+          "action_type": "licence_suspended",
+          "action_date": "2026-07-08",
+          "description": "Licence suspension reported the following day."
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-k-rustom-churchgate-pending-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Live rats and houseflies reported on the premises"
+        },
+        {
+          "id": "case-k-rustom-churchgate-pending-vio-2",
+          "violation_type": "expired_food",
+          "description": "Expired food products found"
+        },
+        {
+          "id": "case-k-rustom-churchgate-pending-vio-3",
+          "violation_type": "temperature_control",
+          "description": "Cold-chain lapses reported"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-k-rustom-churchgate-pending-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "FDA suspends ice-cream parlour licence after hygiene inspection",
+          "url": "https://indianexpress.com/",
+          "published_at": "2026-07-09",
+          "is_primary": true
+        },
+        {
+          "id": "case-k-rustom-churchgate-pending-src-2",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "Churchgate ice-cream shop licence suspended",
+          "url": "https://timesofindia.indiatimes.com/",
+          "published_at": "2026-07-09",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-k-rustom-churchgate-pending-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-07",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-k-rustom-churchgate-pending-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-07-08",
+          "notes": "Licence suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-swad-misal-nashik",
+    "review_status": "pending",
+    "queued_at": "2026-08-13T11:15:00+05:30",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-swad-misal-nashik",
+      "name": "Swad Misal",
+      "normalized_name": "swad misal",
+      "address": null,
+      "locality": "College Road",
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 20.006438,
+      "longitude": 73.769188,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Swad+Misal+College+Road+Nashik",
+      "business_type": "restaurant",
+      "created_at": "2026-08-13T11:15:00+05:30",
+      "updated_at": "2026-08-13T11:15:00+05:30"
+    },
+    "case": {
+      "id": "case-swad-misal-nashik-pending",
+      "establishment_id": "est-swad-misal-nashik",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-10",
+      "action_date": "2026-08-10",
+      "summary": "Local reports say FDA issued an improvement notice after finding poor kitchen hygiene and missing staff medical records.",
+      "verification_status": "reported",
+      "confidence_score": 0.61,
+      "created_at": "2026-08-13T11:15:00+05:30",
+      "updated_at": "2026-08-13T11:15:00+05:30",
+      "actions": [
+        {
+          "id": "case-swad-misal-nashik-pending-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-10",
+          "description": null
+        },
+        {
+          "id": "case-swad-misal-nashik-pending-act-2",
+          "action_type": "improvement_notice",
+          "action_date": "2026-08-10",
+          "description": "Improvement notice issued."
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-swad-misal-nashik-pending-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Poor kitchen hygiene reported"
+        },
+        {
+          "id": "case-swad-misal-nashik-pending-vio-2",
+          "violation_type": "employee_medical_records",
+          "description": "Missing staff medical records"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-swad-misal-nashik-pending-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "FDA notice to Nashik eatery after hygiene inspection",
+          "url": "https://www.hindustantimes.com/",
+          "published_at": "2026-08-11",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-swad-misal-nashik-pending-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-10",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-swad-misal-nashik-pending-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-10",
+          "notes": "Improvement notice"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-gokul-dairy-kolhapur",
+    "review_status": "pending",
+    "queued_at": "2026-08-14T08:05:00+05:30",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-gokul-dairy-kolhapur",
+      "name": "Gokul Dairy Depot",
+      "normalized_name": "gokul dairy depot",
+      "address": "Shivaji Udyamnagar",
+      "locality": "Shahupuri",
+      "district": "Kolhapur",
+      "city": "Kolhapur",
+      "state": "Maharashtra",
+      "pincode": "416001",
+      "latitude": 16.703188,
+      "longitude": 74.243312,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Gokul+Dairy+Shahupuri+Kolhapur",
+      "business_type": "dairy",
+      "created_at": "2026-08-14T08:05:00+05:30",
+      "updated_at": "2026-08-14T08:05:00+05:30"
+    },
+    "case": {
+      "id": "case-gokul-dairy-kolhapur-pending",
+      "establishment_id": "est-gokul-dairy-kolhapur",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": "2026-08-12",
+      "action_date": "2026-08-12",
+      "summary": "FDA reportedly seized milk packets labelled with an expired batch and collected samples for laboratory testing.",
+      "verification_status": "unverified",
+      "confidence_score": 0.48,
+      "created_at": "2026-08-14T08:05:00+05:30",
+      "updated_at": "2026-08-14T08:05:00+05:30",
+      "actions": [
+        {
+          "id": "case-gokul-dairy-kolhapur-pending-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-12",
+          "description": "Expired batch reportedly seized."
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-gokul-dairy-kolhapur-pending-vio-1",
+          "violation_type": "expired_food",
+          "description": "Milk packets with expired batch labels"
+        },
+        {
+          "id": "case-gokul-dairy-kolhapur-pending-vio-2",
+          "violation_type": "labelling",
+          "description": "Incorrect or outdated labelling reported"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-gokul-dairy-kolhapur-pending-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Kolhapur dairy depot inspected, packets seized",
+          "url": "https://www.mid-day.com/",
+          "published_at": "2026-08-13",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-gokul-dairy-kolhapur-pending-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-12",
+          "notes": "Seizure reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-hotel-sagar-nagpur",
+    "review_status": "pending",
+    "queued_at": "2026-08-14T16:20:00+05:30",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-hotel-sagar-nagpur",
+      "name": "Hotel Sagar",
+      "normalized_name": "hotel sagar",
+      "address": null,
+      "locality": "Sitabuldi",
+      "district": "Nagpur",
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 21.149188,
+      "longitude": 79.082438,
+      "location_accuracy": "district_only",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Sagar+Sitabuldi+Nagpur",
+      "business_type": "hotel",
+      "created_at": "2026-08-14T16:20:00+05:30",
+      "updated_at": "2026-08-14T16:20:00+05:30"
+    },
+    "case": {
+      "id": "case-hotel-sagar-nagpur-pending",
+      "establishment_id": "est-hotel-sagar-nagpur",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "A regional report says the hotel kitchen was sealed after inspectors found pest infestation and unlicensed food preparation.",
+      "verification_status": "reported",
+      "confidence_score": 0.7,
+      "created_at": "2026-08-14T16:20:00+05:30",
+      "updated_at": "2026-08-14T16:20:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-sagar-nagpur-pending-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Raid/inspection reported."
+        },
+        {
+          "id": "case-hotel-sagar-nagpur-pending-act-2",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-13",
+          "description": "Kitchen sealed."
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-sagar-nagpur-pending-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in the kitchen"
+        },
+        {
+          "id": "case-hotel-sagar-nagpur-pending-vio-2",
+          "violation_type": "unlicensed_operation",
+          "description": "Unlicensed food preparation alleged"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-sagar-nagpur-pending-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Nagpur hotel kitchen sealed after FDA raid",
+          "url": "https://indianexpress.com/",
+          "published_at": "2026-08-14",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-sagar-nagpur-pending-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-hotel-sagar-nagpur-pending-hist-2",
+          "status": "sealed",
+          "effective_date": "2026-08-13",
+          "notes": "Sealed"
+        }
+      ]
+    }
+  }
+]
