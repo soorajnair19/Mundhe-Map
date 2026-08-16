@@ -100,6 +100,10 @@ function pinsFromPlaces(places: CommunityPlace[]): MapPin[] {
   }));
 }
 
+function markerKey(pin: MapPin): string {
+  return `${pin.variant}:${pin.id}`;
+}
+
 function createPinElement(pin: MapPin, selected: boolean): HTMLButtonElement {
   const button = document.createElement("button");
   button.type = "button";
@@ -132,14 +136,13 @@ export function MapView({
   const [hover, setHover] = useState<HoverState | null>(null);
   const [ready, setReady] = useState(false);
 
-  const pins = useMemo(
-    () =>
-      layer === "community" ? pinsFromPlaces(places) : pinsFromCases(cases),
-    [layer, cases, places],
-  );
+  const enforcementPins = useMemo(() => pinsFromCases(cases), [cases]);
+  const communityPins = useMemo(() => pinsFromPlaces(places), [places]);
+  const activePins =
+    layer === "community" ? communityPins : enforcementPins;
   const pinsById = useMemo(
-    () => new Map(pins.map((pin) => [pin.id, pin])),
-    [pins],
+    () => new Map(activePins.map((pin) => [pin.id, pin])),
+    [activePins],
   );
 
   useEffect(() => {
@@ -216,22 +219,26 @@ export function MapView({
     const map = mapRef.current;
     if (!map || !ready) return;
 
-    const nextIds = new Set(pins.map((pin) => pin.id));
+    const allPins = [...enforcementPins, ...communityPins];
+    const nextKeys = new Set(allPins.map(markerKey));
 
-    for (const [pinId, marker] of markersRef.current.entries()) {
-      if (!nextIds.has(pinId)) {
+    for (const [key, marker] of markersRef.current.entries()) {
+      if (!nextKeys.has(key)) {
         marker.remove();
-        markersRef.current.delete(pinId);
+        markersRef.current.delete(key);
       }
     }
 
-    for (const pin of pins) {
-      const selected = pin.id === selectedId;
-      const existing = markersRef.current.get(pin.id);
+    for (const pin of allPins) {
+      const key = markerKey(pin);
+      const selected = pin.variant === layer && pin.id === selectedId;
+      const visible = pin.variant === layer;
+      const existing = markersRef.current.get(key);
 
       if (existing) {
         const el = existing.getElement() as HTMLButtonElement;
         el.classList.toggle("is-selected", selected);
+        el.classList.toggle("is-layer-hidden", !visible);
         el.classList.toggle("is-community", pin.variant === "community");
         el.style.setProperty(
           "--pin-color",
@@ -244,6 +251,7 @@ export function MapView({
       }
 
       const element = createPinElement(pin, selected);
+      element.classList.toggle("is-layer-hidden", !visible);
 
       element.addEventListener("click", (event) => {
         event.stopPropagation();
@@ -272,9 +280,9 @@ export function MapView({
         .setLngLat([pin.longitude, pin.latitude])
         .addTo(map);
 
-      markersRef.current.set(pin.id, marker);
+      markersRef.current.set(key, marker);
     }
-  }, [pins, selectedId, ready]);
+  }, [enforcementPins, communityPins, layer, selectedId, ready]);
 
   useEffect(() => {
     if (!ready) return;

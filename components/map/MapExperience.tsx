@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { MapView } from "@/components/map/MapView";
 import { MapLayerTabs } from "@/components/map/MapLayerTabs";
 import { ReportRestoModal } from "@/components/map/ReportRestoModal";
@@ -41,7 +41,6 @@ export function MapExperience({
   communityPlaces: CommunityPlace[];
   publishedFdaCases?: MapCase[];
 }) {
-  const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const allCases = useMemo(
@@ -49,14 +48,24 @@ export function MapExperience({
     [publishedFdaCases],
   );
 
-  const filters = useMemo(
+  const urlFilters = useMemo(
     () => parseFiltersFromSearchParams(searchParams),
     [searchParams],
   );
-  const layer = useMemo(
+  const urlLayer = useMemo(
     () => parseLayerFromSearchParams(searchParams),
     [searchParams],
   );
+  const [layer, setLayerState] = useState(urlLayer);
+  const [filters, setFiltersState] = useState(urlFilters);
+
+  useEffect(() => {
+    setLayerState(urlLayer);
+  }, [urlLayer]);
+
+  useEffect(() => {
+    setFiltersState(urlFilters);
+  }, [urlFilters]);
 
   const filteredCases = useMemo(
     () => filterMapCases(filters, allCases),
@@ -170,15 +179,15 @@ export function MapExperience({
     (nextLayer: MapLayer, nextFilters: CaseFilters) => {
       const params = layerToSearchParams(nextLayer, nextFilters);
       const query = params.toString();
-      router.replace(query ? `${pathname}?${query}` : pathname, {
-        scroll: false,
-      });
+      const url = query ? `${pathname}?${query}` : pathname;
+      window.history.replaceState(null, "", url);
     },
-    [pathname, router],
+    [pathname],
   );
 
   const updateFilters = useCallback(
     (next: CaseFilters) => {
+      setFiltersState(next);
       replaceQuery(layer, next);
     },
     [layer, replaceQuery],
@@ -188,6 +197,7 @@ export function MapExperience({
     (next: MapLayer) => {
       setSelectedId(null);
       setListOpen(false);
+      setLayerState(next);
       replaceQuery(next, filters);
     },
     [filters, replaceQuery],

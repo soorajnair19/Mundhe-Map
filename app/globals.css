@@ -86,6 +86,10 @@ body {
   height: 18px;
 }
 
+.map-case-pin.is-layer-hidden {
+  display: none;
+}
+
 .map-case-pin.is-selected {
   z-index: 6;
   transform: scale(1.2);
