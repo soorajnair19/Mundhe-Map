@@ -207,7 +207,7 @@ export function CommunityQueue({
                 <div className="flex items-center gap-2">
                   <StatusChip status={request.status} />
                   {request.status === "approved" ? (
-                    <span className="rounded-md bg-[#e4f1ec] px-2 py-0.5 text-xs font-medium text-[#0f6e56]">
+                    <span className="rounded-md bg-[var(--community-accent-tint)] px-2 py-0.5 text-xs font-medium text-[var(--community-accent)]">
                       On map
                     </span>
                   ) : null}
@@ -458,7 +458,7 @@ function CommunityDrawer({
                 <span
                   className={`rounded-md px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide ${
                     onMap
-                      ? "bg-[#e4f1ec] text-[#0f6e56]"
+                      ? "bg-[var(--community-accent-tint)] text-[var(--community-accent)]"
                       : "bg-[var(--surface)] text-[var(--muted)]"
                   }`}
                 >
@@ -555,7 +555,7 @@ function CommunityDrawer({
                             href={item.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm font-medium text-[var(--accent)] underline-offset-2 hover:underline"
+                            className="text-sm font-medium text-[var(--community-accent)] underline-offset-2 hover:underline"
                           >
                             {item.label}
                           </a>
@@ -579,7 +579,7 @@ function CommunityDrawer({
                     href={request.maps_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--accent)] underline-offset-2 hover:underline"
+                    className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--community-accent)] underline-offset-2 hover:underline"
                   >
                     Open Map
                     <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
@@ -612,7 +612,7 @@ function CommunityDrawer({
                 <button
                   type="button"
                   onClick={onApprove}
-                  className="rounded-lg bg-[var(--accent)] px-3 py-2 text-sm font-medium text-white"
+                  className="rounded-lg bg-[var(--community-accent)] px-3 py-2 text-sm font-medium text-white"
                 >
                   {request.status === "pending"
                     ? "Approve"

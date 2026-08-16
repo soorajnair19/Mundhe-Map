@@ -61,6 +61,9 @@ export const MARKER_STYLES: Record<
   other: { color: "#5C6770", shape: "circle", label: "Other", inLegend: true },
 };
 
+export const COMMUNITY_PIN_COLOR = "#E0115F";
+export const COMMUNITY_PIN_TINT = "#fce4ed";
+
 /** UI shades derived from a pin colour — hover labels, panel bars, links. */
 export interface PinAccent {
   pin: string;

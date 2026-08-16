@@ -187,7 +187,10 @@ export function MapSidePanel({
                       </span>
                       {showRowStatus ? (
                         item.variant === "community" ? (
-                          <span className="mt-1 inline-flex items-center gap-1.5 rounded-md bg-[var(--accent)] px-2 py-0.5 text-[11px] font-semibold tracking-wide text-white">
+                          <span
+                            className="mt-1 inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-semibold tracking-wide text-white"
+                            style={{ backgroundColor: item.accent }}
+                          >
                             <Flag size={11} strokeWidth={2.25} aria-hidden />
                             {item.statusLabel}
                           </span>

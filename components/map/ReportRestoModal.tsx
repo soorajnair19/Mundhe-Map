@@ -25,7 +25,7 @@ interface ReportRestoModalProps {
 }
 
 const inputClass =
-  "mt-1 w-full rounded-lg border border-[var(--border)] bg-[var(--panel)] px-3 py-2 text-sm text-[var(--ink)] outline-none focus:border-[var(--accent)]";
+  "mt-1 w-full rounded-lg border border-[var(--border)] bg-[var(--panel)] px-3 py-2 text-sm text-[var(--ink)] outline-none focus:border-[var(--community-accent)]";
 
 function RequiredMark({ required }: { required: boolean }) {
   if (!required) return null;
@@ -99,7 +99,7 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
         {state.ok ? (
           <div className="flex flex-col items-center px-5 py-10 text-center">
             <div
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e4f1ec] text-[var(--accent)]"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--community-accent-tint)] text-[var(--community-accent)]"
               aria-hidden
             >
               <Check size={26} strokeWidth={2.5} />
@@ -111,7 +111,7 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
             <button
               type="button"
               onClick={onClose}
-              className="mt-6 w-full rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white"
+              className="mt-6 w-full rounded-lg bg-[var(--community-accent)] px-5 py-2.5 text-sm font-medium text-white"
             >
               OK
             </button>
@@ -318,8 +318,8 @@ function PhotoUpload({
           onDrop={onDrop}
           className={`inline-flex h-9 shrink-0 cursor-pointer items-center gap-1.5 rounded-md border border-dashed px-2.5 text-xs transition ${
             dragging
-              ? "border-[var(--accent)] bg-[var(--surface)]"
-              : "border-[var(--border-strong)] bg-[var(--surface)]/60 hover:border-[var(--accent)]"
+              ? "border-[var(--community-accent)] bg-[var(--surface)]"
+              : "border-[var(--border-strong)] bg-[var(--surface)]/60 hover:border-[var(--community-accent)]"
           }`}
         >
           <ImagePlus

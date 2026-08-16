@@ -56,7 +56,7 @@ export function CommunityDetailContent({
       </div>
 
       <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
-        <div className="inline-flex items-center gap-2 rounded-md bg-[var(--accent)] px-3 py-1.5 text-xs font-semibold tracking-wide text-white">
+        <div className="inline-flex items-center gap-2 rounded-md bg-[var(--community-accent)] px-3 py-1.5 text-xs font-semibold tracking-wide text-white">
           <Flag size={13} strokeWidth={2.25} aria-hidden />
           Community report
         </div>
@@ -101,7 +101,7 @@ export function CommunityDetailContent({
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-[var(--accent)] underline-offset-2 hover:underline"
+                      className="font-medium text-[var(--community-accent)] underline-offset-2 hover:underline"
                     >
                       {item.label}
                     </a>
@@ -123,7 +123,7 @@ export function CommunityDetailContent({
               href={place.maps_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--accent)] underline-offset-2 hover:underline"
+              className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--community-accent)] underline-offset-2 hover:underline"
             >
               Open Map
               <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />

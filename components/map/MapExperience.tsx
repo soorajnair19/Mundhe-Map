@@ -14,6 +14,7 @@ import { LegendFilter } from "@/components/filters/LegendFilter";
 import { StatsBar } from "@/components/stats/StatsBar";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import {
+  COMMUNITY_PIN_COLOR,
   MARKER_STYLES,
   pinAccent,
   type MarkerKind,
@@ -118,7 +119,7 @@ export function MapExperience({
           location: [place.locality, place.city].filter(Boolean).join(", "),
           district: place.district,
           statusLabel: "Community report",
-          accent: "#0f6e56",
+          accent: COMMUNITY_PIN_COLOR,
           variant: "community" as const,
         }))
         .sort((a, b) => a.name.localeCompare(b.name));
@@ -186,7 +187,7 @@ export function MapExperience({
   const setLayer = useCallback(
     (next: MapLayer) => {
       setSelectedId(null);
-      setListOpen(next === "community");
+      setListOpen(false);
       replaceQuery(next, filters);
     },
     [filters, replaceQuery],
