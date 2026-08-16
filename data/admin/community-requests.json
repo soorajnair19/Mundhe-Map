@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "req-https-maps-app-goo-gl-diu7pgipndtukxdm6-msw0jtmq",
+    "status": "pending",
+    "place_name": "https://maps.app.goo.gl/diu7PgiPnDtuKXdm6",
+    "maps_url": "https://maps.app.goo.gl/diu7PgiPnDtuKXdm6",
+    "address": null,
+    "locality": "Wagle Estate",
+    "city": "Thane",
+    "district": "Thane",
+    "latitude": 18.949099999999998,
+    "longitude": 75.85072,
+    "concern": "Lack of hygiene overall",
+    "evidence": [],
+    "submitted_at": "2026-08-16T16:22:38.019Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  }
+]
