@@ -80,6 +80,15 @@ const CITY_COORDS: Record<string, [number, number]> = {
   wadvani: [18.983, 76.05],
   wadwani: [18.983, 76.05],
   vadwani: [18.983, 76.05],
+  thane: [19.2183, 72.9781],
+  navi: [19.033, 73.029],
+  "navi mumbai": [19.033, 73.029],
+  kalyan: [19.2437, 73.1355],
+  dombivli: [19.2167, 73.0833],
+  alibag: [18.6414, 72.8722],
+  aurangabad: [19.8762, 75.3433],
+  nagpur: [21.1458, 79.0882],
+  kolhapur: [16.705, 74.2433],
 };
 
 const DISTRICT_COORDS: Record<string, [number, number]> = {
@@ -90,6 +99,8 @@ const DISTRICT_COORDS: Record<string, [number, number]> = {
   solapur: [17.6599, 75.9064],
   satara: [17.6805, 74.0183],
   beed: [18.99, 75.76],
+  thane: [19.2183, 72.9781],
+  raigad: [18.6414, 72.8722],
 };
 
 function key(value: string | null | undefined): string {

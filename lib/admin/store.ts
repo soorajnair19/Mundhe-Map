@@ -8,7 +8,11 @@ import type {
   MapCase,
 } from "@/lib/data/types";
 import type { CommunityRequestDraft } from "@/lib/community/schema";
-import { resolveCommunityCoordinates } from "@/lib/community/coords";
+import {
+  parseMapsCoordinates,
+  resolveCommunityCoordinates,
+  applyCommunityLocation,
+} from "@/lib/community/coords";
 import { geocodeApproximate } from "@/lib/data/csv";
 import { normalizeName } from "@/lib/data/normalize";
 import {
@@ -106,13 +110,7 @@ function ensureFdaCoordinates(establishment: Establishment): Establishment {
     district,
   });
   const fromMaps = establishment.maps_url
-    ? resolveCommunityCoordinates({
-        id: establishment.id,
-        maps_url: establishment.maps_url,
-        locality: establishment.locality,
-        city,
-        district,
-      })
+    ? parseMapsCoordinates(establishment.maps_url)
     : null;
   const useResolved =
     isStateCentroid(establishment.latitude, establishment.longitude) ||
@@ -173,13 +171,15 @@ async function persistCommunityRequests(): Promise<void> {
   store.communitySha = saved.sha;
 }
 
-async function withCommunityPersist<T>(mutate: () => T): Promise<T> {
+async function withCommunityPersist<T>(
+  mutate: () => T | Promise<T>,
+): Promise<T> {
   await hydrateAdminStore();
   const store = getStore();
   const snapshot = structuredClone(store.communityRequests);
   const sha = store.communitySha;
   const mtime = store.communityMtime;
-  const result = mutate();
+  const result = await mutate();
   try {
     await persistCommunityRequests();
     return result;
@@ -233,17 +233,10 @@ function requestToPlace(request: CommunityRequest): CommunityPlace | null {
   };
 }
 
-function ensureMappable(request: CommunityRequest): void {
+async function ensureMappable(request: CommunityRequest): Promise<void> {
+  request.plus_code = request.plus_code ?? null;
   if (request.latitude == null || request.longitude == null) {
-    const coords = resolveCommunityCoordinates({
-      id: request.id,
-      maps_url: request.maps_url,
-      locality: request.locality,
-      city: request.city,
-      district: request.district,
-    });
-    request.latitude = coords.latitude;
-    request.longitude = coords.longitude;
+    await applyCommunityLocation(request);
   }
   if (!request.district) {
     request.district = request.city;
@@ -452,13 +445,46 @@ export async function updateFDAReport(
   });
 }
 
+export async function updateCommunityRequest(
+  id: string,
+  patch: {
+    place_name: string;
+    maps_url: string;
+    plus_code: string | null;
+    address: string | null;
+    locality: string | null;
+    city: string | null;
+    district: string | null;
+    latitude: number | null;
+    longitude: number | null;
+    concern: string;
+  },
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(async () => {
+    const request = getCommunityRequest(id);
+    if (!request) return null;
+    request.place_name = patch.place_name;
+    request.maps_url = patch.maps_url;
+    request.plus_code = patch.plus_code;
+    request.address = patch.address;
+    request.locality = patch.locality;
+    request.city = patch.city;
+    request.district = patch.district ?? patch.city;
+    request.latitude = patch.latitude;
+    request.longitude = patch.longitude;
+    request.concern = patch.concern;
+    await applyCommunityLocation(request);
+    return request;
+  });
+}
+
 export async function approveCommunityRequest(
   id: string,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(() => {
+  return withCommunityPersist(async () => {
     const request = getCommunityRequest(id);
     if (!request) return null;
-    ensureMappable(request);
+    await ensureMappable(request);
     request.status = "approved";
     request.rejection_reason = null;
     request.rejection_notes = null;
@@ -551,16 +577,17 @@ export async function investigateCommunityRequest(
 export async function createCommunityRequest(
   draft: CommunityRequestDraft,
 ): Promise<CommunityRequest> {
-  return withCommunityPersist(() => {
+  return withCommunityPersist(async () => {
     const store = getStore();
     const id = `req-${slugify(draft.place_name)}-${Date.now().toString(36)}`;
     const key = communityPlaceKey(draft.place_name, draft.city);
     const similar = store.communityRequests.filter(
       (request) => communityPlaceKey(request.place_name, request.city) === key,
     ).length;
-    const coords = resolveCommunityCoordinates({
+    const coords = await resolveCommunityCoordinates({
       id,
       maps_url: draft.maps_url,
+      plus_code: draft.plus_code,
       locality: draft.locality,
       city: draft.city,
       district: draft.city,
@@ -571,6 +598,7 @@ export async function createCommunityRequest(
       status: "pending",
       place_name: draft.place_name,
       maps_url: draft.maps_url,
+      plus_code: coords.plus_code,
       address: draft.address,
       locality: draft.locality,
       city: draft.city,

@@ -8,6 +8,7 @@ import {
   rejectCommunityRequestAction,
   restoreCommunityRequestAction,
   unpublishCommunityRequestAction,
+  updateCommunityRequestAction,
 } from "@/lib/admin/actions";
 import type {
   CommunityRequest,
@@ -17,6 +18,8 @@ import type {
 import { COMMUNITY_REJECTION_REASONS } from "@/lib/admin/types";
 import { formatDisplayDate, normalizeName } from "@/lib/data/normalize";
 import { COMMUNITY_REQUEST_FIELDS, isImageEvidenceUrl } from "@/lib/community/schema";
+import { communityPinLooksApproximate } from "@/lib/community/coords";
+import { CommunityEditForm, type CommunityRequestPatch } from "@/components/admin/CommunityEditForm";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
 import { QueueToolbar } from "@/components/admin/QueueToolbar";
@@ -76,6 +79,7 @@ export function CommunityQueue({
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("pending");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [editing, setEditing] = useState(false);
   const [confirm, setConfirm] = useState<ConfirmKind | null>(null);
   const [confirmId, setConfirmId] = useState<string | null>(null);
   const [reason, setReason] = useState<RejectionReason>("insufficient_evidence");
@@ -240,12 +244,27 @@ export function CommunityQueue({
       <CommunityDrawer
         request={selected}
         similarCount={selected ? reportCount(selected, requests) : 0}
-        onClose={() => setSelectedId(null)}
+        editing={editing}
+        onClose={() => {
+          setSelectedId(null);
+          setEditing(false);
+        }}
+        onEdit={() => setEditing(true)}
+        onCancelEdit={() => setEditing(false)}
         onApprove={() => selected && openConfirm("approve", selected.id)}
         onReject={() => selected && openConfirm("reject", selected.id)}
         onDuplicate={() => selected && openConfirm("duplicate", selected.id)}
         onUnpublish={() => selected && openConfirm("unpublish", selected.id)}
         onRestore={() => selected && openConfirm("restore", selected.id)}
+        onSave={async (patch) => {
+          if (!selected) return;
+          const result = await updateCommunityRequestAction(selected.id, patch);
+          if (result.error) {
+            setActionError(result.error);
+            return;
+          }
+          setEditing(false);
+        }}
       />
 
       {confirm === "approve" ? (
@@ -349,27 +368,42 @@ export function CommunityQueue({
 function CommunityDrawer({
   request,
   similarCount,
+  editing,
   onClose,
+  onEdit,
+  onCancelEdit,
   onApprove,
   onReject,
   onDuplicate,
   onUnpublish,
   onRestore,
+  onSave,
 }: {
   request: CommunityRequest | null;
   similarCount: number;
+  editing: boolean;
   onClose: () => void;
+  onEdit: () => void;
+  onCancelEdit: () => void;
   onApprove: () => void;
   onReject: () => void;
   onDuplicate: () => void;
   onUnpublish: () => void;
   onRestore: () => void;
+  onSave: (patch: CommunityRequestPatch) => Promise<void>;
 }) {
   const open = Boolean(request);
-  const location = request
+  const placeLabel = request
     ? formatPlaceLocation(request.locality, request.city)
     : "";
   const onMap = request?.status === "approved";
+  const approximatePin = request
+    ? communityPinLooksApproximate({
+        maps_url: request.maps_url,
+        latitude: request.latitude,
+        longitude: request.longitude,
+      })
+    : false;
 
   return (
     <>
@@ -394,8 +428,8 @@ function CommunityDrawer({
                 <h2 className="text-xl font-medium leading-tight text-[var(--ink)]">
                   {request.place_name}
                 </h2>
-                {location ? (
-                  <p className="mt-1 text-sm text-[var(--muted)]">{location}</p>
+                {placeLabel ? (
+                  <p className="mt-1 text-sm text-[var(--muted)]">{placeLabel}</p>
                 ) : null}
               </div>
               <button
@@ -408,7 +442,17 @@ function CommunityDrawer({
               </button>
             </div>
 
-            <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
+            <div className="flex-1 overflow-y-auto px-5 py-5">
+              {editing ? (
+                <CommunityEditForm
+                  key={request.id}
+                  request={request}
+                  liveOnMap={onMap}
+                  onCancel={onCancelEdit}
+                  onSave={onSave}
+                />
+              ) : (
+                <div className="space-y-6">
               <div className="flex flex-wrap items-center gap-2">
                 <StatusChip status={request.status} />
                 <span
@@ -420,7 +464,20 @@ function CommunityDrawer({
                 >
                   {onMap ? "On community map" : "Not on map"}
                 </span>
+                {approximatePin ? (
+                  <span className="rounded-md bg-[#fff4e5] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#9a6700]">
+                    Approximate pin
+                  </span>
+                ) : null}
               </div>
+
+              {approximatePin ? (
+                <p className="text-sm leading-relaxed text-[#9a6700]">
+                  This pin could not be read from the Maps link. Edit the request
+                  and paste a Share link, Plus Code, or latitude/longitude before
+                  approving.
+                </p>
+              ) : null}
 
               {request.concern ? (
                 <section>
@@ -451,6 +508,20 @@ function CommunityDrawer({
                   <dt className="text-[var(--muted)]"># of Reports</dt>
                   <dd className="text-[var(--ink)]">{similarCount}</dd>
                 </div>
+                {request.plus_code ? (
+                  <div className="col-span-2">
+                    <dt className="text-[var(--muted)]">Plus Code</dt>
+                    <dd className="text-[var(--ink)]">{request.plus_code}</dd>
+                  </div>
+                ) : null}
+                {request.latitude != null && request.longitude != null ? (
+                  <div className="col-span-2">
+                    <dt className="text-[var(--muted)]">Coordinates</dt>
+                    <dd className="text-[var(--ink)] tabular-nums">
+                      {request.latitude.toFixed(5)}, {request.longitude.toFixed(5)}
+                    </dd>
+                  </div>
+                ) : null}
               </dl>
 
               {request.evidence.length > 0 ? (
@@ -515,8 +586,11 @@ function CommunityDrawer({
                   </a>
                 ) : null}
               </section>
+                </div>
+              )}
             </div>
 
+            {!editing ? (
             <div className="flex flex-wrap gap-2 border-t border-[var(--border)] px-5 py-4">
               {onMap ? (
                 <button
@@ -527,6 +601,13 @@ function CommunityDrawer({
                   Remove from map
                 </button>
               ) : null}
+              <button
+                type="button"
+                onClick={onEdit}
+                className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+              >
+                Edit
+              </button>
               {request.status !== "approved" ? (
                 <button
                   type="button"
@@ -568,6 +649,7 @@ function CommunityDrawer({
                 </button>
               ) : null}
             </div>
+            ) : null}
           </div>
         ) : null}
       </aside>

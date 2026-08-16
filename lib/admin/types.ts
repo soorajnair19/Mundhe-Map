@@ -43,6 +43,7 @@ export interface CommunityRequest {
   status: CommunityRequestStatus;
   place_name: string;
   maps_url: string;
+  plus_code: string | null;
   address: string | null;
   locality: string | null;
   city: string | null;

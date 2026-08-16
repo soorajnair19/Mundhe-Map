@@ -177,9 +177,12 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
                   inputMode="url"
                   required
                   maxLength={500}
-                  placeholder="https://maps.google.com/…"
+                  placeholder="https://maps.app.goo.gl/…"
                   className={inputClass}
                 />
+                <span className="mt-1 block text-[11px] leading-relaxed text-[var(--muted)]">
+                  {COMMUNITY_REQUEST_FIELDS.maps_url.hint}
+                </span>
               </label>
 
               <label className="block text-xs text-[var(--muted)]">

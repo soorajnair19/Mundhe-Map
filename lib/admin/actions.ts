@@ -234,3 +234,28 @@ export async function investigateCommunityRequestAction(
     return { error: persistMessage(error) };
   }
 }
+
+export async function updateCommunityRequestAction(
+  id: string,
+  patch: {
+    place_name: string;
+    maps_url: string;
+    plus_code: string | null;
+    address: string | null;
+    locality: string | null;
+    city: string | null;
+    district: string | null;
+    latitude: number | null;
+    longitude: number | null;
+    concern: string;
+  },
+): Promise<{ error: string | null }> {
+  await assertAdmin();
+  try {
+    await store.updateCommunityRequest(id, patch);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
+}

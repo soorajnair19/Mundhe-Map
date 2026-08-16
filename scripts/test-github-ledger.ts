@@ -22,6 +22,7 @@ async function testCommunityLedgerRoundTrip(): Promise<void> {
     status: "pending",
     place_name: "Ledger connectivity test",
     maps_url: "https://www.google.com/maps/search/?api=1&query=Pune+Maharashtra",
+    plus_code: null,
     address: null,
     locality: "Test locality",
     city: "Pune",

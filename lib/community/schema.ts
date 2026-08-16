@@ -4,6 +4,7 @@ import type { CommunityEvidence } from "@/lib/admin/types";
 export interface CommunityRequestDraft {
   place_name: string;
   maps_url: string;
+  plus_code: string | null;
   address: string | null;
   locality: string | null;
   city: string | null;
@@ -16,7 +17,16 @@ export const COMMUNITY_REQUEST_FIELDS = {
   place_name: { label: "Restaurant name", required: true },
   locality: { label: "Locality", required: true },
   city: { label: "City", required: true },
-  maps_url: { label: "Google Maps link", required: true },
+  plus_code: {
+    label: "Plus Code",
+    hint: "Optional. Paste from Google Maps if the link alone is not precise enough.",
+    required: false,
+  },
+  maps_url: {
+    label: "Google Maps link",
+    hint: "Open the restaurant pin in Google Maps → Share → Copy link (maps.app.goo.gl links are fine). Do not paste a search result.",
+    required: true,
+  },
   concern: { label: "What did you notice?", required: false },
   evidence: { label: "Attach photos", required: false },
 } as const;

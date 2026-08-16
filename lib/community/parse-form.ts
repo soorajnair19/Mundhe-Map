@@ -1,6 +1,8 @@
 import type { CommunityEvidence } from "@/lib/admin/types";
 import type { CommunityRequestDraft } from "@/lib/community/schema";
 import { MAX_PHOTO_BYTES, MAX_PHOTOS } from "@/lib/community/schema";
+import { geocodeApproximate } from "@/lib/data/csv";
+import { mapsUrlHasPrecisePin } from "@/lib/community/coords";
 
 const MAX = {
   place_name: 120,
@@ -9,6 +11,9 @@ const MAX = {
   maps_url: 500,
   concern: 1000,
 } as const;
+
+const MAPS_SHARE_LINK_ERROR =
+  "That link does not include a map pin. Open the restaurant in Google Maps, tap Share, then Copy link — not a search result.";
 
 function read(formData: FormData, key: string, max: number): string {
   return String(formData.get(key) ?? "")
@@ -34,6 +39,19 @@ async function fileToDataUrl(file: File): Promise<string> {
   const buffer = Buffer.from(await file.arrayBuffer());
   const type = file.type || "image/jpeg";
   return `data:${type};base64,${buffer.toString("base64")}`;
+}
+
+function geocodeReference(
+  locality: string | null,
+  city: string | null,
+): { latitude: number; longitude: number } {
+  const geo = geocodeApproximate({
+    id: "community-submit",
+    locality,
+    city,
+    district: city ?? "Maharashtra",
+  });
+  return { latitude: geo.latitude, longitude: geo.longitude };
 }
 
 export async function parseCommunityRequestForm(
@@ -64,6 +82,9 @@ export async function parseCommunityRequestForm(
   if (!isHttpUrl(maps_url)) {
     return { ok: false, error: "Paste a valid Google Maps link." };
   }
+  if (!(await mapsUrlHasPrecisePin(maps_url, geocodeReference(locality, city)))) {
+    return { ok: false, error: MAPS_SHARE_LINK_ERROR };
+  }
   if (photos.length > MAX_PHOTOS) {
     return { ok: false, error: `You can attach up to ${MAX_PHOTOS} photos.` };
   }
@@ -90,6 +111,7 @@ export async function parseCommunityRequestForm(
     draft: {
       place_name,
       maps_url,
+      plus_code: null,
       address: null,
       locality,
       city,
