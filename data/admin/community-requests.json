@@ -1,5 +1,27 @@
 [
   {
+    "id": "req-shreya-bar-restaurant-msw3z60h",
+    "status": "pending",
+    "place_name": "Shreya Bar & Restaurant",
+    "maps_url": "https://maps.app.goo.gl/AFhvca4N6p72bLJ37",
+    "plus_code": null,
+    "address": null,
+    "locality": null,
+    "city": "Shanti Nagar, Thane",
+    "district": "Shanti Nagar, Thane",
+    "latitude": 19.19278,
+    "longitude": 72.9446455,
+    "concern": "Lack of Hygiene",
+    "evidence": [],
+    "submitted_at": "2026-08-16T17:58:33.258Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  },
+  {
     "id": "req-shreya-bar-restaurant-msw1a18c",
     "status": "rejected",
     "place_name": "Shreya Bar & Restaurant",
