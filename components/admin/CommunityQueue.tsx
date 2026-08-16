@@ -82,6 +82,7 @@ export function CommunityQueue({
   const [notes, setNotes] = useState("");
   const [duplicateOf, setDuplicateOf] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
 
   const pendingCount = requests.filter((item) => item.status === "pending").length;
 
@@ -118,20 +119,26 @@ export function CommunityQueue({
   async function runConfirm() {
     if (!targetId || !confirm) return;
     setPending(true);
+    setActionError(null);
     try {
-      if (confirm === "approve") await approveCommunityRequestAction(targetId);
+      let result: { error: string | null } = { error: null };
+      if (confirm === "approve") result = await approveCommunityRequestAction(targetId);
       if (confirm === "reject") {
-        await rejectCommunityRequestAction(targetId, reason, notes || null);
+        result = await rejectCommunityRequestAction(targetId, reason, notes || null);
       }
       if (confirm === "unpublish") {
-        await unpublishCommunityRequestAction(targetId);
+        result = await unpublishCommunityRequestAction(targetId);
       }
       if (confirm === "restore") {
-        await restoreCommunityRequestAction(targetId);
+        result = await restoreCommunityRequestAction(targetId);
       }
       if (confirm === "duplicate") {
         if (!duplicateOf) return;
-        await markCommunityRequestDuplicateAction(targetId, duplicateOf);
+        result = await markCommunityRequestDuplicateAction(targetId, duplicateOf);
+      }
+      if (result.error) {
+        setActionError(result.error);
+        return;
       }
       setConfirm(null);
       setSelectedId(null);
@@ -155,6 +162,9 @@ export function CommunityQueue({
           <span className="font-medium tabular-nums">{pendingCount}</span>{" "}
           pending
         </p>
+        {actionError ? (
+          <p className="mt-2 text-sm text-[var(--danger,#b42318)]">{actionError}</p>
+        ) : null}
       </header>
 
       <QueueToolbar

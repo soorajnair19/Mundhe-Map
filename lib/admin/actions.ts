@@ -154,51 +154,83 @@ export async function ingestFdaReportsAction(
   }
 }
 
-export async function approveCommunityRequestAction(id: string): Promise<void> {
+export async function approveCommunityRequestAction(
+  id: string,
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.approveCommunityRequest(id);
-  refreshAdmin();
+  try {
+    await store.approveCommunityRequest(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function rejectCommunityRequestAction(
   id: string,
   reason: RejectionReason | null,
   notes: string | null,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.rejectCommunityRequest(id, reason, notes);
-  refreshAdmin();
+  try {
+    await store.rejectCommunityRequest(id, reason, notes);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function unpublishCommunityRequestAction(
   id: string,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.unpublishCommunityRequest(id);
-  refreshAdmin();
+  try {
+    await store.unpublishCommunityRequest(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function restoreCommunityRequestAction(
   id: string,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.restoreCommunityRequest(id);
-  refreshAdmin();
+  try {
+    await store.restoreCommunityRequest(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function markCommunityRequestDuplicateAction(
   id: string,
   duplicateOfPlace: string | null,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.markCommunityRequestDuplicate(id, duplicateOfPlace);
-  refreshAdmin();
+  try {
+    await store.markCommunityRequestDuplicate(id, duplicateOfPlace);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function investigateCommunityRequestAction(
   id: string,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.investigateCommunityRequest(id);
-  refreshAdmin();
+  try {
+    await store.investigateCommunityRequest(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }

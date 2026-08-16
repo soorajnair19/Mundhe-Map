@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { getClientIp } from "@/lib/admin/auth";
 import { isSubmitLocked, recordSubmit } from "@/lib/admin/rate-limit";
 import { createCommunityRequest } from "@/lib/admin/store";
+import { persistMessageSafe } from "@/lib/admin/persist";
 import { parseCommunityRequestForm } from "@/lib/community/parse-form";
 
 export async function submitCommunityRequestAction(
@@ -24,8 +25,13 @@ export async function submitCommunityRequestAction(
   }
 
   recordSubmit(ip);
-  createCommunityRequest(parsed.draft);
-  revalidatePath("/admin");
-  revalidatePath("/admin/community-requests");
-  return { error: null, ok: true };
+  try {
+    await createCommunityRequest(parsed.draft);
+    revalidatePath("/");
+    revalidatePath("/admin");
+    revalidatePath("/admin/community-requests");
+    return { error: null, ok: true };
+  } catch (error) {
+    return { error: persistMessageSafe(error), ok: false };
+  }
 }

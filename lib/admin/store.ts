@@ -11,7 +11,12 @@ import type { CommunityRequestDraft } from "@/lib/community/schema";
 import { resolveCommunityCoordinates } from "@/lib/community/coords";
 import { geocodeApproximate } from "@/lib/data/csv";
 import { normalizeName } from "@/lib/data/normalize";
-import { loadFdaLedger, saveFdaLedger } from "@/lib/admin/persist";
+import {
+  loadCommunityLedger,
+  loadFdaLedger,
+  saveCommunityLedger,
+  saveFdaLedger,
+} from "@/lib/admin/persist";
 import { isDuplicateReport, existingFdaKeys } from "@/lib/ingest/run";
 import type {
   CommunityRequest,
@@ -23,7 +28,7 @@ import type {
   RejectionReason,
 } from "@/lib/admin/types";
 
-const STORE_VERSION = 4;
+const STORE_VERSION = 5;
 
 interface AdminStore {
   version: number;
@@ -31,6 +36,8 @@ interface AdminStore {
   communityRequests: CommunityRequest[];
   fdaMtime: number;
   fdaSha: string | null;
+  communityMtime: number;
+  communitySha: string | null;
 }
 
 const globalStore = globalThis as typeof globalThis & {
@@ -44,6 +51,8 @@ function cloneStore(): AdminStore {
     communityRequests: structuredClone(communitySeed) as CommunityRequest[],
     fdaMtime: 0,
     fdaSha: null,
+    communityMtime: 0,
+    communitySha: null,
   };
 }
 
@@ -64,6 +73,14 @@ export async function hydrateAdminStore(): Promise<void> {
     store.fdaReports = ledger.reports;
     store.fdaMtime = ledger.mtime;
     store.fdaSha = ledger.sha;
+  } catch {
+    // Keep bundled seed if the living file cannot be read yet.
+  }
+  try {
+    const ledger = await loadCommunityLedger();
+    store.communityRequests = ledger.requests;
+    store.communityMtime = ledger.mtime;
+    store.communitySha = ledger.sha;
   } catch {
     // Keep bundled seed if the living file cannot be read yet.
   }
@@ -142,6 +159,34 @@ async function withFdaPersist<T>(mutate: () => T): Promise<T> {
     store.fdaReports = snapshot;
     store.fdaSha = sha;
     store.fdaMtime = mtime;
+    throw error;
+  }
+}
+
+async function persistCommunityRequests(): Promise<void> {
+  const store = getStore();
+  const saved = await saveCommunityLedger(
+    store.communityRequests,
+    store.communitySha,
+  );
+  store.communityMtime = saved.mtime;
+  store.communitySha = saved.sha;
+}
+
+async function withCommunityPersist<T>(mutate: () => T): Promise<T> {
+  await hydrateAdminStore();
+  const store = getStore();
+  const snapshot = structuredClone(store.communityRequests);
+  const sha = store.communitySha;
+  const mtime = store.communityMtime;
+  const result = mutate();
+  try {
+    await persistCommunityRequests();
+    return result;
+  } catch (error) {
+    store.communityRequests = snapshot;
+    store.communitySha = sha;
+    store.communityMtime = mtime;
     throw error;
   }
 }
@@ -407,128 +452,146 @@ export async function updateFDAReport(
   });
 }
 
-export function approveCommunityRequest(id: string): CommunityRequest | null {
-  const request = getCommunityRequest(id);
-  if (!request) return null;
-  ensureMappable(request);
-  request.status = "approved";
-  request.rejection_reason = null;
-  request.rejection_notes = null;
-  request.duplicate_of_place = null;
-  return request;
+export async function approveCommunityRequest(
+  id: string,
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(() => {
+    const request = getCommunityRequest(id);
+    if (!request) return null;
+    ensureMappable(request);
+    request.status = "approved";
+    request.rejection_reason = null;
+    request.rejection_notes = null;
+    request.duplicate_of_place = null;
+    return request;
+  });
 }
 
-export function rejectCommunityRequest(
+export async function rejectCommunityRequest(
   id: string,
   reason: RejectionReason | null,
   notes: string | null,
-): CommunityRequest | null {
-  const request = getCommunityRequest(id);
-  if (!request) return null;
-  request.status = "rejected";
-  request.rejection_reason = reason;
-  request.rejection_notes = notes;
-  request.duplicate_of_place = null;
-  return request;
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(() => {
+    const request = getCommunityRequest(id);
+    if (!request) return null;
+    request.status = "rejected";
+    request.rejection_reason = reason;
+    request.rejection_notes = notes;
+    request.duplicate_of_place = null;
+    return request;
+  });
 }
 
-export function unpublishCommunityRequest(
+export async function unpublishCommunityRequest(
   id: string,
-): CommunityRequest | null {
-  const request = getCommunityRequest(id);
-  if (!request) return null;
-  request.status = "pending";
-  request.rejection_reason = null;
-  request.rejection_notes = null;
-  request.duplicate_of_place = null;
-  return request;
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(() => {
+    const request = getCommunityRequest(id);
+    if (!request) return null;
+    request.status = "pending";
+    request.rejection_reason = null;
+    request.rejection_notes = null;
+    request.duplicate_of_place = null;
+    return request;
+  });
 }
 
-export function restoreCommunityRequest(id: string): CommunityRequest | null {
-  const request = getCommunityRequest(id);
-  if (!request) return null;
-  if (request.duplicate_of_place) {
-    const target = findRequestByPlaceId(request.duplicate_of_place);
-    if (target && target.similar_report_count > 1) {
-      target.similar_report_count -= 1;
+export async function restoreCommunityRequest(
+  id: string,
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(() => {
+    const request = getCommunityRequest(id);
+    if (!request) return null;
+    if (request.duplicate_of_place) {
+      const target = findRequestByPlaceId(request.duplicate_of_place);
+      if (target && target.similar_report_count > 1) {
+        target.similar_report_count -= 1;
+      }
     }
-  }
-  request.status = "pending";
-  request.rejection_reason = null;
-  request.rejection_notes = null;
-  request.duplicate_of_place = null;
-  return request;
+    request.status = "pending";
+    request.rejection_reason = null;
+    request.rejection_notes = null;
+    request.duplicate_of_place = null;
+    return request;
+  });
 }
 
-export function markCommunityRequestDuplicate(
+export async function markCommunityRequestDuplicate(
   id: string,
   duplicateOfPlace: string | null,
-): CommunityRequest | null {
-  const request = getCommunityRequest(id);
-  if (!request || !duplicateOfPlace) return null;
-  const target = findRequestByPlaceId(duplicateOfPlace);
-  if (!target) return null;
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(() => {
+    const request = getCommunityRequest(id);
+    if (!request || !duplicateOfPlace) return null;
+    const target = findRequestByPlaceId(duplicateOfPlace);
+    if (!target) return null;
 
-  request.status = "duplicate";
-  request.duplicate_of_place = target.published_place_id ?? target.id;
-  request.rejection_reason = "duplicate";
-  request.rejection_notes = null;
+    request.status = "duplicate";
+    request.duplicate_of_place = target.published_place_id ?? target.id;
+    request.rejection_reason = "duplicate";
+    request.rejection_notes = null;
 
-  target.similar_report_count += 1;
-  return request;
-}
-
-export function investigateCommunityRequest(
-  id: string,
-): CommunityRequest | null {
-  const request = getCommunityRequest(id);
-  if (!request) return null;
-  request.status = "investigating";
-  return request;
-}
-
-export function createCommunityRequest(
-  draft: CommunityRequestDraft,
-): CommunityRequest {
-  const store = getStore();
-  const id = `req-${slugify(draft.place_name)}-${Date.now().toString(36)}`;
-  const key = communityPlaceKey(draft.place_name, draft.city);
-  const similar = store.communityRequests.filter(
-    (request) => communityPlaceKey(request.place_name, request.city) === key,
-  ).length;
-  const coords = resolveCommunityCoordinates({
-    id,
-    maps_url: draft.maps_url,
-    locality: draft.locality,
-    city: draft.city,
-    district: draft.city,
+    target.similar_report_count += 1;
+    return request;
   });
+}
 
-  const request: CommunityRequest = {
-    id,
-    status: "pending",
-    place_name: draft.place_name,
-    maps_url: draft.maps_url,
-    address: draft.address,
-    locality: draft.locality,
-    city: draft.city,
-    district: draft.city,
-    latitude: coords.latitude,
-    longitude: coords.longitude,
-    concern: draft.concern,
-    evidence: draft.evidence.map((item, index) => ({
-      ...item,
-      id: `${id}-ev-${index + 1}`,
-    })),
-    submitted_at: nowIso(),
-    submitter: draft.submitter,
-    similar_report_count: similar + 1,
-    rejection_reason: null,
-    rejection_notes: null,
-    duplicate_of_place: null,
-    published_place_id: null,
-  };
+export async function investigateCommunityRequest(
+  id: string,
+): Promise<CommunityRequest | null> {
+  return withCommunityPersist(() => {
+    const request = getCommunityRequest(id);
+    if (!request) return null;
+    request.status = "investigating";
+    return request;
+  });
+}
 
-  store.communityRequests.unshift(request);
-  return request;
+export async function createCommunityRequest(
+  draft: CommunityRequestDraft,
+): Promise<CommunityRequest> {
+  return withCommunityPersist(() => {
+    const store = getStore();
+    const id = `req-${slugify(draft.place_name)}-${Date.now().toString(36)}`;
+    const key = communityPlaceKey(draft.place_name, draft.city);
+    const similar = store.communityRequests.filter(
+      (request) => communityPlaceKey(request.place_name, request.city) === key,
+    ).length;
+    const coords = resolveCommunityCoordinates({
+      id,
+      maps_url: draft.maps_url,
+      locality: draft.locality,
+      city: draft.city,
+      district: draft.city,
+    });
+
+    const request: CommunityRequest = {
+      id,
+      status: "pending",
+      place_name: draft.place_name,
+      maps_url: draft.maps_url,
+      address: draft.address,
+      locality: draft.locality,
+      city: draft.city,
+      district: draft.city,
+      latitude: coords.latitude,
+      longitude: coords.longitude,
+      concern: draft.concern,
+      evidence: draft.evidence.map((item, index) => ({
+        ...item,
+        id: `${id}-ev-${index + 1}`,
+      })),
+      submitted_at: nowIso(),
+      submitter: draft.submitter,
+      similar_report_count: similar + 1,
+      rejection_reason: null,
+      rejection_notes: null,
+      duplicate_of_place: null,
+      published_place_id: null,
+    };
+
+    store.communityRequests.unshift(request);
+    return request;
+  });
 }

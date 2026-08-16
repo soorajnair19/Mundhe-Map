@@ -1,8 +1,9 @@
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { FDAReport } from "@/lib/admin/types";
+import type { CommunityRequest, FDAReport } from "@/lib/admin/types";
 
 export const FDA_LEDGER_RELATIVE = "data/admin/pending-fda-reports.json";
+export const COMMUNITY_LEDGER_RELATIVE = "data/admin/community-requests.json";
 
 export class PersistError extends Error {
   constructor(message: string) {
@@ -14,7 +15,7 @@ export class PersistError extends Error {
 export function persistMessageSafe(error: unknown): string {
   if (error instanceof PersistError) return error.message;
   if (error instanceof Error) return error.message;
-  return "Could not save the FDA ledger.";
+  return "Could not save the ledger.";
 }
 
 export interface LedgerSnapshot {
@@ -23,8 +24,38 @@ export interface LedgerSnapshot {
   sha: string | null;
 }
 
-function ledgerPath(): string {
-  return path.join(process.cwd(), FDA_LEDGER_RELATIVE);
+export interface CommunityLedgerSnapshot {
+  requests: CommunityRequest[];
+  mtime: number;
+  sha: string | null;
+}
+
+interface LedgerFileConfig {
+  relativePath: string;
+  ledgerLabel: string;
+  commitMessage: string;
+}
+
+interface GenericLedgerSnapshot<T> {
+  data: T[];
+  mtime: number;
+  sha: string | null;
+}
+
+const FDA_LEDGER: LedgerFileConfig = {
+  relativePath: FDA_LEDGER_RELATIVE,
+  ledgerLabel: "FDA",
+  commitMessage: "chore: update FDA report ledger",
+};
+
+const COMMUNITY_LEDGER: LedgerFileConfig = {
+  relativePath: COMMUNITY_LEDGER_RELATIVE,
+  ledgerLabel: "community",
+  commitMessage: "chore: update community request ledger",
+};
+
+function ledgerPath(relativePath: string): string {
+  return path.join(process.cwd(), relativePath);
 }
 
 function githubRepo(): { owner: string; repo: string } | null {
@@ -55,8 +86,8 @@ function onVercel(): boolean {
   return process.env.VERCEL === "1";
 }
 
-function serialize(reports: FDAReport[]): string {
-  return `${JSON.stringify(reports, null, 2)}\n`;
+function serialize<T>(data: T[]): string {
+  return `${JSON.stringify(data, null, 2)}\n`;
 }
 
 async function githubRequest(
@@ -66,7 +97,7 @@ async function githubRequest(
   const token = githubToken();
   if (!token) {
     throw new PersistError(
-      "FDA_GITHUB_TOKEN is missing. Approvals on Vercel cannot be saved to the living ledger file.",
+      "FDA_GITHUB_TOKEN is missing. Live changes on Vercel cannot be saved to the living ledger file.",
     );
   }
   const response = await fetch(`https://api.github.com${pathname}`, {
@@ -81,7 +112,9 @@ async function githubRequest(
   return response;
 }
 
-async function loadFromGitHub(): Promise<LedgerSnapshot> {
+async function loadFromGitHub<T>(
+  config: LedgerFileConfig,
+): Promise<GenericLedgerSnapshot<T>> {
   const repo = githubRepo();
   if (!repo) {
     throw new PersistError(
@@ -89,12 +122,12 @@ async function loadFromGitHub(): Promise<LedgerSnapshot> {
     );
   }
   const response = await githubRequest(
-    `/repos/${repo.owner}/${repo.repo}/contents/${FDA_LEDGER_RELATIVE}?ref=${encodeURIComponent(githubBranch())}`,
+    `/repos/${repo.owner}/${repo.repo}/contents/${config.relativePath}?ref=${encodeURIComponent(githubBranch())}`,
     { method: "GET", cache: "no-store" },
   );
   if (!response.ok) {
     throw new PersistError(
-      `Could not read FDA ledger from GitHub (${response.status}).`,
+      `Could not read ${config.ledgerLabel} ledger from GitHub (${response.status}).`,
     );
   }
   const body = (await response.json()) as {
@@ -105,14 +138,15 @@ async function loadFromGitHub(): Promise<LedgerSnapshot> {
   const encoded = (body.content ?? "").replace(/\n/g, "");
   const json = Buffer.from(encoded, "base64").toString("utf8");
   return {
-    reports: JSON.parse(json) as FDAReport[],
+    data: JSON.parse(json) as T[],
     mtime: Date.now(),
     sha: body.sha ?? null,
   };
 }
 
-async function saveToGitHub(
-  reports: FDAReport[],
+async function saveToGitHub<T>(
+  config: LedgerFileConfig,
+  data: T[],
   sha: string | null,
   attempt = 0,
 ): Promise<string> {
@@ -122,13 +156,13 @@ async function saveToGitHub(
       "Set FDA_GITHUB_REPO (owner/name) so the living ledger can be saved on Vercel.",
     );
   }
-  const content = Buffer.from(serialize(reports), "utf8").toString("base64");
+  const content = Buffer.from(serialize(data), "utf8").toString("base64");
   const response = await githubRequest(
-    `/repos/${repo.owner}/${repo.repo}/contents/${FDA_LEDGER_RELATIVE}`,
+    `/repos/${repo.owner}/${repo.repo}/contents/${config.relativePath}`,
     {
       method: "PUT",
       body: JSON.stringify({
-        message: "chore: update FDA report ledger",
+        message: config.commitMessage,
         content,
         sha: sha ?? undefined,
         branch: githubBranch(),
@@ -136,52 +170,89 @@ async function saveToGitHub(
     },
   );
   if (response.status === 409 && attempt < 1) {
-    const latest = await loadFromGitHub();
-    return saveToGitHub(reports, latest.sha, attempt + 1);
+    const latest = await loadFromGitHub<T>(config);
+    return saveToGitHub(config, data, latest.sha, attempt + 1);
   }
   if (!response.ok) {
     const detail = await response.text();
     throw new PersistError(
-      `Could not save FDA ledger to GitHub (${response.status}). ${detail.slice(0, 200)}`,
+      `Could not save ${config.ledgerLabel} ledger to GitHub (${response.status}). ${detail.slice(0, 200)}`,
     );
   }
   const body = (await response.json()) as { content?: { sha?: string } };
   return body.content?.sha ?? sha ?? "";
 }
 
-async function loadFromDisk(): Promise<LedgerSnapshot> {
-  const file = ledgerPath();
+async function loadFromDisk<T>(
+  config: LedgerFileConfig,
+): Promise<GenericLedgerSnapshot<T>> {
+  const file = ledgerPath(config.relativePath);
   const [raw, info] = await Promise.all([readFile(file, "utf8"), stat(file)]);
   return {
-    reports: JSON.parse(raw) as FDAReport[],
+    data: JSON.parse(raw) as T[],
     mtime: info.mtimeMs,
     sha: null,
   };
 }
 
-export async function loadFdaLedger(): Promise<LedgerSnapshot> {
+async function loadLedger<T>(
+  config: LedgerFileConfig,
+): Promise<GenericLedgerSnapshot<T>> {
   if (onVercel() && githubToken()) {
     try {
-      return await loadFromGitHub();
+      return await loadFromGitHub<T>(config);
     } catch {
-      return loadFromDisk();
+      return loadFromDisk<T>(config);
     }
   }
-  return loadFromDisk();
+  return loadFromDisk<T>(config);
+}
+
+async function saveLedger<T>(
+  config: LedgerFileConfig,
+  data: T[],
+  sha: string | null,
+): Promise<{ mtime: number; sha: string | null }> {
+  if (onVercel()) {
+    const nextSha = await saveToGitHub(config, data, sha);
+    return { mtime: Date.now(), sha: nextSha };
+  }
+
+  const file = ledgerPath(config.relativePath);
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, serialize(data), "utf8");
+  const info = await stat(file);
+  return { mtime: info.mtimeMs, sha };
+}
+
+export async function loadFdaLedger(): Promise<LedgerSnapshot> {
+  const snapshot = await loadLedger<FDAReport>(FDA_LEDGER);
+  return {
+    reports: snapshot.data,
+    mtime: snapshot.mtime,
+    sha: snapshot.sha,
+  };
 }
 
 export async function saveFdaLedger(
   reports: FDAReport[],
   sha: string | null,
 ): Promise<{ mtime: number; sha: string | null }> {
-  if (onVercel()) {
-    const nextSha = await saveToGitHub(reports, sha);
-    return { mtime: Date.now(), sha: nextSha };
-  }
+  return saveLedger(FDA_LEDGER, reports, sha);
+}
 
-  const file = ledgerPath();
-  await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(file, serialize(reports), "utf8");
-  const info = await stat(file);
-  return { mtime: info.mtimeMs, sha };
+export async function loadCommunityLedger(): Promise<CommunityLedgerSnapshot> {
+  const snapshot = await loadLedger<CommunityRequest>(COMMUNITY_LEDGER);
+  return {
+    requests: snapshot.data,
+    mtime: snapshot.mtime,
+    sha: snapshot.sha,
+  };
+}
+
+export async function saveCommunityLedger(
+  requests: CommunityRequest[],
+  sha: string | null,
+): Promise<{ mtime: number; sha: string | null }> {
+  return saveLedger(COMMUNITY_LEDGER, requests, sha);
 }

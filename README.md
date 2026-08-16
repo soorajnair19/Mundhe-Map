@@ -42,7 +42,9 @@ Copy [`.env.example`](.env.example) to `.env.local` and set `ADMIN_PIN` (4 digit
 
 FDA reports live in [`data/admin/pending-fda-reports.json`](data/admin/pending-fda-reports.json). That file is a living ledger: ingest **appends** new pending rows, and approve/reject change a row in place. Earlier approved cases stay. Approved FDA reports are shown on the public map on top of the curated [`data/seed/cases.json`](data/seed/cases.json) set.
 
-Locally, review actions write that JSON file on disk. On Vercel, set `CRON_SECRET`, `FDA_GITHUB_TOKEN` (repo contents write), and `FDA_GITHUB_REPO` (`owner/name`) so approve/reject/ingest commit the same file back to GitHub. Without the token, live admin actions are refused rather than saved only in memory.
+Community requests live in [`data/admin/community-requests.json`](data/admin/community-requests.json) the same way: public submissions append pending rows, and approve/reject/unpublish update that ledger. Approved requests appear on the Community map layer.
+
+Locally, review actions write those JSON files on disk. On Vercel, set `CRON_SECRET`, `FDA_GITHUB_TOKEN` (repo contents write), and `FDA_GITHUB_REPO` (`owner/name`) so FDA and community approve/reject/submit actions commit the same files back to GitHub. Without the token, live admin actions are refused rather than saved only in memory.
 
 ## Daily FDA ingest
 
