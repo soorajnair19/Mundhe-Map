@@ -70,12 +70,37 @@ function githubRepo(): { owner: string; repo: string } | null {
   return null;
 }
 
-function githubBranch(): string {
-  return (
-    process.env.FDA_GITHUB_BRANCH?.trim() ||
-    process.env.VERCEL_GIT_COMMIT_REF?.trim() ||
-    "main"
-  );
+function isCommitSha(ref: string): boolean {
+  return /^[0-9a-f]{40}$/i.test(ref);
+}
+
+function githubWriteBranch(): string {
+  const explicit = process.env.FDA_GITHUB_BRANCH?.trim();
+  if (explicit && !isCommitSha(explicit)) return explicit;
+
+  const vercelRef = process.env.VERCEL_GIT_COMMIT_REF?.trim();
+  if (vercelRef && !isCommitSha(vercelRef)) return vercelRef;
+
+  return "main";
+}
+
+function githubReadRef(): string {
+  const explicit = process.env.FDA_GITHUB_BRANCH?.trim();
+  if (explicit) return explicit;
+
+  const vercelSha = process.env.VERCEL_GIT_COMMIT_SHA?.trim();
+  if (vercelSha) return vercelSha;
+
+  const vercelRef = process.env.VERCEL_GIT_COMMIT_REF?.trim();
+  if (vercelRef) return vercelRef;
+
+  return "main";
+}
+
+function githubTarget(config: LedgerFileConfig): string {
+  const repo = githubRepo();
+  if (!repo) return config.relativePath;
+  return `${repo.owner}/${repo.repo}@${githubWriteBranch()}/${config.relativePath}`;
 }
 
 function githubToken(): string | null {
@@ -122,12 +147,12 @@ async function loadFromGitHub<T>(
     );
   }
   const response = await githubRequest(
-    `/repos/${repo.owner}/${repo.repo}/contents/${config.relativePath}?ref=${encodeURIComponent(githubBranch())}`,
+    `/repos/${repo.owner}/${repo.repo}/contents/${config.relativePath}?ref=${encodeURIComponent(githubReadRef())}`,
     { method: "GET", cache: "no-store" },
   );
   if (!response.ok) {
     throw new PersistError(
-      `Could not read ${config.ledgerLabel} ledger from GitHub (${response.status}).`,
+      `Could not read ${config.ledgerLabel} ledger from GitHub (${response.status}) at ${githubTarget(config)}.`,
     );
   }
   const body = (await response.json()) as {
@@ -144,6 +169,17 @@ async function loadFromGitHub<T>(
   };
 }
 
+async function resolveGitHubSha<T>(
+  config: LedgerFileConfig,
+): Promise<string | null> {
+  try {
+    const latest = await loadFromGitHub<T>(config);
+    return latest.sha;
+  } catch {
+    return null;
+  }
+}
+
 async function saveToGitHub<T>(
   config: LedgerFileConfig,
   data: T[],
@@ -156,6 +192,12 @@ async function saveToGitHub<T>(
       "Set FDA_GITHUB_REPO (owner/name) so the living ledger can be saved on Vercel.",
     );
   }
+
+  let nextSha = sha;
+  if (!nextSha) {
+    nextSha = await resolveGitHubSha<T>(config);
+  }
+
   const content = Buffer.from(serialize(data), "utf8").toString("base64");
   const response = await githubRequest(
     `/repos/${repo.owner}/${repo.repo}/contents/${config.relativePath}`,
@@ -164,23 +206,27 @@ async function saveToGitHub<T>(
       body: JSON.stringify({
         message: config.commitMessage,
         content,
-        sha: sha ?? undefined,
-        branch: githubBranch(),
+        sha: nextSha ?? undefined,
+        branch: githubWriteBranch(),
       }),
     },
   );
-  if (response.status === 409 && attempt < 1) {
-    const latest = await loadFromGitHub<T>(config);
-    return saveToGitHub(config, data, latest.sha, attempt + 1);
+  if ((response.status === 409 || response.status === 422) && attempt < 1) {
+    const latestSha = await resolveGitHubSha<T>(config);
+    return saveToGitHub(config, data, latestSha, attempt + 1);
   }
   if (!response.ok) {
     const detail = await response.text();
+    const hint =
+      response.status === 404
+        ? ` Check FDA_GITHUB_REPO (use soorajnair19/Mundhe-Map), FDA_GITHUB_BRANCH=main, and that FDA_GITHUB_TOKEN has Contents read/write on that repo. Target: ${githubTarget(config)}.`
+        : "";
     throw new PersistError(
-      `Could not save ${config.ledgerLabel} ledger to GitHub (${response.status}). ${detail.slice(0, 200)}`,
+      `Could not save ${config.ledgerLabel} ledger to GitHub (${response.status}) at ${githubTarget(config)}.${hint} ${detail.slice(0, 200)}`,
     );
   }
   const body = (await response.json()) as { content?: { sha?: string } };
-  return body.content?.sha ?? sha ?? "";
+  return body.content?.sha ?? nextSha ?? "";
 }
 
 async function loadFromDisk<T>(
