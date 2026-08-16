@@ -1,7 +1,7 @@
 [
   {
     "id": "req-https-maps-app-goo-gl-diu7pgipndtukxdm6-msw0jtmq",
-    "status": "pending",
+    "status": "approved",
     "place_name": "https://maps.app.goo.gl/diu7PgiPnDtuKXdm6",
     "maps_url": "https://maps.app.goo.gl/diu7PgiPnDtuKXdm6",
     "address": null,
@@ -18,6 +18,6 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-https-maps-app-goo-gl-diu7pgipndtukxdm6-msw0jtmq"
   }
 ]
