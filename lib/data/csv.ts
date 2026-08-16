@@ -57,6 +57,10 @@ const LOCALITY_COORDS: Record<string, [number, number]> = {
   "cidco|nashik": [19.973, 73.764],
   "dindori|nashik": [20.17, 73.82],
   "malkapur|karad": [17.289, 74.181],
+  "midc|beed": [18.99, 75.76],
+  "old mondha|majalgaon": [19.1556, 76.2169],
+  "wadvani|beed": [18.983, 76.05],
+  "wadwani|beed": [18.983, 76.05],
 };
 
 const CITY_COORDS: Record<string, [number, number]> = {
@@ -65,6 +69,11 @@ const CITY_COORDS: Record<string, [number, number]> = {
   nashik: [19.9975, 73.7898],
   solapur: [17.6599, 75.9064],
   karad: [17.289, 74.181],
+  beed: [18.99, 75.76],
+  majalgaon: [19.1556, 76.2169],
+  wadvani: [18.983, 76.05],
+  wadwani: [18.983, 76.05],
+  vadwani: [18.983, 76.05],
 };
 
 const DISTRICT_COORDS: Record<string, [number, number]> = {
@@ -74,6 +83,7 @@ const DISTRICT_COORDS: Record<string, [number, number]> = {
   nashik: [19.9975, 73.7898],
   solapur: [17.6599, 75.9064],
   satara: [17.6805, 74.0183],
+  beed: [18.99, 75.76],
 };
 
 function key(value: string | null | undefined): string {

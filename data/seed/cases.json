@@ -899,6 +899,96 @@
       "business_type": "restaurant",
       "created_at": "2026-08-14T12:00:00+05:30",
       "updated_at": "2026-08-14T12:00:00+05:30"
+    },
+    {
+      "id": "swagat-oil-industries-beed",
+      "name": "Swagat Oil Industries",
+      "normalized_name": "swagat oil industries",
+      "address": null,
+      "locality": "MIDC",
+      "district": "Beed",
+      "city": "Beed",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.98946,
+      "longitude": 75.76024,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Swagat+Oil+Industries+Beed+Maharashtra",
+      "business_type": "manufacturer",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "charkha-oil-mill-beed",
+      "name": "Charkha Oil Mill",
+      "normalized_name": "charkha oil mill",
+      "address": null,
+      "locality": "MIDC",
+      "district": "Beed",
+      "city": "Beed",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.98856,
+      "longitude": 75.7606,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Charkha+Oil+Mill+Beed+Maharashtra",
+      "business_type": "manufacturer",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "jai-hanuman-traders-wadvani",
+      "name": "Jai Hanuman Traders",
+      "normalized_name": "jai hanuman traders",
+      "address": null,
+      "locality": "Wadvani",
+      "district": "Beed",
+      "city": "Wadvani",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.98246,
+      "longitude": 76.05096,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Jai+Hanuman+Traders+Wadvani+Beed+Maharashtra",
+      "business_type": "retailer",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "janvi-commercial-majalgaon",
+      "name": "Janvi Commercial",
+      "normalized_name": "janvi commercial",
+      "address": null,
+      "locality": "Old Mondha",
+      "district": "Beed",
+      "city": "Majalgaon",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.15488,
+      "longitude": 76.21738,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Janvi+Commercial+Majalgaon+Beed+Maharashtra",
+      "business_type": "retailer",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "vinayak-oil-mill-majalgaon",
+      "name": "Vinayak Oil Mill",
+      "normalized_name": "vinayak oil mill",
+      "address": null,
+      "locality": "Old Mondha",
+      "district": "Beed",
+      "city": "Majalgaon",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.15686,
+      "longitude": 76.21702,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Vinayak+Oil+Mill+Majalgaon+Beed+Maharashtra",
+      "business_type": "manufacturer",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -4192,6 +4282,456 @@
           "status": "licence_suspended",
           "effective_date": "2026-08-14",
           "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-swagat-oil-industries-beed",
+      "establishment_id": "swagat-oil-industries-beed",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-06",
+      "action_date": "2026-08-06",
+      "summary": "The Free Press Journal reported that FDA raided five edible-oil units in Beed district, seizing 1,19,186 kg of food oil worth ₹1.94 crore, then suspended their licences and sealed the premises. NDTV Profit, citing an FDA press note, said 66,653 kg of soybean oil worth ₹1.05 crore was seized at Swagat Oil Industries over alleged misleading Refined and Ultra Refined labels on oil from the same tank, reused tins and unhygienic premises.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-swagat-oil-industries-beed-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-06",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-act-main",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-06",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-swagat-oil-industries-beed-vio-1",
+          "violation_type": "labelling",
+          "description": "soybean oil from the same tank labelled both Refined and Ultra Refined"
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-vio-2",
+          "violation_type": "improper_storage",
+          "description": "large-scale use of reused tins"
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic premises"
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-vio-4",
+          "violation_type": "missing_records",
+          "description": "Certificate of Analysis, food-grade certificates, medical and pest-control records absent"
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-vio-5",
+          "violation_type": "other",
+          "description": "no in-house laboratory or technical personnel"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-swagat-oil-industries-beed-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO",
+          "url": "https://www.freepressjournal.in/mumbai/maharashtra-fda-action-fake-food-oil-worth-194-crore-seized-during-raid-in-beed-5-units-sealed-video",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/india/beed-oil-scam-busted-fda-raids-5-units-seizes-over-1-lakh-kg-substandard-oil-11886345",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-swagat-oil-industries-beed-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-06",
+          "notes": "Raid"
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-06",
+          "notes": "Licence suspended"
+        },
+        {
+          "id": "case-swagat-oil-industries-beed-hist-3",
+          "status": "sealed",
+          "effective_date": "2026-08-06",
+          "notes": "Premises sealed"
+        }
+      ]
+    },
+    {
+      "id": "case-charkha-oil-mill-beed",
+      "establishment_id": "charkha-oil-mill-beed",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-06",
+      "action_date": "2026-08-06",
+      "summary": "The Free Press Journal reported that FDA raided five edible-oil units in Beed district, seizing 1,19,186 kg of food oil worth ₹1.94 crore, then suspended their licences and sealed the premises. NDTV Profit, citing an FDA press note, said 45,995.7 kg of palmolein oil worth ₹78.22 lakh was seized at Charkha Oil Mill over alleged misleading packaging, reused tins and unhygienic conditions.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-charkha-oil-mill-beed-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-06",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-act-main",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-06",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-charkha-oil-mill-beed-vio-1",
+          "violation_type": "labelling",
+          "description": "misleading packaging of palmolein oil"
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-vio-2",
+          "violation_type": "improper_storage",
+          "description": "reused tins"
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic conditions"
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-vio-4",
+          "violation_type": "missing_records",
+          "description": "Certificate of Analysis, food-grade certificates and other required records absent"
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-vio-5",
+          "violation_type": "other",
+          "description": "no in-house laboratory"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-charkha-oil-mill-beed-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO",
+          "url": "https://www.freepressjournal.in/mumbai/maharashtra-fda-action-fake-food-oil-worth-194-crore-seized-during-raid-in-beed-5-units-sealed-video",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/india/beed-oil-scam-busted-fda-raids-5-units-seizes-over-1-lakh-kg-substandard-oil-11886345",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-charkha-oil-mill-beed-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-06",
+          "notes": "Raid"
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-06",
+          "notes": "Licence suspended"
+        },
+        {
+          "id": "case-charkha-oil-mill-beed-hist-3",
+          "status": "sealed",
+          "effective_date": "2026-08-06",
+          "notes": "Premises sealed"
+        }
+      ]
+    },
+    {
+      "id": "case-jai-hanuman-traders-wadvani",
+      "establishment_id": "jai-hanuman-traders-wadvani",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-07",
+      "action_date": "2026-08-07",
+      "summary": "The Free Press Journal reported that FDA raided five edible-oil units in Beed district, seizing 1,19,186 kg of food oil worth ₹1.94 crore, then suspended their licences and sealed the premises. NDTV Profit, citing an FDA press note, said 4,545.2 kg of edible oil worth ₹7.25 lakh was seized at Jai Hanuman Traders in Wadvani over alleged reused tins, unhygienic conditions and improper labelling of storage tanks.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-jai-hanuman-traders-wadvani-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-07",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-act-main",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-07",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-jai-hanuman-traders-wadvani-vio-1",
+          "violation_type": "improper_storage",
+          "description": "reused tins"
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic conditions"
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-vio-3",
+          "violation_type": "labelling",
+          "description": "improper labelling of storage tanks"
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-vio-4",
+          "violation_type": "missing_records",
+          "description": "Certificate of Analysis, food-grade certificates, medical and pest-control records absent"
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-vio-5",
+          "violation_type": "other",
+          "description": "no in-house laboratory"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-jai-hanuman-traders-wadvani-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO",
+          "url": "https://www.freepressjournal.in/mumbai/maharashtra-fda-action-fake-food-oil-worth-194-crore-seized-during-raid-in-beed-5-units-sealed-video",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/india/beed-oil-scam-busted-fda-raids-5-units-seizes-over-1-lakh-kg-substandard-oil-11886345",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-jai-hanuman-traders-wadvani-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-07",
+          "notes": "Raid"
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-07",
+          "notes": "Licence suspended"
+        },
+        {
+          "id": "case-jai-hanuman-traders-wadvani-hist-3",
+          "status": "sealed",
+          "effective_date": "2026-08-07",
+          "notes": "Premises sealed"
+        }
+      ]
+    },
+    {
+      "id": "case-janvi-commercial-majalgaon",
+      "establishment_id": "janvi-commercial-majalgaon",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-07",
+      "action_date": "2026-08-07",
+      "summary": "The Free Press Journal reported that FDA raided five edible-oil units in Beed district, seizing 1,19,186 kg of food oil worth ₹1.94 crore, then suspended their licences and sealed the premises. NDTV Profit, citing an FDA press note, said 1,746 kg of loose refined soybean oil worth ₹2.79 lakh was seized at Janvi Commercial in Majalgaon over alleged unsafe storage of unlabelled loose oil.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-janvi-commercial-majalgaon-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-07",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-janvi-commercial-majalgaon-act-main",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-07",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-janvi-commercial-majalgaon-vio-1",
+          "violation_type": "improper_storage",
+          "description": "unlabelled loose oil stored unsafely"
+        },
+        {
+          "id": "case-janvi-commercial-majalgaon-vio-2",
+          "violation_type": "missing_records",
+          "description": "batch numbers and Certificate of Analysis absent"
+        },
+        {
+          "id": "case-janvi-commercial-majalgaon-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic storage tanks"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-janvi-commercial-majalgaon-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO",
+          "url": "https://www.freepressjournal.in/mumbai/maharashtra-fda-action-fake-food-oil-worth-194-crore-seized-during-raid-in-beed-5-units-sealed-video",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-janvi-commercial-majalgaon-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/india/beed-oil-scam-busted-fda-raids-5-units-seizes-over-1-lakh-kg-substandard-oil-11886345",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-janvi-commercial-majalgaon-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-07",
+          "notes": "Raid"
+        },
+        {
+          "id": "case-janvi-commercial-majalgaon-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-07",
+          "notes": "Licence suspended"
+        },
+        {
+          "id": "case-janvi-commercial-majalgaon-hist-3",
+          "status": "sealed",
+          "effective_date": "2026-08-07",
+          "notes": "Premises sealed"
+        }
+      ]
+    },
+    {
+      "id": "case-vinayak-oil-mill-majalgaon",
+      "establishment_id": "vinayak-oil-mill-majalgaon",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": "2026-08-07",
+      "action_date": "2026-08-07",
+      "summary": "The Free Press Journal reported that FDA raided five edible-oil units in Beed district, seizing 1,19,186 kg of food oil worth ₹1.94 crore, then suspended their licences and sealed the premises. NDTV Profit, citing an FDA press note, said 248 kg of loose refined soybean oil worth ₹39,680 was seized at Vinayak Oil Mill in Majalgaon over alleged unsafe storage, reused tins and missing records.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-07",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-act-main",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-07",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-vio-1",
+          "violation_type": "improper_storage",
+          "description": "unsafe storage of loose oil"
+        },
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-vio-2",
+          "violation_type": "other",
+          "description": "reused tins"
+        },
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-vio-3",
+          "violation_type": "missing_records",
+          "description": "required records absent"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO",
+          "url": "https://www.freepressjournal.in/mumbai/maharashtra-fda-action-fake-food-oil-worth-194-crore-seized-during-raid-in-beed-5-units-sealed-video",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/india/beed-oil-scam-busted-fda-raids-5-units-seizes-over-1-lakh-kg-substandard-oil-11886345",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-07",
+          "notes": "Raid"
+        },
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-07",
+          "notes": "Licence suspended"
+        },
+        {
+          "id": "case-vinayak-oil-mill-majalgaon-hist-3",
+          "status": "sealed",
+          "effective_date": "2026-08-07",
+          "notes": "Premises sealed"
         }
       ]
     }
