@@ -74,12 +74,14 @@ function PanelContent({
           Community report
         </div>
 
-        <section>
-          <h3 className="text-xs text-[var(--muted)]">Concern</h3>
-          <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
-            {place.concern}
-          </p>
-        </section>
+        {place.concern ? (
+          <section>
+            <h3 className="text-xs text-[var(--muted)]">Concern</h3>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
+              {place.concern}
+            </p>
+          </section>
+        ) : null}
 
         {place.address ? (
           <section>

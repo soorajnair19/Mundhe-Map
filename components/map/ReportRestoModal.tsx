@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  startTransition,
   useActionState,
   useEffect,
   useId,
@@ -11,7 +12,7 @@ import {
   type DragEvent,
   type FormEvent,
 } from "react";
-import { ImagePlus, X } from "lucide-react";
+import { Check, ImagePlus, X } from "lucide-react";
 import { submitCommunityRequestAction } from "@/lib/community/actions";
 import {
   COMMUNITY_REQUEST_FIELDS,
@@ -49,25 +50,21 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
     firstFieldRef.current?.focus();
   }, []);
 
-  useEffect(() => {
-    if (!state.ok) return;
-    const timer = window.setTimeout(onClose, 1800);
-    return () => window.clearTimeout(timer);
-  }, [state.ok, onClose]);
-
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     for (const photo of photos) {
       formData.append("photos", photo);
     }
-    formAction(formData);
+    startTransition(() => {
+      formAction(formData);
+    });
   }
 
   return (
     <div
       className="fixed inset-0 z-[70] flex items-end justify-center bg-[rgba(15,23,22,0.36)] px-4 py-6 sm:items-center"
-      onClick={onClose}
+      onClick={state.ok ? undefined : onClose}
     >
       <div
         role="dialog"
@@ -100,10 +97,25 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
         </div>
 
         {state.ok ? (
-          <p className="px-5 py-6 text-sm text-[var(--ink)]" role="status">
-            Thanks. It is in the review queue and will not appear on the public
-            map until it is approved.
-          </p>
+          <div className="flex flex-col items-center px-5 py-10 text-center">
+            <div
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e4f1ec] text-[var(--accent)]"
+              aria-hidden
+            >
+              <Check size={26} strokeWidth={2.5} />
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-[var(--ink)]" role="status">
+              Thanks for the submission. It is in the review queue and will
+              appear on the public community map once approved.
+            </p>
+            <button
+              type="button"
+              onClick={onClose}
+              className="mt-6 w-full rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white"
+            >
+              OK
+            </button>
+          </div>
         ) : (
           <form onSubmit={onSubmit} className="flex min-h-0 flex-1 flex-col">
             <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-5 py-4">
@@ -177,9 +189,7 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
                 />
                 <textarea
                   name="concern"
-                  required
                   rows={4}
-                  minLength={12}
                   maxLength={1000}
                   className={`${inputClass} resize-y`}
                 />

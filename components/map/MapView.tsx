@@ -5,7 +5,6 @@ import {
   Map as MapLibreMap,
   Marker,
   NavigationControl,
-  LngLatBounds,
   type MapMouseEvent,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -127,7 +126,6 @@ export function MapView({
   const mapRef = useRef<MapLibreMap | null>(null);
   const markersRef = useRef<Map<string, Marker>>(new Map());
   const onSelectRef = useRef(onSelect);
-  const previousLayerRef = useRef<MapLayer>(layer);
   const [hover, setHover] = useState<HoverState | null>(null);
   const [ready, setReady] = useState(false);
 
@@ -175,13 +173,11 @@ export function MapView({
     const finishSetup = () => {
       if (cancelled || !mapRef.current) return;
       map.resize();
-      if (previousLayerRef.current === "enforcement") {
-        map.fitBounds(MUMBAI_BOUNDS, {
-          padding: 48,
-          maxZoom: 11,
-          duration: 0,
-        });
-      }
+      map.fitBounds(MUMBAI_BOUNDS, {
+        padding: 48,
+        maxZoom: 11,
+        duration: 0,
+      });
       setReady(true);
     };
 
@@ -278,34 +274,9 @@ export function MapView({
   }, [pins, selectedId, ready]);
 
   useEffect(() => {
-    const map = mapRef.current;
-    if (!map || !ready) return;
-
-    const previous = previousLayerRef.current;
-    previousLayerRef.current = layer;
+    if (!ready) return;
     setHover(null);
-
-    if (layer === "community" && places.length > 0) {
-      const bounds = new LngLatBounds();
-      for (const place of places) {
-        bounds.extend([place.longitude, place.latitude]);
-      }
-      map.fitBounds(bounds, {
-        padding: 72,
-        maxZoom: 11,
-        duration: previous === "community" ? 0 : 600,
-      });
-      return;
-    }
-
-    if (previous === "community" && layer === "enforcement") {
-      map.fitBounds(MUMBAI_BOUNDS, {
-        padding: 48,
-        maxZoom: 11,
-        duration: 600,
-      });
-    }
-  }, [layer, places, ready]);
+  }, [layer, ready]);
 
   const hoverPin = hover ? (pinsById.get(hover.pinId) ?? null) : null;
 

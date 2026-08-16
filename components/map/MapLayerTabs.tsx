@@ -5,13 +5,13 @@ import type { MapLayer } from "@/lib/data/types";
 const TABS: { id: MapLayer; label: string; description: string }[] = [
   {
     id: "enforcement",
-    label: "Enforcement",
-    description: "Publicly reported enforcement actions",
+    label: "FDA",
+    description: "Publicly reported FDA actions",
   },
   {
     id: "community",
     label: "Community",
-    description: "Places reported by the public",
+    description: "Places flagged for FDA to inspect",
   },
 ];
 

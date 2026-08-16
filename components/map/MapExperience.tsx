@@ -165,19 +165,34 @@ export function MapExperience() {
             onSelect={setMarkerKind}
           />
         ) : (
-          <div className="absolute bottom-4 left-4 z-10 flex w-[min(100%-2rem,20rem)] flex-col gap-2">
+            <div className="absolute bottom-4 left-4 z-10 flex w-fit max-w-[calc(100%-2rem)] flex-col gap-2">
             <button
               type="button"
               onClick={() => {
                 setSelectedId(null);
                 setReportOpen(true);
               }}
-              className="rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
+              className="w-fit rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
             >
               Report a Resto
             </button>
-            <div className="rounded-md border border-[var(--border)] bg-[var(--panel)]/95 px-2.5 py-2 text-xs text-[var(--muted)] shadow-sm backdrop-blur-sm">
-              Places reported by the public. Not official enforcement actions.
+            <div className="rounded-md border border-[var(--border)] bg-[var(--panel)]/95 px-2.5 py-2 text-xs leading-snug text-[var(--muted)] shadow-sm backdrop-blur-sm">
+              <p className="whitespace-nowrap max-sm:whitespace-normal">
+                Flag restaurants you want FDA to inspect. This is not an official
+                complaint.
+              </p>
+              <p className="whitespace-nowrap max-sm:whitespace-normal">
+                For official reporting, submit a request to FDA{" "}
+                <a
+                  href="https://complaints.mahafda.in/complaint/new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-[var(--accent)] underline underline-offset-2"
+                >
+                  here
+                </a>
+                .
+              </p>
             </div>
           </div>
         )}

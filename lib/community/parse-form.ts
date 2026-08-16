@@ -64,9 +64,6 @@ export async function parseCommunityRequestForm(
   if (!isHttpUrl(maps_url)) {
     return { ok: false, error: "Paste a valid Google Maps link." };
   }
-  if (concern.length < 12) {
-    return { ok: false, error: "Describe what you noticed in a bit more detail." };
-  }
   if (photos.length > MAX_PHOTOS) {
     return { ok: false, error: `You can attach up to ${MAX_PHOTOS} photos.` };
   }

@@ -17,7 +17,7 @@ export const COMMUNITY_REQUEST_FIELDS = {
   locality: { label: "Locality", required: true },
   city: { label: "City", required: true },
   maps_url: { label: "Google Maps link", required: true },
-  concern: { label: "What did you notice?", required: true },
+  concern: { label: "What did you notice?", required: false },
   evidence: { label: "Attach photos", required: false },
 } as const;
 

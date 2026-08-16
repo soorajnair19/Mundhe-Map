@@ -175,9 +175,11 @@ export function CommunityQueue({
                   ) : null}
                 </div>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">
-                “{request.concern}”
-              </p>
+              {request.concern ? (
+                <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">
+                  “{request.concern}”
+                </p>
+              ) : null}
               <p className="mt-2 text-xs text-[var(--muted)]">
                 Submitted {formatDisplayDate(request.submitted_at)}
               </p>
@@ -333,12 +335,14 @@ function CommunityDrawer({
             <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
               <StatusChip status={request.status} />
 
-              <section>
-                <h3 className="text-xs text-[var(--muted)]">Concern</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
-                  {request.concern}
-                </p>
-              </section>
+              {request.concern ? (
+                <section>
+                  <h3 className="text-xs text-[var(--muted)]">Concern</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
+                    {request.concern}
+                  </p>
+                </section>
+              ) : null}
 
               {request.address ? (
                 <section>
