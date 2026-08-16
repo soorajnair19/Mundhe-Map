@@ -22,7 +22,9 @@ export function CommunityDetailContent({
   canPrev?: boolean;
   canNext?: boolean;
 }) {
-  const location = [place.locality, place.city].filter(Boolean).join(", ");
+  const location =
+    [...new Set([place.locality, place.city].filter(Boolean))].join(", ") ||
+    place.district;
 
   return (
     <div className="flex h-full flex-col">
@@ -44,7 +46,6 @@ export function CommunityDetailContent({
           {location ? (
             <p className="mt-1 text-sm text-[var(--muted)]">{location}</p>
           ) : null}
-          <p className="text-sm text-[var(--muted)]">{place.district}</p>
         </div>
         <PanelHeaderControls
           onClose={onClose}
