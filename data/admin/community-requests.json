@@ -1,7 +1,7 @@
 [
   {
     "id": "req-shreya-bar-restaurant-msw1a18c",
-    "status": "approved",
+    "status": "rejected",
     "place_name": "Shreya Bar & Restaurant",
     "maps_url": "https://maps.app.goo.gl/AFhvca4N6p72bLJ37",
     "plus_code": null,
@@ -16,7 +16,7 @@
     "submitted_at": "2026-08-16T16:43:01.420Z",
     "submitter": null,
     "similar_report_count": 1,
-    "rejection_reason": null,
+    "rejection_reason": "insufficient_evidence",
     "rejection_notes": null,
     "duplicate_of_place": null,
     "published_place_id": "place-shreya-bar-restaurant-msw1a18c"
