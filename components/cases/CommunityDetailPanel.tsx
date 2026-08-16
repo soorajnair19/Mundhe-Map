@@ -2,47 +2,25 @@
 
 import type { CommunityPlace } from "@/lib/data/types";
 import { formatDisplayDate } from "@/lib/data/normalize";
-import { ArrowUpRight, Flag, X } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Flag } from "lucide-react";
+import { PanelHeaderControls } from "@/components/map/PanelHeaderControls";
 
-interface CommunityDetailPanelProps {
-  place: CommunityPlace | null;
-  onClose: () => void;
-}
-
-export function CommunityDetailPanel({
+export function CommunityDetailContent({
   place,
   onClose,
-}: CommunityDetailPanelProps) {
-  const open = Boolean(place);
-
-  return (
-    <>
-      <div
-        className={`fixed inset-0 z-40 bg-[rgba(15,23,22,0.28)] transition-opacity duration-200 md:hidden ${
-          open ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
-        onClick={onClose}
-        aria-hidden={!open}
-      />
-      <aside
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[420px] flex-col border-l border-[var(--border)] bg-[var(--panel)] shadow-[-12px_0_40px_rgba(15,23,22,0.08)] transition-transform duration-300 ease-out ${
-          open ? "translate-x-0" : "pointer-events-none translate-x-full"
-        }`}
-        aria-hidden={!open}
-        aria-label="Reported place details"
-      >
-        {place ? <PanelContent place={place} onClose={onClose} /> : null}
-      </aside>
-    </>
-  );
-}
-
-function PanelContent({
-  place,
-  onClose,
+  onBack,
+  onPrev,
+  onNext,
+  canPrev,
+  canNext,
 }: {
   place: CommunityPlace;
   onClose: () => void;
+  onBack?: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  canPrev?: boolean;
+  canNext?: boolean;
 }) {
   const location = [place.locality, place.city].filter(Boolean).join(", ");
 
@@ -50,6 +28,16 @@ function PanelContent({
     <div className="flex h-full flex-col">
       <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
         <div>
+          {onBack ? (
+            <button
+              type="button"
+              onClick={onBack}
+              className="mb-2 inline-flex items-center gap-1 text-xs text-[var(--muted)] transition hover:text-[var(--ink)]"
+            >
+              <ArrowLeft size={14} strokeWidth={2} aria-hidden />
+              Back to list
+            </button>
+          ) : null}
           <h2 className="text-xl font-medium leading-tight text-[var(--ink)]">
             {place.place_name}
           </h2>
@@ -58,14 +46,13 @@ function PanelContent({
           ) : null}
           <p className="text-sm text-[var(--muted)]">{place.district}</p>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="-mr-1.5 rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)]"
-          aria-label="Close panel"
-        >
-          <X size={18} strokeWidth={2} />
-        </button>
+        <PanelHeaderControls
+          onClose={onClose}
+          onPrev={onPrev}
+          onNext={onNext}
+          canPrev={canPrev}
+          canNext={canNext}
+        />
       </div>
 
       <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">

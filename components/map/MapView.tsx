@@ -278,6 +278,26 @@ export function MapView({
     setHover(null);
   }, [layer, ready]);
 
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready || !selectedId) return;
+
+    const pin = pinsById.get(selectedId);
+    if (!pin) return;
+
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+    const zoom = Math.min(13, MAHARASHTRA_MAX_ZOOM);
+
+    map.easeTo({
+      center: [pin.longitude, pin.latitude],
+      zoom,
+      duration: 700,
+      padding: isDesktop
+        ? { top: 80, bottom: 140, left: 48, right: 440 }
+        : { top: 64, bottom: 64, left: 32, right: 32 },
+    });
+  }, [selectedId, ready, pinsById]);
+
   const hoverPin = hover ? (pinsById.get(hover.pinId) ?? null) : null;
 
   return (

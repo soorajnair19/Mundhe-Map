@@ -5,11 +5,20 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { MapView } from "@/components/map/MapView";
 import { MapLayerTabs } from "@/components/map/MapLayerTabs";
 import { ReportRestoModal } from "@/components/map/ReportRestoModal";
-import { CaseDetailPanel } from "@/components/cases/CaseDetailPanel";
-import { CommunityDetailPanel } from "@/components/cases/CommunityDetailPanel";
+import {
+  MapSidePanel,
+  type FilterResultItem,
+  type ListStatusFilter,
+} from "@/components/map/MapSidePanel";
 import { LegendFilter } from "@/components/filters/LegendFilter";
 import { StatsBar } from "@/components/stats/StatsBar";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import {
+  MARKER_STYLES,
+  pinAccent,
+  type MarkerKind,
+} from "@/lib/data/status";
+import { formatStatus } from "@/lib/data/normalize";
 import {
   computeCommunityStats,
   computeStats,
@@ -59,8 +68,16 @@ export function MapExperience({
   );
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [listOpen, setListOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
   const closeReport = useCallback(() => setReportOpen(false), []);
+  const closePanel = useCallback(() => {
+    setSelectedId(null);
+    setListOpen(false);
+  }, []);
+  const backToList = useCallback(() => {
+    setSelectedId(null);
+  }, []);
 
   const selectedCase = useMemo(() => {
     if (layer !== "enforcement" || !selectedId) return null;
@@ -79,6 +96,59 @@ export function MapExperience({
     layer === "community"
       ? (selectedPlace?.id ?? null)
       : (selectedCase?.case.id ?? null);
+  const panelOpen = listOpen || Boolean(activeSelectedId);
+  const statusFilter = useMemo((): ListStatusFilter | null => {
+    if (layer !== "enforcement" || !filters.markerKind) return null;
+    if (!(filters.markerKind in MARKER_STYLES)) return null;
+    const kind = filters.markerKind as MarkerKind;
+    const style = MARKER_STYLES[kind];
+    return {
+      label: style.label,
+      accent: style.color,
+      kind,
+    };
+  }, [layer, filters.markerKind]);
+
+  const listItems = useMemo((): FilterResultItem[] => {
+    if (layer === "community") {
+      return [...communityPlaces]
+        .map((place) => ({
+          id: place.id,
+          name: place.place_name,
+          location: [place.locality, place.city].filter(Boolean).join(", "),
+          district: place.district,
+          statusLabel: "Community report",
+          accent: "#0f6e56",
+          variant: "community" as const,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    return [...filteredCases]
+      .map((mapCase) => ({
+        id: mapCase.case.id,
+        name: mapCase.establishment.name,
+        location: [
+          mapCase.establishment.locality,
+          mapCase.establishment.city,
+        ]
+          .filter(Boolean)
+          .join(", "),
+        district: mapCase.establishment.district,
+        status: mapCase.case.status,
+        statusLabel: formatStatus(mapCase.case.status),
+        accent: pinAccent(mapCase.case.status).pin,
+        variant: "enforcement" as const,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [layer, communityPlaces, filteredCases]);
+
+  const listTitle =
+    layer === "community"
+      ? "Community reports"
+      : filters.markerKind && filters.markerKind in MARKER_STYLES
+        ? MARKER_STYLES[filters.markerKind as MarkerKind].label
+        : "All cases";
 
   const statItems =
     layer === "community"
@@ -116,6 +186,7 @@ export function MapExperience({
   const setLayer = useCallback(
     (next: MapLayer) => {
       setSelectedId(null);
+      setListOpen(next === "community");
       replaceQuery(next, filters);
     },
     [filters, replaceQuery],
@@ -123,6 +194,8 @@ export function MapExperience({
 
   const setMarkerKind = useCallback(
     (markerKind: string | null) => {
+      setSelectedId(null);
+      setListOpen(true);
       updateFilters({ ...filters, markerKind, action: null });
     },
     [filters, updateFilters],
@@ -135,11 +208,11 @@ export function MapExperience({
         closeReport();
         return;
       }
-      setSelectedId(null);
+      closePanel();
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [reportOpen, closeReport]);
+  }, [reportOpen, closeReport, closePanel]);
 
   return (
     <div className="flex min-h-screen flex-col bg-[var(--surface)]">
@@ -177,7 +250,7 @@ export function MapExperience({
             <button
               type="button"
               onClick={() => {
-                setSelectedId(null);
+                closePanel();
                 setReportOpen(true);
               }}
               className="w-fit rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
@@ -205,13 +278,17 @@ export function MapExperience({
           </div>
         )}
 
-        <CaseDetailPanel
-          mapCase={selectedCase}
-          onClose={() => setSelectedId(null)}
-        />
-        <CommunityDetailPanel
-          place={selectedPlace}
-          onClose={() => setSelectedId(null)}
+        <MapSidePanel
+          open={panelOpen}
+          listTitle={listTitle}
+          items={listItems}
+          showRowStatus={layer === "enforcement" && !filters.markerKind}
+          statusFilter={statusFilter}
+          selectedCase={selectedCase}
+          selectedPlace={selectedPlace}
+          onClose={closePanel}
+          onSelect={setSelectedId}
+          onBack={listOpen ? backToList : undefined}
         />
         {reportOpen ? <ReportRestoModal onClose={closeReport} /> : null}
       </div>

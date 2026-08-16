@@ -9,46 +9,27 @@ import {
   formatStatus,
 } from "@/lib/data/normalize";
 import { pinAccent } from "@/lib/data/status";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { StatusIcon } from "@/components/status/StatusIcon";
 import { FormattedSummary } from "@/components/cases/FormattedSummary";
+import { PanelHeaderControls } from "@/components/map/PanelHeaderControls";
 
-interface CaseDetailPanelProps {
-  mapCase: MapCase | null;
-  onClose: () => void;
-}
-
-export function CaseDetailPanel({ mapCase, onClose }: CaseDetailPanelProps) {
-  const open = Boolean(mapCase);
-
-  return (
-    <>
-      <div
-        className={`fixed inset-0 z-40 bg-[rgba(15,23,22,0.28)] transition-opacity duration-200 md:hidden ${
-          open ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
-        onClick={onClose}
-        aria-hidden={!open}
-      />
-      <aside
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[420px] flex-col border-l border-[var(--border)] bg-[var(--panel)] shadow-[-12px_0_40px_rgba(15,23,22,0.08)] transition-transform duration-300 ease-out ${
-          open ? "translate-x-0" : "pointer-events-none translate-x-full"
-        }`}
-        aria-hidden={!open}
-        aria-label="Case details"
-      >
-        {mapCase ? <PanelContent mapCase={mapCase} onClose={onClose} /> : null}
-      </aside>
-    </>
-  );
-}
-
-function PanelContent({
+export function CaseDetailContent({
   mapCase,
   onClose,
+  onBack,
+  onPrev,
+  onNext,
+  canPrev,
+  canNext,
 }: {
   mapCase: MapCase;
   onClose: () => void;
+  onBack?: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  canPrev?: boolean;
+  canNext?: boolean;
 }) {
   const { case: enforcementCase, establishment } = mapCase;
   const accent = pinAccent(enforcementCase.status);
@@ -67,6 +48,16 @@ function PanelContent({
     >
       <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
         <div>
+          {onBack ? (
+            <button
+              type="button"
+              onClick={onBack}
+              className="mb-2 inline-flex items-center gap-1 text-xs text-[var(--muted)] transition hover:text-[var(--ink)]"
+            >
+              <ArrowLeft size={14} strokeWidth={2} aria-hidden />
+              Back to list
+            </button>
+          ) : null}
           <h2 className="text-xl font-medium leading-tight text-[var(--ink)]">
             {establishment.name}
           </h2>
@@ -77,14 +68,13 @@ function PanelContent({
           </p>
           <p className="text-sm text-[var(--muted)]">{establishment.district}</p>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="-mr-1.5 rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)]"
-          aria-label="Close panel"
-        >
-          <X size={18} strokeWidth={2} />
-        </button>
+        <PanelHeaderControls
+          onClose={onClose}
+          onPrev={onPrev}
+          onNext={onNext}
+          canPrev={canPrev}
+          canNext={canNext}
+        />
       </div>
 
       <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">

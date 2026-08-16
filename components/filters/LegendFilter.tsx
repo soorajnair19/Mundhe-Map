@@ -94,7 +94,7 @@ function KindChip({
     <Chip
       active={active}
       color={style.color}
-      onClick={() => onSelect(active ? null : kind)}
+      onClick={() => onSelect(kind)}
     >
       <StatusIcon kind={kind} size={12} color={style.color} />
       {style.label}
