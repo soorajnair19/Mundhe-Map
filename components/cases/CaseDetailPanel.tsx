@@ -11,6 +11,7 @@ import {
 import { pinAccent } from "@/lib/data/status";
 import { ArrowUpRight, X } from "lucide-react";
 import { StatusIcon } from "@/components/status/StatusIcon";
+import { FormattedSummary } from "@/components/cases/FormattedSummary";
 
 interface CaseDetailPanelProps {
   mapCase: MapCase | null;
@@ -119,9 +120,9 @@ function PanelContent({
         {enforcementCase.summary ? (
           <section>
             <h3 className="text-xs text-[var(--muted)]">Summary</h3>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
-              {enforcementCase.summary}
-            </p>
+            <div className="mt-2">
+              <FormattedSummary text={enforcementCase.summary} />
+            </div>
           </section>
         ) : null}
 

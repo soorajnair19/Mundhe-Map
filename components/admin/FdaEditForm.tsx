@@ -101,6 +101,7 @@ const labelClass = "block text-xs text-[var(--muted)]";
 interface FdaEditFormProps {
   establishment: Establishment;
   enforcementCase: EnforcementCase;
+  liveOnMap?: boolean;
   onCancel: () => void;
   onSave: (patch: {
     establishment: Establishment;
@@ -115,6 +116,7 @@ function newId(prefix: string): string {
 export function FdaEditForm({
   establishment,
   enforcementCase,
+  liveOnMap = false,
   onCancel,
   onSave,
 }: FdaEditFormProps) {
@@ -614,7 +616,12 @@ export function FdaEditForm({
         )}
       />
 
-      <div className="flex gap-2 border-t border-[var(--border)] pt-4">
+      <div className="flex flex-wrap items-center gap-2 border-t border-[var(--border)] pt-4">
+        {liveOnMap ? (
+          <p className="w-full text-xs text-[var(--muted)]">
+            Saving updates this case on the public map.
+          </p>
+        ) : null}
         <button
           type="button"
           onClick={onCancel}

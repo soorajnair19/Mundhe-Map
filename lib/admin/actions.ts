@@ -97,6 +97,32 @@ export async function updateFDAReportAction(
   }
 }
 
+export async function unpublishFDAReportAction(
+  id: string,
+): Promise<{ error: string | null }> {
+  await assertAdmin();
+  try {
+    await store.unpublishFDAReport(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
+}
+
+export async function restoreFDAReportAction(
+  id: string,
+): Promise<{ error: string | null }> {
+  await assertAdmin();
+  try {
+    await store.restoreFDAReport(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
+}
+
 export async function ingestFdaReportsAction(
   lookbackDays = 2,
 ): Promise<{ error: string | null; added: number; skipped: number; fetched: number }> {

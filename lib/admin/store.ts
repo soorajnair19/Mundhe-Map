@@ -361,6 +361,31 @@ export async function markFDAReportDuplicate(
   });
 }
 
+function returnFdaReportToQueue(report: FDAReport): FDAReport {
+  report.review_status = "pending";
+  report.rejection_reason = null;
+  report.rejection_notes = null;
+  report.duplicate_of_case_id = null;
+  report.case.updated_at = nowIso();
+  return report;
+}
+
+export async function unpublishFDAReport(id: string): Promise<FDAReport | null> {
+  return withFdaPersist(() => {
+    const report = getFDAReport(id);
+    if (!report) return null;
+    return returnFdaReportToQueue(report);
+  });
+}
+
+export async function restoreFDAReport(id: string): Promise<FDAReport | null> {
+  return withFdaPersist(() => {
+    const report = getFDAReport(id);
+    if (!report) return null;
+    return returnFdaReportToQueue(report);
+  });
+}
+
 export async function updateFDAReport(
   id: string,
   patch: { establishment: Establishment; case: EnforcementCase },

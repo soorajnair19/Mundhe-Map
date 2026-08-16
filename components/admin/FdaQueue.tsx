@@ -7,6 +7,8 @@ import {
   ingestFdaReportsAction,
   markFDAReportDuplicateAction,
   rejectFDAReportAction,
+  restoreFDAReportAction,
+  unpublishFDAReportAction,
   updateFDAReportAction,
 } from "@/lib/admin/actions";
 import type {
@@ -19,6 +21,7 @@ import { formatDisplayDate, formatLabel } from "@/lib/data/normalize";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
 import { FdaEditForm } from "@/components/admin/FdaEditForm";
+import { FormattedSummary } from "@/components/cases/FormattedSummary";
 import { QueueToolbar } from "@/components/admin/QueueToolbar";
 import { StatusChip } from "@/components/admin/StatusChip";
 
@@ -30,7 +33,7 @@ const STATUSES = [
   { value: "duplicate", label: "Duplicate" },
 ];
 
-type ConfirmKind = "approve" | "reject" | "duplicate" | null;
+type ConfirmKind = "approve" | "reject" | "duplicate" | "unpublish" | "restore";
 
 interface FdaQueueProps {
   reports: FDAReport[];
@@ -42,7 +45,7 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
   const [status, setStatus] = useState("pending");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [editing, setEditing] = useState(false);
-  const [confirm, setConfirm] = useState<ConfirmKind>(null);
+  const [confirm, setConfirm] = useState<ConfirmKind | null>(null);
   const [confirmId, setConfirmId] = useState<string | null>(null);
   const [reason, setReason] = useState<RejectionReason>("insufficient_evidence");
   const [notes, setNotes] = useState("");
@@ -77,6 +80,7 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
 
   const selected = reports.find((report) => report.id === selectedId) ?? null;
   const targetId = confirmId ?? selectedId;
+  const targetReport = reports.find((report) => report.id === targetId) ?? null;
 
   function openConfirm(kind: ConfirmKind, id: string) {
     setConfirmId(id);
@@ -95,6 +99,12 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
       if (confirm === "approve") result = await approveFDAReportAction(targetId);
       if (confirm === "reject") {
         result = await rejectFDAReportAction(targetId, reason, notes || null);
+      }
+      if (confirm === "unpublish") {
+        result = await unpublishFDAReportAction(targetId);
+      }
+      if (confirm === "restore") {
+        result = await restoreFDAReportAction(targetId);
       }
       if (confirm === "duplicate") {
         result = await markFDAReportDuplicateAction(targetId, duplicateOf);
@@ -168,7 +178,10 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
 
       {visible.length === 0 ? (
         <div className="mt-8 rounded-xl border border-dashed border-[var(--border-strong)] bg-[var(--panel)] px-6 py-12 text-center text-sm text-[var(--muted)]">
-          No FDA reports in this view.
+          {status === "pending" &&
+          reports.some((item) => item.review_status === "approved")
+            ? "Nothing pending. Approved reports are on the public map — open the Approved filter to manage them."
+            : "No FDA reports in this view."}
         </div>
       ) : (
         <ul className="mt-5 space-y-3">
@@ -190,6 +203,11 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   <StatusChip status={report.review_status} />
+                  {report.review_status === "approved" ? (
+                    <span className="rounded-md bg-[#e4f1ec] px-2 py-0.5 text-xs font-medium text-[#0f6e56]">
+                      On map
+                    </span>
+                  ) : null}
                   <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-xs font-medium text-[var(--ink)]">
                     {formatLabel(report.case.case_type)}
                   </span>
@@ -279,6 +297,8 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
         onApprove={() => selected && openConfirm("approve", selected.id)}
         onReject={() => selected && openConfirm("reject", selected.id)}
         onDuplicate={() => selected && openConfirm("duplicate", selected.id)}
+        onUnpublish={() => selected && openConfirm("unpublish", selected.id)}
+        onRestore={() => selected && openConfirm("restore", selected.id)}
         onSave={async (patch) => {
           if (!selected) return;
           const result = await updateFDAReportAction(selected.id, patch);
@@ -292,9 +312,13 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
 
       {confirm === "approve" ? (
         <ConfirmDialog
-          title="Approve FDA report"
+          title={
+            targetReport?.review_status === "pending"
+              ? "Approve FDA report"
+              : "Move back to queue and approve"
+          }
           body="Approval adds this case to the public FDA Actions map and saves it in the living ledger so later deploys keep it."
-          confirmLabel="Approve"
+          confirmLabel="Approve and publish"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
@@ -302,8 +326,16 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
       ) : null}
       {confirm === "reject" ? (
         <ConfirmDialog
-          title="Reject FDA report"
-          body="The report will leave the pending queue. It is kept in local review history, not permanently deleted."
+          title={
+            targetReport?.review_status === "pending"
+              ? "Reject FDA report"
+              : "Move back to queue and reject"
+          }
+          body={
+            targetReport?.review_status === "approved"
+              ? "This case will be removed from the public map and marked as rejected."
+              : "The report will leave the pending queue. It is kept in review history, not permanently deleted."
+          }
           confirmLabel="Reject"
           tone="danger"
           onCancel={() => setConfirm(null)}
@@ -334,14 +366,39 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
           </label>
         </ConfirmDialog>
       ) : null}
+      {confirm === "unpublish" ? (
+        <ConfirmDialog
+          title="Remove from map"
+          body="This case will be taken off the public FDA Actions map and returned to the pending queue."
+          confirmLabel="Remove from map"
+          onCancel={() => setConfirm(null)}
+          onConfirm={runConfirm}
+          pending={pending}
+        />
+      ) : null}
+      {confirm === "restore" ? (
+        <ConfirmDialog
+          title="Move back to queue"
+          body="This report will return to the pending queue. It will not appear on the public map until it is approved again."
+          confirmLabel="Move back to queue"
+          onCancel={() => setConfirm(null)}
+          onConfirm={runConfirm}
+          pending={pending}
+        />
+      ) : null}
       {confirm === "duplicate" ? (
         <ConfirmDialog
           title="Mark as duplicate"
-          body="This candidate will be stored as a duplicate of an existing case or place and removed from the pending queue."
+          body={
+            targetReport?.review_status === "approved"
+              ? "This case will be taken off the public map and stored as a duplicate of an existing case."
+              : "This candidate will be stored as a duplicate of an existing case or place and removed from the pending queue."
+          }
           confirmLabel="Mark duplicate"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={!duplicateOf}
         >
           <DuplicatePicker
             places={publishedPlaces.map((place) => ({
@@ -368,6 +425,8 @@ function FdaDrawer({
   onApprove,
   onReject,
   onDuplicate,
+  onUnpublish,
+  onRestore,
   onSave,
 }: {
   report: FDAReport | null;
@@ -378,12 +437,15 @@ function FdaDrawer({
   onApprove: () => void;
   onReject: () => void;
   onDuplicate: () => void;
+  onUnpublish: () => void;
+  onRestore: () => void;
   onSave: (patch: {
     establishment: FDAReport["establishment"];
     case: FDAReport["case"];
   }) => Promise<void>;
 }) {
   const open = Boolean(report);
+  const onMap = report?.review_status === "approved";
 
   return (
     <>
@@ -425,8 +487,10 @@ function FdaDrawer({
             <div className="flex-1 overflow-y-auto px-5 py-5">
               {editing ? (
                 <FdaEditForm
+                  key={report.id}
                   establishment={report.establishment}
                   enforcementCase={report.case}
+                  liveOnMap={onMap}
                   onCancel={onCancelEdit}
                   onSave={onSave}
                 />
@@ -436,40 +500,64 @@ function FdaDrawer({
             </div>
             {!editing ? (
               <div className="flex flex-wrap gap-2 border-t border-[var(--border)] px-5 py-4">
-                {report.review_status === "pending" ? (
-                  <>
-                    <button
-                      type="button"
-                      onClick={onApprove}
-                      className="rounded-lg bg-[var(--accent)] px-3 py-2 text-sm font-medium text-white"
-                    >
-                      Approve
-                    </button>
-                    <button
-                      type="button"
-                      onClick={onEdit}
-                      className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      type="button"
-                      onClick={onReject}
-                      className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
-                    >
-                      Reject
-                    </button>
-                    <button
-                      type="button"
-                      onClick={onDuplicate}
-                      className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
-                    >
-                      Mark as duplicate
-                    </button>
-                  </>
-                ) : (
-                  <StatusChip status={report.review_status} />
-                )}
+                {onMap ? (
+                  <button
+                    type="button"
+                    onClick={onUnpublish}
+                    className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                  >
+                    Remove from map
+                  </button>
+                ) : null}
+                <button
+                  type="button"
+                  onClick={onEdit}
+                  className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                >
+                  Edit
+                </button>
+                {report.review_status !== "approved" ? (
+                  <button
+                    type="button"
+                    onClick={onApprove}
+                    className="rounded-lg bg-[var(--accent)] px-3 py-2 text-sm font-medium text-white"
+                  >
+                    {report.review_status === "pending"
+                      ? "Approve"
+                      : "Move back to queue and approve"}
+                  </button>
+                ) : null}
+                {report.review_status !== "rejected" ? (
+                  <button
+                    type="button"
+                    onClick={onReject}
+                    className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                  >
+                    {report.review_status === "pending"
+                      ? "Reject"
+                      : "Move back to queue and reject"}
+                  </button>
+                ) : null}
+                {report.review_status === "pending" ||
+                report.review_status === "approved" ? (
+                  <button
+                    type="button"
+                    onClick={onDuplicate}
+                    className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                  >
+                    Mark as duplicate
+                  </button>
+                ) : null}
+                {report.review_status === "rejected" ||
+                report.review_status === "duplicate" ? (
+                  <button
+                    type="button"
+                    onClick={onRestore}
+                    className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                  >
+                    Move back to queue
+                  </button>
+                ) : null}
               </div>
             ) : null}
           </div>
@@ -483,7 +571,20 @@ function FdaDetail({ report }: { report: FDAReport }) {
   const { establishment, case: item } = report;
   return (
     <div className="space-y-6 text-sm">
-      <StatusChip status={report.review_status} />
+      <div className="flex flex-wrap items-center gap-2">
+        <StatusChip status={report.review_status} />
+        <span
+          className={`rounded-md px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide ${
+            report.review_status === "approved"
+              ? "bg-[#e4f1ec] text-[#0f6e56]"
+              : "bg-[var(--surface)] text-[var(--muted)]"
+          }`}
+        >
+          {report.review_status === "approved"
+            ? "On FDA Actions map"
+            : "Not on map"}
+        </span>
+      </div>
       <section>
         <h3 className="text-xs text-[var(--muted)]">Establishment</h3>
         <dl className="mt-2 grid grid-cols-2 gap-2">
@@ -533,7 +634,9 @@ function FdaDetail({ report }: { report: FDAReport }) {
             }
           />
         </dl>
-        <p className="mt-3 leading-relaxed">{item.summary}</p>
+        <div className="mt-3">
+          <FormattedSummary text={item.summary} />
+        </div>
         {item.violations.length > 0 ? (
           <ul className="mt-3 space-y-1">
             {item.violations.map((violation) => (

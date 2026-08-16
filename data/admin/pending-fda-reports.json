@@ -628,9 +628,9 @@
   },
   {
     "id": "fda-maharashtra-fda-cancels-10-licences-in-brutal-au-2026-08-12",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "insufficient_evidence",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -662,7 +662,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T11:33:31.606Z",
       "actions": [
         {
           "id": "case-maharashtra-fda-cancels-10-licences-in-brutal-au-ingested-act-1",
@@ -768,9 +768,9 @@
   },
   {
     "id": "fda-mumbai-malad-fda-raid-news-fda-n18s-mumbai-2026-08-11",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "insufficient_evidence",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -802,7 +802,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T11:33:29.865Z",
       "actions": [
         {
           "id": "case-mumbai-malad-fda-raid-news-fda-n18s-mumbai-ingested-act-1",
@@ -902,11 +902,11 @@
   },
   {
     "id": "fda-maharashtra-fda-action-fake-food-oil-worth-1-94--2026-08-08",
-    "review_status": "pending",
+    "review_status": "duplicate",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "duplicate",
     "rejection_notes": null,
-    "duplicate_of_case_id": null,
+    "duplicate_of_case_id": "case-swagat-oil-industries-beed",
     "establishment": {
       "id": "est-maharashtra-fda-action-fake-food-oil-worth-1-94-",
       "name": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Be",
@@ -936,7 +936,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T11:40:48.461Z",
       "actions": [
         {
           "id": "case-maharashtra-fda-action-fake-food-oil-worth-1-94--ingested-act-1",
@@ -969,14 +969,14 @@
   },
   {
     "id": "fda-licence-cancelled-tukaram-mundhe-led-fda-cracks--2026-08-06",
-    "review_status": "pending",
+    "review_status": "approved",
     "queued_at": "2026-08-16T09:18:00.449Z",
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-licence-cancelled-tukaram-mundhe-led-fda-cracks-",
-      "name": "Licence Cancelled: Tukaram Mundhe-Led FDA Cracks Down on Pune's Inducare Pharma",
+      "name": "Inducare Pharma",
       "normalized_name": "licence cancelled: tukaram mundhe led fda cracks down on pune s inducare pharma",
       "address": null,
       "locality": null,
@@ -990,7 +990,7 @@
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Licence%20Cancelled%3A%20Tukaram%20Mundhe-Led%20FDA%20Cracks%20Down%20on%20Pune's%20Inducare%20Pharma%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z"
+      "updated_at": "2026-08-16T11:48:53.278Z"
     },
     "case": {
       "id": "case-licence-cancelled-tukaram-mundhe-led-fda-cracks--ingested",
@@ -999,11 +999,11 @@
       "status": "licence_cancelled",
       "inspection_date": null,
       "action_date": "2026-08-06",
-      "summary": "Licence Cancelled: Tukaram Mundhe-Led FDA Cracks Down on Pune's Inducare Pharma &nbsp;&nbsp; NDTV Profit",
+      "summary": "Six products were Not of Standard Quality (NSQ) due to certain deficiencies, raising serious concerns regarding their quality, safety and public health implications. \n\nSinhanad Guggul: Fungal growth, black spots on tablets and failure in the Microbial Limit Test.\n\nPunarnavadi Mandur: Fungal growth and failure in the Microbial Limit Test.\n\nTriphala Guggul: Failed to comply with prescribed microbial limits.\n\nKanchanar Guggul: Total microbial count, yeast and mould counts exceeded permissible limits.\n\nHingvastak Churna: Excessive total ash content along with insects, larvae and other foreign impurities.\n\nTriphala Churna: Formation of lumps and presence of insects, larvae and other foreign impurities.",
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T11:48:53.278Z",
       "actions": [
         {
           "id": "case-licence-cancelled-tukaram-mundhe-led-fda-cracks--ingested-act-1",
