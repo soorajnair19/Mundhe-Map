@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "import-csv": "node scripts/import-csv.mjs",
-    "ingest-fda": "tsx scripts/ingest-fda.ts"
+    "ingest-fda": "tsx scripts/ingest-fda.ts",
+    "test-github-ledger": "tsx scripts/test-github-ledger.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
