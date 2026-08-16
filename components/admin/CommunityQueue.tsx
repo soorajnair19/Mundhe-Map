@@ -15,6 +15,7 @@ import type {
 } from "@/lib/admin/types";
 import { COMMUNITY_REJECTION_REASONS } from "@/lib/admin/types";
 import { formatDisplayDate, formatDisplayDateTime } from "@/lib/data/normalize";
+import { COMMUNITY_REQUEST_FIELDS, isImageEvidenceUrl } from "@/lib/community/schema";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
 import { QueueToolbar } from "@/components/admin/QueueToolbar";
@@ -318,19 +319,27 @@ function CommunityDrawer({
                 <h3 className="text-xs text-[var(--muted)]">Place</h3>
                 <dl className="mt-2 grid grid-cols-2 gap-2">
                   <div>
-                    <dt className="text-xs text-[var(--muted)]">Name</dt>
+                    <dt className="text-xs text-[var(--muted)]">
+                      {COMMUNITY_REQUEST_FIELDS.place_name.label}
+                    </dt>
                     <dd>{request.place_name}</dd>
                   </div>
+                  {request.address ? (
+                    <div>
+                      <dt className="text-xs text-[var(--muted)]">Address</dt>
+                      <dd>{request.address}</dd>
+                    </div>
+                  ) : null}
                   <div>
-                    <dt className="text-xs text-[var(--muted)]">Address</dt>
-                    <dd>{request.address || "—"}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs text-[var(--muted)]">Locality</dt>
+                    <dt className="text-xs text-[var(--muted)]">
+                      {COMMUNITY_REQUEST_FIELDS.locality.label}
+                    </dt>
                     <dd>{request.locality || "—"}</dd>
                   </div>
                   <div>
-                    <dt className="text-xs text-[var(--muted)]">City</dt>
+                    <dt className="text-xs text-[var(--muted)]">
+                      {COMMUNITY_REQUEST_FIELDS.city.label}
+                    </dt>
                     <dd>{request.city || "—"}</dd>
                   </div>
                 </dl>
@@ -345,22 +354,45 @@ function CommunityDrawer({
                 </a>
               </section>
               <section>
-                <h3 className="text-xs text-[var(--muted)]">Report</h3>
+                <h3 className="text-xs text-[var(--muted)]">
+                  {COMMUNITY_REQUEST_FIELDS.concern.label}
+                </h3>
                 <p className="mt-2 leading-relaxed">“{request.concern}”</p>
                 <p className="mt-3 text-xs text-[var(--muted)]">
                   Submitted {formatDisplayDateTime(request.submitted_at)}
                 </p>
                 <p className="mt-1 text-xs text-[var(--muted)]">
-                  Submitter: {request.submitter || "Not collected"}
+                  Name: {request.submitter || "Not collected"}
                 </p>
                 <p className="mt-1 text-xs text-[var(--muted)]">
                   Similar reports: {request.similar_report_count}
                 </p>
+                <h3 className="mt-4 text-xs text-[var(--muted)]">
+                  {COMMUNITY_REQUEST_FIELDS.evidence.label}
+                </h3>
                 {request.evidence.length > 0 ? (
-                  <ul className="mt-3 space-y-2">
+                  <ul className="mt-3 grid grid-cols-2 gap-2">
                     {request.evidence.map((item) => (
                       <li key={item.id}>
-                        {item.url ? (
+                        {item.url && isImageEvidenceUrl(item.url) ? (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block overflow-hidden rounded-md border border-[var(--border)]"
+                          >
+                            {/* Uploaded photos may be data URLs in the mock store. */}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={item.url}
+                              alt={item.label}
+                              className="h-28 w-full object-cover"
+                            />
+                            <span className="block truncate px-2 py-1 text-xs text-[var(--muted)]">
+                              {item.label}
+                            </span>
+                          </a>
+                        ) : item.url ? (
                           <a
                             href={item.url}
                             target="_blank"
@@ -377,7 +409,7 @@ function CommunityDrawer({
                   </ul>
                 ) : (
                   <p className="mt-3 text-xs text-[var(--muted)]">
-                    No evidence attached.
+                    No photos attached.
                   </p>
                 )}
               </section>

@@ -2,6 +2,8 @@ import fdaSeed from "@/data/admin/pending-fda-reports.json";
 import communitySeed from "@/data/admin/community-requests.json";
 import { getAllMapCases } from "@/lib/data/load";
 import type { EnforcementCase, Establishment } from "@/lib/data/types";
+import type { CommunityRequestDraft } from "@/lib/community/schema";
+import { normalizeName } from "@/lib/data/normalize";
 import type {
   CommunityRequest,
   CommunityRequestStatus,
@@ -190,5 +192,50 @@ export function investigateCommunityRequest(
   const request = getCommunityRequest(id);
   if (!request) return null;
   request.status = "investigating";
+  return request;
+}
+
+function slugify(value: string): string {
+  const slug = value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 40);
+  return slug || "place";
+}
+
+export function createCommunityRequest(
+  draft: CommunityRequestDraft,
+): CommunityRequest {
+  const store = getStore();
+  const id = `req-${slugify(draft.place_name)}-${Date.now().toString(36)}`;
+  const placeKey = `${normalizeName(draft.place_name)}|${normalizeName(draft.city ?? "")}`;
+  const similar = store.communityRequests.filter((request) => {
+    const key = `${normalizeName(request.place_name)}|${normalizeName(request.city ?? "")}`;
+    return key === placeKey;
+  }).length;
+
+  const request: CommunityRequest = {
+    id,
+    status: "pending",
+    place_name: draft.place_name,
+    maps_url: draft.maps_url,
+    address: draft.address,
+    locality: draft.locality,
+    city: draft.city,
+    concern: draft.concern,
+    evidence: draft.evidence.map((item, index) => ({
+      ...item,
+      id: `${id}-ev-${index + 1}`,
+    })),
+    submitted_at: nowIso(),
+    submitter: draft.submitter,
+    similar_report_count: similar + 1,
+    rejection_reason: null,
+    rejection_notes: null,
+    duplicate_of_place: null,
+  };
+
+  store.communityRequests.unshift(request);
   return request;
 }

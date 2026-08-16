@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { MapView } from "@/components/map/MapView";
 import { MapLayerTabs } from "@/components/map/MapLayerTabs";
+import { ReportRestoModal } from "@/components/map/ReportRestoModal";
 import { CaseDetailPanel } from "@/components/cases/CaseDetailPanel";
 import { CommunityDetailPanel } from "@/components/cases/CommunityDetailPanel";
 import { LegendFilter } from "@/components/filters/LegendFilter";
@@ -50,6 +51,8 @@ export function MapExperience() {
   );
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [reportOpen, setReportOpen] = useState(false);
+  const closeReport = useCallback(() => setReportOpen(false), []);
 
   const selectedCase = useMemo(() => {
     if (layer !== "enforcement" || !selectedId) return null;
@@ -119,11 +122,16 @@ export function MapExperience() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSelectedId(null);
+      if (event.key !== "Escape") return;
+      if (reportOpen) {
+        closeReport();
+        return;
+      }
+      setSelectedId(null);
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [reportOpen, closeReport]);
 
   return (
     <div className="flex min-h-screen flex-col bg-[var(--surface)]">
@@ -157,8 +165,20 @@ export function MapExperience() {
             onSelect={setMarkerKind}
           />
         ) : (
-          <div className="pointer-events-none absolute bottom-4 left-4 z-10 max-w-xs rounded-md border border-[var(--border)] bg-[var(--panel)]/95 px-2.5 py-2 text-xs text-[var(--muted)] shadow-sm backdrop-blur-sm">
-            Places reported by the public. Not official enforcement actions.
+          <div className="absolute bottom-4 left-4 z-10 flex w-[min(100%-2rem,20rem)] flex-col gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedId(null);
+                setReportOpen(true);
+              }}
+              className="rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
+            >
+              Report a Resto
+            </button>
+            <div className="rounded-md border border-[var(--border)] bg-[var(--panel)]/95 px-2.5 py-2 text-xs text-[var(--muted)] shadow-sm backdrop-blur-sm">
+              Places reported by the public. Not official enforcement actions.
+            </div>
           </div>
         )}
 
@@ -170,6 +190,7 @@ export function MapExperience() {
           place={selectedPlace}
           onClose={() => setSelectedId(null)}
         />
+        {reportOpen ? <ReportRestoModal onClose={closeReport} /> : null}
       </div>
 
       <SiteFooter />

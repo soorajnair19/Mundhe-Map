@@ -1,0 +1,378 @@
+"use client";
+
+import {
+  useActionState,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type DragEvent,
+  type FormEvent,
+} from "react";
+import { ImagePlus, X } from "lucide-react";
+import { submitCommunityRequestAction } from "@/lib/community/actions";
+import {
+  COMMUNITY_REQUEST_FIELDS,
+  MAX_PHOTOS,
+  MAX_PHOTO_BYTES,
+} from "@/lib/community/schema";
+
+interface ReportRestoModalProps {
+  onClose: () => void;
+}
+
+const inputClass =
+  "mt-1 w-full rounded-lg border border-[var(--border)] bg-[var(--panel)] px-3 py-2 text-sm text-[var(--ink)] outline-none focus:border-[var(--accent)]";
+
+function RequiredMark({ required }: { required: boolean }) {
+  if (!required) return null;
+  return (
+    <span className="text-[#E11D2E]" aria-hidden>
+      {" "}
+      *
+    </span>
+  );
+}
+
+export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
+  const [state, formAction, pending] = useActionState(
+    submitCommunityRequestAction,
+    { error: null, ok: false },
+  );
+  const firstFieldRef = useRef<HTMLInputElement>(null);
+  const [photos, setPhotos] = useState<File[]>([]);
+  const [photoError, setPhotoError] = useState<string | null>(null);
+
+  useEffect(() => {
+    firstFieldRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!state.ok) return;
+    const timer = window.setTimeout(onClose, 1800);
+    return () => window.clearTimeout(timer);
+  }, [state.ok, onClose]);
+
+  function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    for (const photo of photos) {
+      formData.append("photos", photo);
+    }
+    formAction(formData);
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-[70] flex items-end justify-center bg-[rgba(15,23,22,0.36)] px-4 py-6 sm:items-center"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="report-resto-title"
+        className="flex max-h-[min(92vh,42rem)] w-full max-w-lg flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--panel)] shadow-xl"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="flex shrink-0 items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
+          <div>
+            <h2
+              id="report-resto-title"
+              className="text-lg font-medium text-[var(--ink)]"
+            >
+              Report a resto
+            </h2>
+            <p className="mt-1 text-sm leading-relaxed text-[var(--muted)]">
+              This is a community report only. It is not an official request to
+              the FDA, and it does not start an inspection on its own.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="-mr-1.5 rounded-md p-1.5 text-[var(--muted)] hover:bg-[var(--surface)] hover:text-[var(--ink)]"
+            aria-label="Close"
+          >
+            <X size={18} strokeWidth={2} />
+          </button>
+        </div>
+
+        {state.ok ? (
+          <p className="px-5 py-6 text-sm text-[var(--ink)]" role="status">
+            Thanks. It is in the review queue and will not appear on the public
+            map until it is approved.
+          </p>
+        ) : (
+          <form onSubmit={onSubmit} className="flex min-h-0 flex-1 flex-col">
+            <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-5 py-4">
+              <label className="block text-xs text-[var(--muted)]">
+                {COMMUNITY_REQUEST_FIELDS.place_name.label}
+                <RequiredMark
+                  required={COMMUNITY_REQUEST_FIELDS.place_name.required}
+                />
+                <input
+                  ref={firstFieldRef}
+                  name="place_name"
+                  required
+                  minLength={2}
+                  maxLength={120}
+                  className={inputClass}
+                  autoComplete="organization"
+                />
+              </label>
+
+              <div className="grid grid-cols-2 gap-3">
+                <label className="block text-xs text-[var(--muted)]">
+                  {COMMUNITY_REQUEST_FIELDS.locality.label}
+                  <RequiredMark
+                    required={COMMUNITY_REQUEST_FIELDS.locality.required}
+                  />
+                  <input
+                    name="locality"
+                    required
+                    minLength={2}
+                    maxLength={80}
+                    className={inputClass}
+                    autoComplete="address-level3"
+                  />
+                </label>
+                <label className="block text-xs text-[var(--muted)]">
+                  {COMMUNITY_REQUEST_FIELDS.city.label}
+                  <RequiredMark
+                    required={COMMUNITY_REQUEST_FIELDS.city.required}
+                  />
+                  <input
+                    name="city"
+                    required
+                    minLength={2}
+                    maxLength={80}
+                    className={inputClass}
+                    autoComplete="address-level2"
+                  />
+                </label>
+              </div>
+
+              <label className="block text-xs text-[var(--muted)]">
+                {COMMUNITY_REQUEST_FIELDS.maps_url.label}
+                <RequiredMark
+                  required={COMMUNITY_REQUEST_FIELDS.maps_url.required}
+                />
+                <input
+                  name="maps_url"
+                  type="url"
+                  inputMode="url"
+                  required
+                  maxLength={500}
+                  placeholder="https://maps.google.com/…"
+                  className={inputClass}
+                />
+              </label>
+
+              <label className="block text-xs text-[var(--muted)]">
+                {COMMUNITY_REQUEST_FIELDS.concern.label}
+                <RequiredMark
+                  required={COMMUNITY_REQUEST_FIELDS.concern.required}
+                />
+                <textarea
+                  name="concern"
+                  required
+                  rows={4}
+                  minLength={12}
+                  maxLength={1000}
+                  className={`${inputClass} resize-y`}
+                />
+              </label>
+
+              <PhotoUpload
+                photos={photos}
+                onChange={setPhotos}
+                error={photoError}
+                onError={setPhotoError}
+              />
+
+              {state.error ? (
+                <p className="text-sm text-[#8B1E1E]" role="alert">
+                  {state.error}
+                </p>
+              ) : null}
+            </div>
+
+            <div className="flex shrink-0 justify-end gap-2 border-t border-[var(--border)] bg-[var(--panel)] px-5 py-3">
+              <button
+                type="button"
+                onClick={onClose}
+                className="rounded-lg px-3 py-2 text-sm text-[var(--muted)] hover:bg-[var(--surface)]"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={pending}
+                className="rounded-lg bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white hover:bg-[#c41826] disabled:opacity-50"
+              >
+                {pending ? "Sending…" : "Submit report"}
+              </button>
+            </div>
+          </form>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function PhotoUpload({
+  photos,
+  onChange,
+  error,
+  onError,
+}: {
+  photos: File[];
+  onChange: (files: File[]) => void;
+  error: string | null;
+  onError: (message: string | null) => void;
+}) {
+  const inputId = useId();
+  const remaining = MAX_PHOTOS - photos.length;
+  const [dragging, setDragging] = useState(false);
+
+  function addFiles(list: FileList | File[]) {
+    const incoming = Array.from(list);
+    const next = [...photos];
+    let message: string | null = null;
+
+    for (const file of incoming) {
+      if (next.length >= MAX_PHOTOS) {
+        message = `You can attach up to ${MAX_PHOTOS} photos.`;
+        break;
+      }
+      if (!file.type.startsWith("image/")) {
+        message = "Attach photos only (JPG, PNG, or WebP).";
+        continue;
+      }
+      if (file.size > MAX_PHOTO_BYTES) {
+        message = "Each photo must be under 2.5 MB.";
+        continue;
+      }
+      if (
+        next.some(
+          (existing) =>
+            existing.name === file.name && existing.size === file.size,
+        )
+      ) {
+        continue;
+      }
+      next.push(file);
+    }
+
+    onError(message);
+    onChange(next);
+  }
+
+  function onInputChange(event: ChangeEvent<HTMLInputElement>) {
+    addFiles(event.target.files ?? []);
+    event.target.value = "";
+  }
+
+  function onDrop(event: DragEvent<HTMLLabelElement>) {
+    event.preventDefault();
+    setDragging(false);
+    addFiles(event.dataTransfer.files);
+  }
+
+  return (
+    <div>
+      <p className="text-xs text-[var(--muted)]">
+        {COMMUNITY_REQUEST_FIELDS.evidence.label}
+      </p>
+      <input
+        id={inputId}
+        type="file"
+        accept="image/jpeg,image/png,image/webp,image/gif"
+        multiple
+        className="sr-only"
+        onChange={onInputChange}
+      />
+      <div className="mt-1 flex items-center gap-2">
+        <label
+          htmlFor={inputId}
+          onDragOver={(event) => {
+            event.preventDefault();
+            setDragging(true);
+          }}
+          onDragLeave={() => setDragging(false)}
+          onDrop={onDrop}
+          className={`inline-flex h-9 shrink-0 cursor-pointer items-center gap-1.5 rounded-md border border-dashed px-2.5 text-xs transition ${
+            dragging
+              ? "border-[var(--accent)] bg-[var(--surface)]"
+              : "border-[var(--border-strong)] bg-[var(--surface)]/60 hover:border-[var(--accent)]"
+          }`}
+        >
+          <ImagePlus
+            size={14}
+            strokeWidth={2}
+            className="text-[var(--muted)]"
+            aria-hidden
+          />
+          <span className="text-[var(--ink)]">
+            {remaining > 0 ? "Add photos" : "Limit reached"}
+          </span>
+        </label>
+        {photos.length > 0 ? (
+          <ul className="flex min-w-0 flex-1 items-center gap-1.5 overflow-x-auto">
+            {photos.map((photo, index) => (
+              <PhotoThumb
+                key={`${photo.name}-${photo.size}-${index}`}
+                photo={photo}
+                onRemove={() =>
+                  onChange(photos.filter((_, itemIndex) => itemIndex !== index))
+                }
+              />
+            ))}
+          </ul>
+        ) : (
+          <span className="text-xs text-[var(--muted)]">
+            Optional · up to {MAX_PHOTOS}
+          </span>
+        )}
+      </div>
+
+      {error ? (
+        <p className="mt-1 text-xs text-[#8B1E1E]" role="alert">
+          {error}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+function PhotoThumb({
+  photo,
+  onRemove,
+}: {
+  photo: File;
+  onRemove: () => void;
+}) {
+  const src = useMemo(() => URL.createObjectURL(photo), [photo]);
+
+  useEffect(() => {
+    return () => URL.revokeObjectURL(src);
+  }, [src]);
+
+  return (
+    <li className="relative h-9 w-9 shrink-0 overflow-hidden rounded-md border border-[var(--border)]">
+      {/* File previews are blob URLs, not remote images. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt="" className="h-full w-full object-cover" />
+      <button
+        type="button"
+        onClick={onRemove}
+        className="absolute top-0.5 right-0.5 rounded-full bg-[rgba(15,23,22,0.72)] p-px text-white"
+        aria-label={`Remove ${photo.name}`}
+      >
+        <X size={10} strokeWidth={2.5} />
+      </button>
+    </li>
+  );
+}

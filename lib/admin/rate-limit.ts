@@ -1,9 +1,11 @@
 const WINDOW_MS = 15 * 60 * 1000;
 const MAX_ATTEMPTS = 5;
+const MAX_SUBMIT_ATTEMPTS = 8;
 
 type Bucket = { count: number; resetAt: number };
 
 const attempts = new Map<string, Bucket>();
+const submitAttempts = new Map<string, Bucket>();
 
 function getBucket(key: string, now: number): Bucket {
   const existing = attempts.get(key);
@@ -28,4 +30,25 @@ export function recordLoginFailure(key: string, now = Date.now()): void {
 
 export function clearLoginFailures(key: string): void {
   attempts.delete(key);
+}
+
+function getSubmitBucket(key: string, now: number): Bucket {
+  const existing = submitAttempts.get(key);
+  if (!existing || now >= existing.resetAt) {
+    const next = { count: 0, resetAt: now + WINDOW_MS };
+    submitAttempts.set(key, next);
+    return next;
+  }
+  return existing;
+}
+
+export function isSubmitLocked(key: string, now = Date.now()): boolean {
+  const bucket = submitAttempts.get(key);
+  if (!bucket || now >= bucket.resetAt) return false;
+  return bucket.count >= MAX_SUBMIT_ATTEMPTS;
+}
+
+export function recordSubmit(key: string, now = Date.now()): void {
+  const bucket = getSubmitBucket(key, now);
+  bucket.count += 1;
 }

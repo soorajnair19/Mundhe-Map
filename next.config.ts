@@ -3,7 +3,11 @@ import type { NextConfig } from "next";
 process.env.NEXT_PUBLIC_BUILD_TIME = new Date().toISOString();
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "8mb",
+    },
+  },
 };
 
 export default nextConfig;
