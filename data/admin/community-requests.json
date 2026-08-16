@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "req-ledger-test-msw09n4e",
+    "status": "pending",
+    "place_name": "Ledger connectivity test",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune+Maharashtra",
+    "address": null,
+    "locality": "Test locality",
+    "city": "Pune",
+    "district": "Pune",
+    "latitude": 18.5204,
+    "longitude": 73.8567,
+    "concern": "Automated GitHub ledger write test — safe to delete.",
+    "evidence": [],
+    "submitted_at": "2026-08-16T16:14:43.022Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  }
+]
