@@ -1,5 +1,5 @@
 function labeledLine(block: string): { label: string; detail: string } | null {
-  const match = block.match(/^([^:]{2,80}):\s+(.+)$/s);
+  const match = block.match(/^([^:]{2,80}):\s+(.+)$/);
   if (!match) return null;
   const label = match[1].trim();
   const detail = match[2].trim();
@@ -10,7 +10,7 @@ function labeledLine(block: string): { label: string; detail: string } | null {
 
 function expandInlineLabels(text: string): string {
   if (text.includes("\n")) return text;
-  return text.replace(/(?<=\.)\s+(?=[A-Z][^:]{1,60}:\s)/g, "\n");
+  return text.replace(/\.\s+(?=[A-Z][^:]{1,60}:\s)/g, ".\n");
 }
 
 export function parseSummary(text: string): {
