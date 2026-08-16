@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import {
   approveCommunityRequestAction,
-  investigateCommunityRequestAction,
   markCommunityRequestDuplicateAction,
   rejectCommunityRequestAction,
 } from "@/lib/admin/actions";
@@ -14,7 +13,7 @@ import type {
   RejectionReason,
 } from "@/lib/admin/types";
 import { COMMUNITY_REJECTION_REASONS } from "@/lib/admin/types";
-import { formatDisplayDate, formatDisplayDateTime } from "@/lib/data/normalize";
+import { formatDisplayDate, normalizeName } from "@/lib/data/normalize";
 import { COMMUNITY_REQUEST_FIELDS, isImageEvidenceUrl } from "@/lib/community/schema";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
@@ -23,14 +22,33 @@ import { StatusChip } from "@/components/admin/StatusChip";
 
 const STATUSES = [
   { value: "pending", label: "Pending" },
-  { value: "investigating", label: "Investigating" },
   { value: "approved", label: "Approved" },
   { value: "rejected", label: "Rejected" },
   { value: "duplicate", label: "Duplicate" },
   { value: "all", label: "All" },
 ];
 
-type ConfirmKind = "approve" | "reject" | "duplicate" | "investigate" | null;
+type ConfirmKind = "approve" | "reject" | "duplicate" | null;
+
+function placeKey(request: CommunityRequest): string {
+  return `${normalizeName(request.place_name)}|${normalizeName(request.city ?? "")}`;
+}
+
+function similarReportCount(
+  request: CommunityRequest,
+  all: CommunityRequest[],
+): number {
+  const key = placeKey(request);
+  return all.filter((item) => item.id !== request.id && placeKey(item) === key)
+    .length;
+}
+
+function formatPlaceLocation(
+  locality: string | null,
+  city: string | null,
+): string {
+  return [...new Set([locality, city].filter(Boolean))].join(", ");
+}
 
 interface CommunityQueueProps {
   requests: CommunityRequest[];
@@ -94,9 +112,6 @@ export function CommunityQueue({
       if (confirm === "duplicate") {
         await markCommunityRequestDuplicateAction(targetId, duplicateOf);
       }
-      if (confirm === "investigate") {
-        await investigateCommunityRequestAction(targetId);
-      }
       setConfirm(null);
       setSelectedId(null);
     } finally {
@@ -135,7 +150,9 @@ export function CommunityQueue({
         </div>
       ) : (
         <ul className="mt-5 space-y-3">
-          {visible.map((request) => (
+          {visible.map((request) => {
+            const similar = similarReportCount(request, requests);
+            return (
             <li
               key={request.id}
               className="rounded-xl border border-[var(--border)] bg-[var(--panel)] p-4"
@@ -146,15 +163,16 @@ export function CommunityQueue({
                     {request.place_name}
                   </h2>
                   <p className="text-sm text-[var(--muted)]">
-                    {[request.locality, request.city].filter(Boolean).join(" · ")}
+                    {formatPlaceLocation(request.locality, request.city)}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <StatusChip status={request.status} />
-                  <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-xs font-medium">
-                    {request.similar_report_count}{" "}
-                    {request.similar_report_count === 1 ? "request" : "requests"}
-                  </span>
+                  {similar > 0 ? (
+                    <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-xs font-medium">
+                      {similar} similar
+                    </span>
+                  ) : null}
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">
@@ -173,17 +191,20 @@ export function CommunityQueue({
                 </button>
               </div>
             </li>
-          ))}
+            );
+          })}
         </ul>
       )}
 
       <CommunityDrawer
         request={selected}
+        similarCount={
+          selected ? similarReportCount(selected, requests) : 0
+        }
         onClose={() => setSelectedId(null)}
         onApprove={() => selected && openConfirm("approve", selected.id)}
         onReject={() => selected && openConfirm("reject", selected.id)}
         onDuplicate={() => selected && openConfirm("duplicate", selected.id)}
-        onInvestigate={() => selected && openConfirm("investigate", selected.id)}
       />
 
       {confirm === "approve" ? (
@@ -247,130 +268,107 @@ export function CommunityQueue({
           />
         </ConfirmDialog>
       ) : null}
-      {confirm === "investigate" ? (
-        <ConfirmDialog
-          title="Mark as investigating"
-          body="Keep this request out of the pending queue while it is being looked into. It is still not an FDA enforcement record."
-          confirmLabel="Investigate"
-          onCancel={() => setConfirm(null)}
-          onConfirm={runConfirm}
-          pending={pending}
-        />
-      ) : null}
     </div>
   );
 }
 
 function CommunityDrawer({
   request,
+  similarCount,
   onClose,
   onApprove,
   onReject,
   onDuplicate,
-  onInvestigate,
 }: {
   request: CommunityRequest | null;
+  similarCount: number;
   onClose: () => void;
   onApprove: () => void;
   onReject: () => void;
   onDuplicate: () => void;
-  onInvestigate: () => void;
 }) {
   const open = Boolean(request);
-  const canAct =
-    request?.status === "pending" || request?.status === "investigating";
+  const canAct = request?.status === "pending";
+  const location = request
+    ? formatPlaceLocation(request.locality, request.city)
+    : "";
 
   return (
     <>
       <div
-        className={`fixed inset-0 z-40 bg-[rgba(15,23,22,0.28)] transition-opacity ${
+        className={`fixed inset-0 z-40 bg-[rgba(15,23,22,0.28)] transition-opacity duration-200 ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={onClose}
         aria-hidden={!open}
       />
       <aside
-        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[480px] flex-col border-l border-[var(--border)] bg-[var(--panel)] shadow-[-12px_0_40px_rgba(15,23,22,0.08)] transition-transform duration-300 ${
+        className={`fixed inset-y-0 right-0 z-50 flex w-full max-w-[420px] flex-col border-l border-[var(--border)] bg-[var(--panel)] shadow-[-12px_0_40px_rgba(15,23,22,0.08)] transition-transform duration-300 ease-out ${
           open ? "translate-x-0" : "pointer-events-none translate-x-full"
         }`}
         aria-hidden={!open}
+        aria-label="Community request details"
       >
         {request ? (
           <div className="flex h-full flex-col">
             <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
               <div>
-                <h2 className="text-xl font-medium">{request.place_name}</h2>
-                <p className="mt-1 text-sm text-[var(--muted)]">
-                  {[request.locality, request.city].filter(Boolean).join(", ")}
-                </p>
+                <h2 className="text-xl font-medium leading-tight text-[var(--ink)]">
+                  {request.place_name}
+                </h2>
+                {location ? (
+                  <p className="mt-1 text-sm text-[var(--muted)]">{location}</p>
+                ) : null}
               </div>
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-md p-1.5 text-[var(--muted)] hover:bg-[var(--surface)]"
-                aria-label="Close"
+                className="-mr-1.5 rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)]"
+                aria-label="Close panel"
               >
-                <X size={18} />
+                <X size={18} strokeWidth={2} />
               </button>
             </div>
-            <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5 text-sm">
+
+            <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
               <StatusChip status={request.status} />
+
               <section>
-                <h3 className="text-xs text-[var(--muted)]">Place</h3>
-                <dl className="mt-2 grid grid-cols-2 gap-2">
-                  <div>
-                    <dt className="text-xs text-[var(--muted)]">
-                      {COMMUNITY_REQUEST_FIELDS.place_name.label}
-                    </dt>
-                    <dd>{request.place_name}</dd>
-                  </div>
-                  {request.address ? (
-                    <div>
-                      <dt className="text-xs text-[var(--muted)]">Address</dt>
-                      <dd>{request.address}</dd>
-                    </div>
-                  ) : null}
-                  <div>
-                    <dt className="text-xs text-[var(--muted)]">
-                      {COMMUNITY_REQUEST_FIELDS.locality.label}
-                    </dt>
-                    <dd>{request.locality || "—"}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs text-[var(--muted)]">
-                      {COMMUNITY_REQUEST_FIELDS.city.label}
-                    </dt>
-                    <dd>{request.city || "—"}</dd>
-                  </div>
-                </dl>
-                <a
-                  href={request.maps_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-0.5 text-xs font-medium text-[var(--accent)] hover:underline"
-                >
-                  Open Google Maps
-                  <ArrowUpRight size={14} />
-                </a>
+                <h3 className="text-xs text-[var(--muted)]">Concern</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
+                  {request.concern}
+                </p>
               </section>
-              <section>
-                <h3 className="text-xs text-[var(--muted)]">
-                  {COMMUNITY_REQUEST_FIELDS.concern.label}
-                </h3>
-                <p className="mt-2 leading-relaxed">“{request.concern}”</p>
-                <p className="mt-3 text-xs text-[var(--muted)]">
-                  Submitted {formatDisplayDateTime(request.submitted_at)}
-                </p>
-                <p className="mt-1 text-xs text-[var(--muted)]">
-                  Name: {request.submitter || "Not collected"}
-                </p>
-                <p className="mt-1 text-xs text-[var(--muted)]">
-                  Similar reports: {request.similar_report_count}
-                </p>
-                <h3 className="mt-4 text-xs text-[var(--muted)]">
-                  {COMMUNITY_REQUEST_FIELDS.evidence.label}
-                </h3>
-                {request.evidence.length > 0 ? (
+
+              {request.address ? (
+                <section>
+                  <h3 className="text-xs text-[var(--muted)]">Address</h3>
+                  <p className="mt-2 text-sm text-[var(--ink)]">
+                    {request.address}
+                  </p>
+                </section>
+              ) : null}
+
+              <dl className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <dt className="text-[var(--muted)]">Reported</dt>
+                  <dd className="text-[var(--ink)]">
+                    {formatDisplayDate(request.submitted_at)}
+                  </dd>
+                </div>
+                {similarCount > 0 ? (
+                  <div>
+                    <dt className="text-[var(--muted)]">Similar reports</dt>
+                    <dd className="text-[var(--ink)]">{similarCount}</dd>
+                  </div>
+                ) : null}
+              </dl>
+
+              {request.evidence.length > 0 ? (
+                <section>
+                  <h3 className="text-xs text-[var(--muted)]">
+                    {COMMUNITY_REQUEST_FIELDS.evidence.label}
+                  </h3>
                   <ul className="mt-3 grid grid-cols-2 gap-2">
                     {request.evidence.map((item) => (
                       <li key={item.id}>
@@ -397,23 +395,39 @@ function CommunityDrawer({
                             href={item.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[var(--accent)] hover:underline"
+                            className="text-sm font-medium text-[var(--accent)] underline-offset-2 hover:underline"
                           >
                             {item.label}
                           </a>
                         ) : (
-                          item.label
+                          <span className="text-sm text-[var(--ink)]">
+                            {item.label}
+                          </span>
                         )}
                       </li>
                     ))}
                   </ul>
-                ) : (
-                  <p className="mt-3 text-xs text-[var(--muted)]">
-                    No photos attached.
-                  </p>
-                )}
+                </section>
+              ) : null}
+
+              <section className="flex items-center justify-between gap-3 border-t border-[var(--border)] pt-4">
+                <p className="text-xs text-[var(--muted)]">
+                  Reported by the public. Not an official enforcement action.
+                </p>
+                {request.maps_url ? (
+                  <a
+                    href={request.maps_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--accent)] underline-offset-2 hover:underline"
+                  >
+                    Open Map
+                    <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
+                  </a>
+                ) : null}
               </section>
             </div>
+
             <div className="flex flex-wrap gap-2 border-t border-[var(--border)] px-5 py-4">
               {canAct ? (
                 <>
@@ -438,15 +452,6 @@ function CommunityDrawer({
                   >
                     Mark as duplicate
                   </button>
-                  {request.status === "pending" ? (
-                    <button
-                      type="button"
-                      onClick={onInvestigate}
-                      className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
-                    >
-                      Investigate
-                    </button>
-                  ) : null}
                 </>
               ) : (
                 <StatusChip status={request.status} />
