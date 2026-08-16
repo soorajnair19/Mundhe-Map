@@ -25,6 +25,7 @@ const LOCALITY_COORDS = {
   "santacruz east|mumbai": [19.081, 72.842],
   "juhu|mumbai": [19.1075, 72.8263],
   "andheri east|mumbai": [19.1136, 72.8697],
+  "andheri west|mumbai": [19.136, 72.827],
   "koldongari|mumbai": [19.119, 72.846],
   "vile parle west|mumbai": [19.103, 72.84],
   "goregaon|mumbai": [19.1663, 72.8526],
@@ -36,7 +37,10 @@ const LOCALITY_COORDS = {
   "laxman tawde road|mumbai": [19.257, 72.862],
   "bhandup|mumbai": [19.148, 72.937],
   "bhandup west|mumbai": [19.148, 72.932],
+  "ghatkopar|mumbai": [19.086, 72.908],
   "ghatkopar west|mumbai": [19.086, 72.908],
+  "goregaon east|mumbai": [19.163, 72.88],
+  "malvani|mumbai": [19.197, 72.822],
   "vashi naka|mumbai": [19.052, 72.899],
   "chembur|mumbai": [19.0522, 72.9005],
   "kondhwa khurd|pune": [18.469, 73.889],
@@ -48,6 +52,8 @@ const LOCALITY_COORDS = {
   "bavdhan|pune": [18.515, 73.778],
   "pimple gurav|pune": [18.59, 73.813],
   "camp|pune": [18.5158, 73.879],
+  "lohegaon|pune": [18.581, 73.908],
+  "warje|pune": [18.482, 73.808],
   "madde wasti|solapur": [17.6599, 75.9064],
   "satpur|nashik": [19.997, 73.74],
   "college road|nashik": [19.9975, 73.7898],
@@ -245,7 +251,7 @@ function inferStatus(notes) {
   const value = notes.toLowerCase();
   if (value.includes("reinstat") || value.includes("restor")) return "reinstated";
   if (value.includes("cancel")) return "licence_cancelled";
-  if (value.includes("suspend")) return "licence_suspended";
+  if (/\bsuspen/.test(value)) return "licence_suspended";
   if (value.includes("seal")) return "sealed";
   if (value.includes("seizure") || value.includes("seized")) return "seizure";
   if (value.includes("notice")) return "notice_issued";

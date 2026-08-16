@@ -989,6 +989,150 @@
       "business_type": "manufacturer",
       "created_at": "2026-08-08T12:00:00+05:30",
       "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "blinkit-bay-vue-malvani",
+      "name": "Blinkit (Bay Vue Building)",
+      "normalized_name": "blinkit bay vue building",
+      "address": "Bay Vue Building, Marve Road",
+      "locality": "Malvani",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.1979,
+      "longitude": 72.82236,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit+Bay+Vue+Building+Marve+Road+Malvani+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "zepto-lohegaon-pune",
+      "name": "Zepto",
+      "normalized_name": "zepto",
+      "address": null,
+      "locality": "Lohegaon",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.58046,
+      "longitude": 73.90836,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Zepto+Lohegaon+Pune",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "swinsta-ent-warje-pune",
+      "name": "Swinsta ENT Pvt Ltd",
+      "normalized_name": "swinsta ent pvt ltd",
+      "address": "Warje Jakat Naka Karvenagar",
+      "locality": "Warje",
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.48146,
+      "longitude": 73.80884,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Swinsta+ENT+Warje+Jakat+Naka+Karvenagar+Pune",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "blinkit-ghatkopar",
+      "name": "Blinkit (Shiv Shakti Heights)",
+      "normalized_name": "blinkit shiv shakti heights",
+      "address": "Shiv Shakti Heights near Patel Chowk",
+      "locality": "Ghatkopar",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.08546,
+      "longitude": 72.90872,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit+Shiv+Shakti+Heights+Patel+Chowk+Ghatkopar+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "instamart-hill-road-bandra-west",
+      "name": "Instamart",
+      "normalized_name": "instamart",
+      "address": "Hill Road",
+      "locality": "Bandra West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0596,
+      "longitude": 72.82998,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Instamart+Hill+Road+Bandra+West+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "rajidi-retail-azad-nagar-andheri-west",
+      "name": "Rajidi Retail (Instamart)",
+      "normalized_name": "rajidi retail instamart",
+      "address": "Azad Nagar",
+      "locality": "Andheri West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.1351,
+      "longitude": 72.82712,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Rajidi+Retail+Azad+Nagar+Andheri+West+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "instamart-mahakali-caves-andheri-east",
+      "name": "Instamart",
+      "normalized_name": "instamart",
+      "address": "Mahakali Caves Road",
+      "locality": "Andheri East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.11288,
+      "longitude": 72.86994,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Instamart+Mahakali+Caves+Road+Andheri+East+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "bollywood-cafe-film-city-goregaon",
+      "name": "Bollywood Cafe",
+      "normalized_name": "bollywood cafe",
+      "address": "Dadasaheb Phalke Film City",
+      "locality": "Goregaon East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.16156,
+      "longitude": 72.88072,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bollywood+Cafe+Dadasaheb+Phalke+Film+City+Goregaon+East+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -1055,7 +1199,7 @@
         },
         {
           "id": "case-flint-waarsa-nariman-point-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-06-30",
           "notes": "Licence suspension reported"
         }
@@ -1119,7 +1263,7 @@
         },
         {
           "id": "case-mk-bakery-borivali-east-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-06-30",
           "notes": "Licence suspension reported"
         }
@@ -1188,7 +1332,7 @@
         },
         {
           "id": "case-hotel-shree-krishna-bhandup-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-06-30",
           "notes": "Licence suspension reported"
         }
@@ -1257,7 +1401,7 @@
         },
         {
           "id": "case-hotel-gopal-krishna-santacruz-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-06-30",
           "notes": "Licence suspension reported"
         }
@@ -1331,7 +1475,7 @@
         },
         {
           "id": "case-karak-enterprises-andheri-east-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-06-30",
           "notes": "Licence suspension reported"
         }
@@ -1395,7 +1539,7 @@
         },
         {
           "id": "case-ace-clubs-resorts-bandra-west-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-06-30",
           "notes": "Licence suspension reported"
         }
@@ -2763,7 +2907,7 @@
         },
         {
           "id": "case-stany-caterers-kem-parel-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-18",
           "notes": "Licence suspension reported"
         }
@@ -3024,7 +3168,7 @@
         },
         {
           "id": "case-hotel-grand-purandar-sinhagad-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -3087,7 +3231,7 @@
         },
         {
           "id": "case-crown-bakers-sinhagad-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -3150,7 +3294,7 @@
         },
         {
           "id": "case-agrotis-catering-ambegaon-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -3213,7 +3357,7 @@
         },
         {
           "id": "case-barkat-biryani-house-wagholi-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -3276,7 +3420,7 @@
         },
         {
           "id": "case-royal-biryani-house-wagholi-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -3339,7 +3483,7 @@
         },
         {
           "id": "case-national-360-bavdhan-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -3397,7 +3541,7 @@
         },
         {
           "id": "case-devansh-milk-pimple-gurav-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-07-04",
           "notes": "Licence suspension reported"
         }
@@ -4212,7 +4356,7 @@
         },
         {
           "id": "case-blinkit-malad-west-hist-2",
-          "status": "other",
+          "status": "licence_suspended",
           "effective_date": "2026-08-11",
           "notes": "Licence suspension reported"
         }
@@ -4732,6 +4876,578 @@
           "status": "sealed",
           "effective_date": "2026-08-07",
           "notes": "Premises sealed"
+        }
+      ]
+    },
+    {
+      "id": "case-blinkit-bay-vue-malvani",
+      "establishment_id": "blinkit-bay-vue-malvani",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that FDA suspended the FSSAI licence of a Blinkit facility at Bay Vue Building on Marve Road in Malvani after inspectors found the chiller operating at 6 degrees Celsius, missing medical examination records for around 40 food handlers, and handlers not wearing headgear, aprons and gloves.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-blinkit-bay-vue-malvani-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-blinkit-bay-vue-malvani-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-blinkit-bay-vue-malvani-vio-1",
+          "violation_type": "temperature_control",
+          "description": "chiller room operating at 6 degrees Celsius, above the required temperature"
+        },
+        {
+          "id": "case-blinkit-bay-vue-malvani-vio-2",
+          "violation_type": "employee_medical_records",
+          "description": "medical examination records missing for around 40 food handlers"
+        },
+        {
+          "id": "case-blinkit-bay-vue-malvani-vio-3",
+          "violation_type": "other",
+          "description": "food handlers not wearing headgear, aprons and gloves"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-blinkit-bay-vue-malvani-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-blinkit-bay-vue-malvani-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-blinkit-bay-vue-malvani-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-13",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-zepto-lohegaon-pune",
+      "establishment_id": "zepto-lohegaon-pune",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that FDA suspended the licence of a Zepto facility in Pune's Lohegaon after inspectors found food stored beyond Use By dates, FIFO and FEFO practices not being followed, unhygienic storage, inadequate pest control, personal-hygiene deficiencies and cold-storage temperature problems. The FDA said Zepto's response at a subsequent hearing was unsatisfactory.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-zepto-lohegaon-pune-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-zepto-lohegaon-pune-vio-1",
+          "violation_type": "expired_food",
+          "description": "food products stored beyond declared Use By dates"
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-vio-2",
+          "violation_type": "improper_storage",
+          "description": "FIFO and FEFO practices not followed"
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic storage conditions"
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-vio-4",
+          "violation_type": "pest_infestation",
+          "description": "inadequate pest control"
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-vio-5",
+          "violation_type": "other",
+          "description": "serious deficiencies in personal hygiene"
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-vio-6",
+          "violation_type": "temperature_control",
+          "description": "serious temperature-control problems in cold storage"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-zepto-lohegaon-pune-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-zepto-lohegaon-pune-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-zepto-lohegaon-pune-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-13",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-swinsta-ent-warje-pune",
+      "establishment_id": "swinsta-ent-warje-pune",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that FDA suspended the licence of Swinsta ENT Pvt Ltd at Warje Jakat Naka in Karvenagar after inspectors found an active cockroach infestation, cold-chain failures for frozen products, and serious hygiene and pest-control deficiencies.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-swinsta-ent-warje-pune-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-swinsta-ent-warje-pune-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-swinsta-ent-warje-pune-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "active cockroach infestation"
+        },
+        {
+          "id": "case-swinsta-ent-warje-pune-vio-2",
+          "violation_type": "temperature_control",
+          "description": "failures in maintaining the cold chain for frozen products"
+        },
+        {
+          "id": "case-swinsta-ent-warje-pune-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "serious deficiencies in hygiene and pest-control practices"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-swinsta-ent-warje-pune-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-swinsta-ent-warje-pune-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-swinsta-ent-warje-pune-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-13",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-blinkit-ghatkopar",
+      "establishment_id": "blinkit-ghatkopar",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that inspectors found inadequate drainage and waste-disposal arrangements, frozen-product temperature-control problems, unprotected lighting, poor housekeeping, a cockroach infestation, damaged ceilings and flooring and inadequate food segregation at a Blinkit facility in Ghatkopar. The facility scored 34 out of 74 and was recorded as non-compliant.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-blinkit-ghatkopar-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-blinkit-ghatkopar-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-blinkit-ghatkopar-vio-1",
+          "violation_type": "waste_management",
+          "description": "inadequate drainage and waste-disposal arrangements"
+        },
+        {
+          "id": "case-blinkit-ghatkopar-vio-2",
+          "violation_type": "temperature_control",
+          "description": "problems with temperature control for frozen products"
+        },
+        {
+          "id": "case-blinkit-ghatkopar-vio-3",
+          "violation_type": "other",
+          "description": "unprotected lighting fixtures in unpacked-food storage area"
+        },
+        {
+          "id": "case-blinkit-ghatkopar-vio-4",
+          "violation_type": "poor_hygiene",
+          "description": "poor housekeeping and damaged ceilings and flooring"
+        },
+        {
+          "id": "case-blinkit-ghatkopar-vio-5",
+          "violation_type": "pest_infestation",
+          "description": "cockroach infestation"
+        },
+        {
+          "id": "case-blinkit-ghatkopar-vio-6",
+          "violation_type": "improper_storage",
+          "description": "inadequate segregation of food"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-blinkit-ghatkopar-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-blinkit-ghatkopar-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-blinkit-ghatkopar-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-13",
+          "notes": "Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-instamart-hill-road-bandra-west",
+      "establishment_id": "instamart-hill-road-bandra-west",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that FDA found heavy rodent droppings near food packages, a lizard infestation, rusted metal racks and hygiene failures at an Instamart-linked facility on Hill Road in Bandra West. The establishment scored 63 out of 140.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-instamart-hill-road-bandra-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-instamart-hill-road-bandra-west-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-instamart-hill-road-bandra-west-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "heavy rodent droppings near food packages and lizard infestation"
+        },
+        {
+          "id": "case-instamart-hill-road-bandra-west-vio-2",
+          "violation_type": "other",
+          "description": "rusted metal racks"
+        },
+        {
+          "id": "case-instamart-hill-road-bandra-west-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "broader hygiene failures"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-instamart-hill-road-bandra-west-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-instamart-hill-road-bandra-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-instamart-hill-road-bandra-west-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-13",
+          "notes": "Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-rajidi-retail-azad-nagar-andheri-west",
+      "establishment_id": "rajidi-retail-azad-nagar-andheri-west",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that inspectors found expired Zorabian Chicken Curry Cut stored at 8 degrees Celsius rather than the 0-4 degrees Celsius range cited by the FDA at a Rajidi Retail facility associated with Instamart in Azad Nagar, Andheri West. The expired stock was discarded on the spot.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-vio-1",
+          "violation_type": "expired_food",
+          "description": "expired Zorabian Chicken Curry Cut discarded on the spot"
+        },
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-vio-2",
+          "violation_type": "temperature_control",
+          "description": "poultry stored at 8 degrees Celsius rather than the required 0-4 degrees Celsius"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-rajidi-retail-azad-nagar-andheri-west-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-13",
+          "notes": "Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-instamart-mahakali-caves-andheri-east",
+      "establishment_id": "instamart-mahakali-caves-andheri-east",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that inspectors found goods stored in overcrowded conditions, no air curtains at the main entryways and food bags placed directly on the floor at an Instamart facility on Mahakali Caves Road in Andheri East.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-vio-1",
+          "violation_type": "improper_storage",
+          "description": "goods stored in overcrowded conditions and food bags placed directly on the floor"
+        },
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-vio-2",
+          "violation_type": "other",
+          "description": "no air curtains at the main entryways"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-instamart-mahakali-caves-andheri-east-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-13",
+          "notes": "Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-bollywood-cafe-film-city-goregaon",
+      "establishment_id": "bollywood-cafe-film-city-goregaon",
+      "case_type": "notice",
+      "status": "notice_issued",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "NDTV reported that FDA raided Bollywood Cafe at Dadasaheb Phalke Film City in Goregaon East and found food being prepared in unhygienic conditions, a severe fly infestation, dirty drains and food prepared on rusty and unclean food-contact surfaces. The FDA initiated action under Section 69 of the Food Safety and Standards Act.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-13T12:00:00+05:30",
+      "updated_at": "2026-08-13T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "food prepared in unhygienic conditions on rusty and unclean food-contact surfaces"
+        },
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "severe fly infestation"
+        },
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-vio-3",
+          "violation_type": "waste_management",
+          "description": "dirty drains"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Cockroaches, Lizards: Licences Of Blinkit, Instamart And Zepto Facilities Suspended",
+          "url": "https://www.ndtv.com/india-news/cockroaches-lizards-licences-of-blinkit-instamart-and-zepto-facilities-suspended-11911308",
+          "published_at": null,
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Raid"
+        },
+        {
+          "id": "case-bollywood-cafe-film-city-goregaon-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-13",
+          "notes": "Notice reported"
         }
       ]
     }
