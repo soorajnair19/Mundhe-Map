@@ -110,6 +110,19 @@ export function geocodeApproximate(input: {
     };
   }
 
+  if (locality) {
+    const localityOnly = Object.entries(LOCALITY_COORDS).find(([place]) =>
+      place.startsWith(`${locality}|`),
+    );
+    if (localityOnly) {
+      return {
+        latitude: localityOnly[1][0] + dLat,
+        longitude: localityOnly[1][1] + dLng,
+        location_accuracy: "approximate",
+      };
+    }
+  }
+
   const cityHit = CITY_COORDS[city];
   if (cityHit) {
     return {

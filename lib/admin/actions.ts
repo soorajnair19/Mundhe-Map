@@ -8,6 +8,8 @@ import {
   clearAdminSession,
 } from "@/lib/admin/auth";
 import * as store from "@/lib/admin/store";
+import { persistMessageSafe } from "@/lib/admin/persist";
+import { buildFdaIngestReports } from "@/lib/ingest/run";
 import type { EnforcementCase, Establishment } from "@/lib/data/types";
 import type { RejectionReason } from "@/lib/admin/types";
 
@@ -16,6 +18,10 @@ function refreshAdmin(): void {
   revalidatePath("/admin");
   revalidatePath("/admin/fda-reports");
   revalidatePath("/admin/community-requests");
+}
+
+function persistMessage(error: unknown): string {
+  return persistMessageSafe(error);
 }
 
 export async function loginAdmin(
@@ -35,38 +41,91 @@ export async function logoutAdmin(): Promise<void> {
   redirect("/admin");
 }
 
-export async function approveFDAReportAction(id: string): Promise<void> {
+export async function approveFDAReportAction(
+  id: string,
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.approveFDAReport(id);
-  refreshAdmin();
+  try {
+    await store.approveFDAReport(id);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function rejectFDAReportAction(
   id: string,
   reason: RejectionReason | null,
   notes: string | null,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.rejectFDAReport(id, reason, notes);
-  refreshAdmin();
+  try {
+    await store.rejectFDAReport(id, reason, notes);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function markFDAReportDuplicateAction(
   id: string,
   duplicateOfCaseId: string | null,
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.markFDAReportDuplicate(id, duplicateOfCaseId);
-  refreshAdmin();
+  try {
+    await store.markFDAReportDuplicate(id, duplicateOfCaseId);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
 }
 
 export async function updateFDAReportAction(
   id: string,
   patch: { establishment: Establishment; case: EnforcementCase },
-): Promise<void> {
+): Promise<{ error: string | null }> {
   await assertAdmin();
-  store.updateFDAReport(id, patch);
-  refreshAdmin();
+  try {
+    await store.updateFDAReport(id, patch);
+    refreshAdmin();
+    return { error: null };
+  } catch (error) {
+    return { error: persistMessage(error) };
+  }
+}
+
+export async function ingestFdaReportsAction(
+  lookbackDays = 2,
+): Promise<{ error: string | null; added: number; skipped: number; fetched: number }> {
+  await assertAdmin();
+  try {
+    await store.hydrateAdminStore();
+    const built = await buildFdaIngestReports(
+      lookbackDays,
+      store.getFDAReports("all"),
+    );
+    const added = await store.enqueueFDAReports(built.reports);
+    refreshAdmin();
+    const warning = built.errors.length
+      ? `Some feeds failed: ${built.errors.join(" · ")}`
+      : null;
+    return {
+      error: warning,
+      added: added.length,
+      skipped: built.skipped,
+      fetched: built.fetched,
+    };
+  } catch (error) {
+    return {
+      error: persistMessage(error),
+      added: 0,
+      skipped: 0,
+      fetched: 0,
+    };
+  }
 }
 
 export async function approveCommunityRequestAction(id: string): Promise<void> {

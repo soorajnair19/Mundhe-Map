@@ -25,7 +25,7 @@ Leave unknowns blank in the data. Do not invent coordinates, dates, or outcomes.
 
 Mundhe Map is a reader, not a reporting platform. There is no public submission form, no official FDA feed, and no claim of completeness. Coverage is only as good as what has been published and entered.
 
-Not in this version: automated ingestion, user accounts, a public requests form, or per-case SEO pages.
+Not in this version: user accounts, a public requests form, or per-case SEO pages.
 
 ## Run it locally
 
@@ -38,7 +38,23 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Admin
 
-Copy [`.env.example`](.env.example) to `.env.local` and set `ADMIN_PIN` (4 digits) and `ADMIN_SESSION_SECRET`. Open [http://localhost:3000/admin](http://localhost:3000/admin). Review actions are stored in local mock state for this version and reset when the server restarts. They do not change the public map.
+Copy [`.env.example`](.env.example) to `.env.local` and set `ADMIN_PIN` (4 digits) and `ADMIN_SESSION_SECRET`. Open [http://localhost:3000/admin](http://localhost:3000/admin).
+
+FDA reports live in [`data/admin/pending-fda-reports.json`](data/admin/pending-fda-reports.json). That file is a living ledger: ingest **appends** new pending rows, and approve/reject change a row in place. Earlier approved cases stay. Approved FDA reports are shown on the public map on top of the curated [`data/seed/cases.json`](data/seed/cases.json) set.
+
+Locally, review actions write that JSON file on disk. On Vercel, set `CRON_SECRET`, `FDA_GITHUB_TOKEN` (repo contents write), and `FDA_GITHUB_REPO` (`owner/name`) so approve/reject/ingest commit the same file back to GitHub. Without the token, live admin actions are refused rather than saved only in memory.
+
+## Daily FDA ingest
+
+Around 8:00 PM IST the app looks for Maharashtra FDA enforcement stories from public RSS (Google News plus outlet city feeds), queues candidates in **Admin → FDA Reports**, and skips URLs/places already on the map or in the ledger.
+
+```bash
+npm run ingest-fda -- --lookback-days=14
+```
+
+Then refresh `/admin/fda-reports`. Use **Fetch latest reports** in admin for a 2-day window. A GitHub Action and Vercel Cron (`30 14 * * *` UTC) run the same job daily.
+
+Leave unknowns blank. Heuristic extraction is conservative — open the source link, edit if needed, then approve.
 
 ## Add or update cases
 

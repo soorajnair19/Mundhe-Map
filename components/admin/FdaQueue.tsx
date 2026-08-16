@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import {
   approveFDAReportAction,
+  ingestFdaReportsAction,
   markFDAReportDuplicateAction,
   rejectFDAReportAction,
   updateFDAReportAction,
@@ -47,6 +48,9 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
   const [notes, setNotes] = useState("");
   const [duplicateOf, setDuplicateOf] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
+  const [ingestMessage, setIngestMessage] = useState<string | null>(null);
+  const [ingesting, setIngesting] = useState(false);
 
   const pendingCount = reports.filter((r) => r.review_status === "pending").length;
 
@@ -85,13 +89,19 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
   async function runConfirm() {
     if (!targetId || !confirm) return;
     setPending(true);
+    setActionError(null);
     try {
-      if (confirm === "approve") await approveFDAReportAction(targetId);
+      let result: { error: string | null } = { error: null };
+      if (confirm === "approve") result = await approveFDAReportAction(targetId);
       if (confirm === "reject") {
-        await rejectFDAReportAction(targetId, reason, notes || null);
+        result = await rejectFDAReportAction(targetId, reason, notes || null);
       }
       if (confirm === "duplicate") {
-        await markFDAReportDuplicateAction(targetId, duplicateOf);
+        result = await markFDAReportDuplicateAction(targetId, duplicateOf);
+      }
+      if (result.error) {
+        setActionError(result.error);
+        return;
       }
       setConfirm(null);
       setSelectedId(null);
@@ -109,10 +119,42 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
           Cases that appear to have actually happened. Review before they can
           appear on the public FDA Actions map.
         </p>
-        <p className="mt-2 text-sm text-[var(--ink)]">
-          <span className="font-medium tabular-nums">{pendingCount}</span>{" "}
-          pending
-        </p>
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <p className="text-sm text-[var(--ink)]">
+            <span className="font-medium tabular-nums">{pendingCount}</span>{" "}
+            pending
+          </p>
+          <button
+            type="button"
+            disabled={ingesting}
+            onClick={async () => {
+              setIngesting(true);
+              setActionError(null);
+              setIngestMessage(null);
+              try {
+                const result = await ingestFdaReportsAction(2);
+                if (result.error && result.added === 0 && result.fetched === 0) {
+                  setActionError(result.error);
+                  return;
+                }
+                setIngestMessage(
+                  `Fetched ${result.fetched} stories, queued ${result.added}, skipped ${result.skipped} duplicates.${result.error ? ` ${result.error}` : ""}`,
+                );
+              } finally {
+                setIngesting(false);
+              }
+            }}
+            className="rounded-md bg-[var(--ink)] px-3 py-1.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-60"
+          >
+            {ingesting ? "Fetching…" : "Fetch latest reports"}
+          </button>
+        </div>
+        {ingestMessage ? (
+          <p className="mt-2 text-sm text-[var(--muted)]">{ingestMessage}</p>
+        ) : null}
+        {actionError ? (
+          <p className="mt-2 text-sm text-[#b42318]">{actionError}</p>
+        ) : null}
       </header>
 
       <QueueToolbar
@@ -239,7 +281,11 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
         onDuplicate={() => selected && openConfirm("duplicate", selected.id)}
         onSave={async (patch) => {
           if (!selected) return;
-          await updateFDAReportAction(selected.id, patch);
+          const result = await updateFDAReportAction(selected.id, patch);
+          if (result.error) {
+            setActionError(result.error);
+            return;
+          }
           setEditing(false);
         }}
       />
@@ -247,7 +293,7 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
       {confirm === "approve" ? (
         <ConfirmDialog
           title="Approve FDA report"
-          body="Approval will make this case publicly visible in the FDA Actions map once the production data layer is connected. For now it will be marked approved and removed from the pending queue."
+          body="Approval adds this case to the public FDA Actions map and saves it in the living ledger so later deploys keep it."
           confirmLabel="Approve"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}

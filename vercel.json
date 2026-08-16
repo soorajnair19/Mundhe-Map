@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/ingest-fda",
+      "schedule": "30 14 * * *"
+    }
+  ]
+}

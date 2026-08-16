@@ -1,14 +1,18 @@
 import fdaSeed from "@/data/admin/pending-fda-reports.json";
 import communitySeed from "@/data/admin/community-requests.json";
-import { getAllMapCases } from "@/lib/data/load";
+import { getAllMapCases, mergeMapCases } from "@/lib/data/load";
 import type {
   CommunityPlace,
   EnforcementCase,
   Establishment,
+  MapCase,
 } from "@/lib/data/types";
 import type { CommunityRequestDraft } from "@/lib/community/schema";
 import { resolveCommunityCoordinates } from "@/lib/community/coords";
+import { geocodeApproximate } from "@/lib/data/csv";
 import { normalizeName } from "@/lib/data/normalize";
+import { loadFdaLedger, saveFdaLedger } from "@/lib/admin/persist";
+import { isDuplicateReport, existingFdaKeys } from "@/lib/ingest/run";
 import type {
   CommunityRequest,
   CommunityRequestStatus,
@@ -19,12 +23,14 @@ import type {
   RejectionReason,
 } from "@/lib/admin/types";
 
-const STORE_VERSION = 3;
+const STORE_VERSION = 4;
 
 interface AdminStore {
   version: number;
   fdaReports: FDAReport[];
   communityRequests: CommunityRequest[];
+  fdaMtime: number;
+  fdaSha: string | null;
 }
 
 const globalStore = globalThis as typeof globalThis & {
@@ -36,6 +42,8 @@ function cloneStore(): AdminStore {
     version: STORE_VERSION,
     fdaReports: structuredClone(fdaSeed) as FDAReport[],
     communityRequests: structuredClone(communitySeed) as CommunityRequest[],
+    fdaMtime: 0,
+    fdaSha: null,
   };
 }
 
@@ -47,6 +55,95 @@ function getStore(): AdminStore {
     globalStore.__mundheAdminStore = cloneStore();
   }
   return globalStore.__mundheAdminStore;
+}
+
+export async function hydrateAdminStore(): Promise<void> {
+  const store = getStore();
+  try {
+    const ledger = await loadFdaLedger();
+    store.fdaReports = ledger.reports;
+    store.fdaMtime = ledger.mtime;
+    store.fdaSha = ledger.sha;
+  } catch {
+    // Keep bundled seed if the living file cannot be read yet.
+  }
+}
+
+function placeOrState(value: string | null): string | null {
+  if (!value || value.toLowerCase() === "maharashtra") return null;
+  return value;
+}
+
+function isStateCentroid(latitude: number, longitude: number): boolean {
+  return Math.abs(latitude - 18.95) < 0.08 && Math.abs(longitude - 75.85) < 0.08;
+}
+
+function ensureFdaCoordinates(establishment: Establishment): Establishment {
+  const city = placeOrState(establishment.city);
+  const district =
+    placeOrState(establishment.district) ?? city ?? establishment.locality ?? "Maharashtra";
+  const geo = geocodeApproximate({
+    id: establishment.id,
+    locality: establishment.locality,
+    city,
+    district,
+  });
+  const fromMaps = establishment.maps_url
+    ? resolveCommunityCoordinates({
+        id: establishment.id,
+        maps_url: establishment.maps_url,
+        locality: establishment.locality,
+        city,
+        district,
+      })
+    : null;
+  const useResolved =
+    isStateCentroid(establishment.latitude, establishment.longitude) ||
+    establishment.location_accuracy === "unknown";
+  if (!useResolved) return establishment;
+  if (fromMaps && !isStateCentroid(fromMaps.latitude, fromMaps.longitude)) {
+    return {
+      ...establishment,
+      city: city ?? establishment.city,
+      district,
+      latitude: fromMaps.latitude,
+      longitude: fromMaps.longitude,
+      location_accuracy: geo.location_accuracy === "unknown" ? "approximate" : geo.location_accuracy,
+    };
+  }
+  return {
+    ...establishment,
+    city: city ?? establishment.city,
+    district,
+    latitude: geo.latitude,
+    longitude: geo.longitude,
+    location_accuracy: geo.location_accuracy,
+  };
+}
+
+async function persistFdaReports(): Promise<void> {
+  const store = getStore();
+  const saved = await saveFdaLedger(store.fdaReports, store.fdaSha);
+  store.fdaMtime = saved.mtime;
+  store.fdaSha = saved.sha;
+}
+
+async function withFdaPersist<T>(mutate: () => T): Promise<T> {
+  await hydrateAdminStore();
+  const store = getStore();
+  const snapshot = structuredClone(store.fdaReports);
+  const sha = store.fdaSha;
+  const mtime = store.fdaMtime;
+  const result = mutate();
+  try {
+    await persistFdaReports();
+    return result;
+  } catch (error) {
+    store.fdaReports = snapshot;
+    store.fdaSha = sha;
+    store.fdaMtime = mtime;
+    throw error;
+  }
 }
 
 function nowIso(): string {
@@ -162,8 +259,17 @@ export function getPendingCounts(): {
   };
 }
 
+export function getPublishedFdaCases(): MapCase[] {
+  return getStore()
+    .fdaReports.filter((report) => report.review_status === "approved")
+    .map((report) => ({
+      case: report.case,
+      establishment: report.establishment,
+    }));
+}
+
 export function getPublishedPlaceOptions(): PublishedPlaceOption[] {
-  return getAllMapCases().map((item) => ({
+  return mergeMapCases(getAllMapCases(), getPublishedFdaCases()).map((item) => ({
     establishmentId: item.establishment.id,
     caseId: item.case.id,
     name: item.establishment.name,
@@ -187,62 +293,93 @@ export function getCommunityPlaceOptions(): DuplicatePlaceOption[] {
   }));
 }
 
-export function approveFDAReport(id: string): FDAReport | null {
-  const report = getFDAReport(id);
-  if (!report) return null;
-  report.review_status = "approved";
-  report.rejection_reason = null;
-  report.rejection_notes = null;
-  report.duplicate_of_case_id = null;
-  report.case.updated_at = nowIso();
-  return report;
+export async function enqueueFDAReports(
+  incoming: FDAReport[],
+): Promise<FDAReport[]> {
+  if (incoming.length === 0) return [];
+  await hydrateAdminStore();
+  const store = getStore();
+  const toAdd = incoming.filter(
+    (report) =>
+      !isDuplicateReport(report, existingFdaKeys(store.fdaReports)) &&
+      !store.fdaReports.some((existing) => existing.id === report.id),
+  );
+  if (!toAdd.length) return [];
+  return withFdaPersist(() => {
+    const inner = getStore();
+    for (const report of toAdd) {
+      if (inner.fdaReports.some((existing) => existing.id === report.id)) continue;
+      inner.fdaReports.unshift(report);
+    }
+    return toAdd;
+  });
 }
 
-export function rejectFDAReport(
+export async function approveFDAReport(id: string): Promise<FDAReport | null> {
+  return withFdaPersist(() => {
+    const report = getFDAReport(id);
+    if (!report) return null;
+    report.establishment = ensureFdaCoordinates(report.establishment);
+    report.review_status = "approved";
+    report.rejection_reason = null;
+    report.rejection_notes = null;
+    report.duplicate_of_case_id = null;
+    report.case.updated_at = nowIso();
+    return report;
+  });
+}
+
+export async function rejectFDAReport(
   id: string,
   reason: RejectionReason | null,
   notes: string | null,
-): FDAReport | null {
-  const report = getFDAReport(id);
-  if (!report) return null;
-  report.review_status = "rejected";
-  report.rejection_reason = reason;
-  report.rejection_notes = notes;
-  report.duplicate_of_case_id = null;
-  report.case.updated_at = nowIso();
-  return report;
+): Promise<FDAReport | null> {
+  return withFdaPersist(() => {
+    const report = getFDAReport(id);
+    if (!report) return null;
+    report.review_status = "rejected";
+    report.rejection_reason = reason;
+    report.rejection_notes = notes;
+    report.duplicate_of_case_id = null;
+    report.case.updated_at = nowIso();
+    return report;
+  });
 }
 
-export function markFDAReportDuplicate(
+export async function markFDAReportDuplicate(
   id: string,
   duplicateOfCaseId: string | null,
-): FDAReport | null {
-  const report = getFDAReport(id);
-  if (!report) return null;
-  report.review_status = "duplicate";
-  report.duplicate_of_case_id = duplicateOfCaseId;
-  report.rejection_reason = "duplicate";
-  report.case.updated_at = nowIso();
-  return report;
+): Promise<FDAReport | null> {
+  return withFdaPersist(() => {
+    const report = getFDAReport(id);
+    if (!report) return null;
+    report.review_status = "duplicate";
+    report.duplicate_of_case_id = duplicateOfCaseId;
+    report.rejection_reason = "duplicate";
+    report.case.updated_at = nowIso();
+    return report;
+  });
 }
 
-export function updateFDAReport(
+export async function updateFDAReport(
   id: string,
   patch: { establishment: Establishment; case: EnforcementCase },
-): FDAReport | null {
-  const report = getFDAReport(id);
-  if (!report) return null;
-  const updatedAt = nowIso();
-  report.establishment = {
-    ...patch.establishment,
-    updated_at: updatedAt,
-  };
-  report.case = {
-    ...patch.case,
-    establishment_id: report.establishment.id,
-    updated_at: updatedAt,
-  };
-  return report;
+): Promise<FDAReport | null> {
+  return withFdaPersist(() => {
+    const report = getFDAReport(id);
+    if (!report) return null;
+    const updatedAt = nowIso();
+    report.establishment = ensureFdaCoordinates({
+      ...patch.establishment,
+      updated_at: updatedAt,
+    });
+    report.case = {
+      ...patch.case,
+      establishment_id: report.establishment.id,
+      updated_at: updatedAt,
+    };
+    return report;
+  });
 }
 
 export function approveCommunityRequest(id: string): CommunityRequest | null {

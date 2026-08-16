@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { PinGate } from "@/components/admin/PinGate";
 import { isAdminAuthenticated } from "@/lib/admin/auth";
-import { getPendingCounts } from "@/lib/admin/store";
+import { getPendingCounts, hydrateAdminStore } from "@/lib/admin/store";
 import { PRODUCT_NAME } from "@/lib/branding";
 
 export const dynamic = "force-dynamic";
@@ -20,6 +20,7 @@ export default async function AdminLayout({
     return <PinGate />;
   }
 
+  await hydrateAdminStore();
   const counts = getPendingCounts();
   return (
     <AdminShell fdaPending={counts.fda} communityPending={counts.community}>

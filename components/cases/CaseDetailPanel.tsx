@@ -2,6 +2,7 @@
 
 import type { CSSProperties } from "react";
 import type { MapCase } from "@/lib/data/types";
+import { caseTimeline } from "@/lib/data/load";
 import {
   formatDisplayDate,
   formatLabel,
@@ -50,9 +51,7 @@ function PanelContent({
 }) {
   const { case: enforcementCase, establishment } = mapCase;
   const accent = pinAccent(enforcementCase.status);
-  const history = [...enforcementCase.status_history].sort((a, b) =>
-    a.effective_date.localeCompare(b.effective_date),
-  );
+  const history = caseTimeline(enforcementCase);
   const showTimeline = history.length >= 2;
 
   return (

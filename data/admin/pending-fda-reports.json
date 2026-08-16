@@ -1,11 +1,1247 @@
 [
   {
-    "id": "fda-k-rustom-churchgate",
+    "id": "fda-bombay-hc-revokes-restaurant-licence-suspension--2026-08-03",
     "review_status": "pending",
-    "queued_at": "2026-08-12T09:40:00+05:30",
+    "queued_at": "2026-08-16T09:18:00.449Z",
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-hc-revokes-restaurant-licence-suspension-",
+      "name": "Bombay HC revokes restaurant licence suspension, raps Maharashtra FDA over delay",
+      "normalized_name": "bombay hc revokes licence suspension raps maharashtra fda over delay",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": "Maharashtra",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.95072,
+      "longitude": 75.85096,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20revokes%20restaurant%20licence%20suspension%2C%20raps%20Maharashtra%20FDA%20over%20delay%20Maharashtra%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-bombay-hc-revokes-restaurant-licence-suspension--ingested",
+      "establishment_id": "est-bombay-hc-revokes-restaurant-licence-suspension-",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-03",
+      "summary": "Bombay HC revokes restaurant licence suspension, raps Maharashtra FDA over delay &nbsp;&nbsp; Telangana Today",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-bombay-hc-revokes-restaurant-licence-suspension--ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-03",
+          "description": "Telangana Today report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-hc-revokes-restaurant-licence-suspension--ingested-src-1",
+          "source_name": "Telangana Today",
+          "source_type": "other_news",
+          "title": "Bombay HC revokes restaurant licence suspension, raps Maharashtra FDA over delay",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQYkFCdHZxT3BoZjhsUWY4TGZrOWRZM3dpU0tmZldCOVpBOWdwd25aOFFYNXI4WXZJQ3RMNmRKVHJKd1otQi1vS1lsakhyT0h4QTFOdFFaZkY3VUh4Z1VrckFYZG9tblEyRXlqbWh4Z3R5Zk5ibGViOUhnU2VFZWdIVUdxeUQ5OFBxVmlkVDlTRTVnNE9ZZExCRGhfa25rOGpOYURHLWxfSUl2UQ?oc=5",
+          "published_at": "2026-08-03",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-hc-revokes-restaurant-licence-suspension--ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-03",
+          "notes": "Bombay HC revokes restaurant licence suspension, raps Maharashtra FDA over delay"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-blinkit-s-mumbai-facility-licence-suspended-afte-2026-08-11",
+    "review_status": "duplicate",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": "duplicate",
+    "rejection_notes": null,
+    "duplicate_of_case_id": "case-blinkit-malad-west",
+    "establishment": {
+      "id": "est-blinkit-s-mumbai-facility-licence-suspended-afte",
+      "name": "Blinkit’s Mumbai Facility Licence Suspended After FDA Finds Cockroach Infestatio",
+      "normalized_name": "blinkit s mumbai facility licence suspended after fda finds cockroach infestatio",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0751,
+      "longitude": 72.8777,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit%E2%80%99s%20Mumbai%20Facility%20Licence%20Suspended%20After%20FDA%20Finds%20Cockroach%20Infestatio%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-blinkit-s-mumbai-facility-licence-suspended-afte-ingested",
+      "establishment_id": "est-blinkit-s-mumbai-facility-licence-suspended-afte",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-11",
+      "summary": "Blinkit’s Mumbai Facility Licence Suspended After FDA Finds Cockroach Infestation &nbsp;&nbsp; inc42.com",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:47:02.673Z",
+      "actions": [
+        {
+          "id": "case-blinkit-s-mumbai-facility-licence-suspended-afte-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-11",
+          "description": "inc42.com report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-blinkit-s-mumbai-facility-licence-suspended-afte-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-blinkit-s-mumbai-facility-licence-suspended-afte-ingested-src-1",
+          "source_name": "inc42.com",
+          "source_type": "other_news",
+          "title": "Blinkit’s Mumbai Facility Licence Suspended After FDA Finds Cockroach Infestation",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaV9oZGp4MGxsbW12SVdoRUljWm1TYXN2RmU5LWxucDNvdU5sQXBLNTdCa21iV0FEWVM5WGV2SVFLOUQ4Q0Z2eEkyMDVvMEZWYUpkcHg5aEFyWWFSWVB2UkVWcGV5S2hLYmEyRWV3M21rR2NYTVFBb2hHTVNUY1ItWjM1MDlyLWp1RVpZdWZqdGI3dVZGUVF3Y0RMUGdseDkwdl9UUk5abw?oc=5",
+          "published_at": "2026-08-11",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-blinkit-s-mumbai-facility-licence-suspended-afte-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-11",
+          "notes": "Blinkit’s Mumbai Facility Licence Suspended After FDA Finds Cockroach Infestation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-pune-s-iconic-camp-burger-king-sealed-as-maharas-2026-08-14",
+    "review_status": "duplicate",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": "duplicate",
+    "rejection_notes": null,
+    "duplicate_of_case_id": "case-burger-king-camp-pune",
+    "establishment": {
+      "id": "est-pune-s-iconic-camp-burger-king-sealed-as-maharas",
+      "name": "Pune's iconic Camp Burger King sealed as Maharashtra FDA widens food safety driv",
+      "normalized_name": "pune s iconic camp burger king sealed as maharashtra fda widens food safety driv",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.52112,
+      "longitude": 73.85766000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune's%20iconic%20Camp%20Burger%20King%20sealed%20as%20Maharashtra%20FDA%20widens%20food%20safety%20driv%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-pune-s-iconic-camp-burger-king-sealed-as-maharas-ingested",
+      "establishment_id": "est-pune-s-iconic-camp-burger-king-sealed-as-maharas",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": null,
+      "action_date": "2026-08-14",
+      "summary": "Pune's iconic Camp Burger King sealed as Maharashtra FDA widens food safety drive &nbsp;&nbsp; India Today",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:47:12.825Z",
+      "actions": [
+        {
+          "id": "case-pune-s-iconic-camp-burger-king-sealed-as-maharas-ingested-act-1",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-14",
+          "description": "India Today report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-pune-s-iconic-camp-burger-king-sealed-as-maharas-ingested-src-1",
+          "source_name": "India Today",
+          "source_type": "other_news",
+          "title": "Pune's iconic Camp Burger King sealed as Maharashtra FDA widens food safety drive",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNX2VOaTRFdG9lcWRhRGxSRk1XYjZKQnZOaHY3emtpM1JyYzdsWXVXSjQtNXltOXFPLV9jUTlMMlF2U2d0aWFuRGQ0RUl4VHp2ZVVDcEFvcFRMNFVhdEpja0lPSmNycnhQYlNCeDAycUZRel9QckxFOTZzNTdad1d0RXVuVHZCRWFLd0ZQQU1mMVdDaUxnTklYQno2SmlxYlRYeHFuMFdFNE5ISmswZ0c0SzltbkxYaFFrLUhxaU1rekhnTnJCTkJ2TlpFOVRYVHJFYzhIeV80MmVCZ9IB3wFBVV95cUxNY3ZqMEI5dW5rZXdabWZPWDB6QzJyVi0xYkNvMGNKNjFOTTV3am03VU93Q0hpdHVkZ1dINE9EQ0hTdHRPNHNCWUpDMmRNakZBc0VSQnpiNnd2cnVoTWNSejVURHh5dlRKVWpvLUhtNklfQnE3WWpGY3NuWHdXTk5lYUR4Z2RRNmtoZW9QVUZNZTBUUmFKVmZlTzVNSFFDeElqMl90ZFhoWFNMR0FwQkhwc1J2NEpXWm1zSThkbkRIN3BNVFVYd0dkWktMT3NQbjEwYXp1SUlBcWloYVpfVzE4?oc=5",
+          "published_at": "2026-08-14",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-pune-s-iconic-camp-burger-king-sealed-as-maharas-ingested-hist-1",
+          "status": "sealed",
+          "effective_date": "2026-08-14",
+          "notes": "Pune's iconic Camp Burger King sealed as Maharashtra FDA widens food safety drive"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-tukaram-mundhe-s-maharashtra-fda-suspends-parle--2026-08-15",
+    "review_status": "approved",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-tukaram-mundhe-s-maharashtra-fda-suspends-parle-",
+      "name": "Parle Agro Warehouse",
+      "normalized_name": "tukaram mundhe s maharashtra fda suspends parle agro warehouse licence: expired",
+      "address": null,
+      "locality": "Chembur",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400074",
+      "latitude": 19.0522,
+      "longitude": 72.9005,
+      "location_accuracy": "approximate",
+      "maps_url": "https://maps.app.goo.gl/SegYUZJeCus8NmTf6",
+      "business_type": "manufacturer",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:50:30.274Z"
+    },
+    "case": {
+      "id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested",
+      "establishment_id": "est-tukaram-mundhe-s-maharashtra-fda-suspends-parle-",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-15",
+      "summary": "Maharashtra FDA has reportedly suspended the license of a Velocity Express warehouse linked to Parle Agro after seizing expired beverages worth ₹99,970. The inspection revealed expired batches of Appy Fizz, Frooti, and Candy Juice during a night operation by eight officials.",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:50:36.454Z",
+      "actions": [
+        {
+          "id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "livemint.com report"
+        },
+        {
+          "id": "act-1786873715112-39b49",
+          "action_type": "seizure",
+          "action_date": "2026-08-15",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested-vio-1",
+          "violation_type": "expired_food",
+          "description": "Expired food reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested-src-1",
+          "source_name": "livemint.com",
+          "source_type": "other_news",
+          "title": "Tukaram Mundhe's Maharashtra FDA suspends Parle Agro warehouse licence: Expired Frooti seized — what else was found?",
+          "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOcUpqNmVYem9Ob1lHVkp2RFpfVVJVYW9LOERidkpCSkYwM1ktbWdxbGZzUVZOdmtXUnFoQWhJUG5Tb0hPcTRSMkhKWkRpZnR6U0NBWjNqNmFLaFZkVi0yeHBBc3pFaXBzWW9faUtFQ3ZIbVFhYVN5bnhxRERhdjlyYUlGVlBkelU4T2dORGd0Zk82TFRNMTRFYXh2SVh1b3RYbmZIY0RicnZ2cEtVRld4ZjVnc3ktMEVKRElwNDJTTWRaeEtIbU45NDhjNFl2LVkzT3NaWW9yWUlGZzZCbFVmUWhVdTdqUjNtYlJidWNER3F4b2dDOFpWVUdUWFE5cU4zb1NNUXZ30gGLAkFVX3lxTE9xVFVISEhjT0RNMTNPVk55LWYtRmdlNXhxYlU0anVPY2ppcUd6MlBhTWpPY3hGdVVlNHpfa3ktWlBJNC1LUXNZNmh2UGpGRVZuRE1Zd2g1RTJYTGg3eFh4OFowU253WU44TmpBbGJyY2JSZmhVT2tEZDBKX0NiWFduTWF4eWlmeHlJX21Yd0NhY1FiTTNGME5qZ3BZUXJ2emVmZ1puQl9JbWxnYy1WS3NteWFFUElvMkZyVkdIQWJLUGVMWU1EeVlPU2YzRUc0ZmlhOXBFREwzZ2hGSFdGNG9UeUJGSGxuTUh5TmVoOFVTdk5BbHdnbzFuQVVTZ3pENTdrWmE0M1p1ZnlaZw?oc=5",
+          "published_at": "2026-08-15",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-15",
+          "notes": "Tukaram Mundhe's Maharashtra FDA suspends Parle Agro warehouse licence: Expired Frooti seized — what else was found?"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-domino-mumbai-2026-08-12",
+    "review_status": "duplicate",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": "duplicate",
+    "rejection_notes": null,
+    "duplicate_of_case_id": "case-dominos-r-city-ghatkopar",
+    "establishment": {
+      "id": "est-mumbai-domino-mumbai",
+      "name": "Mumbai Domino",
+      "normalized_name": "mumbai domino",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07564,
+      "longitude": 72.8777,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Domino%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-mumbai-domino-mumbai-ingested",
+      "establishment_id": "est-mumbai-domino-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Starbucks, McDonald’s among chains inspected by Maharashtra FDA; 3 Mumbai Domino’s licences suspended &nbsp;&nbsp; The Times of India",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:45:35.519Z",
+      "actions": [
+        {
+          "id": "case-mumbai-domino-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-12",
+          "description": "The Times of India report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-domino-mumbai-ingested-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Starbucks, McDonald’s among chains inspected by Maharashtra FDA; 3 Mumbai Domino’s licences suspended",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPVElINHpoZHpNM19PRlM2LTB0NVdIVHJvU3JxMndIb2xVRjhENDRhWnB5Qng0Wll6TTRpTUJqSmdPN2UzSTBZYnQ1RDV3cDdObUlJSVVQbXV3SEI5b1BXZFRTWWd4aTNjQThjam1jLWVxMmN4Z3gzeWtPSlVELTJRM1FBZXpqMnRXOV9GSFlvNml5Z3duUXotbU1NdXdzbklhZ3lRUVAyR3lZM3BIWnMxWUplcWdHdjE2N2k2UGZDYmtOY0NZVm01dVl5allvUjBGT3BPV184YmFvbG5Sa1I2U05RWmhKbkxHN3BNdjM0QWF5dVHSAfgBQVVfeXFMT2FMX1c5SEllbUdiTWZTR21ZcVFJZHM4ZnR5TkVhenl3U29FWEpIQy12QUxDWGZLb0k1UDU1dzg5OHNMcEp6U2NkUmVyMUFLcnZ6MFIyLTNVcGRjS0k1M2JVUnBLRWhhSkg0YTI5RWhzREdia0lHckpyMjlRRktwSTg4REVXWF9Mc0JMUFBLRkdIVG5EVVRBd2dWblNmb2xYMkZkSC1TdXk1Z0dYQVFBNEpjUFlQaTdvc3dLTzdITjkydzdadzFmelRScDcxTUR5UEpYMmJkdllMalpjSEQ0VWRCSjNzM1gwUU5IMVZtX0llM1JKUUE2NXg?oc=5",
+          "published_at": "2026-08-12",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-domino-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-12",
+          "notes": "Starbucks, McDonald’s among chains inspected by Maharashtra FDA; 3 Mumbai Domino’s licences suspended"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-why-was-parle-warehouse-licence-suspended-tukara-2026-08-15",
+    "review_status": "duplicate",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": "duplicate",
+    "rejection_notes": null,
+    "duplicate_of_case_id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested",
+    "establishment": {
+      "id": "est-why-was-parle-warehouse-licence-suspended-tukara",
+      "name": "Why was Parle warehouse licence suspended? Tukaram Mundhe-led FDA raid reveals e",
+      "normalized_name": "why was parle warehouse licence suspended? tukaram mundhe led fda raid reveals e",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.076,
+      "longitude": 72.87854,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Why%20was%20Parle%20warehouse%20licence%20suspended%3F%20Tukaram%20Mundhe-led%20FDA%20raid%20reveals%20e%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-why-was-parle-warehouse-licence-suspended-tukara-ingested",
+      "establishment_id": "est-why-was-parle-warehouse-licence-suspended-tukara",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-15",
+      "summary": "Why was Parle warehouse licence suspended? Tukaram Mundhe-led FDA raid reveals expired Frooty, Appy Fizz in Mumbai premises &nbsp;&nbsp; theweek.in",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:51:10.452Z",
+      "actions": [
+        {
+          "id": "case-why-was-parle-warehouse-licence-suspended-tukara-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-15",
+          "description": "theweek.in report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-why-was-parle-warehouse-licence-suspended-tukara-ingested-vio-1",
+          "violation_type": "expired_food",
+          "description": "Expired food reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-why-was-parle-warehouse-licence-suspended-tukara-ingested-src-1",
+          "source_name": "theweek.in",
+          "source_type": "other_news",
+          "title": "Why was Parle warehouse licence suspended? Tukaram Mundhe-led FDA raid reveals expired Frooty, Appy Fizz in Mumbai premises",
+          "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPRFFNeW5vQ3VyalJ6Q1pkOGZMeHFCVGlNSmRIT1ZnZE1xck9SVlVkNGVuV0JNN1BzT29qN3RIWElyeGNhcTFvbDZ6aUtfMU1SYnJkSGhISlpHRVNrSmx3blhfNy1mVWpRbEV4a2xwMjI1X2plWXdBVWtjRlpnb1FQYjN6UmhvUGVkbkxXamVKWUZsYzRqNndLMFM3elcxWGhHUExSRnVYOUlRVXZBYjNnMWJNQVhFNXJGQnc4anh0Y0ttQTNYa2IyYUc3dkVhc3lxZjc5NGk5S2FlV1JDU2VudFJyUXNSNkYwZWk3b29Fa3ZHSmVVRzliYWVmSWVreDlsSkcybGJvNHhLd9IBigJBVV95cUxPRFFNeW5vQ3VyalJ6Q1pkOGZMeHFCVGlNSmRIT1ZnZE1xck9SVlVkNGVuV0JNN1BzT29qN3RIWElyeGNhcTFvbDZ6aUtfMU1SYnJkSGhISlpHRVNrSmx3blhfNy1mVWpRbEV4a2xwMjI1X2plWXdBVWtjRlpnb1FQYjN6UmhvUGVkbkxXamVKWUZsYzRqNndLMFM3elcxWGhHUExSRnVYOUlRVXZBYjNnMWJNQVhFNXJGQnc4anh0Y0ttQTNYa2IyYUc3dkVhc3lxZjc5NGk5S2FlV1JDU2VudFJyUXNSNkYwZWk3b29Fa3ZHSmVVRzliYWVmSWVreDlsSkcybGJvNHhLdw?oc=5",
+          "published_at": "2026-08-15",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-why-was-parle-warehouse-licence-suspended-tukara-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-15",
+          "notes": "Why was Parle warehouse licence suspended? Tukaram Mundhe-led FDA raid reveals expired Frooty, Appy Fizz in Mumbai premises"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-raided-shut-over-food-safety-violations-3-famous-2026-08-05",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-raided-shut-over-food-safety-violations-3-famous",
+      "name": "Raided, shut over food safety violations, 3 famous Mumbai restaurants to reopen",
+      "normalized_name": "raided shut over food safety violations 3 famous mumbai restaurants to reopen",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.076,
+      "longitude": 72.87818,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Raided%2C%20shut%20over%20food%20safety%20violations%2C%203%20famous%20Mumbai%20restaurants%20to%20reopen%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-raided-shut-over-food-safety-violations-3-famous-ingested",
+      "establishment_id": "est-raided-shut-over-food-safety-violations-3-famous",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-08-05",
+      "summary": "Raided, shut over food safety violations, 3 famous Mumbai restaurants to reopen &nbsp;&nbsp; The Indian Express",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-raided-shut-over-food-safety-violations-3-famous-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-05",
+          "description": "The Indian Express report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-raided-shut-over-food-safety-violations-3-famous-ingested-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Raided, shut over food safety violations, 3 famous Mumbai restaurants to reopen",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcE4zWWxjWUZiRkE1SjUwbk1NaXhvOGV5ZUh6aWRhLS1OSXlkOVk0WV9obDlRZGFhZWNETU9WektRNi1YUm9FN3hMaUg2UWFhTUtMWEdBMG5SbmxSaHdsOGw4TWtGdEtvZjhpLVZmX2JKdUxwa0hDTjB0aGZIaDlZdUtLX1ltRXdMUkJvcjNmWGFXS1E4cjUwRGE4MnpjcGEyTzhpX0RUWml5MUd1blVGSGZUVl9ad1l10gG_AUFVX3lxTE5zVHRyOUpVLWlhTTkxaXZPR0MtM3dHczk4eDRtUjd4S0NFOUZ5VFhMOEozaDBuOVd4cFh5WmpnNXpmaDdjUGhSa2NKUzVuYXozbDhTbXBrOGpwRm1oMVBGNnVsMzYwM1g4WU1KcXV1aWxtMU1HcUI0aFN2Rjk3RXh2a0tzNVd2V2VqTXBTdEU4TXpoLXl0OW1FVDBNdmxUYjM5c0RNQVNxaTE2SnVtTHFoaVhyOEVGZVQyVk9janNN?oc=5",
+          "published_at": "2026-08-05",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-raided-shut-over-food-safety-violations-3-famous-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-05",
+          "notes": "Raided, shut over food safety violations, 3 famous Mumbai restaurants to reopen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--2026-08-04",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence-",
+      "name": "Mumbai's Tewari Bros. Mithaiwala's FSSAI licence suspended after man claims he f",
+      "normalized_name": "mumbai s tewari bros mithaiwala s fssai licence suspended after man claims he f",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07636,
+      "longitude": 72.87782,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai's%20Tewari%20Bros.%20Mithaiwala's%20FSSAI%20licence%20suspended%20after%20man%20claims%20he%20f%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested",
+      "establishment_id": "est-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence-",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-04",
+      "summary": "Mumbai's Tewari Bros. Mithaiwala's FSSAI licence suspended after man claims he found stapler pin in Kaju &nbsp;&nbsp; The Times of India",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-04",
+          "description": "The Times of India report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Mumbai's Tewari Bros. Mithaiwala's FSSAI licence suspended after man claims he found stapler pin in Kaju",
+          "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOWHh0cnBCUVhuY1hGREd5UWd2UFFFcFUzcHZxV3JyNVlwNFBtZ2tCOTQtWEtpckptdzFDbWFYMmIxaHEtcGZBRTFPbEFlWFhFYkVOOHNXTkNPT0JjbXZ1eG1pamFDRkprWFd0WlhDM3lTM0puTXFaUXRuYTl4dERWUTZaenRud2Zvc04wZ2xiQlVEdjZlMUZPM0VpVzlScnpSRjlNbWZNZGoxUlgyZ3lGVF9RVFh3UXlQMk9BNGtwX2FsRzkwUjFYX1JvX0k3enMwUHJxMzRRR1lfOFZIc25MUXduQjMwTUtxQ2lfTEgtMlZzeWZlZ25TRkNFVm16VXZyMktiZG5Lckw0SVZhdGZSTzZR0gGXAkFVX3lxTE1YWkcwMnVqUzZQcVdnamR4N3ppVVdrSDZuYW9LdndDMU5ESWRCcm5oMzhnQi1OcXQ0TWszWVB4Rm1mSm9yYTNqVk5kQ3pNQ1otaTNJZ0ZmeWlQZlZmYWxtakRlT3d0UFdzLUZxSFVEN1FqN25XRlNBWFpnUF9yOE9tRUxUNnp0UVFreWFsWlI2UkJFbXFvU2NRRUJUUHNFSV90SzhWOTNuQzBZR2R5THA4T2YycGdEaTR0ZUtkS3JSQmdVRTFaSXIzUHpoRWRKTXZGUlhhQ0g5eml1ZFdNcEU0Qlp0LS1tcFU5dXROcjA3akZHZTktdXpVaFlPZEF2OS1rc1lKX2Q1WHJaSG4xbXN4QTdmQmpMcw?oc=5",
+          "published_at": "2026-08-04",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-04",
+          "notes": "Mumbai's Tewari Bros. Mithaiwala's FSSAI licence suspended after man claims he found stapler pin in Kaju"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-sweet-shop-s-fssai-licence-suspended-afte-2026-08-03",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-sweet-shop-s-fssai-licence-suspended-afte",
+      "name": "Mumbai sweet shop's FSSAI licence suspended after customer finds rusted metal pi",
+      "normalized_name": "mumbai sweet shop s fssai licence suspended after customer finds rusted metal pi",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07546,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20sweet%20shop's%20FSSAI%20licence%20suspended%20after%20customer%20finds%20rusted%20metal%20pi%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-mumbai-sweet-shop-s-fssai-licence-suspended-afte-ingested",
+      "establishment_id": "est-mumbai-sweet-shop-s-fssai-licence-suspended-afte",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-03",
+      "summary": "Mumbai sweet shop's FSSAI licence suspended after customer finds rusted metal pin in kaju katli &nbsp;&nbsp; Moneycontrol.com",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-mumbai-sweet-shop-s-fssai-licence-suspended-afte-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-03",
+          "description": "Moneycontrol.com report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-sweet-shop-s-fssai-licence-suspended-afte-ingested-src-1",
+          "source_name": "Moneycontrol.com",
+          "source_type": "other_news",
+          "title": "Mumbai sweet shop's FSSAI licence suspended after customer finds rusted metal pin in kaju katli",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNRlVTa0RGVXVtbnRVQzhMZFJST2JmeGpNQmxHTkVtQk5tVWhYSkRHV2U2RlY5Yjl4Uld4Y1JZaWtuVU9yR3Z6ZG1HV3d5VWYyYjgyWDFxaHAyZ1pDUWNQZDh1OVJpQmpobWczODdWMGl4SWwzd3EzaVY2OFhaa0hJaEtoMUlZZEJ0YWhKdjA3QXRyQjYydVdXSTVIUjhPOTQxdnd5LXZFNHhGcTJiYzJvaFI4dGJ2am1hcVgxUnpSdkRrbXJFeERSb09sZ0hFWGJxVFVfMDhyWXFMRGNYRVpWempXYWtwZ9IB6wFBVV95cUxObkhwNTVINmFCNXNtZTFYVWtLU0FibU54NnlyZURBZktsbkExUEtFaVNQWXdRTkRHM2NBOU9GamJkYnRhM2NKZ0I1cHRielMybVdoUTBLa09YN2Y2OTFEUG5OUmdOUGlXbFQyUGlFdlFuNExCdEs2enpvREpBR2tXeVJHT2FhUjRNUkUwd09LU2RCeUpCT3ZPMU9ULVhIQnZ6cFU2SXp2OURJMkxyYUMwamFxczI2YUhfak5KcExROVRWQnFDOVVTRGdmVUItRVhhMjJaVlZpMWpGam9HTjlQSGlTd0ZJMUNrQVBR?oc=5",
+          "published_at": "2026-08-03",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-sweet-shop-s-fssai-licence-suspended-afte-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-03",
+          "notes": "Mumbai sweet shop's FSSAI licence suspended after customer finds rusted metal pin in kaju katli"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-maharashtra-fda-cancels-10-licences-in-brutal-au-2026-08-12",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-maharashtra-fda-cancels-10-licences-in-brutal-au",
+      "name": "Maharashtra FDA Cancels 10 Licences in Brutal August Raid",
+      "normalized_name": "maharashtra fda cancels 10 licences in brutal august raid",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": "Maharashtra",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.94964,
+      "longitude": 75.85011999999999,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20Cancels%2010%20Licences%20in%20Brutal%20August%20Raid%20Maharashtra%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-maharashtra-fda-cancels-10-licences-in-brutal-au-ingested",
+      "establishment_id": "est-maharashtra-fda-cancels-10-licences-in-brutal-au",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": null,
+      "action_date": "2026-08-12",
+      "summary": "Maharashtra FDA Cancels 10 Licences in Brutal August Raid &nbsp;&nbsp; Hindustan Herald",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-maharashtra-fda-cancels-10-licences-in-brutal-au-ingested-act-1",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-08-12",
+          "description": "Hindustan Herald report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-maharashtra-fda-cancels-10-licences-in-brutal-au-ingested-src-1",
+          "source_name": "Hindustan Herald",
+          "source_type": "hindustan_times",
+          "title": "Maharashtra FDA Cancels 10 Licences in Brutal August Raid",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5rMGR0U1AycEpGSy1lNjJCQ0IxZ3JmbEJWSVpFRlNuRklKS3A5VkEybUJMOVNET05PVGo4X3BWanZQb19QdWtUVjJiU3dQa09zM0dldnV0a21YT0pQOHFiQ2tyVXJ1MTJkcTBhSVdmYzhUVnhRV2ZuSFRWSQ?oc=5",
+          "published_at": "2026-08-12",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-maharashtra-fda-cancels-10-licences-in-brutal-au-ingested-hist-1",
+          "status": "licence_cancelled",
+          "effective_date": "2026-08-12",
+          "notes": "Maharashtra FDA Cancels 10 Licences in Brutal August Raid"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-expired-frooti-and-appy-fizz-seized-in-mumbai-wa-2026-08-16",
+    "review_status": "duplicate",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": "duplicate",
+    "rejection_notes": null,
+    "duplicate_of_case_id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested",
+    "establishment": {
+      "id": "est-expired-frooti-and-appy-fizz-seized-in-mumbai-wa",
+      "name": "Expired Frooti and Appy Fizz seized in Mumbai warehouse raid: Tukaram Mundhe-led",
+      "normalized_name": "expired frooti appy fizz seized in mumbai warehouse raid: tukaram mundhe led",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0751,
+      "longitude": 72.87794000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Expired%20Frooti%20and%20Appy%20Fizz%20seized%20in%20Mumbai%20warehouse%20raid%3A%20Tukaram%20Mundhe-led%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-expired-frooti-and-appy-fizz-seized-in-mumbai-wa-ingested",
+      "establishment_id": "est-expired-frooti-and-appy-fizz-seized-in-mumbai-wa",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-08-16",
+      "summary": "Expired Frooti and Appy Fizz seized in Mumbai warehouse raid: Tukaram Mundhe-led FDA suspends company lic &nbsp;&nbsp; The Times of India",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:51:20.668Z",
+      "actions": [
+        {
+          "id": "case-expired-frooti-and-appy-fizz-seized-in-mumbai-wa-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-16",
+          "description": "The Times of India report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-expired-frooti-and-appy-fizz-seized-in-mumbai-wa-ingested-vio-1",
+          "violation_type": "expired_food",
+          "description": "Expired food reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-expired-frooti-and-appy-fizz-seized-in-mumbai-wa-ingested-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Expired Frooti and Appy Fizz seized in Mumbai warehouse raid: Tukaram Mundhe-led FDA suspends company lic",
+          "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPTDE5NjQxR3NiTEU3dWY4c2N2ckdTV1JwdHBuR0V1Zzd6eURtUXBWN0h5TEplWkc3YTBsNnc2VmcwQzcxRkxkd212UVF2eE16NUtrVjE2czFpZEVtb2VvTjV4MXZxdVJhV0p2cTJ1aTk0TVdvSV9tUFJOaHN3clNHTUVpR3ZiUDM1QUFROFlTVDZSVTJCekV2b0x5V0RuNWJUbDB6c3JabU9QZ3cwSnJVSEx6Y1lienZfeFVOWWdHYkVuM09aWWpQRWxHM3JuX1owOEVJd3ExQWFlNDJ3R3Y3WkotdC1SWmNNRXhoX1J3N0pTR2QwX1gzLWxQOXN6cjFTLWJHWEEyS2trTmZtTTVwMGF0M0bSAZoCQVVfeXFMTmhidV81b0RfdmR6NmhSLXVqYW5NdUdpWVVlWUt4TTBpT3FyVkVlT2F3am1oM2lZS3hOR0RlbzIwUUQta2J5Rm8wUDZRM01pYVhBYkNEQTktWS1uN3BKc2Z2S3dWYnFNVk9jb0dWYzdKcXpWZU5ldk9jeGNNZ1lITUlQMlQ4MVVoeDZJLXJOc1YyNk1kaEtac3VTek53YVFIbHlPV2dpV09jTGZHcjNwUkltZ3BNa2pIeDdHWVRkbG51bE5JVXBteW1IOHlJekIxMTg1RkFHeElXdUUyVnRrQXpQTmQyamEzR1djWjBxNjVOVW92MEJBc0JNNDdPelZMTFVoYTZvSkljTkZ6Q08xdk5sOVZuWTMtQURn?oc=5",
+          "published_at": "2026-08-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-expired-frooti-and-appy-fizz-seized-in-mumbai-wa-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-16",
+          "notes": "Expired Frooti and Appy Fizz seized in Mumbai warehouse raid: Tukaram Mundhe-led FDA suspends company lic"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-malad-fda-raid-news-fda-n18s-mumbai-2026-08-11",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-malad-fda-raid-news-fda-n18s-mumbai",
+      "name": "Mumbai Malad FDA Raid News | ब्लिंकिटच्या गोदामावर FDAची कारवाई | N18S",
+      "normalized_name": "mumbai malad fda raid news | ब्लिंकिटच्या गोदामावर fdaची कारवाई | n18s",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07726,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Malad%20FDA%20Raid%20News%20%7C%20%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%95%E0%A4%BF%E0%A4%9F%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%97%E0%A5%8B%E0%A4%A6%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B5%E0%A4%B0%20FDA%E0%A4%9A%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%88%20%7C%20N18S%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-mumbai-malad-fda-raid-news-fda-n18s-mumbai-ingested",
+      "establishment_id": "est-mumbai-malad-fda-raid-news-fda-n18s-mumbai",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-08-11",
+      "summary": "Mumbai Malad FDA Raid News | ब्लिंकिटच्या गोदामावर FDAची कारवाई | N18S &nbsp;&nbsp; News18 Marathi",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-mumbai-malad-fda-raid-news-fda-n18s-mumbai-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-11",
+          "description": "News18 Marathi report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-malad-fda-raid-news-fda-n18s-mumbai-ingested-src-1",
+          "source_name": "News18 Marathi",
+          "source_type": "other_news",
+          "title": "Mumbai Malad FDA Raid News | ब्लिंकिटच्या गोदामावर FDAची कारवाई | N18S",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQ3VyT05UaklXNEc5aWxTMFpiQW9ZdnVFeTJCdVhSSkNvc2N3ZjFZLVZVY01zaEZiVjh2V29oUFVkNExBWjRHSnlZWFRZWXFHLU5qZXpFUF9tS080X0YyRW1RR0xJSlRFYXNqbDliVnMxeXF3dC12M0VONzcyRk53N2luMWFiUHpWby1pejh3cTlUT3Y1WWJBQg?oc=5",
+          "published_at": "2026-08-11",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-malad-fda-raid-news-fda-n18s-mumbai-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-11",
+          "notes": "Mumbai Malad FDA Raid News | ब्लिंकिटच्या गोदामावर FDAची कारवाई | N18S"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-fda-pune-mango-pulp-se-pune-2026-08-13",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-fda-pune-mango-pulp-se-pune",
+      "name": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त, FDA ची मोठी कारवाई | Pune Mango Pulp Se",
+      "normalized_name": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त fda ची मोठी कारवाई | pune mango pulp se",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.51914,
+      "longitude": 73.85754,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A4%AE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A5%87%20%E0%A4%86%E0%A4%82%E0%A4%AC%E0%A4%BE%20%E0%A4%AA%E0%A4%B2%E0%A5%8D%E0%A4%AA%20%E0%A4%86%E0%A4%AE%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%9A%E0%A4%BE%20%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A4%BE%20%E0%A4%9C%E0%A4%AA%E0%A5%8D%E0%A4%A4%2C%20FDA%20%E0%A4%9A%E0%A5%80%20%E0%A4%AE%E0%A5%8B%E0%A4%A0%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%88%20%7C%20Pune%20Mango%20Pulp%20Se%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-fda-pune-mango-pulp-se-pune-ingested",
+      "establishment_id": "est-fda-pune-mango-pulp-se-pune",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-08-13",
+      "summary": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त, FDA ची मोठी कारवाई | Pune Mango Pulp Seizure Kraken (Iw20ExG6OL) &nbsp;&nbsp; Mshale",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-fda-pune-mango-pulp-se-pune-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-13",
+          "description": "Mshale report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-fda-pune-mango-pulp-se-pune-ingested-src-1",
+          "source_name": "Mshale",
+          "source_type": "other_news",
+          "title": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त, FDA ची मोठी कारवाई | Pune Mango Pulp Seizure Kraken (Iw20ExG6OL)",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUSk14Y2ZwZGg2dmFabEpJc1BUZGYyejd6LXhuN1k1cmVDRHNIMnA3dUtiRjRBelczMm9kTWlhanI4dllfZHRLQ0lodElUai10ejByUUFzb0syTTA?oc=5",
+          "published_at": "2026-08-13",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-fda-pune-mango-pulp-se-pune-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-13",
+          "notes": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त, FDA ची मोठी कारवाई | Pune Mango Pulp Seizure Kraken (Iw20ExG6OL)"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-maharashtra-fda-action-fake-food-oil-worth-1-94--2026-08-08",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-maharashtra-fda-action-fake-food-oil-worth-1-94-",
+      "name": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Be",
+      "normalized_name": "maharashtra fda action: fake food oil worth ₹1 94 crore seized during raid in be",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": "Maharashtra",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.94964,
+      "longitude": 75.85036,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20Action%3A%20Fake%20Food%20Oil%20Worth%20%E2%82%B91.94%20Crore%20Seized%20During%20Raid%20In%20Be%20Maharashtra%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-maharashtra-fda-action-fake-food-oil-worth-1-94--ingested",
+      "establishment_id": "est-maharashtra-fda-action-fake-food-oil-worth-1-94-",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO &nbsp;&nbsp; freepressjournal.in",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-maharashtra-fda-action-fake-food-oil-worth-1-94--ingested-act-1",
+          "action_type": "business_sealed",
+          "action_date": "2026-08-08",
+          "description": "freepressjournal.in report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-maharashtra-fda-action-fake-food-oil-worth-1-94--ingested-src-1",
+          "source_name": "freepressjournal.in",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYXp1UVItNFRlODROUHZJRHFZanBaM1c1YWxuNnlWX29jcGdJZk4wTGxWaXdmR29VOV91b1JpMmlPbjVoYnE1cVpIaEpYT05naFZWOHhpWG5oZXY3MFdRVkFlZ3FZRVktMDFPRGtVYjY4cnNVRGZUdkJxNzF2Y3RreFV1N3l5UktIV09fSlFaU0p1Yk52UXRFNWlxZ3ZTRG55LXJnVWVfWUlGM0lScXd1My1QWTVOb0lrNWV6dDRTaE4yUk1hV1hHdmQxM0F5SS1wRTVCTWdn0gHbAUFVX3lxTE5jNGlwVzYweU11U1h4YTRpZEVHazJKaF8tMkVFaGpBWS1BRWNzOXY3eFVpb2I1VC00RERWZnJiZ25tOXN1bzJWZjNmOUgwYnlMbnlQYU85OFpnUjB6cl9SVXB6ZHZpNGZQVVhVNW5jOW4xUlQ1R18zR0lrMHVKdHExcDRiSm9rRjAxQ2JFUm9falJrOVM4Vmk3OGRPcVhkNGNzSGVQSWNkMXM4bmlMU2dGbUwteVk0X3FhQnFBRHBCbXFXRjZmTnNfQ3BKSXg5Sk9SRlB3NWRYV0Z2MA?oc=5",
+          "published_at": "2026-08-08",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-maharashtra-fda-action-fake-food-oil-worth-1-94--ingested-hist-1",
+          "status": "sealed",
+          "effective_date": "2026-08-08",
+          "notes": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Beed; 5 Units Sealed - VIDEO"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-licence-cancelled-tukaram-mundhe-led-fda-cracks--2026-08-06",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-licence-cancelled-tukaram-mundhe-led-fda-cracks-",
+      "name": "Licence Cancelled: Tukaram Mundhe-Led FDA Cracks Down on Pune's Inducare Pharma",
+      "normalized_name": "licence cancelled: tukaram mundhe led fda cracks down on pune s inducare pharma",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519319999999997,
+      "longitude": 73.85766000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Licence%20Cancelled%3A%20Tukaram%20Mundhe-Led%20FDA%20Cracks%20Down%20on%20Pune's%20Inducare%20Pharma%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-licence-cancelled-tukaram-mundhe-led-fda-cracks--ingested",
+      "establishment_id": "est-licence-cancelled-tukaram-mundhe-led-fda-cracks-",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": null,
+      "action_date": "2026-08-06",
+      "summary": "Licence Cancelled: Tukaram Mundhe-Led FDA Cracks Down on Pune's Inducare Pharma &nbsp;&nbsp; NDTV Profit",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-licence-cancelled-tukaram-mundhe-led-fda-cracks--ingested-act-1",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-08-06",
+          "description": "NDTV Profit report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-licence-cancelled-tukaram-mundhe-led-fda-cracks--ingested-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "Licence Cancelled: Tukaram Mundhe-Led FDA Cracks Down on Pune's Inducare Pharma",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPc0NXTlZIUVR5VkQ3UEt6dG41d3p0N1N0dlpYdU44NXZUVWhOdlRNazVmOGl1X1BkSjJxV3FSMEhONG5ETWl1c0RGT0s1d1JkcUtMUTdvVEtWQTRLNWxYZnFCN1ZpdkRIZzFWb0hYcUZhd2hzRk9DV0JnODRVUjFzUFEyS25FNUJ6WnZDeHN4ZHFxUWN3VEN5NWJxNFlLQUluZFl6QlpVYlRCYVl4MFFDYU9laEZ6LTBHd3Ric3hNTmVuX0E5TERfM1piOGxBRkhpQmxRWlpza9IB3wFBVV95cUxPR0JFbGNReFBZMldPX2ZTQ25KWlEzXzBpZTFBMXU1UktxYW5BbjlETXVZMWo0UDRCODc2bnVCZ050c2RWZ095a1hhYW1kVjJZRUFzTFVSbnJkNU5GYlYyek52Si1wby1UTUhuQUtzZ2NmQlhsUXB0Tl9OTUFNenhRMnMwVzVCSnhyeDktYlV6M2x4RHplX1lNQXZNUWwtR3IzRjRvc2h2RDdGY0JyeHdWZ3h2SnM2bWYta2hUdk8ydXRXRG50WkVRRk1oOTZIQXpYbFZyVC1GNXJTSGlvNW4w?oc=5",
+          "published_at": "2026-08-06",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-licence-cancelled-tukaram-mundhe-led-fda-cracks--ingested-hist-1",
+          "status": "licence_cancelled",
+          "effective_date": "2026-08-06",
+          "notes": "Licence Cancelled: Tukaram Mundhe-Led FDA Cracks Down on Pune's Inducare Pharma"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-fda-seizes-banned-food-items-worth-3-36-lakh-in--2026-08-13",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-fda-seizes-banned-food-items-worth-3-36-lakh-in-",
+      "name": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid",
+      "normalized_name": "fda seizes banned food items worth ₹3 36 lakh in major pune division raid",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519679999999997,
+      "longitude": 73.85718,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=FDA%20Seizes%20Banned%20Food%20Items%20Worth%20%E2%82%B93.36%20Lakh%20in%20Major%20Pune%20Division%20Raid%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-fda-seizes-banned-food-items-worth-3-36-lakh-in--ingested",
+      "establishment_id": "est-fda-seizes-banned-food-items-worth-3-36-lakh-in-",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-08-13",
+      "summary": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid &nbsp;&nbsp; Pune Mirror",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-fda-seizes-banned-food-items-worth-3-36-lakh-in--ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-13",
+          "description": "Pune Mirror report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-fda-seizes-banned-food-items-worth-3-36-lakh-in--ingested-src-1",
+          "source_name": "Pune Mirror",
+          "source_type": "other_news",
+          "title": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcGNhd05GekVyN0hZOVhJUUNhZG15a296TWNPMmgyZzlrdi1aU3Jqa0pBUUlRUGZ6QmdDLTRuUGV6OXE0bFlOYS1TTURmaUVKNmYtLVJQUHJ1VmxqaFRUSHhES2xjSlltbkVSeUJIcWRjeXRwbnZ0c1Vwdl9leHRHZmVab0hoTVFnUnR1RWxIUVJlNGJoM0NGMkFwTnlmQ3g2Q1BXck0yZ3FtVXVDdWc?oc=5",
+          "published_at": "2026-08-13",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-fda-seizes-banned-food-items-worth-3-36-lakh-in--ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-13",
+          "notes": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-2026-08-13",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice",
+      "name": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds S",
+      "normalized_name": "chhatrapati sambhajinagar: amarpreet s licence suspended after fda finds s",
+      "address": null,
+      "locality": null,
+      "district": "Chhatrapati Sambhajinagar",
+      "city": "Chhatrapati Sambhajinagar",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.948919999999998,
+      "longitude": 75.8506,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Chhatrapati%20Sambhajinagar%3A%20Hotel%20Amarpreet%E2%80%99s%20Licence%20Suspended%20After%20FDA%20Finds%20S%20Chhatrapati%20Sambhajinagar%20Maharashtra",
+      "business_type": "hotel",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested",
+      "establishment_id": "est-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-13",
+      "summary": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food &nbsp;&nbsp; freepressjournal.in",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-13",
+          "description": "freepressjournal.in report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested-src-1",
+          "source_name": "freepressjournal.in",
+          "source_type": "other_news",
+          "title": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDYwR0dSVndoSU04b2RkOWRRekpGTDZmN3BTLWx3TW1RQTNTZUthY21nVldfQi13QjdjRFJXemQ4bmdMZms0ZVZqOWNLamxQVXpFSTBlcWZXTFMtcUhNcU96YnAyWUhzdmg0R1FIbDU5QTNNbmk5Qmo1aDJKZXZqVlQ1dExONjk1RzVGNUhPRUFoNFItSURUVXl2bkZMeklPYkQ3Mm9NQ0ZNN3NpQkNtZnh0enlXX2lRdGd2UGl5Q2hlZ9IBxwFBVV95cUxPSW95WFNaSW0xN1FnaTVWZlZnT05LbU8yWmdSdGljS1cxeWlETElRM3VlWUVJbkxxSFp2SlpSNnE1Vkh5Y01uenl0eFlNNGJKanhZOWsxeDVxQzc2d0o5cmZtZ3NTRmlqeHl6WGZKUDU2NFVjSkx3cjdLUXdnTmw3Yk5UX3hGUXNKYjd6bHFIbDExUHlBQ0ZHR1oxZm84ZmxDYVpULTluUHh3RmJlVzd5b1NYc3RtUlhxSVdsTzVHQXRWeF9udEpn?oc=5",
+          "published_at": "2026-08-13",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-13",
+          "notes": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-s-famous-poornima-restaurant-moves-hc-aga-2026-07-29",
+    "review_status": "pending",
+    "queued_at": "2026-08-16T09:18:00.449Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-s-famous-poornima-restaurant-moves-hc-aga",
+      "name": "Mumbai’s famous Poornima Restaurant moves HC against FDA, says got ‘official com",
+      "normalized_name": "mumbai s famous poornima moves hc against fda says got ‘official com",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.076,
+      "longitude": 72.87782,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%E2%80%99s%20famous%20Poornima%20Restaurant%20moves%20HC%20against%20FDA%2C%20says%20got%20%E2%80%98official%20com%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z"
+    },
+    "case": {
+      "id": "case-mumbai-s-famous-poornima-restaurant-moves-hc-aga-ingested",
+      "establishment_id": "est-mumbai-s-famous-poornima-restaurant-moves-hc-aga",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-07-29",
+      "summary": "The Indian Express reported: Mumbai’s famous Poornima Restaurant moves HC against FDA, says got ‘official communication after raid’",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T09:18:00.449Z",
+      "actions": [
+        {
+          "id": "case-mumbai-s-famous-poornima-restaurant-moves-hc-aga-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-07-29",
+          "description": "The Indian Express report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-s-famous-poornima-restaurant-moves-hc-aga-ingested-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Mumbai’s famous Poornima Restaurant moves HC against FDA, says got ‘official communication after raid’",
+          "url": "https://indianexpress.com/article/cities/mumbai/udupi-poornima-restaurant-plea-bombay-hc-fda-raid-licence-suspension-10808577/",
+          "published_at": "2026-07-29",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-s-famous-poornima-restaurant-moves-hc-aga-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-07-29",
+          "notes": "Mumbai’s famous Poornima Restaurant moves HC against FDA, says got ‘official communication after raid’"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-k-rustom-churchgate",
+    "review_status": "duplicate",
+    "queued_at": "2026-08-12T09:40:00+05:30",
+    "rejection_reason": "duplicate",
+    "rejection_notes": null,
+    "duplicate_of_case_id": "case-k-rustom-churchgate",
     "establishment": {
       "id": "est-k-rustom-churchgate",
       "name": "K Rustom & Co",
@@ -35,7 +1271,7 @@
       "verification_status": "reported",
       "confidence_score": 0.82,
       "created_at": "2026-08-12T09:40:00+05:30",
-      "updated_at": "2026-08-12T09:40:00+05:30",
+      "updated_at": "2026-08-16T09:51:38.061Z",
       "actions": [
         {
           "id": "case-k-rustom-churchgate-pending-act-1",

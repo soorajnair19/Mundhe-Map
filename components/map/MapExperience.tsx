@@ -18,20 +18,26 @@ import {
   getCommunityPlaceById,
   getMapCaseById,
   layerToSearchParams,
+  mergeMapCases,
   parseFiltersFromSearchParams,
   parseLayerFromSearchParams,
 } from "@/lib/data/load";
-import type { CaseFilters, CommunityPlace, MapLayer } from "@/lib/data/types";
+import type { CaseFilters, CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
 
 export function MapExperience({
   communityPlaces,
+  publishedFdaCases = [],
 }: {
   communityPlaces: CommunityPlace[];
+  publishedFdaCases?: MapCase[];
 }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const allCases = useMemo(() => getAllMapCases(), []);
+  const allCases = useMemo(
+    () => mergeMapCases(getAllMapCases(), publishedFdaCases),
+    [publishedFdaCases],
+  );
 
   const filters = useMemo(
     () => parseFiltersFromSearchParams(searchParams),

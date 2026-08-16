@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { MapExperience } from "@/components/map/MapExperience";
-import { getPublishedCommunityPlaces } from "@/lib/admin/store";
+import { getPublishedCommunityPlaces, getPublishedFdaCases, hydrateAdminStore } from "@/lib/admin/store";
 import { PRODUCT_NAME } from "@/lib/branding";
 
 export const dynamic = "force-dynamic";
@@ -13,11 +13,16 @@ function MapFallback() {
   );
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  await hydrateAdminStore();
   const communityPlaces = getPublishedCommunityPlaces();
+  const publishedFdaCases = getPublishedFdaCases();
   return (
     <Suspense fallback={<MapFallback />}>
-      <MapExperience communityPlaces={communityPlaces} />
+      <MapExperience
+        communityPlaces={communityPlaces}
+        publishedFdaCases={publishedFdaCases}
+      />
     </Suspense>
   );
 }

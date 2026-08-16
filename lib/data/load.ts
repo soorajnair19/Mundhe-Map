@@ -8,9 +8,11 @@ import type {
   CommunityPlace,
   CommunityStats,
   DatePreset,
+  EnforcementCase,
   MapCase,
   MapLayer,
   SeedDataset,
+  StatusHistoryEvent,
   VerificationStatus,
 } from "@/lib/data/types";
 import { statusToMarkerKind, type MarkerKind } from "@/lib/data/status";
@@ -84,6 +86,14 @@ export function computeCommunityStats(
     repeatReports: places.filter((place) => place.similar_report_count > 1)
       .length,
   };
+}
+
+export function mergeMapCases(base: MapCase[], overlay: MapCase[]): MapCase[] {
+  const byCaseId = new Map(base.map((item) => [item.case.id, item]));
+  for (const item of overlay) {
+    byCaseId.set(item.case.id, item);
+  }
+  return [...byCaseId.values()];
 }
 
 export function getAllMapCases(): MapCase[] {
@@ -283,6 +293,50 @@ export function getMapCaseById(
   cases: MapCase[] = getAllMapCases(),
 ): MapCase | null {
   return cases.find((item) => item.case.id === caseId) ?? null;
+}
+
+/** Public timeline: stored history, or Inspection + Action dates from admin. */
+export function caseTimeline(
+  enforcementCase: EnforcementCase,
+): StatusHistoryEvent[] {
+  const history = [...enforcementCase.status_history].sort((a, b) =>
+    a.effective_date.localeCompare(b.effective_date),
+  );
+  if (history.length >= 2) return history;
+
+  const events: StatusHistoryEvent[] = [];
+  const seen = new Set<string>();
+  const add = (event: StatusHistoryEvent) => {
+    const key = `${event.effective_date}|${event.status}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    events.push(event);
+  };
+
+  if (enforcementCase.inspection_date) {
+    add({
+      id: `${enforcementCase.id}-tl-inspection`,
+      status: "inspected",
+      effective_date: enforcementCase.inspection_date,
+      notes: null,
+    });
+  }
+
+  for (const event of history) add(event);
+
+  if (
+    enforcementCase.action_date &&
+    enforcementCase.action_date !== enforcementCase.inspection_date
+  ) {
+    add({
+      id: `${enforcementCase.id}-tl-action`,
+      status: enforcementCase.status,
+      effective_date: enforcementCase.action_date,
+      notes: null,
+    });
+  }
+
+  return events.sort((a, b) => a.effective_date.localeCompare(b.effective_date));
 }
 
 export function parseFiltersFromSearchParams(
