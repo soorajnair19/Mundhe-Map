@@ -1,19 +1,15 @@
-import type { CaseStats } from "@/lib/data/types";
 import { formatDisplayDateTime } from "@/lib/data/normalize";
 import { PRODUCT_NAME } from "@/lib/branding";
 
 interface StatsBarProps {
-  stats: CaseStats;
+  items: { label: string; value: number }[];
+  statsLabel?: string;
 }
 
-export function StatsBar({ stats }: StatsBarProps) {
-  const items = [
-    { label: "Cases", value: stats.totalCases },
-    { label: "Licence actions", value: stats.licenceActions },
-    { label: "Notices", value: stats.notices },
-    { label: "Seizures", value: stats.seizures },
-  ];
-
+export function StatsBar({
+  items,
+  statsLabel = "Map statistics",
+}: StatsBarProps) {
   return (
     <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
       <div className="min-w-0 shrink-0">
@@ -29,7 +25,7 @@ export function StatsBar({ stats }: StatsBarProps) {
       <div
         className="grid w-full max-w-lg grid-cols-4 gap-1.5 sm:ml-auto sm:w-[min(100%,28rem)] sm:gap-2"
         role="group"
-        aria-label="Case statistics"
+        aria-label={statsLabel}
       >
         {items.map((item) => (
           <div

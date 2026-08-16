@@ -1,17 +1,24 @@
 import seed from "@/data/seed/cases.json";
+import communitySeed from "@/data/seed/community-places.json";
 import type {
   ActionType,
   CaseFilters,
   CaseStats,
   CaseType,
+  CommunityPlace,
+  CommunityStats,
   DatePreset,
   MapCase,
+  MapLayer,
   SeedDataset,
   VerificationStatus,
 } from "@/lib/data/types";
 import { statusToMarkerKind, type MarkerKind } from "@/lib/data/status";
 
 const dataset = seed as SeedDataset;
+const communityPlaces = communitySeed as CommunityPlace[];
+
+export const DEFAULT_MAP_LAYER: MapLayer = "enforcement";
 
 const LICENCE_ACTIONS = new Set<string>([
   "licence_suspended",
@@ -49,6 +56,35 @@ export const DEFAULT_FILTERS: CaseFilters = {
   markerKind: null,
   verification: null,
 };
+
+export function getAllCommunityPlaces(): CommunityPlace[] {
+  return communityPlaces;
+}
+
+export function getCommunityPlaceById(
+  placeId: string,
+  places: CommunityPlace[] = getAllCommunityPlaces(),
+): CommunityPlace | null {
+  return places.find((place) => place.id === placeId) ?? null;
+}
+
+export function computeCommunityStats(
+  places: CommunityPlace[],
+): CommunityStats {
+  const cities = new Set(
+    places
+      .map((place) => place.city ?? place.district)
+      .filter((value): value is string => Boolean(value)),
+  );
+
+  return {
+    totalReports: places.length,
+    cities: cities.size,
+    withEvidence: places.filter((place) => place.evidence.length > 0).length,
+    repeatReports: places.filter((place) => place.similar_report_count > 1)
+      .length,
+  };
+}
 
 export function getAllMapCases(): MapCase[] {
   const byId = new Map(
@@ -284,6 +320,21 @@ export function parseFiltersFromSearchParams(
   };
 }
 
+export function parseLayerFromSearchParams(
+  params: URLSearchParams | Record<string, string | string[] | undefined>,
+): MapLayer {
+  const read = (key: string): string | null => {
+    if (params instanceof URLSearchParams) {
+      return params.get(key);
+    }
+    const value = params[key];
+    if (Array.isArray(value)) return value[0] ?? null;
+    return value ?? null;
+  };
+
+  return read("view") === "community" ? "community" : DEFAULT_MAP_LAYER;
+}
+
 export function filtersToSearchParams(filters: CaseFilters): URLSearchParams {
   const params = new URLSearchParams();
   if (filters.datePreset !== "all") params.set("date", filters.datePreset);
@@ -293,6 +344,15 @@ export function filtersToSearchParams(filters: CaseFilters): URLSearchParams {
   if (filters.action) params.set("action", filters.action);
   if (filters.markerKind) params.set("kind", filters.markerKind);
   if (filters.verification) params.set("verification", filters.verification);
+  return params;
+}
+
+export function layerToSearchParams(
+  layer: MapLayer,
+  filters: CaseFilters,
+): URLSearchParams {
+  const params = filtersToSearchParams(filters);
+  if (layer === "community") params.set("view", "community");
   return params;
 }
 

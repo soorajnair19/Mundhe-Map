@@ -186,3 +186,36 @@ export interface CaseStats {
   sealed: number;
   lastUpdated: string | null;
 }
+
+/** Public map layer: sourced enforcement vs user-reported places. */
+export type MapLayer = "enforcement" | "community";
+
+export interface CommunityPlaceEvidence {
+  id: string;
+  label: string;
+  url: string | null;
+}
+
+/** Published user-reported place shown on the Community map layer. */
+export interface CommunityPlace {
+  id: string;
+  place_name: string;
+  maps_url: string;
+  address: string | null;
+  locality: string | null;
+  city: string | null;
+  district: string;
+  latitude: number;
+  longitude: number;
+  concern: string;
+  evidence: CommunityPlaceEvidence[];
+  submitted_at: string;
+  similar_report_count: number;
+}
+
+export interface CommunityStats {
+  totalReports: number;
+  cities: number;
+  withEvidence: number;
+  repeatReports: number;
+}

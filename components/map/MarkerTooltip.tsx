@@ -6,7 +6,7 @@ interface MarkerTooltipProps {
   name: string;
   locality: string;
   district: string;
-  status: string;
+  status?: string;
   statusLabel: string;
   dateLabel: string;
   accent: string;
@@ -39,7 +39,9 @@ export function MarkerTooltip({
         className="mt-2 flex items-center gap-1.5 text-xs font-medium tracking-wide"
         style={{ color: accent }}
       >
-        <StatusIcon status={status} size={13} color={accent} />
+        {status ? (
+          <StatusIcon status={status} size={13} color={accent} />
+        ) : null}
         {statusLabel}
       </p>
       <p className="text-xs text-[var(--muted)]">{dateLabel}</p>

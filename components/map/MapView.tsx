@@ -5,10 +5,11 @@ import {
   Map as MapLibreMap,
   Marker,
   NavigationControl,
+  LngLatBounds,
   type MapMouseEvent,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import type { MapCase } from "@/lib/data/types";
+import type { CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
 import { statusToMarkerKind, MARKER_STYLES, pinAccent } from "@/lib/data/status";
 import {
   formatMonthYear,
@@ -26,47 +27,123 @@ import {
 import { MarkerTooltip } from "@/components/map/MarkerTooltip";
 
 interface MapViewProps {
+  layer: MapLayer;
   cases: MapCase[];
-  selectedCaseId: string | null;
-  onSelectCase: (caseId: string | null) => void;
+  places: CommunityPlace[];
+  selectedId: string | null;
+  onSelect: (id: string | null) => void;
+}
+
+interface MapPin {
+  id: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  locality: string;
+  district: string;
+  statusLabel: string;
+  dateLabel: string;
+  accent: string;
+  variant: MapLayer;
+  status?: string;
 }
 
 interface HoverState {
-  caseId: string;
+  pinId: string;
   x: number;
   y: number;
 }
 
+const COMMUNITY_PIN_COLOR = "#0f6e56";
+
 const CASE_PIN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="map-case-pin__icon" aria-hidden="true"><path d="M0 0h14v14H0z" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.15"><path d="M13.48 7.516a6.5 6.5 0 1 1-6.93-7"/><path d="M9.79 8.09A3 3 0 1 1 5.9 4.21M7 7l2.5-2.5m2 .5l-2-.5l-.5-2l2-2l.5 2l2 .5z"/></g></svg>`;
 
-function createPinElement(mapCase: MapCase, selected: boolean): HTMLButtonElement {
-  const kind = statusToMarkerKind(mapCase.case.status);
-  const style = MARKER_STYLES[kind];
+const COMMUNITY_PIN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="map-case-pin__icon" aria-hidden="true"><path d="M0 0h14v14H0z" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.15"><path d="M3.25 1.75v10.5"/><path d="M3.25 2.2h7.1L8.4 5.15l1.95 2.95H3.25"/></g></svg>`;
+
+function pinsFromCases(cases: MapCase[]): MapPin[] {
+  return cases.map((mapCase) => {
+    return {
+      id: mapCase.case.id,
+      name: mapCase.establishment.name,
+      latitude: mapCase.establishment.latitude,
+      longitude: mapCase.establishment.longitude,
+      locality:
+        mapCase.establishment.locality ??
+        mapCase.establishment.city ??
+        mapCase.establishment.district,
+      district: mapCase.establishment.district,
+      status: mapCase.case.status,
+      statusLabel: formatStatus(mapCase.case.status),
+      dateLabel: formatMonthYear(
+        mapCase.case.action_date ?? mapCase.case.inspection_date,
+      ),
+      accent: pinAccent(mapCase.case.status).ink,
+      variant: "enforcement",
+    };
+  });
+}
+
+function pinsFromPlaces(places: CommunityPlace[]): MapPin[] {
+  return places.map((place) => ({
+    id: place.id,
+    name: place.place_name,
+    latitude: place.latitude,
+    longitude: place.longitude,
+    locality: place.locality ?? place.city ?? place.district,
+    district: place.district,
+    statusLabel: "Community report",
+    dateLabel: formatMonthYear(place.submitted_at),
+    accent: COMMUNITY_PIN_COLOR,
+    variant: "community",
+  }));
+}
+
+function createPinElement(pin: MapPin, selected: boolean): HTMLButtonElement {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = `map-case-pin${selected ? " is-selected" : ""}`;
-  button.style.setProperty("--pin-color", style.color);
-  button.setAttribute(
-    "aria-label",
-    `${mapCase.establishment.name}, ${formatStatus(mapCase.case.status)}`,
+  button.className = `map-case-pin${selected ? " is-selected" : ""}${
+    pin.variant === "community" ? " is-community" : ""
+  }`;
+  button.style.setProperty(
+    "--pin-color",
+    pin.variant === "community"
+      ? COMMUNITY_PIN_COLOR
+      : MARKER_STYLES[statusToMarkerKind(pin.status ?? "other")].color,
   );
-  button.innerHTML = CASE_PIN_SVG;
+  button.setAttribute("aria-label", `${pin.name}, ${pin.statusLabel}`);
+  button.innerHTML =
+    pin.variant === "community" ? COMMUNITY_PIN_SVG : CASE_PIN_SVG;
   return button;
 }
 
-export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
+export function MapView({
+  layer,
+  cases,
+  places,
+  selectedId,
+  onSelect,
+}: MapViewProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const markersRef = useRef<Map<string, Marker>>(new Map());
-  const onSelectRef = useRef(onSelectCase);
+  const onSelectRef = useRef(onSelect);
+  const previousLayerRef = useRef<MapLayer>(layer);
   const [hover, setHover] = useState<HoverState | null>(null);
   const [ready, setReady] = useState(false);
-  const casesById = useMemo(
-    () => new Map(cases.map((item) => [item.case.id, item])),
-    [cases],
+
+  const pins = useMemo(
+    () =>
+      layer === "community" ? pinsFromPlaces(places) : pinsFromCases(cases),
+    [layer, cases, places],
+  );
+  const pinsById = useMemo(
+    () => new Map(pins.map((pin) => [pin.id, pin])),
+    [pins],
   );
 
-  onSelectRef.current = onSelectCase;
+  useEffect(() => {
+    onSelectRef.current = onSelect;
+  }, [onSelect]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -98,11 +175,13 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
     const finishSetup = () => {
       if (cancelled || !mapRef.current) return;
       map.resize();
-      map.fitBounds(MUMBAI_BOUNDS, {
-        padding: 48,
-        maxZoom: 11,
-        duration: 0,
-      });
+      if (previousLayerRef.current === "enforcement") {
+        map.fitBounds(MUMBAI_BOUNDS, {
+          padding: 48,
+          maxZoom: 11,
+          duration: 0,
+        });
+      }
       setReady(true);
     };
 
@@ -120,13 +199,14 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
       setHover(null);
     });
 
+    const markers = markersRef.current;
     return () => {
       cancelled = true;
       resizeObserver.disconnect();
-      for (const marker of markersRef.current.values()) {
+      for (const marker of markers.values()) {
         marker.remove();
       }
-      markersRef.current.clear();
+      markers.clear();
       setReady(false);
       map.remove();
       mapRef.current = null;
@@ -137,56 +217,51 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
     const map = mapRef.current;
     if (!map || !ready) return;
 
-    const nextIds = new Set(cases.map((item) => item.case.id));
+    const nextIds = new Set(pins.map((pin) => pin.id));
 
-    for (const [caseId, marker] of markersRef.current.entries()) {
-      if (!nextIds.has(caseId)) {
+    for (const [pinId, marker] of markersRef.current.entries()) {
+      if (!nextIds.has(pinId)) {
         marker.remove();
-        markersRef.current.delete(caseId);
+        markersRef.current.delete(pinId);
       }
     }
 
-    for (const mapCase of cases) {
-      const selected = mapCase.case.id === selectedCaseId;
-      const existing = markersRef.current.get(mapCase.case.id);
+    for (const pin of pins) {
+      const selected = pin.id === selectedId;
+      const existing = markersRef.current.get(pin.id);
 
       if (existing) {
         const el = existing.getElement() as HTMLButtonElement;
         el.classList.toggle("is-selected", selected);
+        el.classList.toggle("is-community", pin.variant === "community");
         el.style.setProperty(
           "--pin-color",
-          MARKER_STYLES[statusToMarkerKind(mapCase.case.status)].color,
+          pin.variant === "community"
+            ? COMMUNITY_PIN_COLOR
+            : MARKER_STYLES[statusToMarkerKind(pin.status ?? "other")].color,
         );
-        existing.setLngLat([
-          mapCase.establishment.longitude,
-          mapCase.establishment.latitude,
-        ]);
+        existing.setLngLat([pin.longitude, pin.latitude]);
         continue;
       }
 
-      const element = createPinElement(mapCase, selected);
+      const element = createPinElement(pin, selected);
 
       element.addEventListener("click", (event) => {
         event.stopPropagation();
-        onSelectRef.current(mapCase.case.id);
+        onSelectRef.current(pin.id);
       });
 
       element.addEventListener("mouseenter", () => {
-        const point = map.project([
-          mapCase.establishment.longitude,
-          mapCase.establishment.latitude,
-        ]);
+        const point = map.project([pin.longitude, pin.latitude]);
         setHover({
-          caseId: mapCase.case.id,
+          pinId: pin.id,
           x: point.x,
           y: point.y,
         });
       });
 
       element.addEventListener("mouseleave", () => {
-        setHover((current) =>
-          current?.caseId === mapCase.case.id ? null : current,
-        );
+        setHover((current) => (current?.pinId === pin.id ? null : current));
       });
 
       const marker = new Marker({
@@ -195,38 +270,59 @@ export function MapView({ cases, selectedCaseId, onSelectCase }: MapViewProps) {
         pitchAlignment: "viewport",
         rotationAlignment: "viewport",
       })
-        .setLngLat([
-          mapCase.establishment.longitude,
-          mapCase.establishment.latitude,
-        ])
+        .setLngLat([pin.longitude, pin.latitude])
         .addTo(map);
 
-      markersRef.current.set(mapCase.case.id, marker);
+      markersRef.current.set(pin.id, marker);
     }
-  }, [cases, selectedCaseId, ready]);
+  }, [pins, selectedId, ready]);
 
-  const hoverCase = hover ? (casesById.get(hover.caseId) ?? null) : null;
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready) return;
+
+    const previous = previousLayerRef.current;
+    previousLayerRef.current = layer;
+    setHover(null);
+
+    if (layer === "community" && places.length > 0) {
+      const bounds = new LngLatBounds();
+      for (const place of places) {
+        bounds.extend([place.longitude, place.latitude]);
+      }
+      map.fitBounds(bounds, {
+        padding: 72,
+        maxZoom: 11,
+        duration: previous === "community" ? 0 : 600,
+      });
+      return;
+    }
+
+    if (previous === "community" && layer === "enforcement") {
+      map.fitBounds(MUMBAI_BOUNDS, {
+        padding: 48,
+        maxZoom: 11,
+        duration: 600,
+      });
+    }
+  }, [layer, places, ready]);
+
+  const hoverPin = hover ? (pinsById.get(hover.pinId) ?? null) : null;
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-[var(--map-canvas)]">
       <div ref={containerRef} className="absolute inset-0 h-full w-full" />
-      {hover && hoverCase && (
+      {hover && hoverPin && (
         <MarkerTooltip
           x={hover.x}
           y={hover.y}
-          name={hoverCase.establishment.name}
-          locality={
-            hoverCase.establishment.locality ??
-            hoverCase.establishment.city ??
-            hoverCase.establishment.district
-          }
-          district={hoverCase.establishment.district}
-          status={hoverCase.case.status}
-          statusLabel={formatStatus(hoverCase.case.status)}
-          dateLabel={formatMonthYear(
-            hoverCase.case.action_date ?? hoverCase.case.inspection_date,
-          )}
-          accent={pinAccent(hoverCase.case.status).ink}
+          name={hoverPin.name}
+          locality={hoverPin.locality}
+          district={hoverPin.district}
+          status={hoverPin.status}
+          statusLabel={hoverPin.statusLabel}
+          dateLabel={hoverPin.dateLabel}
+          accent={hoverPin.accent}
         />
       )}
     </div>
