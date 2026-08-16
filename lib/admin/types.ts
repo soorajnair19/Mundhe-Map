@@ -46,6 +46,9 @@ export interface CommunityRequest {
   address: string | null;
   locality: string | null;
   city: string | null;
+  district: string | null;
+  latitude: number | null;
+  longitude: number | null;
   concern: string;
   evidence: CommunityEvidence[];
   submitted_at: string;
@@ -54,11 +57,19 @@ export interface CommunityRequest {
   rejection_reason: RejectionReason | null;
   rejection_notes: string | null;
   duplicate_of_place: string | null;
+  published_place_id: string | null;
 }
 
 export interface PublishedPlaceOption {
   establishmentId: string;
   caseId: string;
+  name: string;
+  locality: string | null;
+  city: string | null;
+}
+
+export interface DuplicatePlaceOption {
+  id: string;
   name: string;
   locality: string | null;
   city: string | null;

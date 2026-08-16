@@ -1,6 +1,9 @@
 import { Suspense } from "react";
 import { MapExperience } from "@/components/map/MapExperience";
+import { getPublishedCommunityPlaces } from "@/lib/admin/store";
 import { PRODUCT_NAME } from "@/lib/branding";
+
+export const dynamic = "force-dynamic";
 
 function MapFallback() {
   return (
@@ -11,9 +14,10 @@ function MapFallback() {
 }
 
 export default function HomePage() {
+  const communityPlaces = getPublishedCommunityPlaces();
   return (
     <Suspense fallback={<MapFallback />}>
-      <MapExperience />
+      <MapExperience communityPlaces={communityPlaces} />
     </Suspense>
   );
 }

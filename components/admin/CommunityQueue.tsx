@@ -6,10 +6,12 @@ import {
   approveCommunityRequestAction,
   markCommunityRequestDuplicateAction,
   rejectCommunityRequestAction,
+  restoreCommunityRequestAction,
+  unpublishCommunityRequestAction,
 } from "@/lib/admin/actions";
 import type {
   CommunityRequest,
-  PublishedPlaceOption,
+  DuplicatePlaceOption,
   RejectionReason,
 } from "@/lib/admin/types";
 import { COMMUNITY_REJECTION_REASONS } from "@/lib/admin/types";
@@ -21,26 +23,38 @@ import { QueueToolbar } from "@/components/admin/QueueToolbar";
 import { StatusChip } from "@/components/admin/StatusChip";
 
 const STATUSES = [
+  { value: "all", label: "All" },
   { value: "pending", label: "Pending" },
   { value: "approved", label: "Approved" },
   { value: "rejected", label: "Rejected" },
   { value: "duplicate", label: "Duplicate" },
-  { value: "all", label: "All" },
 ];
 
-type ConfirmKind = "approve" | "reject" | "duplicate" | null;
+type ConfirmKind = "approve" | "reject" | "duplicate" | "unpublish" | "restore";
 
-function placeKey(request: CommunityRequest): string {
-  return `${normalizeName(request.place_name)}|${normalizeName(request.city ?? "")}`;
+function placeKey(name: string, city: string | null): string {
+  return `${normalizeName(name)}|${normalizeName(city ?? "")}`;
 }
 
-function similarReportCount(
+function reportCount(
   request: CommunityRequest,
   all: CommunityRequest[],
 ): number {
-  const key = placeKey(request);
-  return all.filter((item) => item.id !== request.id && placeKey(item) === key)
-    .length;
+  if (request.duplicate_of_place) {
+    const target = all.find(
+      (item) =>
+        item.published_place_id === request.duplicate_of_place ||
+        item.id === request.duplicate_of_place,
+    );
+    if (target) return target.similar_report_count;
+  }
+  const published = all.find(
+    (item) =>
+      item.status === "approved" &&
+      placeKey(item.place_name, item.city) ===
+        placeKey(request.place_name, request.city),
+  );
+  return published?.similar_report_count ?? request.similar_report_count;
 }
 
 function formatPlaceLocation(
@@ -52,17 +66,17 @@ function formatPlaceLocation(
 
 interface CommunityQueueProps {
   requests: CommunityRequest[];
-  publishedPlaces: PublishedPlaceOption[];
+  communityPlaceOptions: DuplicatePlaceOption[];
 }
 
 export function CommunityQueue({
   requests,
-  publishedPlaces,
+  communityPlaceOptions,
 }: CommunityQueueProps) {
   const [query, setQuery] = useState("");
-  const [status, setStatus] = useState("pending");
+  const [status, setStatus] = useState("all");
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [confirm, setConfirm] = useState<ConfirmKind>(null);
+  const [confirm, setConfirm] = useState<ConfirmKind | null>(null);
   const [confirmId, setConfirmId] = useState<string | null>(null);
   const [reason, setReason] = useState<RejectionReason>("insufficient_evidence");
   const [notes, setNotes] = useState("");
@@ -109,11 +123,17 @@ export function CommunityQueue({
       if (confirm === "reject") {
         await rejectCommunityRequestAction(targetId, reason, notes || null);
       }
+      if (confirm === "unpublish") {
+        await unpublishCommunityRequestAction(targetId);
+      }
+      if (confirm === "restore") {
+        await restoreCommunityRequestAction(targetId);
+      }
       if (confirm === "duplicate") {
+        if (!duplicateOf) return;
         await markCommunityRequestDuplicateAction(targetId, duplicateOf);
       }
       setConfirm(null);
-      setSelectedId(null);
     } finally {
       setPending(false);
     }
@@ -126,8 +146,9 @@ export function CommunityQueue({
           Community Requests
         </h1>
         <p className="mt-1 text-sm text-[var(--muted)]">
-          Places people have asked FDA to inspect. These are not enforcement
-          cases and must never be labelled as violations.
+          Places people have asked FDA to inspect. Approving a request publishes
+          it on the public community map. These are not enforcement cases and
+          must never be labelled as violations.
         </p>
         <p className="mt-2 text-sm text-[var(--ink)]">
           <span className="font-medium tabular-nums">{pendingCount}</span>{" "}
@@ -146,12 +167,14 @@ export function CommunityQueue({
 
       {visible.length === 0 ? (
         <div className="mt-8 rounded-xl border border-dashed border-[var(--border-strong)] bg-[var(--panel)] px-6 py-12 text-center text-sm text-[var(--muted)]">
-          No community requests in this view.
+          {status === "pending" && requests.some((item) => item.status === "approved")
+            ? "Nothing pending. Approved places are on the community map — open the Approved filter to manage them."
+            : "No community requests in this view."}
         </div>
       ) : (
         <ul className="mt-5 space-y-3">
           {visible.map((request) => {
-            const similar = similarReportCount(request, requests);
+            const reports = reportCount(request, requests);
             return (
             <li
               key={request.id}
@@ -168,9 +191,14 @@ export function CommunityQueue({
                 </div>
                 <div className="flex items-center gap-2">
                   <StatusChip status={request.status} />
-                  {similar > 0 ? (
+                  {request.status === "approved" ? (
+                    <span className="rounded-md bg-[#e4f1ec] px-2 py-0.5 text-xs font-medium text-[#0f6e56]">
+                      On map
+                    </span>
+                  ) : null}
+                  {reports > 1 ? (
                     <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-xs font-medium">
-                      {similar} similar
+                      {reports} reports
                     </span>
                   ) : null}
                 </div>
@@ -200,20 +228,24 @@ export function CommunityQueue({
 
       <CommunityDrawer
         request={selected}
-        similarCount={
-          selected ? similarReportCount(selected, requests) : 0
-        }
+        similarCount={selected ? reportCount(selected, requests) : 0}
         onClose={() => setSelectedId(null)}
         onApprove={() => selected && openConfirm("approve", selected.id)}
         onReject={() => selected && openConfirm("reject", selected.id)}
         onDuplicate={() => selected && openConfirm("duplicate", selected.id)}
+        onUnpublish={() => selected && openConfirm("unpublish", selected.id)}
+        onRestore={() => selected && openConfirm("restore", selected.id)}
       />
 
       {confirm === "approve" ? (
         <ConfirmDialog
-          title="Approve request"
-          body="This request has passed moderation and can later be shown publicly as a request for inspection. It is not a verified FDA violation or enforcement action."
-          confirmLabel="Approve"
+          title={
+            selected?.status === "pending"
+              ? "Approve request"
+              : "Move back to queue and approve"
+          }
+          body="This place will appear on the public community map as a request for inspection. It is not a verified FDA violation or enforcement action."
+          confirmLabel="Approve and publish"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
@@ -221,8 +253,16 @@ export function CommunityQueue({
       ) : null}
       {confirm === "reject" ? (
         <ConfirmDialog
-          title="Reject request"
-          body="The request will leave the pending queue and stay in local review history."
+          title={
+            selected?.status === "pending"
+              ? "Reject request"
+              : "Move back to queue and reject"
+          }
+          body={
+            selected?.status === "approved"
+              ? "This place will be removed from the community map and marked as rejected."
+              : "The request will leave the pending queue and stay in review history. It will not appear on the community map."
+          }
           confirmLabel="Reject"
           tone="danger"
           onCancel={() => setConfirm(null)}
@@ -253,20 +293,41 @@ export function CommunityQueue({
           </label>
         </ConfirmDialog>
       ) : null}
+      {confirm === "unpublish" ? (
+        <ConfirmDialog
+          title="Remove from map"
+          body="This place will be taken off the public community map and returned to the pending queue."
+          confirmLabel="Remove from map"
+          onCancel={() => setConfirm(null)}
+          onConfirm={runConfirm}
+          pending={pending}
+        />
+      ) : null}
+      {confirm === "restore" ? (
+        <ConfirmDialog
+          title="Move back to queue"
+          body="This request will return to the pending queue. It will not appear on the public map until it is approved again."
+          confirmLabel="Move back to queue"
+          onCancel={() => setConfirm(null)}
+          onConfirm={runConfirm}
+          pending={pending}
+        />
+      ) : null}
       {confirm === "duplicate" ? (
         <ConfirmDialog
           title="Mark as duplicate"
-          body="This submission will be stored as a duplicate of an existing place and removed from the pending queue."
+          body="This submission will count toward an existing community place and will not get its own pin."
           confirmLabel="Mark duplicate"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={!duplicateOf}
         >
           <DuplicatePicker
-            places={publishedPlaces}
+            places={communityPlaceOptions}
             selectedId={duplicateOf}
             onSelect={setDuplicateOf}
-            valueKey="establishmentId"
+            placeholder="Search community places"
           />
         </ConfirmDialog>
       ) : null}
@@ -281,6 +342,8 @@ function CommunityDrawer({
   onApprove,
   onReject,
   onDuplicate,
+  onUnpublish,
+  onRestore,
 }: {
   request: CommunityRequest | null;
   similarCount: number;
@@ -288,12 +351,14 @@ function CommunityDrawer({
   onApprove: () => void;
   onReject: () => void;
   onDuplicate: () => void;
+  onUnpublish: () => void;
+  onRestore: () => void;
 }) {
   const open = Boolean(request);
-  const canAct = request?.status === "pending";
   const location = request
     ? formatPlaceLocation(request.locality, request.city)
     : "";
+  const onMap = request?.status === "approved";
 
   return (
     <>
@@ -333,7 +398,18 @@ function CommunityDrawer({
             </div>
 
             <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
-              <StatusChip status={request.status} />
+              <div className="flex flex-wrap items-center gap-2">
+                <StatusChip status={request.status} />
+                <span
+                  className={`rounded-md px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide ${
+                    onMap
+                      ? "bg-[#e4f1ec] text-[#0f6e56]"
+                      : "bg-[var(--surface)] text-[var(--muted)]"
+                  }`}
+                >
+                  {onMap ? "On community map" : "Not on map"}
+                </span>
+              </div>
 
               {request.concern ? (
                 <section>
@@ -360,12 +436,10 @@ function CommunityDrawer({
                     {formatDisplayDate(request.submitted_at)}
                   </dd>
                 </div>
-                {similarCount > 0 ? (
-                  <div>
-                    <dt className="text-[var(--muted)]">Similar reports</dt>
-                    <dd className="text-[var(--ink)]">{similarCount}</dd>
-                  </div>
-                ) : null}
+                <div>
+                  <dt className="text-[var(--muted)]"># of Reports</dt>
+                  <dd className="text-[var(--ink)]">{similarCount}</dd>
+                </div>
               </dl>
 
               {request.evidence.length > 0 ? (
@@ -433,33 +507,55 @@ function CommunityDrawer({
             </div>
 
             <div className="flex flex-wrap gap-2 border-t border-[var(--border)] px-5 py-4">
-              {canAct ? (
-                <>
-                  <button
-                    type="button"
-                    onClick={onApprove}
-                    className="rounded-lg bg-[var(--accent)] px-3 py-2 text-sm font-medium text-white"
-                  >
-                    Approve
-                  </button>
-                  <button
-                    type="button"
-                    onClick={onReject}
-                    className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
-                  >
-                    Reject
-                  </button>
-                  <button
-                    type="button"
-                    onClick={onDuplicate}
-                    className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
-                  >
-                    Mark as duplicate
-                  </button>
-                </>
-              ) : (
-                <StatusChip status={request.status} />
-              )}
+              {onMap ? (
+                <button
+                  type="button"
+                  onClick={onUnpublish}
+                  className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                >
+                  Remove from map
+                </button>
+              ) : null}
+              {request.status !== "approved" ? (
+                <button
+                  type="button"
+                  onClick={onApprove}
+                  className="rounded-lg bg-[var(--accent)] px-3 py-2 text-sm font-medium text-white"
+                >
+                  {request.status === "pending"
+                    ? "Approve"
+                    : "Move back to queue and approve"}
+                </button>
+              ) : null}
+              {request.status !== "rejected" ? (
+                <button
+                  type="button"
+                  onClick={onReject}
+                  className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                >
+                  {request.status === "pending"
+                    ? "Reject"
+                    : "Move back to queue and reject"}
+                </button>
+              ) : null}
+              {request.status === "pending" ? (
+                <button
+                  type="button"
+                  onClick={onDuplicate}
+                  className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                >
+                  Mark as duplicate
+                </button>
+              ) : null}
+              {request.status === "rejected" || request.status === "duplicate" ? (
+                <button
+                  type="button"
+                  onClick={onRestore}
+                  className="rounded-lg px-3 py-2 text-sm ring-1 ring-[var(--border)]"
+                >
+                  Move back to queue
+                </button>
+              ) : null}
             </div>
           </div>
         ) : null}

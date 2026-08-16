@@ -1,8 +1,8 @@
 import { CommunityQueue } from "@/components/admin/CommunityQueue";
 import { isAdminAuthenticated } from "@/lib/admin/auth";
 import {
+  getCommunityPlaceOptions,
   getCommunityRequests,
-  getPublishedPlaceOptions,
 } from "@/lib/admin/store";
 
 export const dynamic = "force-dynamic";
@@ -15,7 +15,7 @@ export default async function CommunityRequestsPage() {
   return (
     <CommunityQueue
       requests={getCommunityRequests("all")}
-      publishedPlaces={getPublishedPlaceOptions()}
+      communityPlaceOptions={getCommunityPlaceOptions()}
     />
   );
 }

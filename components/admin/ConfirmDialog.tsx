@@ -11,6 +11,7 @@ interface ConfirmDialogProps {
   onCancel: () => void;
   onConfirm: () => void;
   pending?: boolean;
+  confirmDisabled?: boolean;
 }
 
 export function ConfirmDialog({
@@ -22,6 +23,7 @@ export function ConfirmDialog({
   onCancel,
   onConfirm,
   pending,
+  confirmDisabled,
 }: ConfirmDialogProps) {
   const confirmClass =
     tone === "danger"
@@ -52,7 +54,7 @@ export function ConfirmDialog({
           <button
             type="button"
             onClick={onConfirm}
-            disabled={pending}
+            disabled={pending || confirmDisabled}
             className={`rounded-lg px-3 py-2 text-sm font-medium disabled:opacity-50 ${confirmClass}`}
           >
             {pending ? "Working…" : confirmLabel}

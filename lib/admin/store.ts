@@ -1,19 +1,28 @@
 import fdaSeed from "@/data/admin/pending-fda-reports.json";
 import communitySeed from "@/data/admin/community-requests.json";
 import { getAllMapCases } from "@/lib/data/load";
-import type { EnforcementCase, Establishment } from "@/lib/data/types";
+import type {
+  CommunityPlace,
+  EnforcementCase,
+  Establishment,
+} from "@/lib/data/types";
 import type { CommunityRequestDraft } from "@/lib/community/schema";
+import { resolveCommunityCoordinates } from "@/lib/community/coords";
 import { normalizeName } from "@/lib/data/normalize";
 import type {
   CommunityRequest,
   CommunityRequestStatus,
+  DuplicatePlaceOption,
   FDAReport,
   FDAReviewStatus,
   PublishedPlaceOption,
   RejectionReason,
 } from "@/lib/admin/types";
 
+const STORE_VERSION = 3;
+
 interface AdminStore {
+  version: number;
   fdaReports: FDAReport[];
   communityRequests: CommunityRequest[];
 }
@@ -24,13 +33,17 @@ const globalStore = globalThis as typeof globalThis & {
 
 function cloneStore(): AdminStore {
   return {
+    version: STORE_VERSION,
     fdaReports: structuredClone(fdaSeed) as FDAReport[],
     communityRequests: structuredClone(communitySeed) as CommunityRequest[],
   };
 }
 
 function getStore(): AdminStore {
-  if (!globalStore.__mundheAdminStore) {
+  if (
+    !globalStore.__mundheAdminStore ||
+    globalStore.__mundheAdminStore.version !== STORE_VERSION
+  ) {
     globalStore.__mundheAdminStore = cloneStore();
   }
   return globalStore.__mundheAdminStore;
@@ -38,6 +51,73 @@ function getStore(): AdminStore {
 
 function nowIso(): string {
   return new Date().toISOString();
+}
+
+function communityPlaceKey(name: string, city: string | null): string {
+  return `${normalizeName(name)}|${normalizeName(city ?? "")}`;
+}
+
+function slugify(value: string): string {
+  const slug = value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 40);
+  return slug || "place";
+}
+
+function requestToPlace(request: CommunityRequest): CommunityPlace | null {
+  if (
+    request.status !== "approved" ||
+    request.latitude == null ||
+    request.longitude == null
+  ) {
+    return null;
+  }
+  return {
+    id: request.published_place_id ?? request.id,
+    place_name: request.place_name,
+    maps_url: request.maps_url,
+    address: request.address,
+    locality: request.locality,
+    city: request.city,
+    district: request.district ?? request.city ?? "Maharashtra",
+    latitude: request.latitude,
+    longitude: request.longitude,
+    concern: request.concern,
+    evidence: request.evidence,
+    submitted_at: request.submitted_at,
+    similar_report_count: request.similar_report_count,
+  };
+}
+
+function ensureMappable(request: CommunityRequest): void {
+  if (request.latitude == null || request.longitude == null) {
+    const coords = resolveCommunityCoordinates({
+      id: request.id,
+      maps_url: request.maps_url,
+      locality: request.locality,
+      city: request.city,
+      district: request.district,
+    });
+    request.latitude = coords.latitude;
+    request.longitude = coords.longitude;
+  }
+  if (!request.district) {
+    request.district = request.city;
+  }
+  if (!request.published_place_id) {
+    request.published_place_id = `place-${request.id.replace(/^req-/, "")}`;
+  }
+}
+
+function findRequestByPlaceId(placeId: string): CommunityRequest | null {
+  return (
+    getStore().communityRequests.find(
+      (request) =>
+        request.published_place_id === placeId || request.id === placeId,
+    ) ?? null
+  );
 }
 
 export function getFDAReports(status?: FDAReviewStatus | "all"): FDAReport[] {
@@ -89,6 +169,21 @@ export function getPublishedPlaceOptions(): PublishedPlaceOption[] {
     name: item.establishment.name,
     locality: item.establishment.locality,
     city: item.establishment.city,
+  }));
+}
+
+export function getPublishedCommunityPlaces(): CommunityPlace[] {
+  return getStore()
+    .communityRequests.map(requestToPlace)
+    .filter((place): place is CommunityPlace => place !== null);
+}
+
+export function getCommunityPlaceOptions(): DuplicatePlaceOption[] {
+  return getPublishedCommunityPlaces().map((place) => ({
+    id: place.id,
+    name: place.place_name,
+    locality: place.locality,
+    city: place.city,
   }));
 }
 
@@ -153,6 +248,7 @@ export function updateFDAReport(
 export function approveCommunityRequest(id: string): CommunityRequest | null {
   const request = getCommunityRequest(id);
   if (!request) return null;
+  ensureMappable(request);
   request.status = "approved";
   request.rejection_reason = null;
   request.rejection_notes = null;
@@ -174,15 +270,49 @@ export function rejectCommunityRequest(
   return request;
 }
 
+export function unpublishCommunityRequest(
+  id: string,
+): CommunityRequest | null {
+  const request = getCommunityRequest(id);
+  if (!request) return null;
+  request.status = "pending";
+  request.rejection_reason = null;
+  request.rejection_notes = null;
+  request.duplicate_of_place = null;
+  return request;
+}
+
+export function restoreCommunityRequest(id: string): CommunityRequest | null {
+  const request = getCommunityRequest(id);
+  if (!request) return null;
+  if (request.duplicate_of_place) {
+    const target = findRequestByPlaceId(request.duplicate_of_place);
+    if (target && target.similar_report_count > 1) {
+      target.similar_report_count -= 1;
+    }
+  }
+  request.status = "pending";
+  request.rejection_reason = null;
+  request.rejection_notes = null;
+  request.duplicate_of_place = null;
+  return request;
+}
+
 export function markCommunityRequestDuplicate(
   id: string,
   duplicateOfPlace: string | null,
 ): CommunityRequest | null {
   const request = getCommunityRequest(id);
-  if (!request) return null;
+  if (!request || !duplicateOfPlace) return null;
+  const target = findRequestByPlaceId(duplicateOfPlace);
+  if (!target) return null;
+
   request.status = "duplicate";
-  request.duplicate_of_place = duplicateOfPlace;
+  request.duplicate_of_place = target.published_place_id ?? target.id;
   request.rejection_reason = "duplicate";
+  request.rejection_notes = null;
+
+  target.similar_report_count += 1;
   return request;
 }
 
@@ -195,25 +325,22 @@ export function investigateCommunityRequest(
   return request;
 }
 
-function slugify(value: string): string {
-  const slug = value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 40);
-  return slug || "place";
-}
-
 export function createCommunityRequest(
   draft: CommunityRequestDraft,
 ): CommunityRequest {
   const store = getStore();
   const id = `req-${slugify(draft.place_name)}-${Date.now().toString(36)}`;
-  const placeKey = `${normalizeName(draft.place_name)}|${normalizeName(draft.city ?? "")}`;
-  const similar = store.communityRequests.filter((request) => {
-    const key = `${normalizeName(request.place_name)}|${normalizeName(request.city ?? "")}`;
-    return key === placeKey;
-  }).length;
+  const key = communityPlaceKey(draft.place_name, draft.city);
+  const similar = store.communityRequests.filter(
+    (request) => communityPlaceKey(request.place_name, request.city) === key,
+  ).length;
+  const coords = resolveCommunityCoordinates({
+    id,
+    maps_url: draft.maps_url,
+    locality: draft.locality,
+    city: draft.city,
+    district: draft.city,
+  });
 
   const request: CommunityRequest = {
     id,
@@ -223,6 +350,9 @@ export function createCommunityRequest(
     address: draft.address,
     locality: draft.locality,
     city: draft.city,
+    district: draft.city,
+    latitude: coords.latitude,
+    longitude: coords.longitude,
     concern: draft.concern,
     evidence: draft.evidence.map((item, index) => ({
       ...item,
@@ -234,6 +364,7 @@ export function createCommunityRequest(
     rejection_reason: null,
     rejection_notes: null,
     duplicate_of_place: null,
+    published_place_id: null,
   };
 
   store.communityRequests.unshift(request);

@@ -14,7 +14,6 @@ import {
   computeCommunityStats,
   computeStats,
   filterMapCases,
-  getAllCommunityPlaces,
   getAllMapCases,
   getCommunityPlaceById,
   getMapCaseById,
@@ -22,14 +21,17 @@ import {
   parseFiltersFromSearchParams,
   parseLayerFromSearchParams,
 } from "@/lib/data/load";
-import type { CaseFilters, MapLayer } from "@/lib/data/types";
+import type { CaseFilters, CommunityPlace, MapLayer } from "@/lib/data/types";
 
-export function MapExperience() {
+export function MapExperience({
+  communityPlaces,
+}: {
+  communityPlaces: CommunityPlace[];
+}) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const allCases = useMemo(() => getAllMapCases(), []);
-  const communityPlaces = useMemo(() => getAllCommunityPlaces(), []);
 
   const filters = useMemo(
     () => parseFiltersFromSearchParams(searchParams),

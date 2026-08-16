@@ -298,10 +298,14 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
           pending={pending}
         >
           <DuplicatePicker
-            places={publishedPlaces}
+            places={publishedPlaces.map((place) => ({
+              id: place.caseId,
+              name: place.name,
+              locality: place.locality,
+              city: place.city,
+            }))}
             selectedId={duplicateOf}
             onSelect={setDuplicateOf}
-            valueKey="caseId"
           />
         </ConfirmDialog>
       ) : null}

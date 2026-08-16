@@ -12,6 +12,7 @@ import type { EnforcementCase, Establishment } from "@/lib/data/types";
 import type { RejectionReason } from "@/lib/admin/types";
 
 function refreshAdmin(): void {
+  revalidatePath("/");
   revalidatePath("/admin");
   revalidatePath("/admin/fda-reports");
   revalidatePath("/admin/community-requests");
@@ -81,6 +82,22 @@ export async function rejectCommunityRequestAction(
 ): Promise<void> {
   await assertAdmin();
   store.rejectCommunityRequest(id, reason, notes);
+  refreshAdmin();
+}
+
+export async function unpublishCommunityRequestAction(
+  id: string,
+): Promise<void> {
+  await assertAdmin();
+  store.unpublishCommunityRequest(id);
+  refreshAdmin();
+}
+
+export async function restoreCommunityRequestAction(
+  id: string,
+): Promise<void> {
+  await assertAdmin();
+  store.restoreCommunityRequest(id);
   refreshAdmin();
 }
 

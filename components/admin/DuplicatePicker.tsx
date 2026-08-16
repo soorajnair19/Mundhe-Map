@@ -1,20 +1,20 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { PublishedPlaceOption } from "@/lib/admin/types";
+import type { DuplicatePlaceOption } from "@/lib/admin/types";
 
 interface DuplicatePickerProps {
-  places: PublishedPlaceOption[];
+  places: DuplicatePlaceOption[];
   selectedId: string | null;
   onSelect: (id: string | null) => void;
-  valueKey?: "caseId" | "establishmentId";
+  placeholder?: string;
 }
 
 export function DuplicatePicker({
   places,
   selectedId,
   onSelect,
-  valueKey = "caseId",
+  placeholder = "Search published establishments",
 }: DuplicatePickerProps) {
   const [query, setQuery] = useState("");
   const filtered = useMemo(() => {
@@ -39,7 +39,7 @@ export function DuplicatePicker({
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search published establishments"
+          placeholder={placeholder}
           className="mt-1 w-full rounded-lg border border-[var(--border)] px-3 py-2 text-sm outline-none focus:border-[var(--accent)]"
         />
       </label>
@@ -48,13 +48,12 @@ export function DuplicatePicker({
           <li className="px-3 py-2 text-sm text-[var(--muted)]">No matches</li>
         ) : (
           filtered.map((place) => {
-            const id = place[valueKey];
-            const active = selectedId === id;
+            const active = selectedId === place.id;
             return (
-              <li key={`${place.establishmentId}-${place.caseId}`}>
+              <li key={place.id}>
                 <button
                   type="button"
-                  onClick={() => onSelect(active ? null : id)}
+                  onClick={() => onSelect(active ? null : place.id)}
                   className={`flex w-full flex-col items-start px-3 py-2 text-left text-sm ${
                     active
                       ? "bg-[#e4f1ec]"

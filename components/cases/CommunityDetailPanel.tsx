@@ -97,12 +97,10 @@ function PanelContent({
               {formatDisplayDate(place.submitted_at)}
             </dd>
           </div>
-          {place.similar_report_count > 1 ? (
-            <div>
-              <dt className="text-[var(--muted)]">Similar reports</dt>
-              <dd className="text-[var(--ink)]">{place.similar_report_count}</dd>
-            </div>
-          ) : null}
+          <div>
+            <dt className="text-[var(--muted)]"># of Reports</dt>
+            <dd className="text-[var(--ink)]">{place.similar_report_count}</dd>
+          </div>
         </dl>
 
         {place.evidence.length > 0 ? (
