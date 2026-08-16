@@ -23,10 +23,10 @@ import { StatusChip } from "@/components/admin/StatusChip";
 
 const STATUSES = [
   { value: "pending", label: "Pending" },
+  { value: "all", label: "All" },
   { value: "approved", label: "Approved" },
   { value: "rejected", label: "Rejected" },
   { value: "duplicate", label: "Duplicate" },
-  { value: "all", label: "All" },
 ];
 
 type ConfirmKind = "approve" | "reject" | "duplicate" | null;

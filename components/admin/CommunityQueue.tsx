@@ -23,8 +23,8 @@ import { QueueToolbar } from "@/components/admin/QueueToolbar";
 import { StatusChip } from "@/components/admin/StatusChip";
 
 const STATUSES = [
-  { value: "all", label: "All" },
   { value: "pending", label: "Pending" },
+  { value: "all", label: "All" },
   { value: "approved", label: "Approved" },
   { value: "rejected", label: "Rejected" },
   { value: "duplicate", label: "Duplicate" },
@@ -74,7 +74,7 @@ export function CommunityQueue({
   communityPlaceOptions,
 }: CommunityQueueProps) {
   const [query, setQuery] = useState("");
-  const [status, setStatus] = useState("all");
+  const [status, setStatus] = useState("pending");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<ConfirmKind | null>(null);
   const [confirmId, setConfirmId] = useState<string | null>(null);
@@ -134,6 +134,7 @@ export function CommunityQueue({
         await markCommunityRequestDuplicateAction(targetId, duplicateOf);
       }
       setConfirm(null);
+      setSelectedId(null);
     } finally {
       setPending(false);
     }
