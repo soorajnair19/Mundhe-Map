@@ -256,7 +256,7 @@ export function MapExperience({
               }}
               className="w-fit rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
             >
-              Report a Resto
+              Flag for inspection
             </button>
             <div className="rounded-md border border-[var(--border)] bg-[var(--panel)]/95 px-2.5 py-2 text-xs leading-snug text-[var(--muted)] shadow-sm backdrop-blur-sm">
               <p className="whitespace-nowrap max-sm:whitespace-normal">

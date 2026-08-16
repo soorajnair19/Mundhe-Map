@@ -6,8 +6,7 @@ import { mapsUrlHasPrecisePin } from "@/lib/community/coords";
 
 const MAX = {
   place_name: 120,
-  locality: 80,
-  city: 80,
+  area_city: 120,
   maps_url: 500,
   concern: 1000,
 } as const;
@@ -42,14 +41,13 @@ async function fileToDataUrl(file: File): Promise<string> {
 }
 
 function geocodeReference(
-  locality: string | null,
-  city: string | null,
+  areaCity: string,
 ): { latitude: number; longitude: number } {
   const geo = geocodeApproximate({
     id: "community-submit",
-    locality,
-    city,
-    district: city ?? "Maharashtra",
+    locality: null,
+    city: areaCity,
+    district: areaCity,
   });
   return { latitude: geo.latitude, longitude: geo.longitude };
 }
@@ -60,8 +58,8 @@ export async function parseCommunityRequestForm(
   { ok: true; draft: CommunityRequestDraft } | { ok: false; error: string }
 > {
   const place_name = read(formData, "place_name", MAX.place_name);
-  const locality = read(formData, "locality", MAX.locality);
-  const city = read(formData, "city", MAX.city);
+  const area_city = read(formData, "area_city", MAX.area_city);
+  const city = area_city.length >= 2 ? area_city : null;
   const maps_url = read(formData, "maps_url", MAX.maps_url);
   const concern = String(formData.get("concern") ?? "")
     .trim()
@@ -73,16 +71,15 @@ export async function parseCommunityRequestForm(
   if (place_name.length < 2) {
     return { ok: false, error: "Enter the restaurant name." };
   }
-  if (locality.length < 2) {
-    return { ok: false, error: "Enter the locality." };
-  }
-  if (city.length < 2) {
-    return { ok: false, error: "Enter the city." };
-  }
   if (!isHttpUrl(maps_url)) {
     return { ok: false, error: "Paste a valid Google Maps link." };
   }
-  if (!(await mapsUrlHasPrecisePin(maps_url, geocodeReference(locality, city)))) {
+  if (
+    !(await mapsUrlHasPrecisePin(
+      maps_url,
+      city ? geocodeReference(city) : null,
+    ))
+  ) {
     return { ok: false, error: MAPS_SHARE_LINK_ERROR };
   }
   if (photos.length > MAX_PHOTOS) {
@@ -113,7 +110,7 @@ export async function parseCommunityRequestForm(
       maps_url,
       plus_code: null,
       address: null,
-      locality,
+      locality: null,
       city,
       concern,
       evidence,

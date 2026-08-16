@@ -15,8 +15,9 @@ export interface CommunityRequestDraft {
 
 export const COMMUNITY_REQUEST_FIELDS = {
   place_name: { label: "Restaurant name", required: true },
-  locality: { label: "Locality", required: true },
-  city: { label: "City", required: true },
+  area_city: { label: "Area / City", required: false },
+  locality: { label: "Locality", required: false },
+  city: { label: "City", required: false },
   plus_code: {
     label: "Plus Code",
     hint: "Optional. Paste from Google Maps if the link alone is not precise enough.",

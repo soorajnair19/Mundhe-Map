@@ -79,11 +79,10 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
               id="report-resto-title"
               className="text-lg font-medium text-[var(--ink)]"
             >
-              Report a resto
+              Flag a restaurant for inspection
             </h2>
             <p className="mt-1 text-sm leading-relaxed text-[var(--muted)]">
-              This is a community report only. It is not an official request to
-              the FDA, and it does not start an inspection on its own.
+              Community submission only — not an official FDA complaint.
             </p>
           </div>
           <button
@@ -135,36 +134,19 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
                 />
               </label>
 
-              <div className="grid grid-cols-2 gap-3">
-                <label className="block text-xs text-[var(--muted)]">
-                  {COMMUNITY_REQUEST_FIELDS.locality.label}
-                  <RequiredMark
-                    required={COMMUNITY_REQUEST_FIELDS.locality.required}
-                  />
-                  <input
-                    name="locality"
-                    required
-                    minLength={2}
-                    maxLength={80}
-                    className={inputClass}
-                    autoComplete="address-level3"
-                  />
-                </label>
-                <label className="block text-xs text-[var(--muted)]">
-                  {COMMUNITY_REQUEST_FIELDS.city.label}
-                  <RequiredMark
-                    required={COMMUNITY_REQUEST_FIELDS.city.required}
-                  />
-                  <input
-                    name="city"
-                    required
-                    minLength={2}
-                    maxLength={80}
-                    className={inputClass}
-                    autoComplete="address-level2"
-                  />
-                </label>
-              </div>
+              <label className="block text-xs text-[var(--muted)]">
+                {COMMUNITY_REQUEST_FIELDS.area_city.label}
+                <RequiredMark
+                  required={COMMUNITY_REQUEST_FIELDS.area_city.required}
+                />
+                <input
+                  name="area_city"
+                  maxLength={120}
+                  placeholder="e.g. Koregaon Park, Pune"
+                  className={inputClass}
+                  autoComplete="address-level2"
+                />
+              </label>
 
               <label className="block text-xs text-[var(--muted)]">
                 {COMMUNITY_REQUEST_FIELDS.maps_url.label}
@@ -225,7 +207,7 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
                 disabled={pending}
                 className="rounded-lg bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white hover:bg-[#c41826] disabled:opacity-50"
               >
-                {pending ? "Sending…" : "Submit report"}
+                {pending ? "Sending…" : "Submit"}
               </button>
             </div>
           </form>
