@@ -45,7 +45,7 @@
   },
   {
     "id": "req-hotel-radhakrishna-msw0o3to",
-    "status": "approved",
+    "status": "rejected",
     "place_name": "Hotel Radhakrishna",
     "maps_url": "https://maps.app.goo.gl/Szbwpyi5fN57tZKj7",
     "plus_code": null,
@@ -60,7 +60,7 @@
     "submitted_at": "2026-08-16T16:25:57.853Z",
     "submitter": null,
     "similar_report_count": 1,
-    "rejection_reason": null,
+    "rejection_reason": "insufficient_evidence",
     "rejection_notes": null,
     "duplicate_of_place": null,
     "published_place_id": "place-hotel-radhakrishna-msw0o3to"
