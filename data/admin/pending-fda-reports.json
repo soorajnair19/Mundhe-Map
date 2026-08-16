@@ -1,9 +1,9 @@
 [
   {
     "id": "fda-bombay-hc-revokes-restaurant-licence-suspension--2026-08-03",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -35,7 +35,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-16T12:44:23.203Z",
       "actions": [
         {
           "id": "case-bombay-hc-revokes-restaurant-licence-suspension--ingested-act-1",
