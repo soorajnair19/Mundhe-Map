@@ -2047,9 +2047,9 @@
   },
   {
     "id": "fda-fda-pune-mango-pulp-se-pune-2026-08-13",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "insufficient_evidence",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -2081,7 +2081,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-18T17:46:43.691Z",
       "actions": [
         {
           "id": "case-fda-pune-mango-pulp-se-pune-ingested-act-1",
