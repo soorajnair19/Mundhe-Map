@@ -2382,9 +2382,9 @@
   },
   {
     "id": "fda-mumbai-s-famous-poornima-restaurant-moves-hc-aga-2026-07-29",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -2416,7 +2416,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-18T17:59:57.487Z",
       "actions": [
         {
           "id": "case-mumbai-s-famous-poornima-restaurant-moves-hc-aga-ingested-act-1",
