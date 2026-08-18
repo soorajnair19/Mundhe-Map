@@ -41,7 +41,11 @@ async function testCommunityLedgerRoundTrip(): Promise<void> {
   };
 
   const withTest = [testRequest, ...ledger.requests];
-  await saveCommunityLedger(withTest, ledger.sha);
+  await saveCommunityLedger(
+    withTest,
+    ledger.sha,
+    "test: add community ledger probe row",
+  );
 
   const reloaded = await loadCommunityLedger();
   const found = reloaded.requests.some((request) => request.id === marker);
@@ -50,7 +54,11 @@ async function testCommunityLedgerRoundTrip(): Promise<void> {
   }
 
   const cleaned = reloaded.requests.filter((request) => request.id !== marker);
-  await saveCommunityLedger(cleaned, reloaded.sha);
+  await saveCommunityLedger(
+    cleaned,
+    reloaded.sha,
+    "test: remove community ledger probe row",
+  );
 }
 
 async function main() {
@@ -74,7 +82,7 @@ async function main() {
   await testCommunityLedgerRoundTrip();
   console.log("Community ledger write round-trip OK (test row added then removed).");
 
-  await saveFdaLedger(fda.reports, fda.sha);
+  await saveFdaLedger(fda.reports, fda.sha, "test: rewrite FDA ledger");
   console.log("FDA ledger rewrite OK (no data changes).");
 
   console.log("All GitHub ledger checks passed.");

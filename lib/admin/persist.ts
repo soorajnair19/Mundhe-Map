@@ -184,6 +184,7 @@ async function saveToGitHub<T>(
   config: LedgerFileConfig,
   data: T[],
   sha: string | null,
+  commitMessage: string,
   attempt = 0,
 ): Promise<string> {
   const repo = githubRepo();
@@ -204,7 +205,7 @@ async function saveToGitHub<T>(
     {
       method: "PUT",
       body: JSON.stringify({
-        message: config.commitMessage,
+        message: commitMessage,
         content,
         sha: nextSha ?? undefined,
         branch: githubWriteBranch(),
@@ -213,7 +214,7 @@ async function saveToGitHub<T>(
   );
   if ((response.status === 409 || response.status === 422) && attempt < 1) {
     const latestSha = await resolveGitHubSha<T>(config);
-    return saveToGitHub(config, data, latestSha, attempt + 1);
+    return saveToGitHub(config, data, latestSha, commitMessage, attempt + 1);
   }
   if (!response.ok) {
     const detail = await response.text();
@@ -258,9 +259,10 @@ async function saveLedger<T>(
   config: LedgerFileConfig,
   data: T[],
   sha: string | null,
+  commitMessage: string,
 ): Promise<{ mtime: number; sha: string | null }> {
   if (onVercel()) {
-    const nextSha = await saveToGitHub(config, data, sha);
+    const nextSha = await saveToGitHub(config, data, sha, commitMessage);
     return { mtime: Date.now(), sha: nextSha };
   }
 
@@ -283,8 +285,9 @@ export async function loadFdaLedger(): Promise<LedgerSnapshot> {
 export async function saveFdaLedger(
   reports: FDAReport[],
   sha: string | null,
+  commitMessage = FDA_LEDGER.commitMessage,
 ): Promise<{ mtime: number; sha: string | null }> {
-  return saveLedger(FDA_LEDGER, reports, sha);
+  return saveLedger(FDA_LEDGER, reports, sha, commitMessage);
 }
 
 export async function loadCommunityLedger(): Promise<CommunityLedgerSnapshot> {
@@ -299,6 +302,7 @@ export async function loadCommunityLedger(): Promise<CommunityLedgerSnapshot> {
 export async function saveCommunityLedger(
   requests: CommunityRequest[],
   sha: string | null,
+  commitMessage = COMMUNITY_LEDGER.commitMessage,
 ): Promise<{ mtime: number; sha: string | null }> {
-  return saveLedger(COMMUNITY_LEDGER, requests, sha);
+  return saveLedger(COMMUNITY_LEDGER, requests, sha, commitMessage);
 }

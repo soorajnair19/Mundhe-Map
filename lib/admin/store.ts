@@ -142,22 +142,59 @@ function ensureFdaCoordinates(establishment: Establishment): Establishment {
   };
 }
 
-async function persistFdaReports(): Promise<void> {
+function clipName(value: string | null | undefined): string | null {
+  const cleaned = (value ?? "").replace(/\s+/g, " ").trim();
+  if (!cleaned) return null;
+  return cleaned.length > 50 ? `${cleaned.slice(0, 47)}...` : cleaned;
+}
+
+function namedCommit(action: string, name: string | null | undefined): string {
+  const clipped = clipName(name);
+  return clipped ? `${action} - ${clipped}` : action;
+}
+
+function bulkCommit(
+  kind: BulkStatusKind,
+  count: number,
+  singular: string,
+  plural: string,
+): string {
+  const verb =
+    kind === "approve"
+      ? "approve"
+      : kind === "reject"
+        ? "reject"
+        : kind === "unpublish"
+          ? "unpublish"
+          : "restore";
+  return `admin: ${verb} ${count} ${count === 1 ? singular : plural}`;
+}
+
+async function persistFdaReports(commitMessage: string): Promise<void> {
   const store = getStore();
-  const saved = await saveFdaLedger(store.fdaReports, store.fdaSha);
+  const saved = await saveFdaLedger(
+    store.fdaReports,
+    store.fdaSha,
+    commitMessage,
+  );
   store.fdaMtime = saved.mtime;
   store.fdaSha = saved.sha;
 }
 
-async function withFdaPersist<T>(mutate: () => T): Promise<T> {
+async function withFdaPersist<T>(
+  mutate: () => T,
+  commitMessage: string | ((result: T) => string),
+): Promise<T> {
   await hydrateAdminStore();
   const store = getStore();
   const snapshot = structuredClone(store.fdaReports);
   const sha = store.fdaSha;
   const mtime = store.fdaMtime;
   const result = mutate();
+  const message =
+    typeof commitMessage === "function" ? commitMessage(result) : commitMessage;
   try {
-    await persistFdaReports();
+    await persistFdaReports(message);
     return result;
   } catch (error) {
     store.fdaReports = snapshot;
@@ -167,11 +204,12 @@ async function withFdaPersist<T>(mutate: () => T): Promise<T> {
   }
 }
 
-async function persistCommunityRequests(): Promise<void> {
+async function persistCommunityRequests(commitMessage: string): Promise<void> {
   const store = getStore();
   const saved = await saveCommunityLedger(
     store.communityRequests,
     store.communitySha,
+    commitMessage,
   );
   store.communityMtime = saved.mtime;
   store.communitySha = saved.sha;
@@ -179,6 +217,7 @@ async function persistCommunityRequests(): Promise<void> {
 
 async function withCommunityPersist<T>(
   mutate: () => T | Promise<T>,
+  commitMessage: string | ((result: T) => string),
 ): Promise<T> {
   await hydrateAdminStore();
   const store = getStore();
@@ -186,8 +225,10 @@ async function withCommunityPersist<T>(
   const sha = store.communitySha;
   const mtime = store.communityMtime;
   const result = await mutate();
+  const message =
+    typeof commitMessage === "function" ? commitMessage(result) : commitMessage;
   try {
-    await persistCommunityRequests();
+    await persistCommunityRequests(message);
     return result;
   } catch (error) {
     store.communityRequests = snapshot;
@@ -349,14 +390,19 @@ export async function enqueueFDAReports(
       !store.fdaReports.some((existing) => existing.id === report.id),
   );
   if (!toAdd.length) return [];
-  return withFdaPersist(() => {
-    const inner = getStore();
-    for (const report of toAdd) {
-      if (inner.fdaReports.some((existing) => existing.id === report.id)) continue;
-      inner.fdaReports.unshift(report);
-    }
-    return toAdd;
-  });
+  return withFdaPersist(
+    () => {
+      const inner = getStore();
+      for (const report of toAdd) {
+        if (inner.fdaReports.some((existing) => existing.id === report.id)) continue;
+        inner.fdaReports.unshift(report);
+      }
+      return toAdd;
+    },
+    toAdd.length === 1
+      ? namedCommit("admin: queue FDA report", toAdd[0].establishment.name)
+      : `admin: queue ${toAdd.length} FDA reports`,
+  );
 }
 
 function applyApproveFda(report: FDAReport): FDAReport {
@@ -419,11 +465,14 @@ function applyFdaBulkKind(
 }
 
 export async function approveFDAReport(id: string): Promise<FDAReport | null> {
-  return withFdaPersist(() => {
-    const report = getFDAReport(id);
-    if (!report) return null;
-    return applyApproveFda(report);
-  });
+  return withFdaPersist(
+    () => {
+      const report = getFDAReport(id);
+      if (!report) return null;
+      return applyApproveFda(report);
+    },
+    (report) => namedCommit("admin: approve FDA report", report?.establishment.name),
+  );
 }
 
 export async function rejectFDAReport(
@@ -431,38 +480,52 @@ export async function rejectFDAReport(
   reason: RejectionReason | null,
   notes: string | null,
 ): Promise<FDAReport | null> {
-  return withFdaPersist(() => {
-    const report = getFDAReport(id);
-    if (!report) return null;
-    return applyRejectFda(report, reason, notes);
-  });
+  return withFdaPersist(
+    () => {
+      const report = getFDAReport(id);
+      if (!report) return null;
+      return applyRejectFda(report, reason, notes);
+    },
+    (report) => namedCommit("admin: reject FDA report", report?.establishment.name),
+  );
 }
 
 export async function markFDAReportDuplicate(
   id: string,
   duplicateOfCaseId: string | null,
 ): Promise<FDAReport | null> {
-  return withFdaPersist(() => {
-    const report = getFDAReport(id);
-    if (!report) return null;
-    return applyDuplicateFda(report, duplicateOfCaseId);
-  });
+  return withFdaPersist(
+    () => {
+      const report = getFDAReport(id);
+      if (!report) return null;
+      return applyDuplicateFda(report, duplicateOfCaseId);
+    },
+    (report) =>
+      namedCommit("admin: mark FDA report duplicate", report?.establishment.name),
+  );
 }
 
 export async function unpublishFDAReport(id: string): Promise<FDAReport | null> {
-  return withFdaPersist(() => {
-    const report = getFDAReport(id);
-    if (!report) return null;
-    return returnFdaReportToQueue(report);
-  });
+  return withFdaPersist(
+    () => {
+      const report = getFDAReport(id);
+      if (!report) return null;
+      return returnFdaReportToQueue(report);
+    },
+    (report) =>
+      namedCommit("admin: unpublish FDA report", report?.establishment.name),
+  );
 }
 
 export async function restoreFDAReport(id: string): Promise<FDAReport | null> {
-  return withFdaPersist(() => {
-    const report = getFDAReport(id);
-    if (!report) return null;
-    return returnFdaReportToQueue(report);
-  });
+  return withFdaPersist(
+    () => {
+      const report = getFDAReport(id);
+      if (!report) return null;
+      return returnFdaReportToQueue(report);
+    },
+    (report) => namedCommit("admin: restore FDA report", report?.establishment.name),
+  );
 }
 
 export async function bulkUpdateFDAReports(
@@ -481,37 +544,43 @@ export async function bulkUpdateFDAReports(
   const skipped = uniqueIds.length - eligibleIds.length;
   if (eligibleIds.length === 0) return { updated: 0, skipped };
 
-  return withFdaPersist(() => {
-    let updated = 0;
-    for (const id of eligibleIds) {
-      const report = getFDAReport(id);
-      if (!report || !isFdaBulkEligible(report.review_status, kind)) continue;
-      applyFdaBulkKind(report, kind, extras);
-      updated += 1;
-    }
-    return { updated, skipped: uniqueIds.length - updated };
-  });
+  return withFdaPersist(
+    () => {
+      let updated = 0;
+      for (const id of eligibleIds) {
+        const report = getFDAReport(id);
+        if (!report || !isFdaBulkEligible(report.review_status, kind)) continue;
+        applyFdaBulkKind(report, kind, extras);
+        updated += 1;
+      }
+      return { updated, skipped: uniqueIds.length - updated };
+    },
+    (result) => bulkCommit(kind, result.updated, "FDA report", "FDA reports"),
+  );
 }
 
 export async function updateFDAReport(
   id: string,
   patch: { establishment: Establishment; case: EnforcementCase },
 ): Promise<FDAReport | null> {
-  return withFdaPersist(() => {
-    const report = getFDAReport(id);
-    if (!report) return null;
-    const updatedAt = nowIso();
-    report.establishment = ensureFdaCoordinates({
-      ...patch.establishment,
-      updated_at: updatedAt,
-    });
-    report.case = {
-      ...patch.case,
-      establishment_id: report.establishment.id,
-      updated_at: updatedAt,
-    };
-    return report;
-  });
+  return withFdaPersist(
+    () => {
+      const report = getFDAReport(id);
+      if (!report) return null;
+      const updatedAt = nowIso();
+      report.establishment = ensureFdaCoordinates({
+        ...patch.establishment,
+        updated_at: updatedAt,
+      });
+      report.case = {
+        ...patch.case,
+        establishment_id: report.establishment.id,
+        updated_at: updatedAt,
+      };
+      return report;
+    },
+    (report) => namedCommit("admin: edit FDA report", report?.establishment.name),
+  );
 }
 
 export async function updateCommunityRequest(
@@ -529,22 +598,25 @@ export async function updateCommunityRequest(
     concern: string;
   },
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(async () => {
-    const request = getCommunityRequest(id);
-    if (!request) return null;
-    request.place_name = patch.place_name;
-    request.maps_url = patch.maps_url;
-    request.plus_code = patch.plus_code;
-    request.address = patch.address;
-    request.locality = patch.locality;
-    request.city = patch.city;
-    request.district = patch.district ?? patch.city;
-    request.latitude = patch.latitude;
-    request.longitude = patch.longitude;
-    request.concern = patch.concern;
-    await applyCommunityLocation(request);
-    return request;
-  });
+  return withCommunityPersist(
+    async () => {
+      const request = getCommunityRequest(id);
+      if (!request) return null;
+      request.place_name = patch.place_name;
+      request.maps_url = patch.maps_url;
+      request.plus_code = patch.plus_code;
+      request.address = patch.address;
+      request.locality = patch.locality;
+      request.city = patch.city;
+      request.district = patch.district ?? patch.city;
+      request.latitude = patch.latitude;
+      request.longitude = patch.longitude;
+      request.concern = patch.concern;
+      await applyCommunityLocation(request);
+      return request;
+    },
+    (request) => namedCommit("admin: edit community request", request?.place_name),
+  );
 }
 
 async function applyApproveCommunity(
@@ -615,11 +687,15 @@ async function applyCommunityBulkKind(
 export async function approveCommunityRequest(
   id: string,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(async () => {
-    const request = getCommunityRequest(id);
-    if (!request) return null;
-    return applyApproveCommunity(request);
-  });
+  return withCommunityPersist(
+    async () => {
+      const request = getCommunityRequest(id);
+      if (!request) return null;
+      return applyApproveCommunity(request);
+    },
+    (request) =>
+      namedCommit("admin: approve community request", request?.place_name),
+  );
 }
 
 export async function rejectCommunityRequest(
@@ -627,31 +703,43 @@ export async function rejectCommunityRequest(
   reason: RejectionReason | null,
   notes: string | null,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(() => {
-    const request = getCommunityRequest(id);
-    if (!request) return null;
-    return applyRejectCommunity(request, reason, notes);
-  });
+  return withCommunityPersist(
+    () => {
+      const request = getCommunityRequest(id);
+      if (!request) return null;
+      return applyRejectCommunity(request, reason, notes);
+    },
+    (request) =>
+      namedCommit("admin: reject community request", request?.place_name),
+  );
 }
 
 export async function unpublishCommunityRequest(
   id: string,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(() => {
-    const request = getCommunityRequest(id);
-    if (!request) return null;
-    return applyUnpublishCommunity(request);
-  });
+  return withCommunityPersist(
+    () => {
+      const request = getCommunityRequest(id);
+      if (!request) return null;
+      return applyUnpublishCommunity(request);
+    },
+    (request) =>
+      namedCommit("admin: unpublish community request", request?.place_name),
+  );
 }
 
 export async function restoreCommunityRequest(
   id: string,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(() => {
-    const request = getCommunityRequest(id);
-    if (!request) return null;
-    return applyRestoreCommunity(request);
-  });
+  return withCommunityPersist(
+    () => {
+      const request = getCommunityRequest(id);
+      if (!request) return null;
+      return applyRestoreCommunity(request);
+    },
+    (request) =>
+      namedCommit("admin: restore community request", request?.place_name),
+  );
 }
 
 export async function bulkUpdateCommunityRequests(
@@ -670,47 +758,59 @@ export async function bulkUpdateCommunityRequests(
   const skipped = uniqueIds.length - eligibleIds.length;
   if (eligibleIds.length === 0) return { updated: 0, skipped };
 
-  return withCommunityPersist(async () => {
-    let updated = 0;
-    for (const id of eligibleIds) {
-      const request = getCommunityRequest(id);
-      if (!request || !isCommunityBulkEligible(request.status, kind)) continue;
-      await applyCommunityBulkKind(request, kind, extras);
-      updated += 1;
-    }
-    return { updated, skipped: uniqueIds.length - updated };
-  });
+  return withCommunityPersist(
+    async () => {
+      let updated = 0;
+      for (const id of eligibleIds) {
+        const request = getCommunityRequest(id);
+        if (!request || !isCommunityBulkEligible(request.status, kind)) continue;
+        await applyCommunityBulkKind(request, kind, extras);
+        updated += 1;
+      }
+      return { updated, skipped: uniqueIds.length - updated };
+    },
+    (result) =>
+      bulkCommit(kind, result.updated, "community request", "community requests"),
+  );
 }
 
 export async function markCommunityRequestDuplicate(
   id: string,
   duplicateOfPlace: string | null,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(() => {
-    const request = getCommunityRequest(id);
-    if (!request || !duplicateOfPlace) return null;
-    const target = findRequestByPlaceId(duplicateOfPlace);
-    if (!target) return null;
+  return withCommunityPersist(
+    () => {
+      const request = getCommunityRequest(id);
+      if (!request || !duplicateOfPlace) return null;
+      const target = findRequestByPlaceId(duplicateOfPlace);
+      if (!target) return null;
 
-    request.status = "duplicate";
-    request.duplicate_of_place = target.published_place_id ?? target.id;
-    request.rejection_reason = "duplicate";
-    request.rejection_notes = null;
+      request.status = "duplicate";
+      request.duplicate_of_place = target.published_place_id ?? target.id;
+      request.rejection_reason = "duplicate";
+      request.rejection_notes = null;
 
-    target.similar_report_count += 1;
-    return request;
-  });
+      target.similar_report_count += 1;
+      return request;
+    },
+    (request) =>
+      namedCommit("admin: mark community request duplicate", request?.place_name),
+  );
 }
 
 export async function investigateCommunityRequest(
   id: string,
 ): Promise<CommunityRequest | null> {
-  return withCommunityPersist(() => {
-    const request = getCommunityRequest(id);
-    if (!request) return null;
-    request.status = "investigating";
-    return request;
-  });
+  return withCommunityPersist(
+    () => {
+      const request = getCommunityRequest(id);
+      if (!request) return null;
+      request.status = "investigating";
+      return request;
+    },
+    (request) =>
+      namedCommit("admin: investigate community request", request?.place_name),
+  );
 }
 
 export async function createCommunityRequest(
@@ -760,5 +860,5 @@ export async function createCommunityRequest(
 
     store.communityRequests.unshift(request);
     return request;
-  });
+  }, namedCommit("community: submit request", draft.place_name));
 }

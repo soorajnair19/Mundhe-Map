@@ -16,7 +16,17 @@ async function main() {
   const built = await buildFdaIngestReports(days, ledger.reports);
   const nextReports = [...built.reports, ...ledger.reports];
   if (built.reports.length > 0) {
-    await saveFdaLedger(nextReports, ledger.sha);
+    const added = built.reports;
+    const firstName = added[0].establishment.name.replace(/\s+/g, " ").trim();
+    const clipped =
+      firstName.length > 50 ? `${firstName.slice(0, 47)}...` : firstName;
+    await saveFdaLedger(
+      nextReports,
+      ledger.sha,
+      added.length === 1
+        ? `ingest: queue FDA report - ${clipped}`
+        : `ingest: queue ${added.length} FDA reports`,
+    );
   }
 
   console.log(
