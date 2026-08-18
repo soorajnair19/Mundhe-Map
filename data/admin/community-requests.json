@@ -1,5 +1,27 @@
 [
   {
+    "id": "req-mcdonald-s-msyz8345",
+    "status": "pending",
+    "place_name": "McDonald's",
+    "maps_url": "https://maps.app.goo.gl/ehnMNxhkLriDh3Uz5",
+    "plus_code": null,
+    "address": null,
+    "locality": null,
+    "city": "Prabhadevi",
+    "district": "Prabhadevi",
+    "latitude": 19.016861,
+    "longitude": 72.8292786,
+    "concern": "",
+    "evidence": [],
+    "submitted_at": "2026-08-18T18:08:49.502Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  },
+  {
     "id": "req-vishwa-bharati-restaurant-msyz58h6",
     "status": "approved",
     "place_name": "Vishwa Bharati Restaurant",
