@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { ArrowUpRight, X } from "lucide-react";
+import { useCallback, useMemo, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import {
   approveFDAReportAction,
   bulkUpdateFDAReportsAction,
@@ -32,6 +32,8 @@ import { FdaEditForm } from "@/components/admin/FdaEditForm";
 import { FormattedSummary } from "@/components/cases/FormattedSummary";
 import { QueueToolbar } from "@/components/admin/QueueToolbar";
 import { StatusChip } from "@/components/admin/StatusChip";
+import { useQueueNav } from "@/components/admin/useQueueNav";
+import { PanelHeaderControls } from "@/components/map/PanelHeaderControls";
 
 const STATUSES = [
   { value: "pending", label: "Pending" },
@@ -89,6 +91,16 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
   }, [query, reports, status]);
 
   const selected = reports.find((report) => report.id === selectedId) ?? null;
+  const selectEntry = useCallback((id: string) => {
+    setSelectedId(id);
+    setEditing(false);
+  }, []);
+  const listNav = useQueueNav(
+    visible,
+    selectedId,
+    selectEntry,
+    Boolean(selectedId) && !editing && !confirm,
+  );
   const targetId = confirmTargets[0] ?? null;
   const targetReport = reports.find((report) => report.id === targetId) ?? null;
   const bulkKind: BulkStatusKind | null =
@@ -369,6 +381,7 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
       <FdaDrawer
         report={selected}
         editing={editing}
+        {...listNav}
         onClose={() => {
           setSelectedId(null);
           setEditing(false);
@@ -523,6 +536,10 @@ function FdaDrawer({
   report,
   editing,
   onClose,
+  onPrev,
+  onNext,
+  canPrev,
+  canNext,
   onEdit,
   onCancelEdit,
   onApprove,
@@ -535,6 +552,10 @@ function FdaDrawer({
   report: FDAReport | null;
   editing: boolean;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  canPrev?: boolean;
+  canNext?: boolean;
   onEdit: () => void;
   onCancelEdit: () => void;
   onApprove: () => void;
@@ -578,14 +599,15 @@ function FdaDrawer({
                     .join(", ")}
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={onClose}
-                className="rounded-md p-1.5 text-[var(--muted)] hover:bg-[var(--surface)]"
-                aria-label="Close"
-              >
-                <X size={18} />
-              </button>
+              <PanelHeaderControls
+                onClose={onClose}
+                onPrev={onPrev}
+                onNext={onNext}
+                canPrev={canPrev}
+                canNext={canNext}
+                prevLabel="Previous entry"
+                nextLabel="Next entry"
+              />
             </div>
             <div className="flex-1 overflow-y-auto px-5 py-5">
               {editing ? (

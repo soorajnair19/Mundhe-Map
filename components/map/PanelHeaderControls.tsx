@@ -8,6 +8,8 @@ interface PanelHeaderControlsProps {
   onNext?: () => void;
   canPrev?: boolean;
   canNext?: boolean;
+  prevLabel?: string;
+  nextLabel?: string;
 }
 
 export function PanelHeaderControls({
@@ -16,6 +18,8 @@ export function PanelHeaderControls({
   onNext,
   canPrev = false,
   canNext = false,
+  prevLabel = "Previous place",
+  nextLabel = "Next place",
 }: PanelHeaderControlsProps) {
   const showNav = Boolean(onPrev || onNext);
 
@@ -28,7 +32,7 @@ export function PanelHeaderControls({
             onClick={onPrev}
             disabled={!canPrev}
             className="rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)] disabled:pointer-events-none disabled:opacity-30"
-            aria-label="Previous place"
+            aria-label={prevLabel}
           >
             <ChevronUp size={18} strokeWidth={2} />
           </button>
@@ -37,7 +41,7 @@ export function PanelHeaderControls({
             onClick={onNext}
             disabled={!canNext}
             className="rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)] disabled:pointer-events-none disabled:opacity-30"
-            aria-label="Next place"
+            aria-label={nextLabel}
           >
             <ChevronDown size={18} strokeWidth={2} />
           </button>

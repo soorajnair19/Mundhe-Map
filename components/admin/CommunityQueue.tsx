@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { ArrowUpRight, X } from "lucide-react";
+import { useCallback, useMemo, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import {
   approveCommunityRequestAction,
   bulkUpdateCommunityRequestsAction,
@@ -32,6 +32,8 @@ import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
 import { QueueToolbar } from "@/components/admin/QueueToolbar";
 import { StatusChip } from "@/components/admin/StatusChip";
+import { useQueueNav } from "@/components/admin/useQueueNav";
+import { PanelHeaderControls } from "@/components/map/PanelHeaderControls";
 
 const STATUSES = [
   { value: "pending", label: "Pending" },
@@ -120,6 +122,16 @@ export function CommunityQueue({
   }, [query, requests, status]);
 
   const selected = requests.find((item) => item.id === selectedId) ?? null;
+  const selectEntry = useCallback((id: string) => {
+    setSelectedId(id);
+    setEditing(false);
+  }, []);
+  const listNav = useQueueNav(
+    visible,
+    selectedId,
+    selectEntry,
+    Boolean(selectedId) && !editing && !confirm,
+  );
   const targetId = confirmTargets[0] ?? null;
   const targetRequest = requests.find((item) => item.id === targetId) ?? null;
   const bulkKind: BulkStatusKind | null =
@@ -383,6 +395,7 @@ export function CommunityQueue({
         request={selected}
         similarCount={selected ? reportCount(selected, requests) : 0}
         editing={editing}
+        {...listNav}
         onClose={() => {
           setSelectedId(null);
           setEditing(false);
@@ -530,6 +543,10 @@ function CommunityDrawer({
   similarCount,
   editing,
   onClose,
+  onPrev,
+  onNext,
+  canPrev,
+  canNext,
   onEdit,
   onCancelEdit,
   onApprove,
@@ -543,6 +560,10 @@ function CommunityDrawer({
   similarCount: number;
   editing: boolean;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  canPrev?: boolean;
+  canNext?: boolean;
   onEdit: () => void;
   onCancelEdit: () => void;
   onApprove: () => void;
@@ -592,14 +613,15 @@ function CommunityDrawer({
                   <p className="mt-1 text-sm text-[var(--muted)]">{placeLabel}</p>
                 ) : null}
               </div>
-              <button
-                type="button"
-                onClick={onClose}
-                className="-mr-1.5 rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)]"
-                aria-label="Close panel"
-              >
-                <X size={18} strokeWidth={2} />
-              </button>
+              <PanelHeaderControls
+                onClose={onClose}
+                onPrev={onPrev}
+                onNext={onNext}
+                canPrev={canPrev}
+                canNext={canNext}
+                prevLabel="Previous entry"
+                nextLabel="Next entry"
+              />
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-5">
