@@ -12,6 +12,7 @@ import { persistMessageSafe } from "@/lib/admin/persist";
 import { buildFdaIngestReports } from "@/lib/ingest/run";
 import type { EnforcementCase, Establishment } from "@/lib/data/types";
 import type { RejectionReason } from "@/lib/admin/types";
+import type { BulkStatusKind } from "@/lib/admin/bulk";
 
 function refreshAdmin(): void {
   revalidatePath("/");
@@ -123,6 +124,21 @@ export async function restoreFDAReportAction(
   }
 }
 
+export async function bulkUpdateFDAReportsAction(
+  ids: string[],
+  kind: BulkStatusKind,
+  extras?: { reason?: RejectionReason | null; notes?: string | null },
+): Promise<{ error: string | null; updated: number; skipped: number }> {
+  await assertAdmin();
+  try {
+    const result = await store.bulkUpdateFDAReports(ids, kind, extras);
+    refreshAdmin();
+    return { error: null, ...result };
+  } catch (error) {
+    return { error: persistMessage(error), updated: 0, skipped: 0 };
+  }
+}
+
 export async function ingestFdaReportsAction(
   lookbackDays = 2,
 ): Promise<{ error: string | null; added: number; skipped: number; fetched: number }> {
@@ -205,6 +221,21 @@ export async function restoreCommunityRequestAction(
     return { error: null };
   } catch (error) {
     return { error: persistMessage(error) };
+  }
+}
+
+export async function bulkUpdateCommunityRequestsAction(
+  ids: string[],
+  kind: BulkStatusKind,
+  extras?: { reason?: RejectionReason | null; notes?: string | null },
+): Promise<{ error: string | null; updated: number; skipped: number }> {
+  await assertAdmin();
+  try {
+    const result = await store.bulkUpdateCommunityRequests(ids, kind, extras);
+    refreshAdmin();
+    return { error: null, ...result };
+  } catch (error) {
+    return { error: persistMessage(error), updated: 0, skipped: 0 };
   }
 }
 

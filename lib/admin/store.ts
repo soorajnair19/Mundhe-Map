@@ -31,6 +31,12 @@ import type {
   PublishedPlaceOption,
   RejectionReason,
 } from "@/lib/admin/types";
+import {
+  isCommunityBulkEligible,
+  isFdaBulkEligible,
+  type BulkStatusKind,
+  type BulkUpdateResult,
+} from "@/lib/admin/bulk";
 
 const STORE_VERSION = 5;
 
@@ -353,17 +359,70 @@ export async function enqueueFDAReports(
   });
 }
 
+function applyApproveFda(report: FDAReport): FDAReport {
+  report.establishment = ensureFdaCoordinates(report.establishment);
+  report.review_status = "approved";
+  report.rejection_reason = null;
+  report.rejection_notes = null;
+  report.duplicate_of_case_id = null;
+  report.case.updated_at = nowIso();
+  return report;
+}
+
+function applyRejectFda(
+  report: FDAReport,
+  reason: RejectionReason | null,
+  notes: string | null,
+): FDAReport {
+  report.review_status = "rejected";
+  report.rejection_reason = reason;
+  report.rejection_notes = notes;
+  report.duplicate_of_case_id = null;
+  report.case.updated_at = nowIso();
+  return report;
+}
+
+function applyDuplicateFda(
+  report: FDAReport,
+  duplicateOfCaseId: string | null,
+): FDAReport {
+  report.review_status = "duplicate";
+  report.duplicate_of_case_id = duplicateOfCaseId;
+  report.rejection_reason = "duplicate";
+  report.case.updated_at = nowIso();
+  return report;
+}
+
+function returnFdaReportToQueue(report: FDAReport): FDAReport {
+  report.review_status = "pending";
+  report.rejection_reason = null;
+  report.rejection_notes = null;
+  report.duplicate_of_case_id = null;
+  report.case.updated_at = nowIso();
+  return report;
+}
+
+function applyFdaBulkKind(
+  report: FDAReport,
+  kind: BulkStatusKind,
+  extras?: { reason?: RejectionReason | null; notes?: string | null },
+): void {
+  if (kind === "approve") {
+    applyApproveFda(report);
+    return;
+  }
+  if (kind === "reject") {
+    applyRejectFda(report, extras?.reason ?? null, extras?.notes ?? null);
+    return;
+  }
+  returnFdaReportToQueue(report);
+}
+
 export async function approveFDAReport(id: string): Promise<FDAReport | null> {
   return withFdaPersist(() => {
     const report = getFDAReport(id);
     if (!report) return null;
-    report.establishment = ensureFdaCoordinates(report.establishment);
-    report.review_status = "approved";
-    report.rejection_reason = null;
-    report.rejection_notes = null;
-    report.duplicate_of_case_id = null;
-    report.case.updated_at = nowIso();
-    return report;
+    return applyApproveFda(report);
   });
 }
 
@@ -375,12 +434,7 @@ export async function rejectFDAReport(
   return withFdaPersist(() => {
     const report = getFDAReport(id);
     if (!report) return null;
-    report.review_status = "rejected";
-    report.rejection_reason = reason;
-    report.rejection_notes = notes;
-    report.duplicate_of_case_id = null;
-    report.case.updated_at = nowIso();
-    return report;
+    return applyRejectFda(report, reason, notes);
   });
 }
 
@@ -391,21 +445,8 @@ export async function markFDAReportDuplicate(
   return withFdaPersist(() => {
     const report = getFDAReport(id);
     if (!report) return null;
-    report.review_status = "duplicate";
-    report.duplicate_of_case_id = duplicateOfCaseId;
-    report.rejection_reason = "duplicate";
-    report.case.updated_at = nowIso();
-    return report;
+    return applyDuplicateFda(report, duplicateOfCaseId);
   });
-}
-
-function returnFdaReportToQueue(report: FDAReport): FDAReport {
-  report.review_status = "pending";
-  report.rejection_reason = null;
-  report.rejection_notes = null;
-  report.duplicate_of_case_id = null;
-  report.case.updated_at = nowIso();
-  return report;
 }
 
 export async function unpublishFDAReport(id: string): Promise<FDAReport | null> {
@@ -421,6 +462,34 @@ export async function restoreFDAReport(id: string): Promise<FDAReport | null> {
     const report = getFDAReport(id);
     if (!report) return null;
     return returnFdaReportToQueue(report);
+  });
+}
+
+export async function bulkUpdateFDAReports(
+  ids: string[],
+  kind: BulkStatusKind,
+  extras?: { reason?: RejectionReason | null; notes?: string | null },
+): Promise<BulkUpdateResult> {
+  await hydrateAdminStore();
+  const uniqueIds = [...new Set(ids)];
+  if (uniqueIds.length === 0) return { updated: 0, skipped: 0 };
+
+  const eligibleIds = uniqueIds.filter((id) => {
+    const report = getFDAReport(id);
+    return report ? isFdaBulkEligible(report.review_status, kind) : false;
+  });
+  const skipped = uniqueIds.length - eligibleIds.length;
+  if (eligibleIds.length === 0) return { updated: 0, skipped };
+
+  return withFdaPersist(() => {
+    let updated = 0;
+    for (const id of eligibleIds) {
+      const report = getFDAReport(id);
+      if (!report || !isFdaBulkEligible(report.review_status, kind)) continue;
+      applyFdaBulkKind(report, kind, extras);
+      updated += 1;
+    }
+    return { updated, skipped: uniqueIds.length - updated };
   });
 }
 
@@ -478,18 +547,78 @@ export async function updateCommunityRequest(
   });
 }
 
+async function applyApproveCommunity(
+  request: CommunityRequest,
+): Promise<CommunityRequest> {
+  await ensureMappable(request);
+  request.status = "approved";
+  request.rejection_reason = null;
+  request.rejection_notes = null;
+  request.duplicate_of_place = null;
+  return request;
+}
+
+function applyRejectCommunity(
+  request: CommunityRequest,
+  reason: RejectionReason | null,
+  notes: string | null,
+): CommunityRequest {
+  request.status = "rejected";
+  request.rejection_reason = reason;
+  request.rejection_notes = notes;
+  request.duplicate_of_place = null;
+  return request;
+}
+
+function applyUnpublishCommunity(request: CommunityRequest): CommunityRequest {
+  request.status = "pending";
+  request.rejection_reason = null;
+  request.rejection_notes = null;
+  request.duplicate_of_place = null;
+  return request;
+}
+
+function applyRestoreCommunity(request: CommunityRequest): CommunityRequest {
+  if (request.duplicate_of_place) {
+    const target = findRequestByPlaceId(request.duplicate_of_place);
+    if (target && target.similar_report_count > 1) {
+      target.similar_report_count -= 1;
+    }
+  }
+  request.status = "pending";
+  request.rejection_reason = null;
+  request.rejection_notes = null;
+  request.duplicate_of_place = null;
+  return request;
+}
+
+async function applyCommunityBulkKind(
+  request: CommunityRequest,
+  kind: BulkStatusKind,
+  extras?: { reason?: RejectionReason | null; notes?: string | null },
+): Promise<void> {
+  if (kind === "approve") {
+    await applyApproveCommunity(request);
+    return;
+  }
+  if (kind === "reject") {
+    applyRejectCommunity(request, extras?.reason ?? null, extras?.notes ?? null);
+    return;
+  }
+  if (kind === "unpublish") {
+    applyUnpublishCommunity(request);
+    return;
+  }
+  applyRestoreCommunity(request);
+}
+
 export async function approveCommunityRequest(
   id: string,
 ): Promise<CommunityRequest | null> {
   return withCommunityPersist(async () => {
     const request = getCommunityRequest(id);
     if (!request) return null;
-    await ensureMappable(request);
-    request.status = "approved";
-    request.rejection_reason = null;
-    request.rejection_notes = null;
-    request.duplicate_of_place = null;
-    return request;
+    return applyApproveCommunity(request);
   });
 }
 
@@ -501,11 +630,7 @@ export async function rejectCommunityRequest(
   return withCommunityPersist(() => {
     const request = getCommunityRequest(id);
     if (!request) return null;
-    request.status = "rejected";
-    request.rejection_reason = reason;
-    request.rejection_notes = notes;
-    request.duplicate_of_place = null;
-    return request;
+    return applyRejectCommunity(request, reason, notes);
   });
 }
 
@@ -515,11 +640,7 @@ export async function unpublishCommunityRequest(
   return withCommunityPersist(() => {
     const request = getCommunityRequest(id);
     if (!request) return null;
-    request.status = "pending";
-    request.rejection_reason = null;
-    request.rejection_notes = null;
-    request.duplicate_of_place = null;
-    return request;
+    return applyUnpublishCommunity(request);
   });
 }
 
@@ -529,17 +650,35 @@ export async function restoreCommunityRequest(
   return withCommunityPersist(() => {
     const request = getCommunityRequest(id);
     if (!request) return null;
-    if (request.duplicate_of_place) {
-      const target = findRequestByPlaceId(request.duplicate_of_place);
-      if (target && target.similar_report_count > 1) {
-        target.similar_report_count -= 1;
-      }
+    return applyRestoreCommunity(request);
+  });
+}
+
+export async function bulkUpdateCommunityRequests(
+  ids: string[],
+  kind: BulkStatusKind,
+  extras?: { reason?: RejectionReason | null; notes?: string | null },
+): Promise<BulkUpdateResult> {
+  await hydrateAdminStore();
+  const uniqueIds = [...new Set(ids)];
+  if (uniqueIds.length === 0) return { updated: 0, skipped: 0 };
+
+  const eligibleIds = uniqueIds.filter((id) => {
+    const request = getCommunityRequest(id);
+    return request ? isCommunityBulkEligible(request.status, kind) : false;
+  });
+  const skipped = uniqueIds.length - eligibleIds.length;
+  if (eligibleIds.length === 0) return { updated: 0, skipped };
+
+  return withCommunityPersist(async () => {
+    let updated = 0;
+    for (const id of eligibleIds) {
+      const request = getCommunityRequest(id);
+      if (!request || !isCommunityBulkEligible(request.status, kind)) continue;
+      await applyCommunityBulkKind(request, kind, extras);
+      updated += 1;
     }
-    request.status = "pending";
-    request.rejection_reason = null;
-    request.rejection_notes = null;
-    request.duplicate_of_place = null;
-    return request;
+    return { updated, skipped: uniqueIds.length - updated };
   });
 }
 

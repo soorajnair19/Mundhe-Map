@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import {
   approveCommunityRequestAction,
+  bulkUpdateCommunityRequestsAction,
   markCommunityRequestDuplicateAction,
   rejectCommunityRequestAction,
   restoreCommunityRequestAction,
@@ -16,9 +17,16 @@ import type {
   RejectionReason,
 } from "@/lib/admin/types";
 import { COMMUNITY_REJECTION_REASONS } from "@/lib/admin/types";
+import {
+  bulkSkipNote,
+  isCommunityBulkEligible,
+  type BulkStatusKind,
+} from "@/lib/admin/bulk";
 import { formatDisplayDate, normalizeName } from "@/lib/data/normalize";
 import { COMMUNITY_REQUEST_FIELDS, isImageEvidenceUrl } from "@/lib/community/schema";
 import { communityPinLooksApproximate } from "@/lib/community/coords";
+import { AdminQueueTable, QueueRowActions } from "@/components/admin/AdminQueueTable";
+import { BulkActionBar } from "@/components/admin/BulkActionBar";
 import { CommunityEditForm, type CommunityRequestPatch } from "@/components/admin/CommunityEditForm";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
@@ -79,9 +87,11 @@ export function CommunityQueue({
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("pending");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [editing, setEditing] = useState(false);
   const [confirm, setConfirm] = useState<ConfirmKind | null>(null);
-  const [confirmId, setConfirmId] = useState<string | null>(null);
+  const [confirmTargets, setConfirmTargets] = useState<string[]>([]);
+  const [bulkMode, setBulkMode] = useState(false);
   const [reason, setReason] = useState<RejectionReason>("insufficient_evidence");
   const [notes, setNotes] = useState("");
   const [duplicateOf, setDuplicateOf] = useState<string | null>(null);
@@ -110,42 +120,121 @@ export function CommunityQueue({
   }, [query, requests, status]);
 
   const selected = requests.find((item) => item.id === selectedId) ?? null;
-  const targetId = confirmId ?? selectedId;
+  const targetId = confirmTargets[0] ?? null;
+  const targetRequest = requests.find((item) => item.id === targetId) ?? null;
+  const bulkKind: BulkStatusKind | null =
+    confirm && confirm !== "duplicate" ? confirm : null;
+  const bulkEligibleCount = bulkKind
+    ? confirmTargets.filter((id) => {
+        const request = requests.find((item) => item.id === id);
+        return request
+          ? isCommunityBulkEligible(request.status, bulkKind)
+          : false;
+      }).length
+    : 0;
 
-  function openConfirm(kind: ConfirmKind, id: string) {
-    setConfirmId(id);
-    setConfirm(kind);
+  const bulkCounts = useMemo(() => {
+    const selectedRequests = requests.filter((request) =>
+      selectedIds.has(request.id),
+    );
+    return {
+      approve: selectedRequests.filter((request) =>
+        isCommunityBulkEligible(request.status, "approve"),
+      ).length,
+      reject: selectedRequests.filter((request) =>
+        isCommunityBulkEligible(request.status, "reject"),
+      ).length,
+      unpublish: selectedRequests.filter((request) =>
+        isCommunityBulkEligible(request.status, "unpublish"),
+      ).length,
+      restore: selectedRequests.filter((request) =>
+        isCommunityBulkEligible(request.status, "restore"),
+      ).length,
+    };
+  }, [requests, selectedIds]);
+
+  function resetConfirmFields() {
     setReason("insufficient_evidence");
     setNotes("");
     setDuplicateOf(null);
   }
 
+  function openConfirm(kind: ConfirmKind, id: string) {
+    setBulkMode(false);
+    setConfirmTargets([id]);
+    setConfirm(kind);
+    resetConfirmFields();
+  }
+
+  function openBulkConfirm(kind: BulkStatusKind) {
+    setBulkMode(true);
+    setConfirmTargets([...selectedIds]);
+    setConfirm(kind);
+    resetConfirmFields();
+  }
+
+  function toggleRow(id: string) {
+    setSelectedIds((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleAllVisible() {
+    setSelectedIds((current) => {
+      const allSelected =
+        visible.length > 0 && visible.every((row) => current.has(row.id));
+      if (allSelected) return new Set();
+      return new Set(visible.map((row) => row.id));
+    });
+  }
+
   async function runConfirm() {
-    if (!targetId || !confirm) return;
+    if (!confirm || confirmTargets.length === 0) return;
+    if (confirm === "duplicate" && (!targetId || !duplicateOf)) return;
+    const usingBulk = bulkMode;
     setPending(true);
     setActionError(null);
     try {
       let result: { error: string | null } = { error: null };
-      if (confirm === "approve") result = await approveCommunityRequestAction(targetId);
-      if (confirm === "reject") {
-        result = await rejectCommunityRequestAction(targetId, reason, notes || null);
-      }
-      if (confirm === "unpublish") {
+      if (usingBulk && confirm !== "duplicate") {
+        result = await bulkUpdateCommunityRequestsAction(
+          confirmTargets,
+          confirm,
+          { reason, notes: notes || null },
+        );
+      } else if (confirm === "approve" && targetId) {
+        result = await approveCommunityRequestAction(targetId);
+      } else if (confirm === "reject" && targetId) {
+        result = await rejectCommunityRequestAction(
+          targetId,
+          reason,
+          notes || null,
+        );
+      } else if (confirm === "unpublish" && targetId) {
         result = await unpublishCommunityRequestAction(targetId);
-      }
-      if (confirm === "restore") {
+      } else if (confirm === "restore" && targetId) {
         result = await restoreCommunityRequestAction(targetId);
-      }
-      if (confirm === "duplicate") {
-        if (!duplicateOf) return;
-        result = await markCommunityRequestDuplicateAction(targetId, duplicateOf);
+      } else if (confirm === "duplicate" && targetId) {
+        result = await markCommunityRequestDuplicateAction(
+          targetId,
+          duplicateOf,
+        );
       }
       if (result.error) {
         setActionError(result.error);
         return;
       }
       setConfirm(null);
-      setSelectedId(null);
+      setConfirmTargets([]);
+      setBulkMode(false);
+      if (usingBulk) setSelectedIds(new Set());
+      if (!selectedId || confirmTargets.includes(selectedId)) {
+        setSelectedId(null);
+        setEditing(false);
+      }
     } finally {
       setPending(false);
     }
@@ -173,11 +262,31 @@ export function CommunityQueue({
 
       <QueueToolbar
         query={query}
-        onQueryChange={setQuery}
+        onQueryChange={(value) => {
+          setQuery(value);
+          setSelectedIds(new Set());
+        }}
         status={status}
-        onStatusChange={setStatus}
+        onStatusChange={(value) => {
+          setStatus(value);
+          setSelectedIds(new Set());
+        }}
         statuses={STATUSES}
         placeholder="Search place, city, concern…"
+      />
+
+      <BulkActionBar
+        selectedCount={selectedIds.size}
+        approveCount={bulkCounts.approve}
+        rejectCount={bulkCounts.reject}
+        unpublishCount={bulkCounts.unpublish}
+        restoreCount={bulkCounts.restore}
+        onApprove={() => openBulkConfirm("approve")}
+        onReject={() => openBulkConfirm("reject")}
+        onUnpublish={() => openBulkConfirm("unpublish")}
+        onRestore={() => openBulkConfirm("restore")}
+        onClear={() => setSelectedIds(new Set())}
+        approveClassName="bg-[var(--community-accent)] text-white"
       />
 
       {visible.length === 0 ? (
@@ -187,58 +296,87 @@ export function CommunityQueue({
             : "No community requests in this view."}
         </div>
       ) : (
-        <ul className="mt-5 space-y-3">
-          {visible.map((request) => {
-            const reports = reportCount(request, requests);
-            return (
-            <li
-              key={request.id}
-              className="rounded-xl border border-[var(--border)] bg-[var(--panel)] p-4"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-3">
+        <AdminQueueTable
+          rows={visible}
+          selectedIds={selectedIds}
+          onToggle={toggleRow}
+          onToggleAll={toggleAllVisible}
+          rowLabel={(request) => request.place_name}
+          columns={[
+            {
+              key: "place",
+              header: "Place",
+              className: "min-w-[160px]",
+              render: (request) => (
                 <div>
-                  <h2 className="text-lg font-medium text-[var(--ink)]">
+                  <p className="font-medium text-[var(--ink)]">
                     {request.place_name}
-                  </h2>
-                  <p className="text-sm text-[var(--muted)]">
-                    {formatPlaceLocation(request.locality, request.city)}
+                  </p>
+                  <p className="text-xs text-[var(--muted)]">
+                    {formatPlaceLocation(request.locality, request.city) || "—"}
                   </p>
                 </div>
-                <div className="flex items-center gap-2">
+              ),
+            },
+            {
+              key: "status",
+              header: "Status",
+              render: (request) => (
+                <div className="flex flex-wrap items-center gap-1.5">
                   <StatusChip status={request.status} />
                   {request.status === "approved" ? (
                     <span className="rounded-md bg-[var(--community-accent-tint)] px-2 py-0.5 text-xs font-medium text-[var(--community-accent)]">
                       On map
                     </span>
                   ) : null}
-                  {reports > 1 ? (
-                    <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-xs font-medium">
-                      {reports} reports
-                    </span>
-                  ) : null}
                 </div>
-              </div>
-              {request.concern ? (
-                <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">
-                  “{request.concern}”
-                </p>
-              ) : null}
-              <p className="mt-2 text-xs text-[var(--muted)]">
-                Submitted {formatDisplayDate(request.submitted_at)}
-              </p>
-              <div className="mt-4">
-                <button
-                  type="button"
-                  onClick={() => setSelectedId(request.id)}
-                  className="rounded-lg bg-[var(--ink)] px-3 py-1.5 text-sm font-medium text-white"
+              ),
+            },
+            {
+              key: "concern",
+              header: "Concern",
+              className: "max-w-[280px]",
+              render: (request) => (
+                <p
+                  className="max-w-[280px] truncate text-[var(--ink)]"
+                  title={request.concern || undefined}
                 >
-                  Review
-                </button>
-              </div>
-            </li>
-            );
-          })}
-        </ul>
+                  {request.concern ? `“${request.concern}”` : "—"}
+                </p>
+              ),
+            },
+            {
+              key: "reports",
+              header: "Reports",
+              className: "whitespace-nowrap",
+              render: (request) => {
+                const reports = reportCount(request, requests);
+                return reports > 1 ? `${reports} reports` : "1";
+              },
+            },
+            {
+              key: "submitted",
+              header: "Submitted",
+              className: "whitespace-nowrap",
+              render: (request) => formatDisplayDate(request.submitted_at),
+            },
+          ]}
+          renderActions={(request) => (
+            <QueueRowActions
+              status={request.status}
+              approveTone="community"
+              onReview={() => {
+                setSelectedId(request.id);
+                setEditing(false);
+              }}
+              onApprove={() => openConfirm("approve", request.id)}
+              onReject={() => openConfirm("reject", request.id)}
+              onDuplicate={() => openConfirm("duplicate", request.id)}
+              onUnpublish={() => openConfirm("unpublish", request.id)}
+              onRestore={() => openConfirm("restore", request.id)}
+            />
+          )}
+        />
       )}
 
       <CommunityDrawer
@@ -270,34 +408,46 @@ export function CommunityQueue({
       {confirm === "approve" ? (
         <ConfirmDialog
           title={
-            selected?.status === "pending"
-              ? "Approve request"
-              : "Move back to queue and approve"
+            bulkMode
+              ? `Approve ${bulkEligibleCount} request${bulkEligibleCount === 1 ? "" : "s"}`
+              : targetRequest?.status === "pending"
+                ? "Approve request"
+                : "Move back to queue and approve"
           }
-          body="This place will appear on the public community map as a request for inspection. It is not a verified FDA violation or enforcement action."
+          body={
+            bulkMode
+              ? `These places will appear on the public community map as requests for inspection. They are not verified FDA violations or enforcement actions.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : "This place will appear on the public community map as a request for inspection. It is not a verified FDA violation or enforcement action."
+          }
           confirmLabel="Approve and publish"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         />
       ) : null}
       {confirm === "reject" ? (
         <ConfirmDialog
           title={
-            selected?.status === "pending"
-              ? "Reject request"
-              : "Move back to queue and reject"
+            bulkMode
+              ? `Reject ${bulkEligibleCount} request${bulkEligibleCount === 1 ? "" : "s"}`
+              : targetRequest?.status === "pending"
+                ? "Reject request"
+                : "Move back to queue and reject"
           }
           body={
-            selected?.status === "approved"
-              ? "This place will be removed from the community map and marked as rejected."
-              : "The request will leave the pending queue and stay in review history. It will not appear on the community map."
+            bulkMode
+              ? `These requests will leave the pending queue and stay in review history. They will not appear on the community map.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : targetRequest?.status === "approved"
+                ? "This place will be removed from the community map and marked as rejected."
+                : "The request will leave the pending queue and stay in review history. It will not appear on the community map."
           }
           confirmLabel="Reject"
           tone="danger"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         >
           <label className="mt-4 block text-xs text-[var(--muted)]">
             Reason
@@ -326,21 +476,31 @@ export function CommunityQueue({
       {confirm === "unpublish" ? (
         <ConfirmDialog
           title="Remove from map"
-          body="This place will be taken off the public community map and returned to the pending queue."
+          body={
+            bulkMode
+              ? `These places will be taken off the public community map and returned to the pending queue.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : "This place will be taken off the public community map and returned to the pending queue."
+          }
           confirmLabel="Remove from map"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         />
       ) : null}
       {confirm === "restore" ? (
         <ConfirmDialog
           title="Move back to queue"
-          body="This request will return to the pending queue. It will not appear on the public map until it is approved again."
+          body={
+            bulkMode
+              ? `These requests will return to the pending queue. They will not appear on the public map until they are approved again.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : "This request will return to the pending queue. It will not appear on the public map until it is approved again."
+          }
           confirmLabel="Move back to queue"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         />
       ) : null}
       {confirm === "duplicate" ? (

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import {
   approveFDAReportAction,
+  bulkUpdateFDAReportsAction,
   ingestFdaReportsAction,
   markFDAReportDuplicateAction,
   rejectFDAReportAction,
@@ -17,7 +18,14 @@ import type {
   RejectionReason,
 } from "@/lib/admin/types";
 import { FDA_REJECTION_REASONS } from "@/lib/admin/types";
+import {
+  bulkSkipNote,
+  isFdaBulkEligible,
+  type BulkStatusKind,
+} from "@/lib/admin/bulk";
 import { formatDisplayDate, formatLabel } from "@/lib/data/normalize";
+import { AdminQueueTable, QueueRowActions } from "@/components/admin/AdminQueueTable";
+import { BulkActionBar } from "@/components/admin/BulkActionBar";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import { DuplicatePicker } from "@/components/admin/DuplicatePicker";
 import { FdaEditForm } from "@/components/admin/FdaEditForm";
@@ -44,9 +52,11 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("pending");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [editing, setEditing] = useState(false);
   const [confirm, setConfirm] = useState<ConfirmKind | null>(null);
-  const [confirmId, setConfirmId] = useState<string | null>(null);
+  const [confirmTargets, setConfirmTargets] = useState<string[]>([]);
+  const [bulkMode, setBulkMode] = useState(false);
   const [reason, setReason] = useState<RejectionReason>("insufficient_evidence");
   const [notes, setNotes] = useState("");
   const [duplicateOf, setDuplicateOf] = useState<string | null>(null);
@@ -79,34 +89,99 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
   }, [query, reports, status]);
 
   const selected = reports.find((report) => report.id === selectedId) ?? null;
-  const targetId = confirmId ?? selectedId;
+  const targetId = confirmTargets[0] ?? null;
   const targetReport = reports.find((report) => report.id === targetId) ?? null;
+  const bulkKind: BulkStatusKind | null =
+    confirm && confirm !== "duplicate" ? confirm : null;
+  const bulkEligibleCount = bulkKind
+    ? confirmTargets.filter((id) => {
+        const report = reports.find((item) => item.id === id);
+        return report
+          ? isFdaBulkEligible(report.review_status, bulkKind)
+          : false;
+      }).length
+    : 0;
 
-  function openConfirm(kind: ConfirmKind, id: string) {
-    setConfirmId(id);
-    setConfirm(kind);
+  const bulkCounts = useMemo(() => {
+    const selectedReports = reports.filter((report) =>
+      selectedIds.has(report.id),
+    );
+    return {
+      approve: selectedReports.filter((report) =>
+        isFdaBulkEligible(report.review_status, "approve"),
+      ).length,
+      reject: selectedReports.filter((report) =>
+        isFdaBulkEligible(report.review_status, "reject"),
+      ).length,
+      unpublish: selectedReports.filter((report) =>
+        isFdaBulkEligible(report.review_status, "unpublish"),
+      ).length,
+      restore: selectedReports.filter((report) =>
+        isFdaBulkEligible(report.review_status, "restore"),
+      ).length,
+    };
+  }, [reports, selectedIds]);
+
+  function resetConfirmFields() {
     setReason("insufficient_evidence");
     setNotes("");
     setDuplicateOf(null);
   }
 
+  function openConfirm(kind: ConfirmKind, id: string) {
+    setBulkMode(false);
+    setConfirmTargets([id]);
+    setConfirm(kind);
+    resetConfirmFields();
+  }
+
+  function openBulkConfirm(kind: BulkStatusKind) {
+    setBulkMode(true);
+    setConfirmTargets([...selectedIds]);
+    setConfirm(kind);
+    resetConfirmFields();
+  }
+
+  function toggleRow(id: string) {
+    setSelectedIds((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleAllVisible() {
+    setSelectedIds((current) => {
+      const allSelected =
+        visible.length > 0 && visible.every((row) => current.has(row.id));
+      if (allSelected) return new Set();
+      return new Set(visible.map((row) => row.id));
+    });
+  }
+
   async function runConfirm() {
-    if (!targetId || !confirm) return;
+    if (!confirm || confirmTargets.length === 0) return;
+    if (confirm === "duplicate" && !targetId) return;
+    const usingBulk = bulkMode;
     setPending(true);
     setActionError(null);
     try {
       let result: { error: string | null } = { error: null };
-      if (confirm === "approve") result = await approveFDAReportAction(targetId);
-      if (confirm === "reject") {
+      if (usingBulk && confirm !== "duplicate") {
+        result = await bulkUpdateFDAReportsAction(confirmTargets, confirm, {
+          reason,
+          notes: notes || null,
+        });
+      } else if (confirm === "approve" && targetId) {
+        result = await approveFDAReportAction(targetId);
+      } else if (confirm === "reject" && targetId) {
         result = await rejectFDAReportAction(targetId, reason, notes || null);
-      }
-      if (confirm === "unpublish") {
+      } else if (confirm === "unpublish" && targetId) {
         result = await unpublishFDAReportAction(targetId);
-      }
-      if (confirm === "restore") {
+      } else if (confirm === "restore" && targetId) {
         result = await restoreFDAReportAction(targetId);
-      }
-      if (confirm === "duplicate") {
+      } else if (confirm === "duplicate" && targetId) {
         result = await markFDAReportDuplicateAction(targetId, duplicateOf);
       }
       if (result.error) {
@@ -114,8 +189,13 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
         return;
       }
       setConfirm(null);
-      setSelectedId(null);
-      setEditing(false);
+      setConfirmTargets([]);
+      setBulkMode(false);
+      if (usingBulk) setSelectedIds(new Set());
+      if (!selectedId || confirmTargets.includes(selectedId)) {
+        setSelectedId(null);
+        setEditing(false);
+      }
     } finally {
       setPending(false);
     }
@@ -169,11 +249,30 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
 
       <QueueToolbar
         query={query}
-        onQueryChange={setQuery}
+        onQueryChange={(value) => {
+          setQuery(value);
+          setSelectedIds(new Set());
+        }}
         status={status}
-        onStatusChange={setStatus}
+        onStatusChange={(value) => {
+          setStatus(value);
+          setSelectedIds(new Set());
+        }}
         statuses={STATUSES}
         placeholder="Search name, city, summary…"
+      />
+
+      <BulkActionBar
+        selectedCount={selectedIds.size}
+        approveCount={bulkCounts.approve}
+        rejectCount={bulkCounts.reject}
+        unpublishCount={bulkCounts.unpublish}
+        restoreCount={bulkCounts.restore}
+        onApprove={() => openBulkConfirm("approve")}
+        onReject={() => openBulkConfirm("reject")}
+        onUnpublish={() => openBulkConfirm("unpublish")}
+        onRestore={() => openBulkConfirm("restore")}
+        onClear={() => setSelectedIds(new Set())}
       />
 
       {visible.length === 0 ? (
@@ -184,105 +283,87 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
             : "No FDA reports in this view."}
         </div>
       ) : (
-        <ul className="mt-5 space-y-3">
-          {visible.map((report) => (
-            <li
-              key={report.id}
-              className="rounded-xl border border-[var(--border)] bg-[var(--panel)] p-4"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-3">
+        <AdminQueueTable
+          rows={visible}
+          selectedIds={selectedIds}
+          onToggle={toggleRow}
+          onToggleAll={toggleAllVisible}
+          rowLabel={(report) => report.establishment.name}
+          columns={[
+            {
+              key: "establishment",
+              header: "Establishment",
+              className: "min-w-[180px]",
+              render: (report) => (
                 <div>
-                  <h2 className="text-lg font-medium text-[var(--ink)]">
+                  <p className="font-medium text-[var(--ink)]">
                     {report.establishment.name}
-                  </h2>
-                  <p className="text-sm text-[var(--muted)]">
+                  </p>
+                  <p className="text-xs text-[var(--muted)]">
                     {[report.establishment.locality, report.establishment.city]
                       .filter(Boolean)
-                      .join(" · ")}
+                      .join(" · ") || "—"}
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center gap-2">
+              ),
+            },
+            {
+              key: "status",
+              header: "Status",
+              render: (report) => (
+                <div className="flex flex-wrap items-center gap-1.5">
                   <StatusChip status={report.review_status} />
                   {report.review_status === "approved" ? (
                     <span className="rounded-md bg-[#e4f1ec] px-2 py-0.5 text-xs font-medium text-[#0f6e56]">
                       On map
                     </span>
                   ) : null}
-                  <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-xs font-medium text-[var(--ink)]">
-                    {formatLabel(report.case.case_type)}
-                  </span>
                 </div>
-              </div>
-              <dl className="mt-3 grid grid-cols-2 gap-2 text-sm sm:grid-cols-4">
-                <div>
-                  <dt className="text-xs text-[var(--muted)]">Inspection</dt>
-                  <dd>{formatDisplayDate(report.case.inspection_date)}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-[var(--muted)]">Action</dt>
-                  <dd>{formatDisplayDate(report.case.action_date)}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-[var(--muted)]">Queued</dt>
-                  <dd>{formatDisplayDate(report.queued_at)}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-[var(--muted)]">Confidence</dt>
-                  <dd>
-                    {report.case.confidence_score == null
-                      ? "—"
-                      : `${Math.round(report.case.confidence_score * 100)}%`}
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--ink)]">
-                {report.case.summary}
-              </p>
-              <p className="mt-2 text-xs text-[var(--muted)]">
-                Sources:{" "}
-                {report.case.sources.map((source) => source.source_name).join(", ") ||
-                  "—"}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedId(report.id);
-                    setEditing(false);
-                  }}
-                  className="rounded-lg bg-[var(--ink)] px-3 py-1.5 text-sm font-medium text-white"
-                >
-                  Review
-                </button>
-                {report.review_status === "pending" ? (
-                  <>
-                    <button
-                      type="button"
-                      onClick={() => openConfirm("approve", report.id)}
-                      className="rounded-lg bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-white"
-                    >
-                      Approve
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => openConfirm("reject", report.id)}
-                      className="rounded-lg px-3 py-1.5 text-sm text-[var(--muted)] ring-1 ring-[var(--border)]"
-                    >
-                      Reject
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => openConfirm("duplicate", report.id)}
-                      className="rounded-lg px-3 py-1.5 text-sm text-[var(--muted)] ring-1 ring-[var(--border)]"
-                    >
-                      Duplicate
-                    </button>
-                  </>
-                ) : null}
-              </div>
-            </li>
-          ))}
-        </ul>
+              ),
+            },
+            {
+              key: "case_type",
+              header: "Case type",
+              render: (report) => formatLabel(report.case.case_type),
+            },
+            {
+              key: "inspection",
+              header: "Inspection",
+              className: "whitespace-nowrap",
+              render: (report) =>
+                formatDisplayDate(report.case.inspection_date),
+            },
+            {
+              key: "queued",
+              header: "Queued",
+              className: "whitespace-nowrap",
+              render: (report) => formatDisplayDate(report.queued_at),
+            },
+            {
+              key: "confidence",
+              header: "Confidence",
+              className: "whitespace-nowrap",
+              render: (report) =>
+                report.case.confidence_score == null
+                  ? "—"
+                  : `${Math.round(report.case.confidence_score * 100)}%`,
+            },
+          ]}
+          renderActions={(report) => (
+            <QueueRowActions
+              status={report.review_status}
+              onReview={() => {
+                setSelectedId(report.id);
+                setEditing(false);
+              }}
+              onApprove={() => openConfirm("approve", report.id)}
+              onReject={() => openConfirm("reject", report.id)}
+              onDuplicate={() => openConfirm("duplicate", report.id)}
+              onUnpublish={() => openConfirm("unpublish", report.id)}
+              onRestore={() => openConfirm("restore", report.id)}
+            />
+          )}
+        />
       )}
 
       <FdaDrawer
@@ -313,34 +394,46 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
       {confirm === "approve" ? (
         <ConfirmDialog
           title={
-            targetReport?.review_status === "pending"
-              ? "Approve FDA report"
-              : "Move back to queue and approve"
+            bulkMode
+              ? `Approve ${bulkEligibleCount} FDA report${bulkEligibleCount === 1 ? "" : "s"}`
+              : targetReport?.review_status === "pending"
+                ? "Approve FDA report"
+                : "Move back to queue and approve"
           }
-          body="Approval adds this case to the public FDA Actions map and saves it in the living ledger so later deploys keep it."
+          body={
+            bulkMode
+              ? `Approval adds these cases to the public FDA Actions map and saves them in the living ledger so later deploys keep them.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : "Approval adds this case to the public FDA Actions map and saves it in the living ledger so later deploys keep it."
+          }
           confirmLabel="Approve and publish"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         />
       ) : null}
       {confirm === "reject" ? (
         <ConfirmDialog
           title={
-            targetReport?.review_status === "pending"
-              ? "Reject FDA report"
-              : "Move back to queue and reject"
+            bulkMode
+              ? `Reject ${bulkEligibleCount} FDA report${bulkEligibleCount === 1 ? "" : "s"}`
+              : targetReport?.review_status === "pending"
+                ? "Reject FDA report"
+                : "Move back to queue and reject"
           }
           body={
-            targetReport?.review_status === "approved"
-              ? "This case will be removed from the public map and marked as rejected."
-              : "The report will leave the pending queue. It is kept in review history, not permanently deleted."
+            bulkMode
+              ? `These reports will leave the pending queue and stay in review history.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : targetReport?.review_status === "approved"
+                ? "This case will be removed from the public map and marked as rejected."
+                : "The report will leave the pending queue. It is kept in review history, not permanently deleted."
           }
           confirmLabel="Reject"
           tone="danger"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         >
           <label className="mt-4 block text-xs text-[var(--muted)]">
             Reason
@@ -369,21 +462,31 @@ export function FdaQueue({ reports, publishedPlaces }: FdaQueueProps) {
       {confirm === "unpublish" ? (
         <ConfirmDialog
           title="Remove from map"
-          body="This case will be taken off the public FDA Actions map and returned to the pending queue."
+          body={
+            bulkMode
+              ? `These cases will be taken off the public FDA Actions map and returned to the pending queue.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : "This case will be taken off the public FDA Actions map and returned to the pending queue."
+          }
           confirmLabel="Remove from map"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         />
       ) : null}
       {confirm === "restore" ? (
         <ConfirmDialog
           title="Move back to queue"
-          body="This report will return to the pending queue. It will not appear on the public map until it is approved again."
+          body={
+            bulkMode
+              ? `These reports will return to the pending queue. They will not appear on the public map until they are approved again.${bulkSkipNote(bulkEligibleCount, confirmTargets.length)}`
+              : "This report will return to the pending queue. It will not appear on the public map until it is approved again."
+          }
           confirmLabel="Move back to queue"
           onCancel={() => setConfirm(null)}
           onConfirm={runConfirm}
           pending={pending}
+          confirmDisabled={bulkMode && bulkEligibleCount === 0}
         />
       ) : null}
       {confirm === "duplicate" ? (
