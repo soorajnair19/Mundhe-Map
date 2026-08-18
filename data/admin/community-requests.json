@@ -1,7 +1,7 @@
 [
   {
     "id": "req-vishwa-bharati-restaurant-msyz58h6",
-    "status": "pending",
+    "status": "approved",
     "place_name": "Vishwa Bharati Restaurant",
     "maps_url": "https://maps.app.goo.gl/V8ArtCYK5hX9HicaA",
     "plus_code": null,
@@ -19,7 +19,7 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-vishwa-bharati-restaurant-msyz58h6"
   },
   {
     "id": "req-shreya-bar-restaurant-msw3z60h",
