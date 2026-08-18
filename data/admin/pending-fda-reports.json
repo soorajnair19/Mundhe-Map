@@ -1727,7 +1727,7 @@
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Tewari%20Bros.%20Mithaiwala%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z"
+      "updated_at": "2026-08-18T17:49:39.752Z"
     },
     "case": {
       "id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested",
@@ -1736,11 +1736,11 @@
       "status": "licence_suspended",
       "inspection_date": null,
       "action_date": "2026-08-04",
-      "summary": "Mumbai's Tewari Bros. Mithaiwala's FSSAI licence suspended after man claims he found stapler pin in Kaju &nbsp;&nbsp; The Times of India",
+      "summary": "The Maharashtra FDA has suspended the FSSAI licence of Tewari Bros. Mithaiwala's Charni Road outlet after a customer alleged he found a rusted metal pin inside a piece of kaju katli meant for his three-year-old daughter. The regulator has collected sweet samples for testing and is investigating whether the contamination was accidental or deliberate.",
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-18T17:48:25.377Z",
+      "updated_at": "2026-08-18T17:49:39.752Z",
       "actions": [
         {
           "id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested-act-1",
