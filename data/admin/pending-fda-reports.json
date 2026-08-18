@@ -1,5 +1,815 @@
 [
   {
+    "id": "fda-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or",
+      "name": "Maharashtra FDA to pay ₹5 lakh after Bombay HC order on licence suspension",
+      "normalized_name": "maharashtra fda to pay ₹5 lakh after bombay hc order on licence suspension",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.951259999999998,
+      "longitude": 75.85,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20to%20pay%20%E2%82%B95%20lakh%20after%20Bombay%20HC%20order%20on%20licence%20suspension%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or-ingested",
+      "establishment_id": "est-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Maharashtra FDA to pay ₹5 lakh after Bombay HC order on licence suspension &nbsp;&nbsp; Business Standard",
+      "verification_status": "reported",
+      "confidence_score": 0.2,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "Business Standard report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or-ingested-src-1",
+          "source_name": "Business Standard",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA to pay ₹5 lakh after Bombay HC order on licence suspension",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPbDFESF8zemp5Q0t2UDJJZHI1V2lJQVNseVQ0ci13dHhCLWxKSUV4aXEweXJXcUwxVzJpamlqVkZSOFB4VVM1d3JYYnBYUUh6bkh0MFoxRmEzeElBWHMwMWFEV1N2bTQ0UFlSMG9QMTZhWU1ZamNHRE8zYjFIVGxyM2xJUC1lMF9YVmlOYmJ0bklBVHZxRlM0MG94Y3RGdktzNGhWdmhmc0I3Z1dxcWFUa2pUMkJ1LWpTMEJ5VG9VRmRBTjY0THRKUUdYQWZuNzZSUWo3cdIB2gFBVV95cUxQRExkMVJ3NjEwcHA2dzVxSHJVWWI4TnhpOVg2VmNIMHNOVWJGb2ZaY0FucWVIRVNRTC1meTlDSHN0RVhiTnp4M1lidHI4YUlGUnZDcVozeGxEcDM1c1hjTWpnMThaaEJBb1ZIeWNYQnJvZmRVUWFkcEdDVVJZS0E1S3ZsTjJrWUpYYVRlajlFN08zY25MZWt2aTFCRFhROHRuSklLT1VyT01NSHdMc0hsT1NkNnVNYjlhWk9mNGxyX2hQdHVoYUlVN3hzNndWMDZrREdTMERJMm5IUQ?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "Maharashtra FDA to pay ₹5 lakh after Bombay HC order on licence suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-bombay-high-court-orders-5-lakh-compensation-to--2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-high-court-orders-5-lakh-compensation-to-",
+      "name": "Bombay High Court Orders ₹5 Lakh Compensation To Pune Sweets Shop Over FDA Licen",
+      "normalized_name": "bombay high court orders ₹5 lakh compensation to pune sweets shop over fda licen",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5204,
+      "longitude": 73.85742,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Orders%20%E2%82%B95%20Lakh%20Compensation%20To%20Pune%20Sweets%20Shop%20Over%20FDA%20Licen%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-bombay-high-court-orders-5-lakh-compensation-to--ingested",
+      "establishment_id": "est-bombay-high-court-orders-5-lakh-compensation-to-",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Bombay High Court Orders ₹5 Lakh Compensation To Pune Sweets Shop Over FDA Licence Suspension &nbsp;&nbsp; GujaratSamachar English",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-bombay-high-court-orders-5-lakh-compensation-to--ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "GujaratSamachar English report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-high-court-orders-5-lakh-compensation-to--ingested-src-1",
+          "source_name": "GujaratSamachar English",
+          "source_type": "other_news",
+          "title": "Bombay High Court Orders ₹5 Lakh Compensation To Pune Sweets Shop Over FDA Licence Suspension",
+          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOUFpEYjdLMDY1bk5ISzgzY2p2OEw5bWk2LVBkTjlSTkczaHVrMjI2eWFJUlBRMUtuUk9OT3E2cGYteVdHcFlGYi14VGdURXJieTJwSjJDZFFmOVktLTNwWE8ya1FHblViQkNDMGRfWXotT195a3IzYkV0VldvSVlmV3lpZFFXVnJYb0ZvVWd1Zk1pY3dua3lNV0tQZjF3YjhsT3JHYUh3TVVPS1d1MFlIekJ5SExsdDhNVkE5RWFSeFZtSmJEa2ozR2poU1MwMGJ0Y0xpNl90Q3RxRERta2lBTXhaamxDWUF2cHNxMWxkc1d4UHhiUlR3?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-high-court-orders-5-lakh-compensation-to--ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "Bombay High Court Orders ₹5 Lakh Compensation To Pune Sweets Shop Over FDA Licence Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-absolute-strange-policies-bombay-hc-to-fda-over--2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-absolute-strange-policies-bombay-hc-to-fda-over-",
+      "name": "‘Absolute strange policies’: Bombay HC to FDA over ₹5 lakh fine on Pune sweet sh",
+      "normalized_name": "‘absolute strange policies : bombay hc to fda over ₹5 lakh fine on pune sweet sh",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.52112,
+      "longitude": 73.85694000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=%E2%80%98Absolute%20strange%20policies%E2%80%99%3A%20Bombay%20HC%20to%20FDA%20over%20%E2%82%B95%20lakh%20fine%20on%20Pune%20sweet%20sh%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-absolute-strange-policies-bombay-hc-to-fda-over--ingested",
+      "establishment_id": "est-absolute-strange-policies-bombay-hc-to-fda-over-",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "‘Absolute strange policies’: Bombay HC to FDA over ₹5 lakh fine on Pune sweet shop, license suspension &nbsp;&nbsp; Business Today",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-absolute-strange-policies-bombay-hc-to-fda-over--ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "Business Today report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-absolute-strange-policies-bombay-hc-to-fda-over--ingested-src-1",
+          "source_name": "Business Today",
+          "source_type": "other_news",
+          "title": "‘Absolute strange policies’: Bombay HC to FDA over ₹5 lakh fine on Pune sweet shop, license suspension",
+          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNNFZnZktfMGMzMmZ3VDFkbXl1bm1tS29UVFp5SmtHVTZXdHMtZjU4UUY4OFZvRC1tc2tObFNtcF9qQ1VUZFlISWdfQVF4MEdoR01Fc2VjX3Q1VHJNY0w5Z0JtX1NwelU0SVN3NEI4bV9qck44eDI1TDJzTzBnYTFoRW8tVUpOUjZMTXRDTk9RRktJM1RZMkNFanhKQjkyTlRUck1vU3g5WW1pdjdoRmdyZkVXby1ETlRYWTNqZ0J1dWV4TmlVVzdocHVQVjFncjExQWZSTThhNGtLenJkU3pJeG5fSUhuXzl6NkpQX2JSSdIB9AFBVV95cUxNYXpRRjlsU1BXWk01Vlg0Um4wT0ZZQVVfaDF6eVl4bWJ3RUxUaHlBQ0lFMnBhSHpzWmp2cDhxaFoxUWh3akRjQ0g1QVA0SnR2eEdtZHpTLUNkZUFpM1lOdGZOWjc1ZlhQMDdYOFdjNmpfN1dpZF9QckdCaDhHcnlVZGlYWVNZekpVR0tTLTFwYV9NaWdHMG5mQ01UWEk5cDQyX3BNYW5hSFJaNUVvMVFPY0lUM2Q5V3d0YWJhWGY5UXZEM0tlOGFCb2ZlQ29hZ05BOVp5bmdHSDZiS3pjRXFsTFhBQXZxdmx1ampVWDdnemxObXU0?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-absolute-strange-policies-bombay-hc-to-fda-over--ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "‘Absolute strange policies’: Bombay HC to FDA over ₹5 lakh fine on Pune sweet shop, license suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-2026-08-17",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu",
+      "name": "Bombay High Court Orders FDA to Pay ?5 Lakh to Pune Sweet Shop Over Unlawful Lic",
+      "normalized_name": "bombay high court orders fda to pay ?5 lakh to pune sweet shop over unlawful lic",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519499999999997,
+      "longitude": 73.85694000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Orders%20FDA%20to%20Pay%20%3F5%20Lakh%20to%20Pune%20Sweet%20Shop%20Over%20Unlawful%20Lic%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-ingested",
+      "establishment_id": "est-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-17",
+      "summary": "Bombay High Court Orders FDA to Pay ?5 Lakh to Pune Sweet Shop Over Unlawful License Suspension &nbsp;&nbsp; AD HOC NEWS",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-17",
+          "description": "AD HOC NEWS report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-ingested-src-1",
+          "source_name": "AD HOC NEWS",
+          "source_type": "other_news",
+          "title": "Bombay High Court Orders FDA to Pay ?5 Lakh to Pune Sweet Shop Over Unlawful License Suspension",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMDRSRzBIUWN6VHVaWnRWbTl6SnRBVmZ3UENleElzWEtpWFlOY21CcEhrUnZpYlhWSGFrR2t0dVZlVWhHOHZEelpheTBjdVNtNHZSeDdFR09yRDM3SzJRQ2JzbUJYTGZJS1FPRmRna1o4X1pTMjhNZGVldmFwYVFZZ1VJd0F3aHd4Y01qb1hEcGhyc1BlUXlPQVc2WmZGbGVJSExKMW5pMnlMR0wyNHpVU2FZRml4bEQ1Mkw4Wl9WWFBMenBQQ1NFSlI0UWI2bV93QVppcw?oc=5",
+          "published_at": "2026-08-17",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-17",
+          "notes": "Bombay High Court Orders FDA to Pay ?5 Lakh to Pune Sweet Shop Over Unlawful License Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-bombay-high-court-slaps-5-lakh-fine-on-maharasht-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-high-court-slaps-5-lakh-fine-on-maharasht",
+      "name": "Bombay High Court Slaps ₹5 Lakh Fine on Maharashtra FDA Over Pune Sweet Shop Lic",
+      "normalized_name": "bombay high court slaps ₹5 lakh fine on maharashtra fda over pune sweet shop lic",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.52076,
+      "longitude": 73.85730000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Slaps%20%E2%82%B95%20Lakh%20Fine%20on%20Maharashtra%20FDA%20Over%20Pune%20Sweet%20Shop%20Lic%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-bombay-high-court-slaps-5-lakh-fine-on-maharasht-ingested",
+      "establishment_id": "est-bombay-high-court-slaps-5-lakh-fine-on-maharasht",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Bombay High Court Slaps ₹5 Lakh Fine on Maharashtra FDA Over Pune Sweet Shop License Suspension &nbsp;&nbsp; Goemkarponn",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-bombay-high-court-slaps-5-lakh-fine-on-maharasht-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "Goemkarponn report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-high-court-slaps-5-lakh-fine-on-maharasht-ingested-src-1",
+          "source_name": "Goemkarponn",
+          "source_type": "other_news",
+          "title": "Bombay High Court Slaps ₹5 Lakh Fine on Maharashtra FDA Over Pune Sweet Shop License Suspension",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdUVpblhueHh6QWJnY25pRFluV2tCenVVdjdkM3h3LTBkU0JFdkNxSjRsNWQ2MEx3NFFoRi1NNDYyeWhuWmdENzFzTEVpMmhrY1pVU2Z3SUFzWG9EckY4YVV5SldqbjNSUzZCb2JHQUhNQmJHdVlUeTQ1RC03MHhZSDNib3R5RWFRVzBGZTFmUURtYmNEMUdZOVlwZTBGSDJycXlYT2M3Rm1CSjh1cDQ0bkxvLV80Rk9Pbl9kX3pEdlJZTk9wMURn?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-high-court-slaps-5-lakh-fine-on-maharasht-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "Bombay High Court Slaps ₹5 Lakh Fine on Maharashtra FDA Over Pune Sweet Shop License Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t",
+      "name": "Bombay High Court Directs FDA to Pay Rs 5 Lakh to Pune-Based Sweets Shop for Foo",
+      "normalized_name": "bombay high court directs fda to pay rs 5 lakh to pune based sweets shop for foo",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5204,
+      "longitude": 73.85754,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Directs%20FDA%20to%20Pay%20Rs%205%20Lakh%20to%20Pune-Based%20Sweets%20Shop%20for%20Foo%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-ingested",
+      "establishment_id": "est-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Bombay High Court Directs FDA to Pay Rs 5 Lakh to Pune-Based Sweets Shop for Food Licence Suspension &nbsp;&nbsp; lokmattimes.com",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "lokmattimes.com report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-ingested-src-1",
+          "source_name": "lokmattimes.com",
+          "source_type": "other_news",
+          "title": "Bombay High Court Directs FDA to Pay Rs 5 Lakh to Pune-Based Sweets Shop for Food Licence Suspension",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNeFFYcTE5ckNxaVFUVHlmSzFISndEbzJ0c3FRV2R4QjdiLUx6dVZGZS1FdGg5RFVkZnFiWFZmUzRrOFVueEJmS3NhSF9LZHJQZkJfcEtvSUlSemV0QlJqa1lTY3RaQlRqNmhsUm1OX0h6ZEVFNmJ1eERkZXJPOUw1ZDJKVWpxcW1LS2xDQ25FdUhqVE92d0QxVWZOeFBReDZoTUR0cC1CbTFlbjRZTGFaMGt0WnUtY0trVEFLN0JVRUpVSmo5eXZqQVJOX184Uy1GVjRreDFiOXjSAd4BQVVfeXFMUGo2eXhBSlNWLVVGUUlKQ3d0anNUVWVpU1liQ1lYamNkWE1xNHhtQTNUdjhwSWNkYURrZGthSVpqOE1TQWY5eFBaYXE2TDlJSHJaVk5laDZlZkxzbzZoSHZiZnFRb3ZtOGEtZUJRS0tIRkJoUTlqNFlIVkw3QlhOSGlOZGo1T1VUYmFLYlpwZlpSbHJhMUh6MzFGeDdyVWw3b1Q2Vjg5MWdIZVJDb3lwd0RhZ0s2UDdCckN3Q3AyMVJ6ek5GbEUwVG1sQUVBdnRGVXJwVXhkblF5V3J6bXN3?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "Bombay High Court Directs FDA to Pay Rs 5 Lakh to Pune-Based Sweets Shop for Food Licence Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-bombay-high-court-fines-maharashtra-fda-rs-5-lak-2026-08-17",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-high-court-fines-maharashtra-fda-rs-5-lak",
+      "name": "Bombay High Court Fines Maharashtra FDA Rs 5 Lakh Over Pune Sweet Shop Licence S",
+      "normalized_name": "bombay high court fines maharashtra fda rs 5 lakh over pune sweet shop licence s",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519859999999998,
+      "longitude": 73.85682,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Fines%20Maharashtra%20FDA%20Rs%205%20Lakh%20Over%20Pune%20Sweet%20Shop%20Licence%20S%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-bombay-high-court-fines-maharashtra-fda-rs-5-lak-ingested",
+      "establishment_id": "est-bombay-high-court-fines-maharashtra-fda-rs-5-lak",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-17",
+      "summary": "Bombay High Court Fines Maharashtra FDA Rs 5 Lakh Over Pune Sweet Shop Licence Suspension &nbsp;&nbsp; Punekar News",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-bombay-high-court-fines-maharashtra-fda-rs-5-lak-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-17",
+          "description": "Punekar News report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-high-court-fines-maharashtra-fda-rs-5-lak-ingested-src-1",
+          "source_name": "Punekar News",
+          "source_type": "other_news",
+          "title": "Bombay High Court Fines Maharashtra FDA Rs 5 Lakh Over Pune Sweet Shop Licence Suspension",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX3hOWTFROFBqaUF2SEhaSUhTYjNzQkQ3bFZhV3lMcmw1QmlIRUdSVFd3ODd6cXoyZmpSNkNRd1J0X3F3SjJCTFJnWmFhV1lvanVSWkdWR3pSek9CQ294UG41UGgwZzY1em4zZl9sc25ibi1DaUdiZGJNeWwyM1AwclVhX2lvM3ZncC12dUVLc3d2UUFJTW9MM0h5dGl5djRTSnlTcUhJYmNCQjFGMkJ6UGJ6ZjVxMmVh?oc=5",
+          "published_at": "2026-08-17",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-high-court-fines-maharashtra-fda-rs-5-lak-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-17",
+          "notes": "Bombay High Court Fines Maharashtra FDA Rs 5 Lakh Over Pune Sweet Shop Licence Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-pune-sweet-shop-98-compliant-yet-licence-suspend-2026-08-17",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-pune-sweet-shop-98-compliant-yet-licence-suspend",
+      "name": "Pune Sweet Shop 98% Compliant, Yet Licence Suspended; Why Bombay HC Ordered Maha",
+      "normalized_name": "pune sweet shop 98% compliant yet licence suspended; why bombay hc ordered maha",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5204,
+      "longitude": 73.85682,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%2098%25%20Compliant%2C%20Yet%20Licence%20Suspended%3B%20Why%20Bombay%20HC%20Ordered%20Maha%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-pune-sweet-shop-98-compliant-yet-licence-suspend-ingested",
+      "establishment_id": "est-pune-sweet-shop-98-compliant-yet-licence-suspend",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-17",
+      "summary": "Pune Sweet Shop 98% Compliant, Yet Licence Suspended; Why Bombay HC Ordered Maharashtra FDA to Pay Rs 5 Lakh &nbsp;&nbsp; NewsX",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-pune-sweet-shop-98-compliant-yet-licence-suspend-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-17",
+          "description": "NewsX report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-pune-sweet-shop-98-compliant-yet-licence-suspend-ingested-src-1",
+          "source_name": "NewsX",
+          "source_type": "other_news",
+          "title": "Pune Sweet Shop 98% Compliant, Yet Licence Suspended; Why Bombay HC Ordered Maharashtra FDA to Pay Rs 5 Lakh",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNVjFGSlJKeUpEQTNVMmFRZVcwdG5pVXNtenpDOEhPbEwxeUhyZWdsWkcxSkdISld1MGhCMkI1djJXQ2lQbkxGdEU3bmlYV3NMbV9IdkQyNzRXXzRKSEZUeUJUbHJ2MWRaYU5wNE4zTXFrd1F0M1lJMzRwdHVnR2RRaGlEXzVaN3ZsR0VZMTJVaFZSY2ZCYnlWZ2RPb0doRjd2TXdYcXNjbGV6RWZjVVFhNUtHOUpZZnJ6dExMRW9TN1VhNkVDcDhtSzNSb1R1QU1RODRKM1M0VW9hZXZ5bVHSAeMBQVVfeXFMT3VQRmxocjhfNUJvbUtSb2N4VWpHdklMSU0zNXJMUkZES2g1OFZUS1RwNHh1bk96MmdaVTJiU2o1cmpSNFdwaXNpM3V5T193ZzlfRG51dGU3OHhLZDk5RE93Z1AyUDF5X04tVVlHUDctdWEzT282UUgwLU9JaUdlbEJDejJxZjRMRDN0allDUmhWMXZZNjFMQWVRZ05xbjcxUjBoOFpnRjJ3c0RURk5hendjTEZLSXI5WWRfbHlkSUZRV0RiR3pCOWpJT2RJX3F3ay1KTnlaTURNT3d0Y0VtN0Rlckk?oc=5",
+          "published_at": "2026-08-17",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-pune-sweet-shop-98-compliant-yet-licence-suspend-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-17",
+          "notes": "Pune Sweet Shop 98% Compliant, Yet Licence Suspended; Why Bombay HC Ordered Maharashtra FDA to Pay Rs 5 Lakh"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-maharashtra-fda-raid-tactics-questioned-former-c-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-maharashtra-fda-raid-tactics-questioned-former-c",
+      "name": "Maharashtra FDA Raid Tactics Questioned: Former Chief Calls for Regulatory Shift",
+      "normalized_name": "maharashtra fda raid tactics questioned: former chief calls for regulatory shift",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.9509,
+      "longitude": 75.8506,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20Raid%20Tactics%20Questioned%3A%20Former%20Chief%20Calls%20for%20Regulatory%20Shift%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-maharashtra-fda-raid-tactics-questioned-former-c-ingested",
+      "establishment_id": "est-maharashtra-fda-raid-tactics-questioned-former-c",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Maharashtra FDA Raid Tactics Questioned: Former Chief Calls for Regulatory Shift &nbsp;&nbsp; Whalesbook",
+      "verification_status": "reported",
+      "confidence_score": 0.2,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-maharashtra-fda-raid-tactics-questioned-former-c-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-18",
+          "description": "Whalesbook report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-maharashtra-fda-raid-tactics-questioned-former-c-ingested-src-1",
+          "source_name": "Whalesbook",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Raid Tactics Questioned: Former Chief Calls for Regulatory Shift",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxONU5XMnlnNTQycHIwZ1dEMElkUFZXMV9pMy1CVzBnblVKLURPemxURHhDTE9zTjMyUloxaFlZQTVtb3lWT2NfNEdjYWxnaGd5cW1sOXRFNGF5R0hKTllzMVktck16UWwydnduOU9RLUVPRFRPRVFZdFhVMDE5Mzd6UjRudzJ4b3NnMFdSbHktbzd0U01wY3E1NzVFR3pyR1ZvajdlMEJ2SDNON0JmOWZXMFl0Mlc5eTNIcmdLZzR4VkgtTENUYU5pOHBRbXFlZzVUQUVDRHBXS0tyTTA3UVVtNTl4MXUyc0VS?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-maharashtra-fda-raid-tactics-questioned-former-c-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-18",
+          "notes": "Maharashtra FDA Raid Tactics Questioned: Former Chief Calls for Regulatory Shift"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh",
+      "name": "Bombay HC fines FDA Rs 5 lakh over Pune sweet shop",
+      "normalized_name": "bombay hc fines fda rs 5 lakh over pune sweet shop",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519859999999998,
+      "longitude": 73.85730000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20fines%20FDA%20Rs%205%20lakh%20over%20Pune%20sweet%20shop%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-ingested",
+      "establishment_id": "est-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Bombay HC fines FDA Rs 5 lakh over Pune sweet shop's licence suspension &nbsp;&nbsp; Asianet Newsable",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "Asianet Newsable report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-ingested-src-1",
+          "source_name": "Asianet Newsable",
+          "source_type": "other_news",
+          "title": "Bombay HC fines FDA Rs 5 lakh over Pune sweet shop's licence suspension",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOYzY2TUVXa05vNmswMVk1NHZwbFl0LVJ4SnFxRVkwWTVVT1ZSdno0UndTV2dIM3ZXUUxtNFUzaXZJZ0I1MHFSdC1rdHJaR0dtcFBubkRTQzJHZC1SQjRieGhsaF96S3F3am9sYmV5Yl9TUkZwMFQ2a0hEbjFnaHVEUW9OOW5pT3NLMEdHQjRvcGJhbE5lN3NtVDBEbVMwaV9zbUdXYldrM3BFQ2NhUy1JMTJHYXdONlJON0JoamdSaTFndUhQLTFjRFRDWFg1NjTSAc8BQVVfeXFMTmM2Nk1FV2tObzZrMDFZNTR2cGxZdC1SeEpxcUVZMFk1VU9WUnZ6NFJ3U1dnSDN2V1FMbTRVM2l2SWdCNTBxUnQta3RyWkdHbXBQbm5EU0MyR2QtUkI0YnhobGhfektxd2pvbGJleWJfU1JGcDBUNmtIRG4xZ2h1RFFvTjluaU9zSzBHR0I0b3BiYWxOZTdzbVQwRG1TMGlfc21HV2JXazNwRUNjYVMtSTEyR2F3TjZSTjdCaGpnUmkxZ3VIUC0xY0RUQ1hYNTY0?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "Bombay HC fines FDA Rs 5 lakh over Pune sweet shop's licence suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-fda-suspends-licences-of-6-mumbai-hotels-food-es-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-fda-suspends-licences-of-6-mumbai-hotels-food-es",
+      "name": "FDA suspends licences of 6 Mumbai hotels, food establishments over safety violat",
+      "normalized_name": "fda suspends licences of 6 mumbai hotels food establishments over safety violat",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07546,
+      "longitude": 72.87830000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=FDA%20suspends%20licences%20of%206%20Mumbai%20hotels%2C%20food%20establishments%20over%20safety%20violat%20Mumbai%20Maharashtra",
+      "business_type": "hotel",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-fda-suspends-licences-of-6-mumbai-hotels-food-es-ingested",
+      "establishment_id": "est-fda-suspends-licences-of-6-mumbai-hotels-food-es",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Maharashtra FDA suspended six food licenses in Mumbai for hygiene violations. Inspectors found improper storage and maintenance issues at several establishments. Analogue paneer was also found being sold under a different name. This action is part of an ongoing inspection drive across the city. Hospitality bodies have requested due process for affected businesses.",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-fda-suspends-licences-of-6-mumbai-hotels-food-es-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": "Times of India report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-fda-suspends-licences-of-6-mumbai-hotels-food-es-ingested-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-fda-suspends-licences-of-6-mumbai-hotels-food-es-ingested-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "FDA suspends licences of 6 Mumbai hotels, food establishments over safety violations",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-licences-of-6-mumbai-hotels-food-establishments-over-safety-violations/articleshow/133325446.cms",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-fda-suspends-licences-of-6-mumbai-hotels-food-es-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "FDA suspends licences of 6 Mumbai hotels, food establishments over safety violations"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-torturing-citizens-bombay-high-court-directs-mah-2026-08-17",
+    "review_status": "pending",
+    "queued_at": "2026-08-18T15:00:05.432Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-torturing-citizens-bombay-high-court-directs-mah",
+      "name": "'Torturing citizens': Bombay high court directs Maharashtra FDA to pay Rs 5 lakh",
+      "normalized_name": "torturing citizens : bombay high court directs maharashtra fda to pay rs 5 lakh",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.52112,
+      "longitude": 73.85742,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query='Torturing%20citizens'%3A%20Bombay%20high%20court%20directs%20Maharashtra%20FDA%20to%20pay%20Rs%205%20lakh%20Pune%20Maharashtra",
+      "business_type": "dairy",
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z"
+    },
+    "case": {
+      "id": "case-torturing-citizens-bombay-high-court-directs-mah-ingested",
+      "establishment_id": "est-torturing-citizens-bombay-high-court-directs-mah",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-17",
+      "summary": "The Bombay High Court ordered the FDA to pay Rs 5 lakh to a Pune dairy retailer. This compensation was for losses incurred due to a suspended food license. The court found the FDA acted improperly by not revoking the suspension. The retailer had achieved 98% compliance after a food poisoning incident. The judges criticized the FDA's \"perverse\" and \"strange\" policy of delaying revocation.",
+      "verification_status": "reported",
+      "confidence_score": 0.35,
+      "created_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T15:00:05.432Z",
+      "actions": [
+        {
+          "id": "case-torturing-citizens-bombay-high-court-directs-mah-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-17",
+          "description": "Times of India report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-torturing-citizens-bombay-high-court-directs-mah-ingested-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "'Torturing citizens': Bombay high court directs Maharashtra FDA to pay Rs 5 lakh to Pune sweet shop",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/bombay-high-court-directs-maharashtra-fda-to-pay-rs-5-lakh-to-pune-sweet-shop/articleshow/133303595.cms",
+          "published_at": "2026-08-17",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-torturing-citizens-bombay-high-court-directs-mah-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-17",
+          "notes": "'Torturing citizens': Bombay high court directs Maharashtra FDA to pay Rs 5 lakh to Pune sweet shop"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-bombay-hc-imposes-rs-5-lakh-cost-on-fda-for-keep-2026-08-17",
     "review_status": "pending",
     "queued_at": "2026-08-17T14:52:28.287Z",
