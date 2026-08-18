@@ -2315,7 +2315,7 @@
   },
   {
     "id": "fda-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-2026-08-13",
-    "review_status": "pending",
+    "review_status": "approved",
     "queued_at": "2026-08-16T09:18:00.449Z",
     "rejection_reason": null,
     "rejection_notes": null,
@@ -2349,7 +2349,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-18T17:52:15.111Z",
+      "updated_at": "2026-08-18T17:52:32.839Z",
       "actions": [
         {
           "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested-act-1",
