@@ -2336,7 +2336,7 @@
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Amarpreet%20Chhatrapati%20Sambhajinagar%20Maharashtra",
       "business_type": "hotel",
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-18T17:50:56.681Z"
+      "updated_at": "2026-08-18T17:52:15.111Z"
     },
     "case": {
       "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested",
@@ -2345,11 +2345,11 @@
       "status": "licence_suspended",
       "inspection_date": null,
       "action_date": "2026-08-13",
-      "summary": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food ",
+      "summary": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food. During the inspection, rotten vegetables were found in the chilling centre and storeroom; spoiled mushrooms and expired pizza bases were also discovered.\n\nThe authorities strongly suspect that margarine is being used instead of butter in dishes like butter chicken, butter tandoori roti and gravies, even though the menu lists 'butter'. The 'trans fats' found in margarine increase the risk of heart disease.\n\nWastewater was found accumulated in the hotel's kitchen, and garbage bins were observed left uncovered. It was also noted that the 'First In, First Out' system, essential for food storage, was not being followed. These issues have raised serious concerns regarding the quality of the food.",
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-18T17:50:56.681Z",
+      "updated_at": "2026-08-18T17:52:15.111Z",
       "actions": [
         {
           "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested-act-1",
