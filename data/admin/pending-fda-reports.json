@@ -202,9 +202,9 @@
   },
   {
     "id": "fda-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -236,7 +236,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-18T15:00:05.432Z",
-      "updated_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T16:43:07.886Z",
       "actions": [
         {
           "id": "case-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu-ingested-act-1",
