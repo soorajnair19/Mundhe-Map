@@ -336,9 +336,9 @@
   },
   {
     "id": "fda-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-2026-08-18",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -370,7 +370,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-18T15:00:05.432Z",
-      "updated_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T17:45:05.931Z",
       "actions": [
         {
           "id": "case-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t-ingested-act-1",
@@ -537,9 +537,9 @@
   },
   {
     "id": "fda-maharashtra-fda-raid-tactics-questioned-former-c-2026-08-18",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -571,7 +571,7 @@
       "verification_status": "reported",
       "confidence_score": 0.2,
       "created_at": "2026-08-18T15:00:05.432Z",
-      "updated_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T17:45:05.931Z",
       "actions": [
         {
           "id": "case-maharashtra-fda-raid-tactics-questioned-former-c-ingested-act-1",
@@ -811,9 +811,9 @@
   },
   {
     "id": "fda-bombay-hc-imposes-rs-5-lakh-cost-on-fda-for-keep-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-17T14:52:28.287Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -845,7 +845,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-17T14:52:28.287Z",
-      "updated_at": "2026-08-17T14:52:28.287Z",
+      "updated_at": "2026-08-18T17:45:05.931Z",
       "actions": [
         {
           "id": "case-bombay-hc-imposes-rs-5-lakh-cost-on-fda-for-keep-ingested-act-1",
@@ -1012,9 +1012,9 @@
   },
   {
     "id": "fda-bombay-hc-criticises-maharashtra-fda-over-licenc-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-17T14:52:28.287Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -1046,7 +1046,7 @@
       "verification_status": "reported",
       "confidence_score": 0.2,
       "created_at": "2026-08-17T14:52:28.287Z",
-      "updated_at": "2026-08-17T14:52:28.287Z",
+      "updated_at": "2026-08-18T17:45:05.931Z",
       "actions": [
         {
           "id": "case-bombay-hc-criticises-maharashtra-fda-over-licenc-ingested-act-1",
