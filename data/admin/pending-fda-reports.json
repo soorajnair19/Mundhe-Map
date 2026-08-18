@@ -2255,7 +2255,7 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-fda-seizes-banned-food-items-worth-3-36-lakh-in-",
-      "name": "Unnamed establishment in Pune",
+      "name": "Unnamed - Pune",
       "normalized_name": "unnamed establishment in pune",
       "address": null,
       "locality": null,
@@ -2266,10 +2266,10 @@
       "latitude": 18.519679999999997,
       "longitude": 73.85718,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Pune%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z"
+      "updated_at": "2026-08-18T17:47:31.742Z"
     },
     "case": {
       "id": "case-fda-seizes-banned-food-items-worth-3-36-lakh-in--ingested",
@@ -2278,11 +2278,11 @@
       "status": "seizure",
       "inspection_date": null,
       "action_date": "2026-08-13",
-      "summary": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid &nbsp;&nbsp; Pune Mirror",
+      "summary": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid",
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-18T17:47:31.742Z",
       "actions": [
         {
           "id": "case-fda-seizes-banned-food-items-worth-3-36-lakh-in--ingested-act-1",
