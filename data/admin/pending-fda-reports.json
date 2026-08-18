@@ -2336,7 +2336,7 @@
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Amarpreet%20Chhatrapati%20Sambhajinagar%20Maharashtra",
       "business_type": "hotel",
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z"
+      "updated_at": "2026-08-18T17:50:56.681Z"
     },
     "case": {
       "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested",
@@ -2345,11 +2345,11 @@
       "status": "licence_suspended",
       "inspection_date": null,
       "action_date": "2026-08-13",
-      "summary": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food &nbsp;&nbsp; freepressjournal.in",
+      "summary": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds Stale Food ",
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-18T17:50:56.681Z",
       "actions": [
         {
           "id": "case-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice-ingested-act-1",
