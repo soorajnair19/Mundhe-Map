@@ -8,8 +8,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or",
-      "name": "Maharashtra FDA to pay ₹5 lakh after Bombay HC order on licence suspension",
-      "normalized_name": "maharashtra fda to pay ₹5 lakh after bombay hc order on licence suspension",
+      "name": "Unnamed establishment",
+      "normalized_name": "unnamed establishment",
       "address": null,
       "locality": null,
       "district": "Maharashtra",
@@ -19,7 +19,7 @@
       "latitude": 18.951259999999998,
       "longitude": 75.85,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20to%20pay%20%E2%82%B95%20lakh%20after%20Bombay%20HC%20order%20on%20licence%20suspension%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -75,8 +75,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-high-court-orders-5-lakh-compensation-to-",
-      "name": "Bombay High Court Orders ₹5 Lakh Compensation To Pune Sweets Shop Over FDA Licen",
-      "normalized_name": "bombay high court orders ₹5 lakh compensation to pune sweets shop over fda licen",
+      "name": "Pune Sweets Shop",
+      "normalized_name": "pune sweets shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -86,7 +86,7 @@
       "latitude": 18.5204,
       "longitude": 73.85742,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Orders%20%E2%82%B95%20Lakh%20Compensation%20To%20Pune%20Sweets%20Shop%20Over%20FDA%20Licen%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweets%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -142,8 +142,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-absolute-strange-policies-bombay-hc-to-fda-over-",
-      "name": "‘Absolute strange policies’: Bombay HC to FDA over ₹5 lakh fine on Pune sweet sh",
-      "normalized_name": "‘absolute strange policies : bombay hc to fda over ₹5 lakh fine on pune sweet sh",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -153,7 +153,7 @@
       "latitude": 18.52112,
       "longitude": 73.85694000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=%E2%80%98Absolute%20strange%20policies%E2%80%99%3A%20Bombay%20HC%20to%20FDA%20over%20%E2%82%B95%20lakh%20fine%20on%20Pune%20sweet%20sh%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -209,8 +209,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-high-court-orders-fda-to-pay-5-lakh-to-pu",
-      "name": "Bombay High Court Orders FDA to Pay ?5 Lakh to Pune Sweet Shop Over Unlawful Lic",
-      "normalized_name": "bombay high court orders fda to pay ?5 lakh to pune sweet shop over unlawful lic",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -220,7 +220,7 @@
       "latitude": 18.519499999999997,
       "longitude": 73.85694000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Orders%20FDA%20to%20Pay%20%3F5%20Lakh%20to%20Pune%20Sweet%20Shop%20Over%20Unlawful%20Lic%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -276,8 +276,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-high-court-slaps-5-lakh-fine-on-maharasht",
-      "name": "Bombay High Court Slaps ₹5 Lakh Fine on Maharashtra FDA Over Pune Sweet Shop Lic",
-      "normalized_name": "bombay high court slaps ₹5 lakh fine on maharashtra fda over pune sweet shop lic",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -287,7 +287,7 @@
       "latitude": 18.52076,
       "longitude": 73.85730000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Slaps%20%E2%82%B95%20Lakh%20Fine%20on%20Maharashtra%20FDA%20Over%20Pune%20Sweet%20Shop%20Lic%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -343,8 +343,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-high-court-directs-fda-to-pay-rs-5-lakh-t",
-      "name": "Bombay High Court Directs FDA to Pay Rs 5 Lakh to Pune-Based Sweets Shop for Foo",
-      "normalized_name": "bombay high court directs fda to pay rs 5 lakh to pune based sweets shop for foo",
+      "name": "Unnamed establishment in Pune",
+      "normalized_name": "unnamed establishment in pune",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -354,7 +354,7 @@
       "latitude": 18.5204,
       "longitude": 73.85754,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Directs%20FDA%20to%20Pay%20Rs%205%20Lakh%20to%20Pune-Based%20Sweets%20Shop%20for%20Foo%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Pune%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -410,8 +410,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-high-court-fines-maharashtra-fda-rs-5-lak",
-      "name": "Bombay High Court Fines Maharashtra FDA Rs 5 Lakh Over Pune Sweet Shop Licence S",
-      "normalized_name": "bombay high court fines maharashtra fda rs 5 lakh over pune sweet shop licence s",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -421,7 +421,7 @@
       "latitude": 18.519859999999998,
       "longitude": 73.85682,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20High%20Court%20Fines%20Maharashtra%20FDA%20Rs%205%20Lakh%20Over%20Pune%20Sweet%20Shop%20Licence%20S%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -477,8 +477,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-pune-sweet-shop-98-compliant-yet-licence-suspend",
-      "name": "Pune Sweet Shop 98% Compliant, Yet Licence Suspended; Why Bombay HC Ordered Maha",
-      "normalized_name": "pune sweet shop 98% compliant yet licence suspended; why bombay hc ordered maha",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -488,7 +488,7 @@
       "latitude": 18.5204,
       "longitude": 73.85682,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%2098%25%20Compliant%2C%20Yet%20Licence%20Suspended%3B%20Why%20Bombay%20HC%20Ordered%20Maha%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -544,8 +544,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-maharashtra-fda-raid-tactics-questioned-former-c",
-      "name": "Maharashtra FDA Raid Tactics Questioned: Former Chief Calls for Regulatory Shift",
-      "normalized_name": "maharashtra fda raid tactics questioned: former chief calls for regulatory shift",
+      "name": "Unnamed establishment",
+      "normalized_name": "unnamed establishment",
       "address": null,
       "locality": null,
       "district": "Maharashtra",
@@ -555,7 +555,7 @@
       "latitude": 18.9509,
       "longitude": 75.8506,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20Raid%20Tactics%20Questioned%3A%20Former%20Chief%20Calls%20for%20Regulatory%20Shift%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -611,8 +611,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh",
-      "name": "Bombay HC fines FDA Rs 5 lakh over Pune sweet shop",
-      "normalized_name": "bombay hc fines fda rs 5 lakh over pune sweet shop",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -622,7 +622,7 @@
       "latitude": 18.519859999999998,
       "longitude": 73.85730000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20fines%20FDA%20Rs%205%20lakh%20over%20Pune%20sweet%20shop%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -678,8 +678,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-fda-suspends-licences-of-6-mumbai-hotels-food-es",
-      "name": "FDA suspends licences of 6 Mumbai hotels, food establishments over safety violat",
-      "normalized_name": "fda suspends licences of 6 mumbai hotels food establishments over safety violat",
+      "name": "Multiple Mumbai hotels",
+      "normalized_name": "multiple mumbai hotels",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -689,7 +689,7 @@
       "latitude": 19.07546,
       "longitude": 72.87830000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=FDA%20suspends%20licences%20of%206%20Mumbai%20hotels%2C%20food%20establishments%20over%20safety%20violat%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Multiple%20Mumbai%20hotels%20Mumbai%20Maharashtra",
       "business_type": "hotel",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -751,8 +751,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-torturing-citizens-bombay-high-court-directs-mah",
-      "name": "'Torturing citizens': Bombay high court directs Maharashtra FDA to pay Rs 5 lakh",
-      "normalized_name": "torturing citizens : bombay high court directs maharashtra fda to pay rs 5 lakh",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -762,7 +762,7 @@
       "latitude": 18.52112,
       "longitude": 73.85742,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query='Torturing%20citizens'%3A%20Bombay%20high%20court%20directs%20Maharashtra%20FDA%20to%20pay%20Rs%205%20lakh%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "dairy",
       "created_at": "2026-08-18T15:00:05.432Z",
       "updated_at": "2026-08-18T15:00:05.432Z"
@@ -818,8 +818,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-hc-imposes-rs-5-lakh-cost-on-fda-for-keep",
-      "name": "Bombay HC Imposes Rs 5 Lakh Cost On FDA For Keeping Pune Shop Licence Suspended",
-      "normalized_name": "bombay hc imposes rs 5 lakh cost on fda for keeping pune shop licence suspended",
+      "name": "Unnamed establishment in Pune",
+      "normalized_name": "unnamed establishment in pune",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -829,7 +829,7 @@
       "latitude": 18.52058,
       "longitude": 73.85718,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20Imposes%20Rs%205%20Lakh%20Cost%20On%20FDA%20For%20Keeping%20Pune%20Shop%20Licence%20Suspended%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Pune%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-17T14:52:28.287Z",
       "updated_at": "2026-08-17T14:52:28.287Z"
@@ -885,8 +885,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-hc-orders-maha-fda-to-pay-rs-5-lakh-to-pune-swee",
-      "name": "HC orders Maha FDA to pay Rs 5 lakh to Pune sweet shop over licence suspension",
-      "normalized_name": "hc orders maha fda to pay rs 5 lakh to pune sweet shop over licence suspension",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -896,7 +896,7 @@
       "latitude": 18.519319999999997,
       "longitude": 73.85766000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=HC%20orders%20Maha%20FDA%20to%20pay%20Rs%205%20lakh%20to%20Pune%20sweet%20shop%20over%20licence%20suspension%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-17T14:52:28.287Z",
       "updated_at": "2026-08-17T14:52:28.287Z"
@@ -952,8 +952,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-pune-sweet-shop-lost-rs-8-5-lakh-awarded-rs-5-la",
-      "name": "Pune sweet shop lost Rs 8.5 lakh, awarded Rs 5 lakh after food safety raid",
-      "normalized_name": "pune sweet shop lost rs 8 5 lakh awarded rs 5 lakh after food safety raid",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -963,7 +963,7 @@
       "latitude": 18.521659999999997,
       "longitude": 73.85706,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20sweet%20shop%20lost%20Rs%208.5%20lakh%2C%20awarded%20Rs%205%20lakh%20after%20food%20safety%20raid%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-17T14:52:28.287Z",
       "updated_at": "2026-08-17T14:52:28.287Z"
@@ -1019,8 +1019,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-hc-criticises-maharashtra-fda-over-licenc",
-      "name": "Bombay HC Criticises Maharashtra FDA Over Licence Suspension, Order To Pay INR 5",
-      "normalized_name": "bombay hc criticises maharashtra fda over licence suspension order to pay inr 5",
+      "name": "Unnamed establishment",
+      "normalized_name": "unnamed establishment",
       "address": null,
       "locality": null,
       "district": "Maharashtra",
@@ -1030,7 +1030,7 @@
       "latitude": 18.95018,
       "longitude": 75.85047999999999,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20Criticises%20Maharashtra%20FDA%20Over%20Licence%20Suspension%2C%20Order%20To%20Pay%20INR%205%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-17T14:52:28.287Z",
       "updated_at": "2026-08-17T14:52:28.287Z"
@@ -1086,8 +1086,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-hc-orders-maharashtra-fda-to-pay-5-lakh-t",
-      "name": "Bombay HC Orders Maharashtra FDA To Pay ₹5 Lakh To Pune Sweet Shop Over Licence",
-      "normalized_name": "bombay hc orders maharashtra fda to pay ₹5 lakh to pune sweet shop over licence",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -1097,7 +1097,7 @@
       "latitude": 18.5204,
       "longitude": 73.85682,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20Orders%20Maharashtra%20FDA%20To%20Pay%20%E2%82%B95%20Lakh%20To%20Pune%20Sweet%20Shop%20Over%20Licence%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-17T14:52:28.287Z",
       "updated_at": "2026-08-17T14:52:28.287Z"
@@ -1153,8 +1153,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-pune-sweet-shop-s-licence-suspended-despite-98-s",
-      "name": "Pune Sweet Shop’s Licence Suspended Despite 98% Score, Bombay HC Orders FDA To P",
-      "normalized_name": "pune sweet shop s licence suspended despite 98% score bombay hc orders fda to p",
+      "name": "Pune Sweet Shop",
+      "normalized_name": "pune sweet shop",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -1164,7 +1164,7 @@
       "latitude": 18.519499999999997,
       "longitude": 73.85730000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%E2%80%99s%20Licence%20Suspended%20Despite%2098%25%20Score%2C%20Bombay%20HC%20Orders%20FDA%20To%20P%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune%20Sweet%20Shop%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-17T14:52:28.287Z",
       "updated_at": "2026-08-17T14:52:28.287Z"
@@ -1220,8 +1220,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-bombay-hc-revokes-restaurant-licence-suspension-",
-      "name": "Bombay HC revokes restaurant licence suspension, raps Maharashtra FDA over delay",
-      "normalized_name": "bombay hc revokes licence suspension raps maharashtra fda over delay",
+      "name": "Unnamed establishment in Maharashtra",
+      "normalized_name": "unnamed establishment in maharashtra",
       "address": null,
       "locality": null,
       "district": "Maharashtra",
@@ -1231,7 +1231,7 @@
       "latitude": 18.95072,
       "longitude": 75.85096,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay%20HC%20revokes%20restaurant%20licence%20suspension%2C%20raps%20Maharashtra%20FDA%20over%20delay%20Maharashtra%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Maharashtra%20Maharashtra%20Maharashtra",
       "business_type": "restaurant",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1287,8 +1287,8 @@
     "duplicate_of_case_id": "case-blinkit-malad-west",
     "establishment": {
       "id": "est-blinkit-s-mumbai-facility-licence-suspended-afte",
-      "name": "Blinkit’s Mumbai Facility Licence Suspended After FDA Finds Cockroach Infestatio",
-      "normalized_name": "blinkit s mumbai facility licence suspended after fda finds cockroach infestatio",
+      "name": "Blinkit",
+      "normalized_name": "blinkit",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1298,7 +1298,7 @@
       "latitude": 19.0751,
       "longitude": 72.8777,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit%E2%80%99s%20Mumbai%20Facility%20Licence%20Suspended%20After%20FDA%20Finds%20Cockroach%20Infestatio%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1360,8 +1360,8 @@
     "duplicate_of_case_id": "case-burger-king-camp-pune",
     "establishment": {
       "id": "est-pune-s-iconic-camp-burger-king-sealed-as-maharas",
-      "name": "Pune's iconic Camp Burger King sealed as Maharashtra FDA widens food safety driv",
-      "normalized_name": "pune s iconic camp burger king sealed as maharashtra fda widens food safety driv",
+      "name": "Burger King",
+      "normalized_name": "burger king",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -1371,7 +1371,7 @@
       "latitude": 18.52112,
       "longitude": 73.85766000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Pune's%20iconic%20Camp%20Burger%20King%20sealed%20as%20Maharashtra%20FDA%20widens%20food%20safety%20driv%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Burger%20King%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1506,8 +1506,8 @@
     "duplicate_of_case_id": "case-dominos-r-city-ghatkopar",
     "establishment": {
       "id": "est-mumbai-domino-mumbai",
-      "name": "Mumbai Domino",
-      "normalized_name": "mumbai domino",
+      "name": "Domino's Pizza",
+      "normalized_name": "domino s pizza",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1517,7 +1517,7 @@
       "latitude": 19.07564,
       "longitude": 72.8777,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Domino%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Domino's%20Pizza%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1573,8 +1573,8 @@
     "duplicate_of_case_id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested",
     "establishment": {
       "id": "est-why-was-parle-warehouse-licence-suspended-tukara",
-      "name": "Why was Parle warehouse licence suspended? Tukaram Mundhe-led FDA raid reveals e",
-      "normalized_name": "why was parle warehouse licence suspended? tukaram mundhe led fda raid reveals e",
+      "name": "Parle Agro",
+      "normalized_name": "parle agro",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1584,7 +1584,7 @@
       "latitude": 19.076,
       "longitude": 72.87854,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Why%20was%20Parle%20warehouse%20licence%20suspended%3F%20Tukaram%20Mundhe-led%20FDA%20raid%20reveals%20e%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Parle%20Agro%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1646,8 +1646,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-raided-shut-over-food-safety-violations-3-famous",
-      "name": "Raided, shut over food safety violations, 3 famous Mumbai restaurants to reopen",
-      "normalized_name": "raided shut over food safety violations 3 famous mumbai restaurants to reopen",
+      "name": "Multiple Mumbai restaurants",
+      "normalized_name": "multiple mumbai restaurants",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1657,7 +1657,7 @@
       "latitude": 19.076,
       "longitude": 72.87818,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Raided%2C%20shut%20over%20food%20safety%20violations%2C%203%20famous%20Mumbai%20restaurants%20to%20reopen%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Multiple%20Mumbai%20restaurants%20Mumbai%20Maharashtra",
       "business_type": "restaurant",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1713,8 +1713,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence-",
-      "name": "Mumbai's Tewari Bros. Mithaiwala's FSSAI licence suspended after man claims he f",
-      "normalized_name": "mumbai s tewari bros mithaiwala s fssai licence suspended after man claims he f",
+      "name": "Tewari Bros. Mithaiwala",
+      "normalized_name": "tewari bros mithaiwala",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1724,7 +1724,7 @@
       "latitude": 19.07636,
       "longitude": 72.87782,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai's%20Tewari%20Bros.%20Mithaiwala's%20FSSAI%20licence%20suspended%20after%20man%20claims%20he%20f%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Tewari%20Bros.%20Mithaiwala%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1780,8 +1780,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-mumbai-sweet-shop-s-fssai-licence-suspended-afte",
-      "name": "Mumbai sweet shop's FSSAI licence suspended after customer finds rusted metal pi",
-      "normalized_name": "mumbai sweet shop s fssai licence suspended after customer finds rusted metal pi",
+      "name": "Mumbai Sweet Shop",
+      "normalized_name": "mumbai sweet shop",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1791,7 +1791,7 @@
       "latitude": 19.07546,
       "longitude": 72.87806,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20sweet%20shop's%20FSSAI%20licence%20suspended%20after%20customer%20finds%20rusted%20metal%20pi%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Sweet%20Shop%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1847,8 +1847,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-maharashtra-fda-cancels-10-licences-in-brutal-au",
-      "name": "Maharashtra FDA Cancels 10 Licences in Brutal August Raid",
-      "normalized_name": "maharashtra fda cancels 10 licences in brutal august raid",
+      "name": "Unnamed establishment in Maharashtra",
+      "normalized_name": "unnamed establishment in maharashtra",
       "address": null,
       "locality": null,
       "district": "Maharashtra",
@@ -1858,7 +1858,7 @@
       "latitude": 18.94964,
       "longitude": 75.85011999999999,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20Cancels%2010%20Licences%20in%20Brutal%20August%20Raid%20Maharashtra%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Maharashtra%20Maharashtra%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1914,8 +1914,8 @@
     "duplicate_of_case_id": "case-tukaram-mundhe-s-maharashtra-fda-suspends-parle--ingested",
     "establishment": {
       "id": "est-expired-frooti-and-appy-fizz-seized-in-mumbai-wa",
-      "name": "Expired Frooti and Appy Fizz seized in Mumbai warehouse raid: Tukaram Mundhe-led",
-      "normalized_name": "expired frooti appy fizz seized in mumbai warehouse raid: tukaram mundhe led",
+      "name": "Parle Agro",
+      "normalized_name": "parle agro",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1925,7 +1925,7 @@
       "latitude": 19.0751,
       "longitude": 72.87794000000001,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Expired%20Frooti%20and%20Appy%20Fizz%20seized%20in%20Mumbai%20warehouse%20raid%3A%20Tukaram%20Mundhe-led%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Parle%20Agro%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -1987,8 +1987,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-mumbai-malad-fda-raid-news-fda-n18s-mumbai",
-      "name": "Mumbai Malad FDA Raid News | ब्लिंकिटच्या गोदामावर FDAची कारवाई | N18S",
-      "normalized_name": "mumbai malad fda raid news | ब्लिंकिटच्या गोदामावर fdaची कारवाई | n18s",
+      "name": "Blinkit",
+      "normalized_name": "blinkit",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -1998,7 +1998,7 @@
       "latitude": 19.07726,
       "longitude": 72.87806,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Malad%20FDA%20Raid%20News%20%7C%20%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%95%E0%A4%BF%E0%A4%9F%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%97%E0%A5%8B%E0%A4%A6%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B5%E0%A4%B0%20FDA%E0%A4%9A%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%88%20%7C%20N18S%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Blinkit%20Mumbai%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -2054,8 +2054,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-fda-pune-mango-pulp-se-pune",
-      "name": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त, FDA ची मोठी कारवाई | Pune Mango Pulp Se",
-      "normalized_name": "पुरंदरमध्ये आंबा पल्प आमरसाचा साठा जप्त fda ची मोठी कारवाई | pune mango pulp se",
+      "name": "Unnamed establishment in Pune",
+      "normalized_name": "unnamed establishment in pune",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -2065,7 +2065,7 @@
       "latitude": 18.51914,
       "longitude": 73.85754,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A4%AE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A5%87%20%E0%A4%86%E0%A4%82%E0%A4%AC%E0%A4%BE%20%E0%A4%AA%E0%A4%B2%E0%A5%8D%E0%A4%AA%20%E0%A4%86%E0%A4%AE%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%9A%E0%A4%BE%20%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A4%BE%20%E0%A4%9C%E0%A4%AA%E0%A5%8D%E0%A4%A4%2C%20FDA%20%E0%A4%9A%E0%A5%80%20%E0%A4%AE%E0%A5%8B%E0%A4%A0%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%88%20%7C%20Pune%20Mango%20Pulp%20Se%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Pune%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -2121,8 +2121,8 @@
     "duplicate_of_case_id": "case-swagat-oil-industries-beed",
     "establishment": {
       "id": "est-maharashtra-fda-action-fake-food-oil-worth-1-94-",
-      "name": "Maharashtra FDA Action: Fake Food Oil Worth ₹1.94 Crore Seized During Raid In Be",
-      "normalized_name": "maharashtra fda action: fake food oil worth ₹1 94 crore seized during raid in be",
+      "name": "Unnamed establishment in Maharashtra",
+      "normalized_name": "unnamed establishment in maharashtra",
       "address": null,
       "locality": null,
       "district": "Maharashtra",
@@ -2132,7 +2132,7 @@
       "latitude": 18.94964,
       "longitude": 75.85036,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maharashtra%20FDA%20Action%3A%20Fake%20Food%20Oil%20Worth%20%E2%82%B91.94%20Crore%20Seized%20During%20Raid%20In%20Be%20Maharashtra%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Maharashtra%20Maharashtra%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -2255,8 +2255,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-fda-seizes-banned-food-items-worth-3-36-lakh-in-",
-      "name": "FDA Seizes Banned Food Items Worth ₹3.36 Lakh in Major Pune Division Raid",
-      "normalized_name": "fda seizes banned food items worth ₹3 36 lakh in major pune division raid",
+      "name": "Unnamed establishment in Pune",
+      "normalized_name": "unnamed establishment in pune",
       "address": null,
       "locality": null,
       "district": "Pune",
@@ -2266,7 +2266,7 @@
       "latitude": 18.519679999999997,
       "longitude": 73.85718,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=FDA%20Seizes%20Banned%20Food%20Items%20Worth%20%E2%82%B93.36%20Lakh%20in%20Major%20Pune%20Division%20Raid%20Pune%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Pune%20Pune%20Maharashtra",
       "business_type": "other",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -2322,8 +2322,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-chhatrapati-sambhajinagar-hotel-amarpreet-s-lice",
-      "name": "Chhatrapati Sambhajinagar: Hotel Amarpreet’s Licence Suspended After FDA Finds S",
-      "normalized_name": "chhatrapati sambhajinagar: amarpreet s licence suspended after fda finds s",
+      "name": "Hotel Amarpreet",
+      "normalized_name": "amarpreet",
       "address": null,
       "locality": null,
       "district": "Chhatrapati Sambhajinagar",
@@ -2333,7 +2333,7 @@
       "latitude": 18.948919999999998,
       "longitude": 75.8506,
       "location_accuracy": "unknown",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Chhatrapati%20Sambhajinagar%3A%20Hotel%20Amarpreet%E2%80%99s%20Licence%20Suspended%20After%20FDA%20Finds%20S%20Chhatrapati%20Sambhajinagar%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Amarpreet%20Chhatrapati%20Sambhajinagar%20Maharashtra",
       "business_type": "hotel",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"
@@ -2389,8 +2389,8 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-mumbai-s-famous-poornima-restaurant-moves-hc-aga",
-      "name": "Mumbai’s famous Poornima Restaurant moves HC against FDA, says got ‘official com",
-      "normalized_name": "mumbai s famous poornima moves hc against fda says got ‘official com",
+      "name": "Poornima Restaurant",
+      "normalized_name": "poornima",
       "address": null,
       "locality": null,
       "district": "Mumbai Suburban",
@@ -2400,7 +2400,7 @@
       "latitude": 19.076,
       "longitude": 72.87782,
       "location_accuracy": "approximate",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%E2%80%99s%20famous%20Poornima%20Restaurant%20moves%20HC%20against%20FDA%2C%20says%20got%20%E2%80%98official%20com%20Mumbai%20Maharashtra",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Poornima%20Restaurant%20Mumbai%20Maharashtra",
       "business_type": "restaurant",
       "created_at": "2026-08-16T09:18:00.449Z",
       "updated_at": "2026-08-16T09:18:00.449Z"

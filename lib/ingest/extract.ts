@@ -34,6 +34,50 @@ const CITIES: { pattern: RegExp; city: string; district: string }[] = [
   { pattern: /\baurangabad|sambhajinagar\b/i, city: "Chhatrapati Sambhajinagar", district: "Chhatrapati Sambhajinagar" },
 ];
 
+const CITY_NAMES = [
+  "navi mumbai",
+  "mumbai",
+  "pune",
+  "nashik",
+  "nagpur",
+  "thane",
+  "solapur",
+  "kolhapur",
+  "satara",
+  "karad",
+  "aurangabad",
+  "chhatrapati sambhajinagar",
+  "sambhajinagar",
+  "maharashtra",
+  "india",
+];
+
+const KNOWN_BRANDS: { key: string; match: RegExp; name: string }[] = [
+  { key: "tewari", match: /\btewari\b/i, name: "Tewari Bros. Mithaiwala" },
+  { key: "amarpreet", match: /\bhotel\s+amarpreet\b|\bamarpreet\b/i, name: "Hotel Amarpreet" },
+  { key: "poornima", match: /\bpoornima\b/i, name: "Poornima Restaurant" },
+  { key: "burger king", match: /\bburger\s+king\b/i, name: "Burger King" },
+  { key: "blinkit", match: /\bblinkit\b|ब्लिंकिट/i, name: "Blinkit" },
+  { key: "zepto", match: /\bzepto\b/i, name: "Zepto" },
+  { key: "instamart", match: /\binstamart\b/i, name: "Instamart" },
+  { key: "domino", match: /\bdomino/i, name: "Domino's Pizza" },
+  { key: "parle agro", match: /\bparle\s+agro\b|\bfrooti\b|\bappy\b/i, name: "Parle Agro" },
+  { key: "punjab grill", match: /\bpunjab\s+grill\b/i, name: "Punjab Grill" },
+  { key: "inducare", match: /\binducare\b/i, name: "Inducare Pharma" },
+  { key: "iit bombay", match: /\biit\s+bombay\b/i, name: "IIT Bombay" },
+  { key: "parle", match: /\bparle\b/i, name: "Parle Agro" },
+];
+
+const VENUE_SUFFIX =
+  "sweet shops?|sweets shops?|mithaiwala|restaurant|resto|bakery|cafe|café|dhaba|grill|pizza|hotel|dairy|kitchen|warehouse|facility|bar";
+
+export type ExtractedNameKind = "brand" | "parsed" | "generic" | "unknown";
+
+export interface ExtractedEstablishmentName {
+  name: string;
+  kind: ExtractedNameKind;
+}
+
 function slugify(value: string): string {
   const slug = value
     .toLowerCase()
@@ -57,27 +101,10 @@ export function isEnforcementCandidate(item: RssItem): boolean {
 }
 
 export function storyClusterKey(title: string): string {
-  const value = title.toLowerCase();
-  const brands = [
-    "blinkit",
-    "zepto",
-    "instamart",
-    "domino",
-    "parle agro",
-    "parle",
-    "burger king",
-    "punjab grill",
-    "tewari",
-    "hotel amarpreet",
-    "amarpreet",
-    "iit bombay",
-    "poornima",
-    "frooti",
-    "appy",
-  ];
-  const brand = brands.find((name) => value.includes(name));
-  if (brand) return brand;
-  return value
+  const brand = KNOWN_BRANDS.find((entry) => entry.match.test(title));
+  if (brand) return brand.key;
+  return title
+    .toLowerCase()
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -159,16 +186,181 @@ function inferViolations(text: string, caseId: string): FDAReport["case"]["viola
   }));
 }
 
-function extractPlaceName(title: string): string | null {
-  const ofMatch = title.match(
-    /(?:licence|license)\s+of\s+(?:the\s+)?["“]?([^"'”,:]{3,80}?)["”]?(?:\s+in\s+|\s+after\s+|\s+over\s+|,|$)/i,
+function stripHeadlineChrome(title: string): string {
+  return title
+    .replace(/\s[-–—]\s+.+$/, "")
+    .replace(
+      /^(?:chhatrapati\s+sambhajinagar|navi mumbai|mumbai|pune|nashik|nagpur|thane)\s*:\s*/i,
+      "",
+    )
+    .trim();
+}
+
+function titleCaseName(value: string): string {
+  return value
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .map((word) => {
+      if (/^(and|of|the)$/i.test(word)) return word.toLowerCase();
+      if (word === word.toUpperCase() && word.length <= 5) return word;
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
+function looksLikeHeadlineName(value: string): boolean {
+  const v = value.toLowerCase();
+  if (value.length > 52) return true;
+  if (
+    /^(fda|fssai|maharashtra fda|bombay|high court|hc\b)/i.test(value.trim())
+  ) {
+    return true;
+  }
+  return /\b(suspends?|suspended|suspension|raid(?:ed|s)?|seized|seizure|orders?|directs?|fines?|lakh|crore|compensation|court|warns?|questioned|moves hc|over safety)\b/i.test(
+    v,
   );
-  if (ofMatch) return ofMatch[1].trim();
-  const quoted = title.match(/["“]([^"”]{3,80})["”]/);
-  if (quoted) return quoted[1].trim();
-  const possessive = title.match(/([A-Z][\w'&.\s]{2,50})['’]s\s+(?:licence|license)/);
-  if (possessive) return possessive[1].trim();
+}
+
+function isCityName(value: string): boolean {
+  return CITY_NAMES.includes(value.toLowerCase().trim());
+}
+
+function cleanCapturedName(raw: string): string | null {
+  let value = raw
+    .replace(/["“”']/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  value = value.replace(/['’]s$/i, "").trim();
+  value = value.replace(/[,:;|].*$/, "").trim();
+  value = value.replace(
+    /^(?:the|a|an|famous|iconic|popular|renowned|well-known)\s+/i,
+    "",
+  );
+  if (!value || value.length < 3 || value.length > 52) return null;
+  if (isCityName(value)) return null;
+  if (looksLikeHeadlineName(value)) return null;
+  if (/^\d+/.test(value)) return null;
+  if (/^(on|over|for|after|as|in|of|to|from|by|why|how|the)\b/i.test(value)) {
+    return null;
+  }
+  if (/\b(notice|improvement|finding|poor|raid|news|kitchen)\b/i.test(value)) {
+    return null;
+  }
+  if (
+    /\b(hotels|restaurants|establishments|licences|licenses)\b/i.test(value)
+  ) {
+    return null;
+  }
+  const words = value.split(" ");
+  if (words.length === 1) return null;
+  return titleCaseName(value);
+}
+
+function matchBrand(text: string): string | null {
+  const brand = KNOWN_BRANDS.find((entry) => entry.match.test(text));
+  return brand?.name ?? null;
+}
+
+function matchQuotedName(title: string): string | null {
+  const quoted = title.match(/["“]([^"”]{3,60})["”]/);
+  return quoted ? cleanCapturedName(quoted[1]) : null;
+}
+
+function matchLicenceOf(title: string): string | null {
+  const match = title.match(
+    /(?:licences?|licenses?)\s+of\s+(?:the\s+)?["“]?([^"'”|,]{3,60}?)["”]?(?:\s+in\s+|\s+after\s+|\s+over\s+|,|$)/i,
+  );
+  return match ? cleanCapturedName(match[1]) : null;
+}
+
+function matchPossessiveVenue(title: string): string | null {
+  const matches = [
+    ...title.matchAll(
+      /([\p{L}][\p{L}\d'’&.\s.-]{1,50}?)['’]s\s+(?:(?:fssai|food|fda)\s+)?(?:licences?|licenses?|facility|warehouse)/giu,
+    ),
+  ];
+  for (let index = matches.length - 1; index >= 0; index -= 1) {
+    const captured = cleanCapturedName(matches[index][1] ?? "");
+    if (captured) return captured;
+  }
   return null;
+}
+
+function matchHotelName(title: string): string | null {
+  const match = title.match(
+    /\b(Hotel\s+[A-Za-z][\w'’.-]*(?:\s+[A-Za-z][\w'’.-]*){0,3})/,
+  );
+  return match ? cleanCapturedName(match[1]) : null;
+}
+
+function matchVenueSuffix(title: string): string | null {
+  const pattern = new RegExp(
+    `\\b((?:[A-Za-z][\\w'’&.-]+\\s+){0,4}[A-Za-z][\\w'’&.-]+\\s+(?:${VENUE_SUFFIX}))\\b`,
+    "i",
+  );
+  const match = title.match(pattern);
+  return match ? cleanCapturedName(match[1]) : null;
+}
+
+function matchGenericVenue(
+  title: string,
+  city: string | null,
+): ExtractedEstablishmentName | null {
+  const counted = title.match(
+    /\b(\d{1,2})\s+(?:famous\s+|iconic\s+|major\s+)?(?:(mumbai|pune|nashik|nagpur|thane|maharashtra)\s+)?(hotels?|restaurants?|establishments?)\b/i,
+  );
+  if (counted) {
+    const place = counted[2]?.trim() || city || "Maharashtra";
+    const kind = counted[3].toLowerCase().replace(/s$/, "");
+    return {
+      name: `Multiple ${titleCaseName(place)} ${kind}s`,
+      kind: "generic",
+    };
+  }
+
+  const generic = title.match(
+    /\b((?:mumbai|pune|nashik|nagpur|thane|maharashtra)\s+(?:sweet shops?|sweets shops?|restaurants?|hotels?|warehouses?|facilit(?:y|ies)))\b/i,
+  );
+  if (generic) {
+    const cleaned = cleanCapturedName(generic[1]);
+    if (cleaned) return { name: cleaned, kind: "generic" };
+  }
+
+  return null;
+}
+
+export function extractEstablishmentName(
+  title: string,
+  snippet = "",
+  city: string | null = null,
+): ExtractedEstablishmentName {
+  const headline = stripHeadlineChrome(title);
+  const hay = `${headline} ${snippet}`;
+
+  const brand = matchBrand(hay);
+  if (brand) return { name: brand, kind: "brand" };
+
+  const parsed =
+    matchQuotedName(headline) ||
+    matchLicenceOf(headline) ||
+    matchPossessiveVenue(headline) ||
+    matchHotelName(headline) ||
+    matchVenueSuffix(headline);
+
+  if (parsed) return { name: parsed, kind: "parsed" };
+
+  const generic = matchGenericVenue(headline, city);
+  if (generic) return generic;
+
+  if (city) {
+    return { name: `Unnamed establishment in ${city}`, kind: "unknown" };
+  }
+  return { name: "Unnamed establishment", kind: "unknown" };
+}
+
+export function nameLooksLikeHeadline(value: string): boolean {
+  return looksLikeHeadlineName(value);
 }
 
 function extractCity(text: string): { city: string | null; district: string } | null {
@@ -181,18 +373,14 @@ function extractCity(text: string): { city: string | null; district: string } | 
   return null;
 }
 
-function headlineName(title: string): string {
-  return title.replace(/\s[-–—]\s+.+$/, "").slice(0, 80).trim() || title.slice(0, 80);
-}
-
 export function reportFromRssItem(item: RssItem, nowIso: string): FDAReport {
   const text = `${item.title} ${item.snippet}`;
-  const place = extractPlaceName(item.title);
   const location = extractCity(text);
-  const action = inferAction(text);
-  const name = place || headlineName(item.title);
   const city = location?.city ?? null;
   const district = location?.district ?? city ?? "Maharashtra";
+  const extracted = extractEstablishmentName(item.title, item.snippet, city);
+  const name = extracted.name;
+  const action = inferAction(text);
   const slug = slugify(`${name}-${city ?? "mh"}`);
   const reportId = `fda-${slug}-${dateOnly(item.publishedAt) ?? nowIso.slice(0, 10)}`;
   const establishmentId = `est-${slug}`;
@@ -204,7 +392,16 @@ export function reportFromRssItem(item: RssItem, nowIso: string): FDAReport {
     city,
     district,
   });
-  const confidence = place && city ? 0.55 : city ? 0.35 : 0.2;
+  const confidence =
+    extracted.kind === "brand" || extracted.kind === "parsed"
+      ? city
+        ? 0.55
+        : 0.4
+      : extracted.kind === "generic"
+        ? 0.3
+        : city
+          ? 0.25
+          : 0.2;
   const mapsQuery = encodeURIComponent([name, city, "Maharashtra"].filter(Boolean).join(" "));
   const summary =
     item.snippet ||
