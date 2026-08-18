@@ -403,9 +403,9 @@
   },
   {
     "id": "fda-bombay-high-court-fines-maharashtra-fda-rs-5-lak-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -437,7 +437,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-18T15:00:05.432Z",
-      "updated_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-bombay-high-court-fines-maharashtra-fda-rs-5-lak-ingested-act-1",
@@ -470,9 +470,9 @@
   },
   {
     "id": "fda-pune-sweet-shop-98-compliant-yet-licence-suspend-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -504,7 +504,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-18T15:00:05.432Z",
-      "updated_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-pune-sweet-shop-98-compliant-yet-licence-suspend-ingested-act-1",
@@ -604,9 +604,9 @@
   },
   {
     "id": "fda-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-2026-08-18",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -638,7 +638,7 @@
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-18T15:00:05.432Z",
-      "updated_at": "2026-08-18T15:00:05.432Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-bombay-hc-fines-fda-rs-5-lakh-over-pune-sweet-sh-ingested-act-1",
@@ -878,9 +878,9 @@
   },
   {
     "id": "fda-hc-orders-maha-fda-to-pay-rs-5-lakh-to-pune-swee-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-17T14:52:28.287Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -912,7 +912,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-17T14:52:28.287Z",
-      "updated_at": "2026-08-17T14:52:28.287Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-hc-orders-maha-fda-to-pay-rs-5-lakh-to-pune-swee-ingested-act-1",
@@ -945,9 +945,9 @@
   },
   {
     "id": "fda-pune-sweet-shop-lost-rs-8-5-lakh-awarded-rs-5-la-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-17T14:52:28.287Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -979,7 +979,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-17T14:52:28.287Z",
-      "updated_at": "2026-08-17T14:52:28.287Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-pune-sweet-shop-lost-rs-8-5-lakh-awarded-rs-5-la-ingested-act-1",
@@ -1079,9 +1079,9 @@
   },
   {
     "id": "fda-bombay-hc-orders-maharashtra-fda-to-pay-5-lakh-t-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-17T14:52:28.287Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -1113,7 +1113,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-17T14:52:28.287Z",
-      "updated_at": "2026-08-17T14:52:28.287Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-bombay-hc-orders-maharashtra-fda-to-pay-5-lakh-t-ingested-act-1",
@@ -1146,9 +1146,9 @@
   },
   {
     "id": "fda-pune-sweet-shop-s-licence-suspended-despite-98-s-2026-08-17",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-17T14:52:28.287Z",
-    "rejection_reason": null,
+    "rejection_reason": "not_an_enforcement_action",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -1180,7 +1180,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-17T14:52:28.287Z",
-      "updated_at": "2026-08-17T14:52:28.287Z",
+      "updated_at": "2026-08-18T17:37:51.641Z",
       "actions": [
         {
           "id": "case-pune-sweet-shop-s-licence-suspended-despite-98-s-ingested-act-1",
