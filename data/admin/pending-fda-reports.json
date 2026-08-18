@@ -1773,11 +1773,11 @@
   },
   {
     "id": "fda-mumbai-sweet-shop-s-fssai-licence-suspended-afte-2026-08-03",
-    "review_status": "pending",
+    "review_status": "duplicate",
     "queued_at": "2026-08-16T09:18:00.449Z",
-    "rejection_reason": null,
+    "rejection_reason": "duplicate",
     "rejection_notes": null,
-    "duplicate_of_case_id": null,
+    "duplicate_of_case_id": "case-mumbai-s-tewari-bros-mithaiwala-s-fssai-licence--ingested",
     "establishment": {
       "id": "est-mumbai-sweet-shop-s-fssai-licence-suspended-afte",
       "name": "Mumbai Sweet Shop",
@@ -1807,7 +1807,7 @@
       "verification_status": "reported",
       "confidence_score": 0.35,
       "created_at": "2026-08-16T09:18:00.449Z",
-      "updated_at": "2026-08-16T09:18:00.449Z",
+      "updated_at": "2026-08-18T18:00:44.372Z",
       "actions": [
         {
           "id": "case-mumbai-sweet-shop-s-fssai-licence-suspended-afte-ingested-act-1",
