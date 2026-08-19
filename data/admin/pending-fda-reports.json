@@ -1,5 +1,273 @@
 [
   {
+    "id": "fda-hotel-chul-muttons-licence-pune-2026-08-19",
+    "review_status": "pending",
+    "queued_at": "2026-08-19T14:54:16.173Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-hotel-chul-muttons-licence-pune",
+      "name": "Hotel Chul Muttons Licence",
+      "normalized_name": "chul muttons licence",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519319999999997,
+      "longitude": 73.85754,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Chul%20Muttons%20Licence%20Pune%20Maharashtra",
+      "business_type": "hotel",
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z"
+    },
+    "case": {
+      "id": "case-hotel-chul-muttons-licence-pune-ingested",
+      "establishment_id": "est-hotel-chul-muttons-licence-pune",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-08-19",
+      "summary": "Pune: FDA Suspends Hotel Chul Muttons Licence; Banned Products Worth ₹10 Lakh Seized In 4-Day Drive &nbsp;&nbsp; Free Press Journal",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z",
+      "actions": [
+        {
+          "id": "case-hotel-chul-muttons-licence-pune-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-19",
+          "description": "Free Press Journal report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-hotel-chul-muttons-licence-pune-ingested-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Pune: FDA Suspends Hotel Chul Muttons Licence; Banned Products Worth ₹10 Lakh Seized In 4-Day Drive",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPM0VQZllzb1J4WjZHZndxV3NkMlpFcnhDNVVIeUNZZWx6UFZuU3RRMmFQR05vR1ZKODVwbkdiWGpBNGlFcW1iaGtjNFE0Q3huSnpJZ0c2M01VUmxNaG9YNFFETkQ2eHZydjFoSGJNR0lKcXVrUmFnRHc2am5NRjZMX19NUUpwU2dnWng2TEhCRzVhRXJaNlpCaWdjT0F5XzJwcHRSRXMzVVJidUtCSFBidWpoMEVQTjAyNXF5QzdrTC1iSlRiRFR0bzVXMGR1N3V6V2Fv0gHTAUFVX3lxTE8zRVBmWXNvUnhaNkdmd3FXc2QyWkVyeEM1VUh5Q1llbHpQVm5TdFEyYVBHTm9HVko4NXBuR2JYakE0aUVxbWJoa2M0UTRDeG5KeklnRzYzTVVSbE1ob1g0UURORDZ4dnJ2MWhIYk1HSUpxdWtSYWdEdzZqbk1GNkxfX01RSnBTZ2daeDZMSEJHNWFFclo2WkJpZ2NPQXlfMnBwdFJFczNVUmJ1S0JIUGJ1amgwRVBOMDI1cXlDN2tMLWJKVGJEVHRvNVcwZHU3dXpXYW8?oc=5",
+          "published_at": "2026-08-19",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-chul-muttons-licence-pune-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-19",
+          "notes": "Pune: FDA Suspends Hotel Chul Muttons Licence; Banned Products Worth ₹10 Lakh Seized In 4-Day Drive"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-zepto-mumbai-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-19T14:54:16.173Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-zepto-mumbai",
+      "name": "Zepto",
+      "normalized_name": "zepto",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07672,
+      "longitude": 72.87818,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Zepto%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z"
+    },
+    "case": {
+      "id": "case-zepto-mumbai-ingested",
+      "establishment_id": "est-zepto-mumbai",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension &nbsp;&nbsp; Moneycontrol.com",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z",
+      "actions": [
+        {
+          "id": "case-zepto-mumbai-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-08-18",
+          "description": "Moneycontrol.com report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-zepto-mumbai-ingested-src-1",
+          "source_name": "Moneycontrol.com",
+          "source_type": "other_news",
+          "title": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension",
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNMzZhc1dpQkhaY0NJWG9DNlZlcVhaQWRfU3RNMTZweU9LUUN4S1ZUWkF6QkljcDNSMTZZSU5nM1p2M3B3SW9sek1nN0RvVzRBQnVULWpTNFJ0WUx2UWQ2dmNUSWVXVnB3Z2V2WFktZEo5U1N6bExsWTRwbHFzbS1mWHk5N3VnaTUtbG9uOEFiM0Etd1kyYmVGSTh2Q1dYMENaS1Z6NTFtMHhYbUl0emFSWVF6bkZMMWFRTXYtMW9halZydGxDQ2s3OUtzdE1xT3IwclVZUEk2N1VDN3lHNV9ibEl4UjFpUkdqTmxF0gHwAUFVX3lxTE1Mb1VLU1dCcEF3T0Q1RGRZMUY2ZDFpSEcwNUF4bXNKeno5RU5vSGs3OUZhX2FKWWJWTXdEM255d1VHc09saUs2RTBJQ3JIMFlvaGJnVFFZVWRYVXBCY21sTnhRYXpUT1dUdDl1UXJCZHk1aTd5VU9rVEV2TnIzT0xncndDbkJuR2xKeHhTVlpYckJZdVRiVFRfS1ZKVDZSa3Y5OF84TVNBSEJ5NFZKMmVfaG5wWC1kYVY4dmthN2czZ3dHUTF3VjIxdDdrUkhLNzdaSlJTbkFiZkQxWUxhakU3R3FrMGVlVXNCc0FIc1RUMA?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-zepto-mumbai-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-unnamed-establishment-in-mumbai-mumbai-2026-08-18",
+    "review_status": "pending",
+    "queued_at": "2026-08-19T14:54:16.173Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-unnamed-establishment-in-mumbai-mumbai",
+      "name": "Unnamed establishment in Mumbai",
+      "normalized_name": "unnamed establishment in mumbai",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07744,
+      "longitude": 72.87866000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Mumbai%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z"
+    },
+    "case": {
+      "id": "case-unnamed-establishment-in-mumbai-mumbai-ingested",
+      "establishment_id": "est-unnamed-establishment-in-mumbai-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "‘This is harassment’: HC orders FDA to pay ₹5 lakh for keeping sweet shop licence suspended despite 98% compliance | Mumbai news &nbsp;&nbsp; Hindustan Times",
+      "verification_status": "reported",
+      "confidence_score": 0.25,
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z",
+      "actions": [
+        {
+          "id": "case-unnamed-establishment-in-mumbai-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": "Hindustan Times report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-unnamed-establishment-in-mumbai-mumbai-ingested-src-1",
+          "source_name": "Hindustan Times",
+          "source_type": "hindustan_times",
+          "title": "‘This is harassment’: HC orders FDA to pay ₹5 lakh for keeping sweet shop licence suspended despite 98% compliance | Mumbai news",
+          "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQV2hIUURjblZVQnpYX0REUUdJQVN5VWZMTmFFM0w0cGVGQ2xPWGZpTUItZDVSaXZzRnY1dVAwd1hsY2RTdGpfRHJLVnVjWWFXb1p1SkptVEdEVW9oOTR5eGdfLWFWd083UWdQWnVqZ1VudThPbUR3NzFwakRLVXhCclRvLUgtS1MybkhnSXhzQldYOXNWZHZ5aW1mOGFzRnYwS2lraTJqQUFaVWJwaVVqd1Fobm9zUUZsUUc4WkFvY0ZDX3BHc1Y3MDNOR1pwMHN3VDJwNkNXLUJ4dzkyMzdTeEdmMThTREZVX1RWQnhwb0paS1dxVHZSTXNBWXcxamc5S0l4TUFqOC1wMWlW0gGSAkFVX3lxTE95UGFhN2NGVnF4VHRnSy1Da0Y1cXhGMmpoTWFKbjRCNUJvak9rcllxOXZrNTNFNm9ERi0zdExSWVdaUDFJRWhFNVpuWWNZT0lZRE5mYms2X1c3UERtM2FmRzlxb0JaRDFXUEx5bzQ2SnlYYlpsSFBHcGpLQ1F1eVV5c1NFWjNvc0NlVTI2Q1ZOUHkwWEo5NGN3T0VXUEhXa1I5Ry03YkYxN2NCYUFMdlcyRDE0bmlJYVF4YzdpYzQyeFJseHhVRlVtWG1XM25vZDhiYW9nLVRrc0lLMWhHdGJMM1JpNGR4WE5uYUs1NWFWX0xQQkNxd0FtS0htalZqeUc0eVZLb0xJTmstaXBtQWJqT0E?oc=5",
+          "published_at": "2026-08-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnamed-establishment-in-mumbai-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "‘This is harassment’: HC orders FDA to pay ₹5 lakh for keeping sweet shop licence suspended despite 98% compliance | Mumbai news"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-hotel-radha-in-malad-mh-2026-08-19",
+    "review_status": "pending",
+    "queued_at": "2026-08-19T14:54:16.173Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-hotel-radha-in-malad-mh",
+      "name": "Hotel Radha In Malad",
+      "normalized_name": "radha in malad",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.951439999999998,
+      "longitude": 75.85024,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Radha%20In%20Malad%20Maharashtra",
+      "business_type": "hotel",
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z"
+    },
+    "case": {
+      "id": "case-hotel-radha-in-malad-mh-ingested",
+      "establishment_id": "est-hotel-radha-in-malad-mh",
+      "case_type": "inspection",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-08-19",
+      "summary": "Hotel Radha in Malad, Kurla's Janata Tawa and Grill face licence suspension after Maharashtra FDA inspection finds food safety lapses &nbsp;&nbsp; Mid-Day",
+      "verification_status": "reported",
+      "confidence_score": 0.4,
+      "created_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T14:54:16.173Z",
+      "actions": [
+        {
+          "id": "case-hotel-radha-in-malad-mh-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-08-19",
+          "description": "Mid-Day report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-hotel-radha-in-malad-mh-ingested-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Hotel Radha in Malad, Kurla's Janata Tawa and Grill face licence suspension after Maharashtra FDA inspection finds food safety lapses",
+          "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxNZUg5WEJaVnBHcjVieE9kUHJtYzNmNE9YblAyVkxzSFE1am83Y0hyUmJUX3VLTFhZMXhqUnpKbFNtNjRlaXBiaEVmZDZRM3V4TVg1TzJrM0MwOXJhc2xydTJEdjdmWTFFSktaXy1fcUJ0dFg3dGVRQmlOT0VXNW1sLWlwMGRxby02T3NIQy1IUVZvZFhrUjRsYlRNWVlDX3FXT1NlZUtmVm1RSmFvSHdrdjMtbl9jNlhXRzNkUzg5NkF0LWpLcExNYUY3ZF9ldVVVWXBoM3ZybEM3dUUxWlJGSy1tQURRT1EtbXZlOEVDc3RPRTk3TW5tNlRhc2dYVEFESzlBQ0h2Ui03dnJNMXJxRjViUzVSbHBNRklNam0tZ2NpN3gwV2d6Z1ZTd2FrdWRFRjZxTHl6YWjSAb4CQVVfeXFMT2J3WENrS3NsNFlPRnFJNG83M3RENHVJWEE1T3N6QmJodDJjdU5XU0lQMXFPV2hfZ3pLLTdUdl9pNWRfOGMxdjVveC1FOGNNc1JCN2I2dWQ0SExkQVlUZmdTSkxhR0k4Z2NtNkFTaW5PZWpzRG53bmlUM2RVMG13ejFlaGtQQzFvQlhPUkJiakdkYTM3TjZVcVJya2ttd2t2SWlWYWlqbUkzQnJLaEVKdGRaNjJCb1BsMGRmdXg4elM2SmtYX3hwOFNmWWJ5SzBLZmxPVHYtWUd0UzQyd1JaX3FzVzZSQVBrNjVwVjNpdGc4LWRQRTNhWk45cTlibzVIODJLY2VZRHZPU0lMNkUtbERfUUs2RFYzWFllTWJkcVBjaEs0VlVzekt4VklydllZV2dhX3FEVUxucGdseUZB?oc=5",
+          "published_at": "2026-08-19",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-radha-in-malad-mh-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-19",
+          "notes": "Hotel Radha in Malad, Kurla's Janata Tawa and Grill face licence suspension after Maharashtra FDA inspection finds food safety lapses"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-maharashtra-fda-to-pay-5-lakh-after-bombay-hc-or-2026-08-18",
     "review_status": "rejected",
     "queued_at": "2026-08-18T15:00:05.432Z",
