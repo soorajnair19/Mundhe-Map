@@ -1133,6 +1133,78 @@
       "business_type": "restaurant",
       "created_at": "2026-08-13T12:00:00+05:30",
       "updated_at": "2026-08-13T12:00:00+05:30"
+    },
+    {
+      "id": "hotel-radha-malad-west",
+      "name": "Hotel Radha",
+      "normalized_name": "hotel radha",
+      "address": null,
+      "locality": "Malad West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.186,
+      "longitude": 72.84896,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Radha+Malad+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30"
+    },
+    {
+      "id": "janata-tawa-grill-kurla-west",
+      "name": "Janata Tawa and Grill",
+      "normalized_name": "janata tawa and grill",
+      "address": null,
+      "locality": "Kurla West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07146,
+      "longitude": 72.882,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Janata+Tawa+and+Grill+Kurla+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30"
+    },
+    {
+      "id": "saraswati-college-engineering-kharghar",
+      "name": "Saraswati College of Engineering",
+      "normalized_name": "saraswati college of engineering",
+      "address": null,
+      "locality": "Kharghar",
+      "district": "Raigad",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0449,
+      "longitude": 73.06512,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Saraswati+College+of+Engineering+Kharghar+Navi+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30"
+    },
+    {
+      "id": "parmeshthi-super-shoppe-vaijapur",
+      "name": "Parmeshthi Super Shoppe",
+      "normalized_name": "parmeshthi super shoppe",
+      "address": "near Devagiri Hospital",
+      "locality": "Vaijapur",
+      "district": "Chhatrapati Sambhajinagar",
+      "city": "Vaijapur",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.9258,
+      "longitude": 74.7283,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Parmeshthi+Super+Shoppe+Devagiri+Hospital+Vaijapur",
+      "business_type": "retailer",
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -5448,6 +5520,304 @@
           "status": "notice_issued",
           "effective_date": "2026-08-13",
           "notes": "Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-hotel-radha-malad-west",
+      "establishment_id": "hotel-radha-malad-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-18",
+      "action_date": "2026-08-18",
+      "summary": "Mid-Day reported that Maharashtra FDA suspended the food licence of Hotel Radha in Malad West after an 18 August inspection found live rats in the kitchen, including one entering through an open drainage line and another near the ceiling, live cockroaches on kitchen equipment, an open unhygienic drainage system, stagnant water, grease deposits, drainage leakage and an unpleasant smell.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-radha-malad-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-18",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-hotel-radha-malad-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-radha-malad-west-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "live rats in the kitchen, including one entering through an open drainage line and another near the ceiling, and live cockroaches on kitchen equipment including a dough-mixing machine"
+        },
+        {
+          "id": "case-hotel-radha-malad-west-vio-2",
+          "violation_type": "waste_management",
+          "description": "open and unhygienic drainage system"
+        },
+        {
+          "id": "case-hotel-radha-malad-west-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "stagnant water, grease deposits, drainage leakage and an unpleasant smell in the kitchen"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-radha-malad-west-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Hotel Radha in Malad, Kurla's Janata Tawa and Grill face licence suspension after Maharashtra FDA inspection finds food safety lapses",
+          "url": "https://www.mid-day.com/mumbai/mumbai-news/article/maharashtra-fda-raids-hotel-radha-in-malad-kurlas-janata-tawa-and-grill-face-licence-suspension-after-maharashtra-fda-inspection-finds-food-safety-lapses-23645570",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        },
+        {
+          "id": "case-hotel-radha-malad-west-src-2",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/live-rodents-poor-hygiene-maharashtra-fda-seizes-food-products-worth-rs-25-lakh-5-licences-suspended/articleshow/133350294.cms",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-radha-malad-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-18",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-hotel-radha-malad-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-janata-tawa-grill-kurla-west",
+      "establishment_id": "janata-tawa-grill-kurla-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-18",
+      "action_date": "2026-08-18",
+      "summary": "Mid-Day reported that Maharashtra FDA suspended the FSSAI licence of Janata Tawa and Grill in Kurla West after inspectors found raw meat and poultry stored without adequate temperature control or proper separation, and food-contact equipment, utensils, grills and racks covered with grease, food residue and carbon deposits.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-janata-tawa-grill-kurla-west-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-18",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-janata-tawa-grill-kurla-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-janata-tawa-grill-kurla-west-vio-1",
+          "violation_type": "temperature_control",
+          "description": "raw meat and poultry stored without adequate temperature control"
+        },
+        {
+          "id": "case-janata-tawa-grill-kurla-west-vio-2",
+          "violation_type": "improper_storage",
+          "description": "meat and poultry not properly separated from other materials"
+        },
+        {
+          "id": "case-janata-tawa-grill-kurla-west-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "food-contact equipment and utensils covered with grease, food residue and carbon deposits, and burnt food residue on grills and racks"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-janata-tawa-grill-kurla-west-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Hotel Radha in Malad, Kurla's Janata Tawa and Grill face licence suspension after Maharashtra FDA inspection finds food safety lapses",
+          "url": "https://www.mid-day.com/mumbai/mumbai-news/article/maharashtra-fda-raids-hotel-radha-in-malad-kurlas-janata-tawa-and-grill-face-licence-suspension-after-maharashtra-fda-inspection-finds-food-safety-lapses-23645570",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        },
+        {
+          "id": "case-janata-tawa-grill-kurla-west-src-2",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/live-rodents-poor-hygiene-maharashtra-fda-seizes-food-products-worth-rs-25-lakh-5-licences-suspended/articleshow/133350294.cms",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-janata-tawa-grill-kurla-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-18",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-janata-tawa-grill-kurla-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-saraswati-college-engineering-kharghar",
+      "establishment_id": "saraswati-college-engineering-kharghar",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-18",
+      "action_date": "2026-08-18",
+      "summary": "The Times of India and NDTV Profit, citing the same FDA drive covered by Mid-Day, reported that a food-business licence was suspended for an establishment operating at Saraswati College of Engineering in Kharghar after inspectors found deficiencies in food safety, hygiene, pest control, ventilation and food testing.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-saraswati-college-engineering-kharghar-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-18",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-saraswati-college-engineering-kharghar-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-saraswati-college-engineering-kharghar-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "shortcomings in pest-control arrangements"
+        },
+        {
+          "id": "case-saraswati-college-engineering-kharghar-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "deficiencies in hygiene and ventilation"
+        },
+        {
+          "id": "case-saraswati-college-engineering-kharghar-vio-3",
+          "violation_type": "other",
+          "description": "shortcomings in food testing"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-saraswati-college-engineering-kharghar-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Live rodents, poor hygiene: Maharashtra FDA seizes food products worth Rs 25 lakh, 5 licences suspended",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/live-rodents-poor-hygiene-maharashtra-fda-seizes-food-products-worth-rs-25-lakh-5-licences-suspended/articleshow/133350294.cms",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        },
+        {
+          "id": "case-saraswati-college-engineering-kharghar-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/india/janata-tawa-grill-hotel-radha-3-others-lose-food-licence-in-latest-fda-crackdown-in-mumbai-11931637",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-saraswati-college-engineering-kharghar-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-18",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-saraswati-college-engineering-kharghar-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-parmeshthi-super-shoppe-vaijapur",
+      "establishment_id": "parmeshthi-super-shoppe-vaijapur",
+      "case_type": "inspection",
+      "status": "inspected",
+      "inspection_date": "2026-08-18",
+      "action_date": "2026-08-18",
+      "summary": "The Times of India, covering the same 18 August FDA drive as Mid-Day, reported that inspectors found expired food products and unhygienic conditions at Parmeshthi Super Shoppe near Devagiri Hospital in Vaijapur and that proceedings were initiated against the food business operator.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-19T12:00:00+05:30",
+      "updated_at": "2026-08-19T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-18",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-act-main",
+          "action_type": "inspection",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-vio-1",
+          "violation_type": "expired_food",
+          "description": "expired food products found during inspection"
+        },
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic conditions"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Live rodents, poor hygiene: Maharashtra FDA seizes food products worth Rs 25 lakh, 5 licences suspended",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/live-rodents-poor-hygiene-maharashtra-fda-seizes-food-products-worth-rs-25-lakh-5-licences-suspended/articleshow/133350294.cms",
+          "published_at": "2026-08-19",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-18",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-parmeshthi-super-shoppe-vaijapur-hist-2",
+          "status": "other",
+          "effective_date": "2026-08-18",
+          "notes": "Proceedings initiated"
         }
       ]
     }

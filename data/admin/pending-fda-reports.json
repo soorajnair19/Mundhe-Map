@@ -202,11 +202,11 @@
   },
   {
     "id": "fda-hotel-radha-in-malad-mh-2026-08-19",
-    "review_status": "pending",
+    "review_status": "duplicate",
     "queued_at": "2026-08-19T14:54:16.173Z",
-    "rejection_reason": null,
-    "rejection_notes": null,
-    "duplicate_of_case_id": null,
+    "rejection_reason": "duplicate",
+    "rejection_notes": "Split into curated seed cases for Hotel Radha, Janata Tawa and Grill, and other named establishments from the same FDA drive.",
+    "duplicate_of_case_id": "case-hotel-radha-malad-west",
     "establishment": {
       "id": "est-hotel-radha-in-malad-mh",
       "name": "Hotel Radha In Malad",

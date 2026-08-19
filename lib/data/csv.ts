@@ -32,6 +32,10 @@ const LOCALITY_COORDS: Record<string, [number, number]> = {
   "goregaon|mumbai": [19.1663, 72.8526],
   "aarey road|mumbai": [19.1663, 72.8526],
   "malad west|mumbai": [19.186, 72.848],
+  "kurla west|mumbai": [19.072, 72.882],
+  "kurla|mumbai": [19.072, 72.882],
+  "kharghar|navi mumbai": [19.044, 73.065],
+  "vaijapur|vaijapur": [19.9267, 74.7277],
   "borivali east|mumbai": [19.23, 72.864],
   "borivali west|mumbai": [19.229, 72.857],
   "dahisar|mumbai": [19.257, 72.862],
@@ -83,10 +87,12 @@ const CITY_COORDS: Record<string, [number, number]> = {
   thane: [19.2183, 72.9781],
   navi: [19.033, 73.029],
   "navi mumbai": [19.033, 73.029],
+  vaijapur: [19.9267, 74.7277],
+  aurangabad: [19.8762, 75.3433],
+  "chhatrapati sambhajinagar": [19.8762, 75.3433],
   kalyan: [19.2437, 73.1355],
   dombivli: [19.2167, 73.0833],
   alibag: [18.6414, 72.8722],
-  aurangabad: [19.8762, 75.3433],
   nagpur: [21.1458, 79.0882],
   kolhapur: [16.705, 74.2433],
 };
@@ -101,6 +107,7 @@ const DISTRICT_COORDS: Record<string, [number, number]> = {
   beed: [18.99, 75.76],
   thane: [19.2183, 72.9781],
   raigad: [18.6414, 72.8722],
+  "chhatrapati sambhajinagar": [19.8762, 75.3433],
 };
 
 function key(value: string | null | undefined): string {
