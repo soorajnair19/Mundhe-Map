@@ -8,10 +8,10 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-hotel-chul-muttons-licence-pune",
-      "name": "Hotel Chul Muttons Licence",
+      "name": "Hotel Chul Mutton",
       "normalized_name": "chul muttons licence",
       "address": null,
-      "locality": null,
+      "locality": "Lohegaon",
       "district": "Pune",
       "city": "Pune",
       "state": "Maharashtra",
@@ -22,20 +22,20 @@
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Chul%20Muttons%20Licence%20Pune%20Maharashtra",
       "business_type": "hotel",
       "created_at": "2026-08-19T14:54:16.173Z",
-      "updated_at": "2026-08-19T14:54:16.173Z"
+      "updated_at": "2026-08-19T17:37:40.555Z"
     },
     "case": {
       "id": "case-hotel-chul-muttons-licence-pune-ingested",
       "establishment_id": "est-hotel-chul-muttons-licence-pune",
       "case_type": "seizure",
-      "status": "seizure",
+      "status": "licence_suspended",
       "inspection_date": null,
       "action_date": "2026-08-19",
       "summary": "Pune: FDA Suspends Hotel Chul Muttons Licence; Banned Products Worth ₹10 Lakh Seized In 4-Day Drive &nbsp;&nbsp; Free Press Journal",
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-19T14:54:16.173Z",
-      "updated_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-19T17:37:40.555Z",
       "actions": [
         {
           "id": "case-hotel-chul-muttons-licence-pune-ingested-act-1",
