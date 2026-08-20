@@ -1,7 +1,7 @@
 [
   {
     "id": "req-swiggy-nahur-warehouse-mt136nfr",
-    "status": "pending",
+    "status": "approved",
     "place_name": "Swiggy Nahur Warehouse",
     "maps_url": "https://maps.app.goo.gl/5Z5EPWk7sohpREF2A",
     "plus_code": null,
@@ -19,11 +19,11 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-swiggy-nahur-warehouse-mt136nfr"
   },
   {
     "id": "req-blink-mulund-warehouse-mt132ep6",
-    "status": "pending",
+    "status": "approved",
     "place_name": "Blink Mulund Warehouse",
     "maps_url": "https://maps.app.goo.gl/i6s77vS2Hbxn6BLJ9",
     "plus_code": null,
@@ -41,7 +41,7 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-blink-mulund-warehouse-mt132ep6"
   },
   {
     "id": "req-mcdonald-s-msyz8345",
