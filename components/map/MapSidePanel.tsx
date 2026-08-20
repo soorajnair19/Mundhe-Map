@@ -5,6 +5,7 @@ import { Flag, Search, X } from "lucide-react";
 import { CaseDetailContent } from "@/components/cases/CaseDetailPanel";
 import { CommunityDetailContent } from "@/components/cases/CommunityDetailPanel";
 import { StatusIcon } from "@/components/status/StatusIcon";
+import { formatLocationParts } from "@/lib/data/normalize";
 import type { MarkerKind } from "@/lib/data/status";
 import type { CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
 
@@ -234,9 +235,10 @@ export function MapSidePanel({
                         {item.name}
                       </span>
                       <span className="text-xs leading-snug text-[var(--muted)]">
-                        {[item.location, item.district]
-                          .filter(Boolean)
-                          .join(" · ")}
+                        {formatLocationParts(
+                          [item.location, item.district],
+                          " · ",
+                        )}
                       </span>
                       {showRowStatus ? (
                         item.variant === "community" ? (

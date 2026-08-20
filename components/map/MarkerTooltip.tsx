@@ -1,4 +1,5 @@
 import { StatusIcon } from "@/components/status/StatusIcon";
+import { formatLocationParts } from "@/lib/data/normalize";
 
 interface MarkerTooltipProps {
   x: number;
@@ -33,7 +34,7 @@ export function MarkerTooltip({
         {name}
       </p>
       <p className="mt-1 text-xs text-[var(--muted)]">
-        {locality}, {district}
+        {formatLocationParts([locality, district])}
       </p>
       <p
         className="mt-2 flex items-center gap-1.5 text-xs font-medium tracking-wide"

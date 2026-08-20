@@ -27,6 +27,24 @@ export function formatLabel(value: string): string {
     .join(" ");
 }
 
+/** Join location fields, skipping blanks and exact duplicates (city copied into district). */
+export function formatLocationParts(
+  parts: Array<string | null | undefined>,
+  separator = ", ",
+): string {
+  const seen = new Set<string>();
+  const unique: string[] = [];
+  for (const part of parts) {
+    const trimmed = part?.trim();
+    if (!trimmed) continue;
+    const key = trimmed.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    unique.push(trimmed);
+  }
+  return unique.join(separator);
+}
+
 export function formatStatus(status: string): string {
   return formatLabel(status).toUpperCase();
 }
