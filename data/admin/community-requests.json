@@ -1,5 +1,27 @@
 [
   {
+    "id": "req-swiggy-nahur-warehouse-mt136nfr",
+    "status": "pending",
+    "place_name": "Swiggy Nahur Warehouse",
+    "maps_url": "https://maps.app.goo.gl/5Z5EPWk7sohpREF2A",
+    "plus_code": null,
+    "address": null,
+    "locality": null,
+    "city": "Bhandup Sonapur Road, वैती वाडी, Industrial Area, Bhandup West, Mumbai, Maharashtra 400078",
+    "district": "Bhandup Sonapur Road, वैती वाडी, Industrial Area, Bhandup West, Mumbai, Maharashtra 400078",
+    "latitude": 19.1584498,
+    "longitude": 72.941548,
+    "concern": "Milk crates are kept in open and extremely dirty surroundings \r\n\r\nNot suitable for food storage.",
+    "evidence": [],
+    "submitted_at": "2026-08-20T05:35:13.471Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  },
+  {
     "id": "req-blink-mulund-warehouse-mt132ep6",
     "status": "pending",
     "place_name": "Blink Mulund Warehouse",
