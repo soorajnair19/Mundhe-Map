@@ -1,9 +1,9 @@
 [
   {
     "id": "fda-mumbai-restaurant-mumbai-2026-08-19",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-20T14:48:10.463Z",
-    "rejection_reason": null,
+    "rejection_reason": "other",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -35,7 +35,7 @@
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-20T14:48:10.463Z",
-      "updated_at": "2026-08-20T14:48:10.463Z",
+      "updated_at": "2026-08-20T15:47:41.805Z",
       "actions": [
         {
           "id": "case-mumbai-restaurant-mumbai-ingested-act-1",
@@ -146,9 +146,9 @@
   },
   {
     "id": "fda-zepto-mumbai-2026-08-18",
-    "review_status": "pending",
+    "review_status": "rejected",
     "queued_at": "2026-08-19T14:54:16.173Z",
-    "rejection_reason": null,
+    "rejection_reason": "other",
     "rejection_notes": null,
     "duplicate_of_case_id": null,
     "establishment": {
@@ -180,7 +180,7 @@
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-19T14:54:16.173Z",
-      "updated_at": "2026-08-19T14:54:16.173Z",
+      "updated_at": "2026-08-20T15:47:41.805Z",
       "actions": [
         {
           "id": "case-zepto-mumbai-ingested-act-1",
