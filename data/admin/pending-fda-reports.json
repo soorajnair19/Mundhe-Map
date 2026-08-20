@@ -146,11 +146,11 @@
   },
   {
     "id": "fda-zepto-mumbai-2026-08-18",
-    "review_status": "rejected",
+    "review_status": "duplicate",
     "queued_at": "2026-08-19T14:54:16.173Z",
-    "rejection_reason": "other",
-    "rejection_notes": null,
-    "duplicate_of_case_id": null,
+    "rejection_reason": "duplicate",
+    "rejection_notes": "Split into curated seed cases for Otters Club, Daily Fresh Bakers, Prince of Wales, Cafe Sifarish, Zepto Chembur, and Raj Oil Trading from the same FDA drive.",
+    "duplicate_of_case_id": "case-zepto-chembur",
     "establishment": {
       "id": "est-zepto-mumbai",
       "name": "Zepto",

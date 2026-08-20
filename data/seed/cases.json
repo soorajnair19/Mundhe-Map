@@ -1205,6 +1205,114 @@
       "business_type": "retailer",
       "created_at": "2026-08-19T12:00:00+05:30",
       "updated_at": "2026-08-19T12:00:00+05:30"
+    },
+    {
+      "id": "otters-club-bandra-west",
+      "name": "Otters Club",
+      "normalized_name": "otters club",
+      "address": "Carter Road",
+      "locality": "Bandra West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.05942,
+      "longitude": 72.82986,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Otters+Club+Carter+Road+Bandra+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30"
+    },
+    {
+      "id": "daily-fresh-bakers-dahisar-east",
+      "name": "Daily Fresh Bakers & Cakes",
+      "normalized_name": "daily fresh bakers cakes",
+      "address": null,
+      "locality": "Dahisar East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.25018,
+      "longitude": 72.8686,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Daily+Fresh+Bakers+and+Cakes+Dahisar+East+Mumbai",
+      "business_type": "bakery",
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30"
+    },
+    {
+      "id": "prince-of-wales-khar-west",
+      "name": "Prince of Wales Restaurant",
+      "normalized_name": "prince of wales restaurant",
+      "address": null,
+      "locality": "Khar West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0687,
+      "longitude": 72.83724,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Prince+of+Wales+Restaurant+Khar+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30"
+    },
+    {
+      "id": "cafe-sifarish-marol",
+      "name": "Cafe Sifarish",
+      "normalized_name": "cafe sifarish",
+      "address": null,
+      "locality": "Marol",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.11664,
+      "longitude": 72.882,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cafe+Sifarish+Marol+Andheri+East+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30"
+    },
+    {
+      "id": "zepto-chembur",
+      "name": "Zepto Limited",
+      "normalized_name": "zepto limited",
+      "address": "Eastern Express Highway",
+      "locality": "Chembur",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.05094,
+      "longitude": 72.90074,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Zepto+Eastern+Express+Highway+Chembur+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30"
+    },
+    {
+      "id": "raj-oil-trading-vile-parle-east",
+      "name": "Raj Oil Trading",
+      "normalized_name": "raj oil trading",
+      "address": null,
+      "locality": "Vile Parle East",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.09492,
+      "longitude": 72.85396,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Raj+Oil+Trading+Vile+Parle+East+Mumbai",
+      "business_type": "retailer",
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -5818,6 +5926,407 @@
           "status": "other",
           "effective_date": "2026-08-18",
           "notes": "Proceedings initiated"
+        }
+      ]
+    },
+    {
+      "id": "case-otters-club-bandra-west",
+      "establishment_id": "otters-club-bandra-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Moneycontrol, citing PTI, reported that Maharashtra FDA suspended the food licence of Otters Club in Bandra after inspectors found hygiene and maintenance lapses and analogue paneer supplied by Punjab Sind Dairy being used under the name Regular Paneer. The Times of India located the club on Carter Road and reported broken tiles, blocked drains, a malfunctioning refrigerator, unclean flooring in places and missing TPC testing records for edible oil.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-otters-club-bandra-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-otters-club-bandra-west-vio-1",
+          "violation_type": "adulteration",
+          "description": "analogue paneer supplied by Punjab Sind Dairy used under the name Regular Paneer"
+        },
+        {
+          "id": "case-otters-club-bandra-west-vio-2",
+          "violation_type": "improper_storage",
+          "description": "improper storage and a malfunctioning refrigerator with volatile temperature fluctuations"
+        },
+        {
+          "id": "case-otters-club-bandra-west-vio-3",
+          "violation_type": "waste_management",
+          "description": "blocked drains"
+        },
+        {
+          "id": "case-otters-club-bandra-west-vio-4",
+          "violation_type": "poor_hygiene",
+          "description": "broken tiles and unclean flooring in places"
+        },
+        {
+          "id": "case-otters-club-bandra-west-vio-5",
+          "violation_type": "missing_records",
+          "description": "records of Total Polar Compounds testing in edible oil missing"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-otters-club-bandra-west-src-1",
+          "source_name": "Moneycontrol",
+          "source_type": "other_news",
+          "title": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension",
+          "url": "https://www.moneycontrol.com/news/india/in-latest-fda-crackdown-mumbai-s-otters-club-prince-of-wales-amid-6-hotels-to-face-licence-suspension-14009590.html",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-otters-club-bandra-west-src-2",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-license-of-bandras-otters-club-zepto-warehouse-over-hygiene-violations/articleshow/133335061.cms",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-otters-club-bandra-west-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-daily-fresh-bakers-dahisar-east",
+      "establishment_id": "daily-fresh-bakers-dahisar-east",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Moneycontrol, citing PTI, reported that Daily Fresh Bakers in the Dahisar area was among six Mumbai establishments whose food licences were suspended. The Times of India reported that at Daily Fresh Bakers and Cakes, cakes were being prepared on unclean kitchen floors and that inspectors found cockroach and ant infestations. NDTV Profit also cited alleged use of prohibited food colour.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "cakes prepared directly on unclean kitchen floors"
+        },
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "active cockroach and ant infestations"
+        },
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-vio-3",
+          "violation_type": "other",
+          "description": "alleged use of prohibited food colour"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-src-1",
+          "source_name": "Moneycontrol",
+          "source_type": "other_news",
+          "title": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension",
+          "url": "https://www.moneycontrol.com/news/india/in-latest-fda-crackdown-mumbai-s-otters-club-prince-of-wales-amid-6-hotels-to-face-licence-suspension-14009590.html",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-src-2",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-license-of-bandras-otters-club-zepto-warehouse-over-hygiene-violations/articleshow/133335061.cms",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-daily-fresh-bakers-dahisar-east-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-prince-of-wales-khar-west",
+      "establishment_id": "prince-of-wales-khar-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Moneycontrol, citing PTI, reported that Maharashtra FDA suspended the licence of Prince of Wales Restaurant in Khar West. Mid-Day reported that the restaurant's registration certificate was suspended after inspectors found shortcomings in temperature control, storage, pest prevention, equipment hygiene and waste disposal.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-prince-of-wales-khar-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-prince-of-wales-khar-west-vio-1",
+          "violation_type": "temperature_control",
+          "description": "shortcomings in temperature control"
+        },
+        {
+          "id": "case-prince-of-wales-khar-west-vio-2",
+          "violation_type": "improper_storage",
+          "description": "storage lapses"
+        },
+        {
+          "id": "case-prince-of-wales-khar-west-vio-3",
+          "violation_type": "pest_infestation",
+          "description": "shortcomings in pest prevention"
+        },
+        {
+          "id": "case-prince-of-wales-khar-west-vio-4",
+          "violation_type": "poor_hygiene",
+          "description": "equipment hygiene lapses"
+        },
+        {
+          "id": "case-prince-of-wales-khar-west-vio-5",
+          "violation_type": "waste_management",
+          "description": "waste-disposal shortcomings"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-prince-of-wales-khar-west-src-1",
+          "source_name": "Moneycontrol",
+          "source_type": "other_news",
+          "title": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension",
+          "url": "https://www.moneycontrol.com/news/india/in-latest-fda-crackdown-mumbai-s-otters-club-prince-of-wales-amid-6-hotels-to-face-licence-suspension-14009590.html",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-prince-of-wales-khar-west-src-2",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mid-Day",
+          "url": "https://www.mid-day.com/mumbai/mumbai-news/article/maharashtra-fda-raids-otters-club-in-bandra-prince-of-wales-restaurant-and-zepto-among-six-to-face-license-suspensions-as-fdas-action-continue-23645398",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-prince-of-wales-khar-west-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-cafe-sifarish-marol",
+      "establishment_id": "cafe-sifarish-marol",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Moneycontrol, citing PTI, reported that Cafe Sifarish was among six Mumbai establishments whose food licences were suspended, placing it in Andheri West. Mid-Day and NDTV Profit locate the cafe in Marol, Andheri East, and reported multiple food-safety and hygiene violations without listing further specifics.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-cafe-sifarish-marol-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-cafe-sifarish-marol-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "multiple food-safety and hygiene violations reported"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-cafe-sifarish-marol-src-1",
+          "source_name": "Moneycontrol",
+          "source_type": "other_news",
+          "title": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension",
+          "url": "https://www.moneycontrol.com/news/india/in-latest-fda-crackdown-mumbai-s-otters-club-prince-of-wales-amid-6-hotels-to-face-licence-suspension-14009590.html",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-cafe-sifarish-marol-src-2",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Mid-Day",
+          "url": "https://www.mid-day.com/mumbai/mumbai-news/article/maharashtra-fda-raids-otters-club-in-bandra-prince-of-wales-restaurant-and-zepto-among-six-to-face-license-suspensions-as-fdas-action-continue-23645398",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-cafe-sifarish-marol-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-zepto-chembur",
+      "establishment_id": "zepto-chembur",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "Moneycontrol, citing PTI, reported that Maharashtra FDA suspended the licence of Zepto Limited in Chembur. The Times of India reported the Chembur dark store is on the Eastern Express Highway, with meat stored at 9°C rather than 5°C or below, frozen items at -11°C rather than -18°C or lower, greasy floors, black dust on exhaust fans, poor ventilation and conditions that fostered cockroaches and pests.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-zepto-chembur-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-zepto-chembur-vio-1",
+          "violation_type": "temperature_control",
+          "description": "meat stored at 9 degrees Celsius rather than 5 degrees or below, and frozen items at minus 11 degrees rather than minus 18 degrees or lower"
+        },
+        {
+          "id": "case-zepto-chembur-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "greasy slippery floors, black dust on exhaust fans and poor ventilation"
+        },
+        {
+          "id": "case-zepto-chembur-vio-3",
+          "violation_type": "pest_infestation",
+          "description": "conditions that fostered cockroaches and pests"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-zepto-chembur-src-1",
+          "source_name": "Moneycontrol",
+          "source_type": "other_news",
+          "title": "In latest FDA crackdown, Mumbai's Otters Club, Prince of Wales, Zepto outlet face licence suspension",
+          "url": "https://www.moneycontrol.com/news/india/in-latest-fda-crackdown-mumbai-s-otters-club-prince-of-wales-amid-6-hotels-to-face-licence-suspension-14009590.html",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-zepto-chembur-src-2",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-license-of-bandras-otters-club-zepto-warehouse-over-hygiene-violations/articleshow/133335061.cms",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-zepto-chembur-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-raj-oil-trading-vile-parle-east",
+      "establishment_id": "raj-oil-trading-vile-parle-east",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-18",
+      "summary": "The Times of India and NDTV Profit, covering the same six-licence Mumbai action named by Moneycontrol, reported that Raj Oil Trading in Vile Parle East had its licence suspended after inspectors found rat-bite marks on oil packets and foul odours from poorly maintained storage.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-18T12:00:00+05:30",
+      "updated_at": "2026-08-18T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-raj-oil-trading-vile-parle-east-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-18",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-raj-oil-trading-vile-parle-east-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "rat-bite marks on oil packets"
+        },
+        {
+          "id": "case-raj-oil-trading-vile-parle-east-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "foul odours from poorly maintained storage"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-raj-oil-trading-vile-parle-east-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Analogue paneer cockroaches: FDA crackdown hits Bandra's Otters Club Zepto warehouse 4 others in Mumbai",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-license-of-bandras-otters-club-zepto-warehouse-over-hygiene-violations/articleshow/133335061.cms",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        },
+        {
+          "id": "case-raj-oil-trading-vile-parle-east-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/business/mumbai-food-safety-crackdown-fda-suspends-licences-of-chembur-zepto-otters-club-3-others-11926753",
+          "published_at": "2026-08-18",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-raj-oil-trading-vile-parle-east-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
         }
       ]
     }
