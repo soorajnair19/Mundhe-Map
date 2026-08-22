@@ -1,5 +1,27 @@
 [
   {
+    "id": "req-dhadge-misal-khadki-mt44okc2",
+    "status": "pending",
+    "place_name": "Dhadge Misal, Khadki",
+    "maps_url": "https://maps.app.goo.gl/uMK9z1v5DXVdUf3s9?g_st=ic",
+    "plus_code": null,
+    "address": null,
+    "locality": null,
+    "city": "Khadki",
+    "district": "Khadki",
+    "latitude": 18.567913,
+    "longitude": 73.848146,
+    "concern": "Kitchen is very unhygienic, there is sewage inside the kitchen. The preparation is dirty.",
+    "evidence": [],
+    "submitted_at": "2026-08-22T08:40:27.321Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  },
+  {
     "id": "req-swiggy-nahur-warehouse-mt136nfr",
     "status": "approved",
     "place_name": "Swiggy Nahur Warehouse",
