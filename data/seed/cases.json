@@ -1457,6 +1457,204 @@
       "business_type": "restaurant",
       "created_at": "2026-08-22T12:00:00+05:30",
       "updated_at": "2026-08-22T12:00:00+05:30"
+    },
+    {
+      "id": "eat-nino-dadar",
+      "name": "Eat Nino Pvt Ltd",
+      "normalized_name": "eat nino pvt ltd",
+      "address": null,
+      "locality": "Dadar",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.01888,
+      "longitude": 72.84864,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Eat+Nino+Dadar+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "jai-maa-kali-dhaba-andheri",
+      "name": "Jai Maa Kali Dhaba",
+      "normalized_name": "jai maa kali dhaba",
+      "address": null,
+      "locality": "Andheri",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.11756,
+      "longitude": 72.84796,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Jai+Maa+Kali+Dhaba+Andheri+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "aj-hospitality-house-of-maharashtra-santacruz",
+      "name": "AJ Hospitality (House of Maharashtra)",
+      "normalized_name": "aj hospitality house of maharashtra",
+      "address": null,
+      "locality": "Santacruz",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.08208,
+      "longitude": 72.84236,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=House+of+Maharashtra+Santacruz+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "south-india-dosa-corner-kurla",
+      "name": "South India Dosa Corner",
+      "normalized_name": "south india dosa corner",
+      "address": null,
+      "locality": "Kurla",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07236,
+      "longitude": 72.882,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=South+India+Dosa+Corner+Kurla+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "punjab-grill-navi-mumbai",
+      "name": "Punjab Grill",
+      "normalized_name": "punjab grill",
+      "address": null,
+      "locality": "Navi Mumbai",
+      "district": "Thane",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.03318,
+      "longitude": 73.0296,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Punjab+Grill+Navi+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "hotel-roshani-amravati",
+      "name": "Hotel Roshani",
+      "normalized_name": "hotel roshani",
+      "address": null,
+      "locality": "Amravati",
+      "district": "Amravati",
+      "city": "Amravati",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 20.93668,
+      "longitude": 77.78056,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Roshani+Amravati+Maharashtra",
+      "business_type": "hotel",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "roshni-sweet-mart-amravati",
+      "name": "Roshni Sweet Mart",
+      "normalized_name": "roshni sweet mart",
+      "address": null,
+      "locality": "Amravati",
+      "district": "Amravati",
+      "city": "Amravati",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 20.93686,
+      "longitude": 77.78056,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Roshni+Sweet+Mart+Amravati+Maharashtra",
+      "business_type": "retailer",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "hangry-panda-kitchen-nagpur",
+      "name": "The Hangry Panda Kitchen",
+      "normalized_name": "the hangry panda kitchen",
+      "address": null,
+      "locality": "Nagpur",
+      "district": "Nagpur",
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 21.1467,
+      "longitude": 79.08868,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hangry+Panda+Kitchen+Nagpur",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "maroosh-prabhadevi",
+      "name": "Maroosh (Lebensmittel Services India LLP)",
+      "normalized_name": "maroosh lebensmittel services india llp",
+      "address": null,
+      "locality": "Prabhadevi",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.01654,
+      "longitude": 72.82984,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Maroosh+Prabhadevi+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "chathradharr-caterers-bkc",
+      "name": "Chathradharr Caterers",
+      "normalized_name": "chathradharr caterers",
+      "address": "MMRDA",
+      "locality": "BKC",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.06372,
+      "longitude": 72.86284,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Chathradharr+Caterers+MMRDA+BKC+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
+    },
+    {
+      "id": "vijaydeep-mahila-audyogik-govandi",
+      "name": "Vijaydeep Mahila Audyogik Utpadak Sahakari Sanstha",
+      "normalized_name": "vijaydeep mahila audyogik utpadak sahakari sanstha",
+      "address": null,
+      "locality": "Govandi",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.05644,
+      "longitude": 72.915,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Vijaydeep+Mahila+Audyogik+Utpadak+Sahakari+Sanstha+Govandi+Mumbai",
+      "business_type": "other",
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -4537,7 +4735,7 @@
       "status": "notice_issued",
       "inspection_date": null,
       "action_date": "2026-08-08",
-      "summary": "Times of India reported that FDA directed two mess facilities in IIT Bombay Hostels 1 and 2 to stop operations after inspectors found they were functioning without the required licences and registrations. The caterer operating messes in Hostels 12, 13 and 14 was served a notice recommending corrective measures.",
+      "summary": "Times of India reported that FDA directed two mess facilities in IIT Bombay Hostels 1 and 2 to stop operations after inspectors found they were functioning without the required licences and registrations. Annapurna Catering Services, which operates messes in Hostels 12, 13 and 14, held a state licence but received an Improvement Notice over food safety deficiencies.",
       "verification_status": "reported",
       "confidence_score": null,
       "created_at": "2026-08-08T12:00:00+05:30",
@@ -4559,7 +4757,7 @@
         {
           "id": "case-iit-bombay-hostel-messes-vio-2",
           "violation_type": "food_safety_violation",
-          "description": "deficiencies found at Hostel 12, 13 and 14 messes"
+          "description": "deficiencies found at Hostel 12, 13 and 14 messes operated by Annapurna Catering Services"
         }
       ],
       "sources": [
@@ -4569,6 +4767,15 @@
           "source_type": "times_of_india",
           "title": "FDA orders 2 IIT-Bombay messes to shut, suspends licences of multiple restaurants",
           "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-orders-2-iit-bombay-messes-to-shut-suspends-licences-of-multiple-restaurants/articleshow/133039891.cms",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        },
+        {
+          "id": "case-iit-bombay-hostel-messes-src-2",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
           "published_at": "2026-08-08",
           "is_primary": false
         }
@@ -7095,6 +7302,689 @@
           "status": "licence_suspended",
           "effective_date": "2026-08-22",
           "notes": "Food business licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-eat-nino-dadar",
+      "establishment_id": "eat-nino-dadar",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that FDA inspectors at Eat Nino Pvt. Ltd. in Dadar found poor hygiene, houseflies and poor personal hygiene among food handlers. The establishment lacked water-testing records, FoSTaC training and medical records and was not following GMP and GHP norms. Its FSSAI licence was suspended.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-eat-nino-dadar-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-eat-nino-dadar-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "poor hygiene and poor personal hygiene among food handlers"
+        },
+        {
+          "id": "case-eat-nino-dadar-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "houseflies"
+        },
+        {
+          "id": "case-eat-nino-dadar-vio-3",
+          "violation_type": "missing_records",
+          "description": "water-testing records and FoSTaC training absent"
+        },
+        {
+          "id": "case-eat-nino-dadar-vio-4",
+          "violation_type": "employee_medical_records",
+          "description": "medical records absent"
+        },
+        {
+          "id": "case-eat-nino-dadar-vio-5",
+          "violation_type": "other",
+          "description": "not following GMP and GHP norms"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-eat-nino-dadar-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-eat-nino-dadar-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-eat-nino-dadar-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-jai-maa-kali-dhaba-andheri",
+      "establishment_id": "jai-maa-kali-dhaba-andheri",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that inspectors at Jai Maa Kali Dhaba in Andheri found damaged plywood racks, rusted storage racks and food stored next to toilets. Refrigerators lacked temperature displays, the kitchen was dirty and uncovered dough had flies sitting on it. The FSSAI licence was suspended.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-vio-1",
+          "violation_type": "improper_storage",
+          "description": "damaged plywood racks, rusted storage racks and food stored next to toilets"
+        },
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-vio-2",
+          "violation_type": "temperature_control",
+          "description": "refrigerators lacked temperature displays"
+        },
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "dirty kitchen"
+        },
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-vio-4",
+          "violation_type": "pest_infestation",
+          "description": "flies on uncovered dough"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-jai-maa-kali-dhaba-andheri-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-aj-hospitality-house-of-maharashtra-santacruz",
+      "establishment_id": "aj-hospitality-house-of-maharashtra-santacruz",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that at AJ Hospitality, House of Maharashtra, Santacruz, officials found a cockroach infestation, non-food-grade packaging material and newspapers being used to pack food. The premises also lacked a pest-control certificate and had peeling paint in the storage room and rusted kitchen equipment. The FSSAI licence was suspended.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "cockroach infestation"
+        },
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-vio-2",
+          "violation_type": "other",
+          "description": "non-food-grade packaging material and newspapers used to pack food"
+        },
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-vio-3",
+          "violation_type": "missing_records",
+          "description": "pest-control certificate absent"
+        },
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-vio-4",
+          "violation_type": "poor_hygiene",
+          "description": "peeling paint in the storage room and rusted kitchen equipment"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-aj-hospitality-house-of-maharashtra-santacruz-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-south-india-dosa-corner-kurla",
+      "establishment_id": "south-india-dosa-corner-kurla",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that the licence of South India Dosa Corner, Kurla, was suspended after inspectors found improper waste disposal, poor cleaning practices and missing medical, vaccination and food safety training records. Required records were not maintained, and the establishment had failed to rectify deficiencies despite an earlier notice.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-south-india-dosa-corner-kurla-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-south-india-dosa-corner-kurla-vio-1",
+          "violation_type": "waste_management",
+          "description": "improper waste disposal"
+        },
+        {
+          "id": "case-south-india-dosa-corner-kurla-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "poor cleaning practices"
+        },
+        {
+          "id": "case-south-india-dosa-corner-kurla-vio-3",
+          "violation_type": "employee_medical_records",
+          "description": "missing medical and vaccination records"
+        },
+        {
+          "id": "case-south-india-dosa-corner-kurla-vio-4",
+          "violation_type": "missing_records",
+          "description": "food safety training records and other required records not maintained"
+        },
+        {
+          "id": "case-south-india-dosa-corner-kurla-vio-5",
+          "violation_type": "other",
+          "description": "failed to rectify deficiencies despite an earlier notice"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-south-india-dosa-corner-kurla-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-south-india-dosa-corner-kurla-hist-2",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-south-india-dosa-corner-kurla-hist-3",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-punjab-grill-navi-mumbai",
+      "establishment_id": "punjab-grill-navi-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that in Navi Mumbai, Punjab Grill's FSSAI licence was suspended immediately after inspectors found cockroach infestation, unhygienic conditions, stagnant water and missing mandatory records, along with other serious violations.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-punjab-grill-navi-mumbai-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-punjab-grill-navi-mumbai-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "cockroach infestation"
+        },
+        {
+          "id": "case-punjab-grill-navi-mumbai-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "unhygienic conditions"
+        },
+        {
+          "id": "case-punjab-grill-navi-mumbai-vio-3",
+          "violation_type": "other",
+          "description": "stagnant water"
+        },
+        {
+          "id": "case-punjab-grill-navi-mumbai-vio-4",
+          "violation_type": "missing_records",
+          "description": "missing mandatory records"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-punjab-grill-navi-mumbai-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-punjab-grill-navi-mumbai-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-punjab-grill-navi-mumbai-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-hotel-roshani-amravati",
+      "establishment_id": "hotel-roshani-amravati",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that the FDA immediately suspended the licence of Hotel Roshani in Amravati for serious hygiene and sanitation violations under Schedule 4 of the FSSAI Licensing Regulations, 2011.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hotel-roshani-amravati-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hotel-roshani-amravati-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "serious hygiene and sanitation violations under Schedule 4 of the FSSAI Licensing Regulations, 2011"
+        },
+        {
+          "id": "case-hotel-roshani-amravati-vio-2",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported hygiene and sanitation violations leading to licence suspension"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hotel-roshani-amravati-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hotel-roshani-amravati-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-hotel-roshani-amravati-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-roshni-sweet-mart-amravati",
+      "establishment_id": "roshni-sweet-mart-amravati",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that the FDA immediately suspended the licence of Roshni Sweet Mart in Amravati for serious hygiene and sanitation violations under Schedule 4 of the FSSAI Licensing Regulations, 2011.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-roshni-sweet-mart-amravati-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-roshni-sweet-mart-amravati-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "serious hygiene and sanitation violations under Schedule 4 of the FSSAI Licensing Regulations, 2011"
+        },
+        {
+          "id": "case-roshni-sweet-mart-amravati-vio-2",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported hygiene and sanitation violations leading to licence suspension"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-roshni-sweet-mart-amravati-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-roshni-sweet-mart-amravati-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-roshni-sweet-mart-amravati-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-hangry-panda-kitchen-nagpur",
+      "establishment_id": "hangry-panda-kitchen-nagpur",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that The Hangry Panda Kitchen in Nagpur lost its FSSAI licence after inspectors found violations related to cleanliness, sanitation and food handling standards.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-hangry-panda-kitchen-nagpur-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-hangry-panda-kitchen-nagpur-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "violations related to cleanliness and sanitation"
+        },
+        {
+          "id": "case-hangry-panda-kitchen-nagpur-vio-2",
+          "violation_type": "food_safety_violation",
+          "description": "violations related to food handling standards"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-hangry-panda-kitchen-nagpur-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-hangry-panda-kitchen-nagpur-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-hangry-panda-kitchen-nagpur-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-08",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-maroosh-prabhadevi",
+      "establishment_id": "maroosh-prabhadevi",
+      "case_type": "closure",
+      "status": "notice_issued",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that the FDA issued a Stop Business Notice to Maroosh (Lebensmittel Services India LLP) in Prabhadevi during the Mumbai-region inspection drive. Outlet-specific violation details were not listed.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-maroosh-prabhadevi-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-maroosh-prabhadevi-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA issued a Stop Business Notice during the Mumbai inspection drive"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-maroosh-prabhadevi-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-maroosh-prabhadevi-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-maroosh-prabhadevi-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-08",
+          "notes": "Stop Business Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-chathradharr-caterers-bkc",
+      "establishment_id": "chathradharr-caterers-bkc",
+      "case_type": "closure",
+      "status": "notice_issued",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that the FDA issued a Stop Business Notice to Chathradharr Caterers at MMRDA BKC during the Mumbai-region inspection drive. Outlet-specific violation details were not listed.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-chathradharr-caterers-bkc-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-chathradharr-caterers-bkc-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA issued a Stop Business Notice during the Mumbai inspection drive"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-chathradharr-caterers-bkc-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-chathradharr-caterers-bkc-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-chathradharr-caterers-bkc-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-08",
+          "notes": "Stop Business Notice reported"
+        }
+      ]
+    },
+    {
+      "id": "case-vijaydeep-mahila-audyogik-govandi",
+      "establishment_id": "vijaydeep-mahila-audyogik-govandi",
+      "case_type": "closure",
+      "status": "notice_issued",
+      "inspection_date": null,
+      "action_date": "2026-08-08",
+      "summary": "NDTV Profit reported that the FDA issued a Stop Business Notice to Vijaydeep Mahila Audyogik Utpadak Sahakari Sanstha in Govandi during the Mumbai-region inspection drive. Outlet-specific violation details were not listed.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-08T12:00:00+05:30",
+      "updated_at": "2026-08-08T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-vijaydeep-mahila-audyogik-govandi-act-main",
+          "action_type": "notice",
+          "action_date": "2026-08-08",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-vijaydeep-mahila-audyogik-govandi-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA issued a Stop Business Notice during the Mumbai inspection drive"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-vijaydeep-mahila-audyogik-govandi-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA suspends licences of Punjab Grill, South India Dosa Corner & 3 others in Mumbai, Navi Mumbai",
+          "url": "https://www.ndtvprofit.com/business/fda-suspends-licences-of-punjab-grill-south-india-dosa-corner-3-others-in-mumbai-navi-mumbai-11880666",
+          "published_at": "2026-08-08",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-vijaydeep-mahila-audyogik-govandi-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-04",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-vijaydeep-mahila-audyogik-govandi-hist-2",
+          "status": "notice_issued",
+          "effective_date": "2026-08-08",
+          "notes": "Stop Business Notice reported"
         }
       ]
     }
