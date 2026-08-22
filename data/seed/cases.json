@@ -1313,6 +1313,132 @@
       "business_type": "retailer",
       "created_at": "2026-08-18T12:00:00+05:30",
       "updated_at": "2026-08-18T12:00:00+05:30"
+    },
+    {
+      "id": "mcdonalds-metro-house-colaba",
+      "name": "McDonald's Family Restaurant (Hardcastle / Metro House)",
+      "normalized_name": "mcdonald s family restaurant hardcastle metro house",
+      "address": "Metro House Shahid Bhagat Singh Road",
+      "locality": "Colaba",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07474,
+      "longitude": 72.87842,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=McDonalds+Metro+House+Colaba+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
+    },
+    {
+      "id": "bombay-presidency-radio-club-colaba",
+      "name": "Bombay Presidency Radio Club",
+      "normalized_name": "bombay presidency radio club",
+      "address": null,
+      "locality": "Colaba",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07492,
+      "longitude": 72.87782,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bombay+Presidency+Radio+Club+Colaba+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
+    },
+    {
+      "id": "novaara-malad",
+      "name": "Novaara (Ingenious Kitchens Pvt Ltd)",
+      "normalized_name": "novaara ingenious kitchens pvt ltd",
+      "address": null,
+      "locality": "Malad",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07744,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Novaara+Malad+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
+    },
+    {
+      "id": "status-restaurant-nariman-point",
+      "name": "Status Restaurant",
+      "normalized_name": "status restaurant",
+      "address": null,
+      "locality": "Nariman Point",
+      "district": "Mumbai City",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.92544,
+      "longitude": 72.82696,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Status+Restaurant+Nariman+Point+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
+    },
+    {
+      "id": "khar-gymkhana-khar-west",
+      "name": "Khar Gymkhana",
+      "normalized_name": "khar gymkhana",
+      "address": null,
+      "locality": "Khar West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07014,
+      "longitude": 72.8376,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Khar+Gymkhana+Khar+West+Mumbai",
+      "business_type": "restaurant",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
+    },
+    {
+      "id": "bajrang-sweet-mart-santacruz-west",
+      "name": "Bajrang Sweet Mart",
+      "normalized_name": "bajrang sweet mart",
+      "address": null,
+      "locality": "Santacruz West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07636,
+      "longitude": 72.87794,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Bajrang+Sweet+Mart+Santacruz+West+Mumbai",
+      "business_type": "retailer",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
+    },
+    {
+      "id": "asm-hotels-andheri-west",
+      "name": "ASM Hotels and Hospitality Services Pvt Ltd",
+      "normalized_name": "asm hotels and hospitality services pvt ltd",
+      "address": null,
+      "locality": "Andheri West",
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.13636,
+      "longitude": 72.82712,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=ASM+Hotels+and+Hospitality+Services+Andheri+West+Mumbai",
+      "business_type": "hotel",
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30"
     }
   ],
   "cases": [
@@ -6326,6 +6452,578 @@
           "id": "case-raj-oil-trading-vile-parle-east-hist-1",
           "status": "licence_suspended",
           "effective_date": "2026-08-18",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-mcdonalds-metro-house-colaba",
+      "establishment_id": "mcdonalds-metro-house-colaba",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-19",
+      "action_date": "2026-08-19",
+      "summary": "ANI reported that Maharashtra FDA suspended the food licence of the McDonald's outlet in Colaba among seven Mumbai establishments. PTI coverage of the same drive said Hardcastle Restaurants' McDonald's Family Restaurant kiosk at Metro House faced immediate FSSAI licence suspension after a reinspection on August 19 found 18 of 20 earlier deficiencies unrectified, including live cockroaches, uncalibrated refrigeration, rotting food waste and hand-hygiene lapses.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-mcdonalds-metro-house-colaba-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-19",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-19",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mcdonalds-metro-house-colaba-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "live cockroaches and lack of pest traps"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-vio-2",
+          "violation_type": "temperature_control",
+          "description": "uncalibrated refrigeration equipment"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-vio-3",
+          "violation_type": "poor_hygiene",
+          "description": "rotting food waste on kitchen floor"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-vio-4",
+          "violation_type": "other",
+          "description": "dirty cleaning cloths and dust-covered light fixtures without protective shields"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-vio-5",
+          "violation_type": "other",
+          "description": "employees handling ready-to-eat food without washing hands after handling dirty footwear"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-vio-6",
+          "violation_type": "adulteration",
+          "description": "processed non-dairy GO Cheese SAUCE used despite real cheese and paneer claims"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mcdonalds-metro-house-colaba-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mcdonalds-metro-house-colaba-hist-1",
+          "status": "other",
+          "effective_date": "2026-08-12",
+          "notes": "Compliance report submitted"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-hist-2",
+          "status": "inspected",
+          "effective_date": "2026-08-19",
+          "notes": "Reinspection"
+        },
+        {
+          "id": "case-mcdonalds-metro-house-colaba-hist-3",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-19",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-bombay-presidency-radio-club-colaba",
+      "establishment_id": "bombay-presidency-radio-club-colaba",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-19",
+      "action_date": "2026-08-19",
+      "summary": "ANI reported that Maharashtra FDA suspended the food licence of the Bombay Presidency Radio Club among seven Mumbai establishments. PTI coverage of the same drive said the August 19 inspection recorded a 47 per cent non-compliance rate and ordered a stop on purchase, sale and distribution of food during the suspension.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-19",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-19",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "large number of live flies and dead cockroaches in the kitchen"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "peeling paint and plaster above food preparation areas"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-3",
+          "violation_type": "improper_storage",
+          "description": "washing powder and chemicals stored close to food"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-4",
+          "violation_type": "other",
+          "description": "food kept directly on the floor"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-5",
+          "violation_type": "other",
+          "description": "unclean refrigerators used for non-vegetarian food"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-6",
+          "violation_type": "other",
+          "description": "improper thawing"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-7",
+          "violation_type": "other",
+          "description": "inadequately sealed kitchen door"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-8",
+          "violation_type": "other",
+          "description": "garbage bins near cooking stoves"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-vio-9",
+          "violation_type": "other",
+          "description": "spitting marks"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-19",
+          "notes": "Inspection"
+        },
+        {
+          "id": "case-bombay-presidency-radio-club-colaba-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-19",
+          "notes": "Licence suspended"
+        }
+      ]
+    },
+    {
+      "id": "case-novaara-malad",
+      "establishment_id": "novaara-malad",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-13",
+      "action_date": "2026-08-13",
+      "summary": "ANI reported that Maharashtra FDA suspended the food licence of Novaara in Malad among seven Mumbai establishments. PTI coverage of the same drive said Ingenious Kitchens Pvt Ltd operating Novaara lost its licence after a reinspection on August 13 found 14 of 25 earlier serious deficiencies unresolved.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-novaara-malad-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-13",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-novaara-malad-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-13",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-novaara-malad-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "old kitchen utensils and equipment not conforming to food safety standards"
+        },
+        {
+          "id": "case-novaara-malad-vio-2",
+          "violation_type": "pest_infestation",
+          "description": "absence of grease and cockroach traps in the drainage line"
+        },
+        {
+          "id": "case-novaara-malad-vio-3",
+          "violation_type": "employee_medical_records",
+          "description": "inadequate medical examination records for food handlers"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-novaara-malad-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-novaara-malad-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-novaara-malad-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-13",
+          "notes": "Reinspection"
+        }
+      ]
+    },
+    {
+      "id": "case-status-restaurant-nariman-point",
+      "establishment_id": "status-restaurant-nariman-point",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": "2026-08-20",
+      "action_date": "2026-08-20",
+      "summary": "ANI reported that Maharashtra FDA suspended the food licence of Status Restaurant at Nariman Point among seven Mumbai establishments. PTI coverage of the same drive said the outlet faced immediate suspension on Thursday following a customer complaint, with inspectors finding hygiene and PPE lapses including wastewater splash onto clean utensils.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-status-restaurant-nariman-point-act-inspect",
+          "action_type": "inspection",
+          "action_date": "2026-08-20",
+          "description": "Inspection reported by the source."
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-20",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-status-restaurant-nariman-point-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "employee washing face over clean food utensils with wastewater splash"
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-vio-2",
+          "violation_type": "other",
+          "description": "employees without complete PPE"
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-vio-3",
+          "violation_type": "other",
+          "description": "dirty crockery"
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-vio-4",
+          "violation_type": "other",
+          "description": "stagnant water"
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-vio-5",
+          "violation_type": "other",
+          "description": "grease and oil deposits"
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-vio-6",
+          "violation_type": "other",
+          "description": "rust and food waste"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-status-restaurant-nariman-point-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-status-restaurant-nariman-point-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-status-restaurant-nariman-point-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-20",
+          "notes": "Inspection and licence suspended following complaint"
+        }
+      ]
+    },
+    {
+      "id": "case-khar-gymkhana-khar-west",
+      "establishment_id": "khar-gymkhana-khar-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-21",
+      "summary": "ANI reported that Maharashtra FDA suspended the food licence of Khar Gymkhana among seven Mumbai establishments. PTI coverage of the same drive said the registration certificate was suspended after inspectors found storage, cleanliness, food segregation, hot-water and thawing deficiencies.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-khar-gymkhana-khar-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-21",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-khar-gymkhana-khar-west-vio-1",
+          "violation_type": "improper_storage",
+          "description": "inadequate storage arrangements"
+        },
+        {
+          "id": "case-khar-gymkhana-khar-west-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "poor cleanliness in the food preparation area"
+        },
+        {
+          "id": "case-khar-gymkhana-khar-west-vio-3",
+          "violation_type": "other",
+          "description": "inadequate segregation of raw and prepared food"
+        },
+        {
+          "id": "case-khar-gymkhana-khar-west-vio-4",
+          "violation_type": "other",
+          "description": "lack of hot water for washing utensils"
+        },
+        {
+          "id": "case-khar-gymkhana-khar-west-vio-5",
+          "violation_type": "other",
+          "description": "improper thawing of frozen food"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-khar-gymkhana-khar-west-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-khar-gymkhana-khar-west-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-khar-gymkhana-khar-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-19",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-khar-gymkhana-khar-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-21",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-bajrang-sweet-mart-santacruz-west",
+      "establishment_id": "bajrang-sweet-mart-santacruz-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-21",
+      "summary": "ANI reported that Maharashtra FDA suspended food licences of seven Mumbai establishments. Same-day PTI coverage of that Mumbai seven named Bajrang Sweet Mart in Santacruz West among the suspended outlets without listing outlet-specific violation details.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-bajrang-sweet-mart-santacruz-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-21",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-bajrang-sweet-mart-santacruz-west-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported food-safety and hygiene violations leading to licence suspension"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-bajrang-sweet-mart-santacruz-west-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-bajrang-sweet-mart-santacruz-west-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-bajrang-sweet-mart-santacruz-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-19",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-bajrang-sweet-mart-santacruz-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-21",
+          "notes": "Licence suspension reported"
+        }
+      ]
+    },
+    {
+      "id": "case-asm-hotels-andheri-west",
+      "establishment_id": "asm-hotels-andheri-west",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-21",
+      "summary": "ANI reported that Maharashtra FDA suspended food licences of seven Mumbai establishments. Same-day PTI coverage of that Mumbai seven named ASM Hotels and Hospitality Services Pvt Ltd in Andheri West among the suspended outlets without listing outlet-specific violation details.",
+      "verification_status": "reported",
+      "confidence_score": null,
+      "created_at": "2026-08-21T12:00:00+05:30",
+      "updated_at": "2026-08-21T12:00:00+05:30",
+      "actions": [
+        {
+          "id": "case-asm-hotels-andheri-west-act-main",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-21",
+          "description": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-asm-hotels-andheri-west-vio-1",
+          "violation_type": "food_safety_violation",
+          "description": "FDA reported food-safety and hygiene violations leading to licence suspension"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-asm-hotels-andheri-west-src-1",
+          "source_name": "ANI",
+          "source_type": "other_news",
+          "title": "FDA suspends food licences of seven Mumbai establishments",
+          "url": "https://x.com/ani/status/2090868890222104805?s=46",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        },
+        {
+          "id": "case-asm-hotels-andheri-west-src-2",
+          "source_name": "The Telegraph",
+          "source_type": "other_news",
+          "title": "The Telegraph",
+          "url": "https://www.telegraphindia.com/india/cockroaches-flies-dirty-kitchens-maharashtra-fda-suspends-mcdonalds-radio-club-licences-in-south-mumbai/cid/2176071",
+          "published_at": "2026-08-21",
+          "is_primary": false
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-asm-hotels-andheri-west-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-08-19",
+          "notes": "Inspection drive"
+        },
+        {
+          "id": "case-asm-hotels-andheri-west-hist-2",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-21",
           "notes": "Licence suspension reported"
         }
       ]
