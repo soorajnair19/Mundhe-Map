@@ -74,11 +74,11 @@
   },
   {
     "id": "fda-mumbai-mcdonald-mumbai-2026-08-22",
-    "review_status": "pending",
+    "review_status": "duplicate",
     "queued_at": "2026-08-22T14:45:12.500Z",
-    "rejection_reason": null,
+    "rejection_reason": "duplicate",
     "rejection_notes": null,
-    "duplicate_of_case_id": null,
+    "duplicate_of_case_id": "case-mcdonalds-metro-house-colaba",
     "establishment": {
       "id": "est-mumbai-mcdonald-mumbai",
       "name": "Mumbai McDonald",
@@ -108,7 +108,7 @@
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-22T14:45:12.500Z",
-      "updated_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T15:06:46.139Z",
       "actions": [
         {
           "id": "case-mumbai-mcdonald-mumbai-ingested-act-1",
