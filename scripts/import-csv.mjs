@@ -22,6 +22,7 @@ const LOCALITY_COORDS = {
   "mahim west|mumbai": [19.041, 72.841],
   "bandra west|mumbai": [19.0596, 72.8295],
   "bandra east|mumbai": [19.06, 72.845],
+  "bkc|mumbai": [19.063, 72.862],
   "khar west|mumbai": [19.0696, 72.837],
   "marol|mumbai": [19.117, 72.882],
   "vile parle east|mumbai": [19.096, 72.853],
