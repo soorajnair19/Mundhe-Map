@@ -1,5 +1,223 @@
 [
   {
+    "id": "fda-adulterated-dairy-mumbai-2026-08-22",
+    "review_status": "pending",
+    "queued_at": "2026-08-22T14:45:12.500Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-adulterated-dairy-mumbai",
+      "name": "Adulterated Dairy",
+      "normalized_name": "adulterated dairy",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07456,
+      "longitude": 72.87782,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Adulterated%20Dairy%20Mumbai%20Maharashtra",
+      "business_type": "dairy",
+      "created_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T14:45:12.500Z"
+    },
+    "case": {
+      "id": "case-adulterated-dairy-mumbai-ingested",
+      "establishment_id": "est-adulterated-dairy-mumbai",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-08-22",
+      "summary": "Maharashtra FDA suspends licences of 7 Mumbai food outlets; gutkha, adulterated dairy seized statewide &nbsp;&nbsp; ANI News",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T14:45:12.500Z",
+      "actions": [
+        {
+          "id": "case-adulterated-dairy-mumbai-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-22",
+          "description": "ANI News report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-adulterated-dairy-mumbai-ingested-vio-1",
+          "violation_type": "adulteration",
+          "description": "Adulteration reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-adulterated-dairy-mumbai-ingested-src-1",
+          "source_name": "ANI News",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA suspends licences of 7 Mumbai food outlets; gutkha, adulterated dairy seized statewide",
+          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOREZGNE95OGhpVFFJYzdTdXFOYUhRYVVhZDhHOWh6T1JLZS1GMUFTZnJsMzBrektidlNKT2RVMVNXb0lJRUhzdmpGMXpCaGQyTGVUM1ZRWmNLemVvSVlZNms4TnVXdVRqdmhvb2stMjVVWEIzUmZENkk1N2tqc1hXU3BicThpc0RjYXVzVTdZdkhWbTVtUURuRkxLVWd5V3prcXBVLS12WHJZVzYzZ2E5OVU3SlhoX08wWGF6aTdpc0F2SEFNTWVfUDNYLXBFZGVBNG5IQ1luU0FTTDljZ0o0OTRlN0lZMU1fNlBTZGNtaDM3V3I0LUlF?oc=5",
+          "published_at": "2026-08-22",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-adulterated-dairy-mumbai-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-22",
+          "notes": "Maharashtra FDA suspends licences of 7 Mumbai food outlets; gutkha, adulterated dairy seized statewide"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-mcdonald-mumbai-2026-08-22",
+    "review_status": "pending",
+    "queued_at": "2026-08-22T14:45:12.500Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-mcdonald-mumbai",
+      "name": "Mumbai McDonald",
+      "normalized_name": "mumbai mcdonald",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.074740000000002,
+      "longitude": 72.87866000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20McDonald%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T14:45:12.500Z"
+    },
+    "case": {
+      "id": "case-mumbai-mcdonald-mumbai-ingested",
+      "establishment_id": "est-mumbai-mcdonald-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-22",
+      "summary": "Mumbai McDonald's licence suspended after FDA finds pest infestation, hygiene lapses &nbsp;&nbsp; DNA India",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T14:45:12.500Z",
+      "actions": [
+        {
+          "id": "case-mumbai-mcdonald-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-22",
+          "description": "DNA India report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbai-mcdonald-mumbai-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        },
+        {
+          "id": "case-mumbai-mcdonald-mumbai-ingested-vio-2",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbai-mcdonald-mumbai-ingested-src-1",
+          "source_name": "DNA India",
+          "source_type": "other_news",
+          "title": "Mumbai McDonald's licence suspended after FDA finds pest infestation, hygiene lapses",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORXV6WHRLdFBLSTNBV3FGYXFWM1RkQzAzTk5sb19WUVB5MUFvRXI2NUhtUmpwc1FGczlOVHhMMVBobXEtS1dfS1FDcmR4ZnRqRVdZbmVjdGlJU2hrcWh5T1QzcV9ISEdQc1dvY0FjczZNbGRRcWVodmtnX2Q5ZlpjcmNnSk1Bb1RMbURRbGVOdDY2Mkc5UGVJUEc3Y0dKUXJaNTlHbGd5VHFnUEFqcTNRUE8zZnhiVE9XM3ZFeVZHcV9wTnFCamJaSTF30gHPAUFVX3lxTE1pUm1MYzZVUmtTTTFDU0I5TU9JdWZjVG1rc0tDRUl4REJlempBMnN4VEdDNUNrVmhKTExscml5dnFmSFhUV0NsYllOUUFRWUZpXzM3MkY2TnpWblNSRkZ4Skh2NHlXWlNUOE02ZEpEcC1hU2dnajFXSllTanRDMWtudEJaYi1kN2swVkliT1RUckVDVEtSZ0ZSMWMtclVfWmFVZkxEeno5VHZOSU1jZ3l5SGFPX1ppSlpwOTZFOEt0cVI0U25CWTNJT0dzbE5pYw?oc=5",
+          "published_at": "2026-08-22",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-mcdonald-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-22",
+          "notes": "Mumbai McDonald's licence suspended after FDA finds pest infestation, hygiene lapses"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-unnamed-establishment-in-chhatrapati-sambhajinag-2026-08-22",
+    "review_status": "pending",
+    "queued_at": "2026-08-22T14:45:12.500Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-unnamed-establishment-in-chhatrapati-sambhajinag",
+      "name": "Unnamed establishment in Chhatrapati Sambhajinagar",
+      "normalized_name": "unnamed establishment in chhatrapati sambhajinagar",
+      "address": null,
+      "locality": null,
+      "district": "Chhatrapati Sambhajinagar",
+      "city": "Chhatrapati Sambhajinagar",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.87674,
+      "longitude": 75.34354,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Chhatrapati%20Sambhajinagar%20Chhatrapati%20Sambhajinagar%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T14:45:12.500Z"
+    },
+    "case": {
+      "id": "case-unnamed-establishment-in-chhatrapati-sambhajinag-ingested",
+      "establishment_id": "est-unnamed-establishment-in-chhatrapati-sambhajinag",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-22",
+      "summary": "FSSAI licence suspended for Chhatrapati Sambhajinagar restaurant after major violations discovered &nbsp;&nbsp; The Economic Times",
+      "verification_status": "reported",
+      "confidence_score": 0.25,
+      "created_at": "2026-08-22T14:45:12.500Z",
+      "updated_at": "2026-08-22T14:45:12.500Z",
+      "actions": [
+        {
+          "id": "case-unnamed-establishment-in-chhatrapati-sambhajinag-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-22",
+          "description": "The Economic Times report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-unnamed-establishment-in-chhatrapati-sambhajinag-ingested-src-1",
+          "source_name": "The Economic Times",
+          "source_type": "other_news",
+          "title": "FSSAI licence suspended for Chhatrapati Sambhajinagar restaurant after major violations discovered",
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPVFR2YW9IZTF6N2FfTHF1Z19lYlctTTc5eDhEU01UTWxGbUlrd3h5aFBUMGdrQmJXVndra2ViREVYbkhfOVh4UXZrdER3T01sSnF4VEdMeFUzbmFlaVlOcWJvVUgzMW83SzQzMnZUUERNOUdERTVQRlo3T2RtMHktUS1DTDNzR3lheVFFbGg2VDZVQWFaNEg0WUJJLXcwY19iT2F5ZXdxU0czRXZFYkJSeFJXUjZTc3VISV9vVWJSODlmRmRIS29CcHZYcGJiMENNcXVFNUdVTkRNN3dkOE04UlVMSjBPZkdlOW5WaENNRTVYdHRubUQ0dVJYWdIB-wFBVV95cUxPVFR2YW9IZTF6N2FfTHF1Z19lYlctTTc5eDhEU01UTWxGbUlrd3h5aFBUMGdrQmJXVndra2ViREVYbkhfOVh4UXZrdER3T01sSnF4VEdMeFUzbmFlaVlOcWJvVUgzMW83SzQzMnZUUERNOUdERTVQRlo3T2RtMHktUS1DTDNzR3lheVFFbGg2VDZVQWFaNEg0WUJJLXcwY19iT2F5ZXdxU0czRXZFYkJSeFJXUjZTc3VISV9vVWJSODlmRmRIS29CcHZYcGJiMENNcXVFNUdVTkRNN3dkOE04UlVMSjBPZkdlOW5WaENNRTVYdHRubUQ0dVJYWQ?oc=5",
+          "published_at": "2026-08-22",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnamed-establishment-in-chhatrapati-sambhajinag-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-22",
+          "notes": "FSSAI licence suspended for Chhatrapati Sambhajinagar restaurant after major violations discovered"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbai-restaurant-mumbai-2026-08-19",
     "review_status": "rejected",
     "queued_at": "2026-08-20T14:48:10.463Z",
