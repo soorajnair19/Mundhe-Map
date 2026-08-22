@@ -1,7 +1,7 @@
 [
   {
     "id": "req-dhadge-misal-khadki-mt44okc2",
-    "status": "pending",
+    "status": "approved",
     "place_name": "Dhadge Misal",
     "maps_url": "https://maps.app.goo.gl/uMK9z1v5DXVdUf3s9?g_st=ic",
     "plus_code": null,
@@ -19,7 +19,7 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-dhadge-misal-khadki-mt44okc2"
   },
   {
     "id": "req-swiggy-nahur-warehouse-mt136nfr",
