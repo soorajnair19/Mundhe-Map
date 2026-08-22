@@ -275,6 +275,7 @@ export function sourceTypeFromName(name: string): SourceType {
   if (value.includes("times of india")) return "times_of_india";
   if (value.includes("mid-day") || value.includes("mid day")) return "mid_day";
   if (value === "pti" || value.includes("press trust")) return "pti";
+  if (value === "ani" || value.includes("asian news")) return "other_news";
   if (value.includes("fda") || value.includes("government")) return "government";
   return "other_news";
 }
