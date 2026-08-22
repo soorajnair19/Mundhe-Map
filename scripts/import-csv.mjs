@@ -27,7 +27,12 @@ const LOCALITY_COORDS = {
   "marol|mumbai": [19.117, 72.882],
   "vile parle east|mumbai": [19.096, 72.853],
   "santacruz east|mumbai": [19.081, 72.842],
+  "santacruz|mumbai": [19.081, 72.842],
+  "dadar|mumbai": [19.0178, 72.8478],
+  "prabhadevi|mumbai": [19.016, 72.829],
+  "govandi|mumbai": [19.055, 72.915],
   "juhu|mumbai": [19.1075, 72.8263],
+  "andheri|mumbai": [19.119, 72.847],
   "andheri east|mumbai": [19.1136, 72.8697],
   "andheri west|mumbai": [19.136, 72.827],
   "koldongari|mumbai": [19.119, 72.846],
@@ -94,6 +99,8 @@ const CITY_COORDS = {
   vaijapur: [19.9267, 74.7277],
   aurangabad: [19.8762, 75.3433],
   "chhatrapati sambhajinagar": [19.8762, 75.3433],
+  nagpur: [21.1458, 79.0882],
+  amravati: [20.9374, 77.7796],
 };
 
 const DISTRICT_COORDS = {
@@ -107,6 +114,8 @@ const DISTRICT_COORDS = {
   thane: [19.2183, 72.9781],
   raigad: [18.6414, 72.8722],
   "chhatrapati sambhajinagar": [19.8762, 75.3433],
+  amravati: [20.9374, 77.7796],
+  nagpur: [21.1458, 79.0882],
 };
 
 function parseCsv(text) {
