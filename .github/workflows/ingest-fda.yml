@@ -36,5 +36,10 @@ jobs:
             echo "No new FDA reports"
           else
             git commit -m "ingest: append FDA reports from public news RSS"
-            git push
+            # Retry push with pull --rebase in case main moved
+            for i in 1 2 3; do
+              git push && break
+              echo "Push failed, pulling and retrying ($i/3)..."
+              git pull --rebase origin main
+            done
           fi
