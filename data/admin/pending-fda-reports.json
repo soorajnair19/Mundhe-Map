@@ -1,5 +1,151 @@
 [
   {
+    "id": "fda-mumbais-famous-ayubs-restaurant-mumbai-2026-08-25",
+    "review_status": "pending",
+    "queued_at": "2026-08-25T15:12:36.095Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbais-famous-ayubs-restaurant-mumbai",
+      "name": "Mumbais Famous AYUBS Restaurant",
+      "normalized_name": "mumbais famous ayubs",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07492,
+      "longitude": 72.87830000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbais%20Famous%20AYUBS%20Restaurant%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-25T15:12:36.095Z",
+      "updated_at": "2026-08-25T15:12:36.095Z"
+    },
+    "case": {
+      "id": "case-mumbais-famous-ayubs-restaurant-mumbai-ingested",
+      "establishment_id": "est-mumbais-famous-ayubs-restaurant-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-25",
+      "summary": "Maharashtra FDA crackdown: Mumbai's famous AYUB'S restaurant licence suspended over houseflies, open drains &nbsp;&nbsp; Mid-Day",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-25T15:12:36.095Z",
+      "updated_at": "2026-08-25T15:12:36.095Z",
+      "actions": [
+        {
+          "id": "case-mumbais-famous-ayubs-restaurant-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-25",
+          "description": "Mid-Day report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbais-famous-ayubs-restaurant-mumbai-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbais-famous-ayubs-restaurant-mumbai-ingested-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Maharashtra FDA crackdown: Mumbai's famous AYUB'S restaurant licence suspended over houseflies, open drains",
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOakl1M1lOckFYUXVyWWd1dVdDZUdGdzQ4ZVJCUC1FOEFHeDM1VWU5cU9VX0dWdm9ObDlZSFVsaG9pZE5PeDdxb2dHMUVwd1cwWUx3cDltbXAwSXB6MEtoQ0pKNENNb3l6bmQ3V2gzamtyQ1ZSQjE3eV9PWnY4WlcwNU1yQzhvWTlZN01YRFo0RHhIRy15Snl0WmswaDhqbmlnZVpPcHdrR1lmejNCWmN1VEFLTVc5SGtmOU5hOElha0EyUG0xcnZCZk95RHYyOW1zX291Y3A1TU5KNEs4emFCNHU4dl9JVnQ0eWZwY0ljaVFLdVRmYmlVWGF2TdIB-wFBVV95cUxOakl1M1lOckFYUXVyWWd1dVdDZUdGdzQ4ZVJCUC1FOEFHeDM1VWU5cU9VX0dWdm9ObDlZSFVsaG9pZE5PeDdxb2dHMUVwd1cwWUx3cDltbXAwSXB6MEtoQ0pKNENNb3l6bmQ3V2gzamtyQ1ZSQjE3eV9PWnY4WlcwNU1yQzhvWTlZN01YRFo0RHhIRy15Snl0WmswaDhqbmlnZVpPcHdrR1lmejNCWmN1VEFLTVc5SGtmOU5hOElha0EyUG0xcnZCZk95RHYyOW1zX291Y3A1TU5KNEs4emFCNHU4dl9JVnQ0eWZwY0ljaVFLdVRmYmlVWGF2TQ?oc=5",
+          "published_at": "2026-08-25",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbais-famous-ayubs-restaurant-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-25",
+          "notes": "Maharashtra FDA crackdown: Mumbai's famous AYUB'S restaurant licence suspended over houseflies, open drains"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-restaurant-ayub-mumbai-2026-08-25",
+    "review_status": "pending",
+    "queued_at": "2026-08-25T15:12:36.095Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-restaurant-ayub-mumbai",
+      "name": "Mumbai Restaurant Ayub",
+      "normalized_name": "mumbai ayub",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.074740000000002,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Restaurant%20Ayub%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-08-25T15:12:36.095Z",
+      "updated_at": "2026-08-25T15:12:36.095Z"
+    },
+    "case": {
+      "id": "case-mumbai-restaurant-ayub-mumbai-ingested",
+      "establishment_id": "est-mumbai-restaurant-ayub-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-08-25",
+      "summary": "Mumbai Restaurant Ayub’s Food Licence Suspended After FDA Flags Houseflies, Open Drains & Improper Egg &nbsp;&nbsp; Free Press Journal",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-25T15:12:36.095Z",
+      "updated_at": "2026-08-25T15:12:36.095Z",
+      "actions": [
+        {
+          "id": "case-mumbai-restaurant-ayub-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-08-25",
+          "description": "Free Press Journal report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbai-restaurant-ayub-mumbai-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbai-restaurant-ayub-mumbai-ingested-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Mumbai Restaurant Ayub’s Food Licence Suspended After FDA Flags Houseflies, Open Drains & Improper Egg",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObENvYzY0UVB3T1pVeHJQdHNpdkZYaDYxM051UnFmbWFMbTZ1ckVSRkg5WkpSekkydzNqM0tHVWZ4d1JCbjJlaTZYMjRVUWNrZF8wdUQyakZxN002NU5OeVFZbWRRN0JkZmtZUTBZcXlEWnlvckpVWE56aGFnb2xXMndVbmxMR0hpSGU5U3BkODVvcXhpZUliV3ZnMF9oYjVNVHIzVWw5ZWYxNmw5ZGdfSkl2Uks0T1liWFdJYi1NdDhZQkpKb1FrN0xYQl8tc0x6U0Rudk9jYmtKVDkwblNfMjZzTjd5Z9IB6wFBVV95cUxORW1IOHNLU2hDR0NYNXJRTE5ZbXkyT2NyaWttbnNvTWJRTHdRUndwT3hlXzI1c0UzbVhEanplSFNqcHozTUxSYk9kSlhWM2I0OC1wUkRJQ3U5UFpuNU9MMzcxTlVkRWp2Y2YzTEpUZ2JlNC12NVFWZlRESkJMV2lYSVdRWXRhUTN1c09aeEpmN1hkRHZRVTlSYV9WcWNja3JqazBaU2ZqN0puUi1vUnpndF85OWxEc3dKTkl0YV8yWWZsaEhGemxTYUlxTnY4d2tPc1RFeDJuN0o0NUZ3RnpNSllZNWFYaVhsTzAw?oc=5",
+          "published_at": "2026-08-25",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-restaurant-ayub-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-08-25",
+          "notes": "Mumbai Restaurant Ayub’s Food Licence Suspended After FDA Flags Houseflies, Open Drains & Improper Egg"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-adulterated-dairy-mumbai-2026-08-22",
     "review_status": "pending",
     "queued_at": "2026-08-22T14:45:12.500Z",
