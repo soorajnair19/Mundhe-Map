@@ -1,5 +1,27 @@
 [
   {
+    "id": "req-blinkit-dark-store-mt8hbz28",
+    "status": "pending",
+    "place_name": "Blinkit Dark Store",
+    "maps_url": "https://maps.app.goo.gl/jsTX6mffUBRBWSN28",
+    "plus_code": null,
+    "address": null,
+    "locality": null,
+    "city": "Kamothe, Panvel",
+    "district": "Kamothe, Panvel",
+    "latitude": 19.0125849,
+    "longitude": 73.0907905,
+    "concern": "bad ventilation, smelly dairy products whenever we order from here",
+    "evidence": [],
+    "submitted_at": "2026-08-25T09:45:39.530Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  },
+  {
     "id": "req-dominos-koparkhairne-mt64j1xv",
     "status": "approved",
     "place_name": "Dominos Koparkhairne",
