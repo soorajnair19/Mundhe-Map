@@ -1,7 +1,7 @@
 [
   {
     "id": "req-blinkit-dark-store-mt8hbz28",
-    "status": "pending",
+    "status": "approved",
     "place_name": "Blinkit Dark Store",
     "maps_url": "https://maps.app.goo.gl/jsTX6mffUBRBWSN28",
     "plus_code": null,
@@ -19,7 +19,7 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-blinkit-dark-store-mt8hbz28"
   },
   {
     "id": "req-dominos-koparkhairne-mt64j1xv",
