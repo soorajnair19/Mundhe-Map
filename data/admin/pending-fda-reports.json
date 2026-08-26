@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-unnamed-establishment-in-navi-mumbai-navi-mumbai-2026-08-25",
+    "review_status": "pending",
+    "queued_at": "2026-08-26T14:37:14.887Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-unnamed-establishment-in-navi-mumbai-navi-mumbai",
+      "name": "Unnamed establishment in Navi Mumbai",
+      "normalized_name": "unnamed establishment in navi mumbai",
+      "address": null,
+      "locality": null,
+      "district": "Thane",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.033,
+      "longitude": 73.02911999999999,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Navi%20Mumbai%20Navi%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-26T14:37:14.887Z",
+      "updated_at": "2026-08-26T14:37:14.887Z"
+    },
+    "case": {
+      "id": "case-unnamed-establishment-in-navi-mumbai-navi-mumbai-ingested",
+      "establishment_id": "est-unnamed-establishment-in-navi-mumbai-navi-mumbai",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-08-25",
+      "summary": "FDA Busts Major Milk Adulteration Racket In Navi Mumbai 4,710 Litres Of Milk Seized &nbsp;&nbsp; ABP Live English",
+      "verification_status": "reported",
+      "confidence_score": 0.25,
+      "created_at": "2026-08-26T14:37:14.887Z",
+      "updated_at": "2026-08-26T14:37:14.887Z",
+      "actions": [
+        {
+          "id": "case-unnamed-establishment-in-navi-mumbai-navi-mumbai-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-08-25",
+          "description": "ABP Live English report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-unnamed-establishment-in-navi-mumbai-navi-mumbai-ingested-vio-1",
+          "violation_type": "adulteration",
+          "description": "Adulteration reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-unnamed-establishment-in-navi-mumbai-navi-mumbai-ingested-src-1",
+          "source_name": "ABP Live English",
+          "source_type": "other_news",
+          "title": "FDA Busts Major Milk Adulteration Racket In Navi Mumbai 4,710 Litres Of Milk Seized",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQUw5Mi1sRTMtVHFXSkFjT3BNVzREY05ZOXlSZWNwZXpXM2VYWlZzdDVPRDJRZDh6SFBYTHhJWEcxa09Bem5aZGNOcEZSOXptVmRKTE1mZVpGYTlpZ1RUR2RDUWhQcDlXbFgycjhUQlhZUWFwVnZpNVdodFQyY0R2TThtaXpMeDBseGhlTDJkY0FMcnFkOW9DYUlmSnBrTnFBdVpxTmVqSDV5bTVBWjU2LWk1Sm9ocjlvZWNFR0JZLWpWZGY0OVHSAcYBQVVfeXFMUEFMOTItbEUzLVRxV0pBY09wTVc0RGNOWTl5UmVjcGV6VzNlWFpWc3Q1T0QyUWQ4ekhQWEx4SVhHMWtPQXpuWmRjTnBGUjl6bVZkSkxNZmVaRmE5aWdUVEdkQ1FoUHA5V2xYMnI4VEJYWVFhcFZ2aTVXaHRUMmNEdk04bWl6THgwbHhoZUwyZGNBTHJxZDlvQ2FJZkpwa05xQXVacU5lakg1eW01QVo1Ni1pNUpvaHI5b2VjRUdCWS1qVmRmNDlR?oc=5",
+          "published_at": "2026-08-25",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnamed-establishment-in-navi-mumbai-navi-mumbai-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-08-25",
+          "notes": "FDA Busts Major Milk Adulteration Racket In Navi Mumbai 4,710 Litres Of Milk Seized"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbais-famous-ayubs-restaurant-mumbai-2026-08-25",
     "review_status": "pending",
     "queued_at": "2026-08-25T15:12:36.095Z",
