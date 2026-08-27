@@ -1,5 +1,27 @@
 [
   {
+    "id": "req-swiggy-instamart-mtb4fvvf",
+    "status": "pending",
+    "place_name": "Swiggy Instamart",
+    "maps_url": "https://maps.app.goo.gl/DHQNeLG2cUcdCTbY7?g_st=ac",
+    "plus_code": null,
+    "address": null,
+    "locality": null,
+    "city": "Chandivali",
+    "district": "Chandivali",
+    "latitude": 19.1068094,
+    "longitude": 72.901397,
+    "concern": "Fresh Chicken is not stored hygeinically. The packet reeked with foul smell",
+    "evidence": [],
+    "submitted_at": "2026-08-27T06:08:05.578Z",
+    "submitter": null,
+    "similar_report_count": 1,
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_place": null,
+    "published_place_id": null
+  },
+  {
     "id": "req-blinkit-dark-store-mt8hbz28",
     "status": "approved",
     "place_name": "Blinkit Dark Store",
