@@ -1,7 +1,7 @@
 [
   {
     "id": "req-swiggy-instamart-mtb4fvvf",
-    "status": "pending",
+    "status": "approved",
     "place_name": "Swiggy Instamart",
     "maps_url": "https://maps.app.goo.gl/DHQNeLG2cUcdCTbY7?g_st=ac",
     "plus_code": null,
@@ -19,7 +19,7 @@
     "rejection_reason": null,
     "rejection_notes": null,
     "duplicate_of_place": null,
-    "published_place_id": null
+    "published_place_id": "place-swiggy-instamart-mtb4fvvf"
   },
   {
     "id": "req-blinkit-dark-store-mt8hbz28",
