@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-cipla-s-pune-unit-pune-2026-08-28",
+    "review_status": "pending",
+    "queued_at": "2026-08-28T23:36:01.391Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-cipla-s-pune-unit-pune",
+      "name": "Cipla’s Pune Unit",
+      "normalized_name": "cipla s pune unit",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5204,
+      "longitude": 73.85754,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cipla%E2%80%99s%20Pune%20Unit%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-08-28T23:36:01.391Z",
+      "updated_at": "2026-08-28T23:36:01.391Z"
+    },
+    "case": {
+      "id": "case-cipla-s-pune-unit-pune-ingested",
+      "establishment_id": "est-cipla-s-pune-unit-pune",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": null,
+      "action_date": "2026-08-28",
+      "summary": "Here’s why Maharashtra FDA cancelled drug sale licence of Cipla’s Pune unit &nbsp;&nbsp; The Statesman",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-08-28T23:36:01.391Z",
+      "updated_at": "2026-08-28T23:36:01.391Z",
+      "actions": [
+        {
+          "id": "case-cipla-s-pune-unit-pune-ingested-act-1",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-08-28",
+          "description": "The Statesman report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-cipla-s-pune-unit-pune-ingested-src-1",
+          "source_name": "The Statesman",
+          "source_type": "other_news",
+          "title": "Here’s why Maharashtra FDA cancelled drug sale licence of Cipla’s Pune unit",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONVZQUHhmNzdPeHJ2X3h0WnFSQ3lqVlphTEU5RDdBcTZ6OEliZkFsY3U0Z3Q1X3Vmd1Q1R3F4WGYzb09sMWtUYmFvcnltT19iYmlVR3NyRU85eW1sbG0zV1R4aE5XcEtDUXdmRGZVRTBDSGVHSGZ4d0M0WWhkbFJ6c1R6V2tETk5tbk0xeDRTX0pIVjV0aDM2YUtmRlJVN3JDVlhMdlFfRG1fSFFXTF9odklvUk1wcjV4TnBKT2hmandLajZ2dUZz0gHHAUFVX3lxTE41VlBQeGY3N094cnZfeHRacVJDeWpWWmFMRTlEN0FxNno4SWJmQWxjdTRndDVfdWZ3VDVHcXhYZjNvT2wxa1RiYW9yeW1PX2JiaVVHc3JFTzl5bWxsbTNXVHhoTldwS0NRd2ZEZlVFMENIZUdIZnh3QzRZaGRsUnpzVHpXa0ROTm1uTTF4NFNfSkhWNXRoMzZhS2ZGUlU3ckNWWEx2UV9EbV9IUVdMX2h2SW9STXByNXhOcEpPaGZqd0tqNnZ1RnM?oc=5",
+          "published_at": "2026-08-28",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-cipla-s-pune-unit-pune-ingested-hist-1",
+          "status": "licence_cancelled",
+          "effective_date": "2026-08-28",
+          "notes": "Here’s why Maharashtra FDA cancelled drug sale licence of Cipla’s Pune unit"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-unnamed-establishment-in-navi-mumbai-navi-mumbai-2026-08-25",
     "review_status": "pending",
     "queued_at": "2026-08-26T14:37:14.887Z",
