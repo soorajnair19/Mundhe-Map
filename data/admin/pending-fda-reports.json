@@ -1,7 +1,7 @@
 [
   {
     "id": "fda-cipla-s-pune-unit-pune-2026-08-28",
-    "review_status": "pending",
+    "review_status": "approved",
     "queued_at": "2026-08-28T23:36:01.391Z",
     "rejection_reason": null,
     "rejection_notes": null,
@@ -35,7 +35,7 @@
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-28T23:36:01.391Z",
-      "updated_at": "2026-08-28T23:36:01.391Z",
+      "updated_at": "2026-08-29T09:40:37.577Z",
       "actions": [
         {
           "id": "case-cipla-s-pune-unit-pune-ingested-act-1",
