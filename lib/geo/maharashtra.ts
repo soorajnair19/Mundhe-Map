@@ -32,64 +32,71 @@ export const MAHARASHTRA_MIN_ZOOM = 5.8;
 
 export const MAHARASHTRA_MAX_ZOOM = 14;
 
+function cartoVoyagerTiles(cartoApiKey?: string): string[] {
+  const key = cartoApiKey?.trim();
+  const suffix = key ? `?key=${encodeURIComponent(key)}` : "";
+  return ["a", "b", "c"].map(
+    (sub) =>
+      `https://${sub}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png${suffix}`,
+  );
+}
+
 /**
  * Raster basemap clipped to Maharashtra via an opaque mask + solid black outline.
  * These layers live in the style so they appear on first paint.
  */
-export const MAP_STYLE: StyleSpecification = {
-  version: 8,
-  name: "Maharashtra only",
-  sources: {
-    "carto-voyager": {
-      type: "raster",
-      tiles: [
-        "https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
-        "https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
-        "https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
-      ],
-      tileSize: 256,
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    },
-    "maharashtra-mask": {
-      type: "geojson",
-      data: maharashtraMask as GeoJSON.GeoJSON,
-    },
-    "maharashtra-boundary": {
-      type: "geojson",
-      data: maharashtraBoundary as GeoJSON.GeoJSON,
-    },
-  },
-  layers: [
-    {
-      id: "carto-voyager",
-      type: "raster",
-      source: "carto-voyager",
-      minzoom: 0,
-      maxzoom: 20,
-    },
-    {
-      id: "maharashtra-mask-fill",
-      type: "fill",
-      source: "maharashtra-mask",
-      paint: {
-        "fill-color": "#fbf8f3",
-        "fill-opacity": 1,
+export function buildMapStyle(cartoApiKey?: string): StyleSpecification {
+  return {
+    version: 8,
+    name: "Maharashtra only",
+    sources: {
+      "carto-voyager": {
+        type: "raster",
+        tiles: cartoVoyagerTiles(cartoApiKey),
+        tileSize: 256,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      },
+      "maharashtra-mask": {
+        type: "geojson",
+        data: maharashtraMask as GeoJSON.GeoJSON,
+      },
+      "maharashtra-boundary": {
+        type: "geojson",
+        data: maharashtraBoundary as GeoJSON.GeoJSON,
       },
     },
-    {
-      id: "maharashtra-boundary-line",
-      type: "line",
-      source: "maharashtra-boundary",
-      layout: {
-        "line-cap": "round",
-        "line-join": "round",
+    layers: [
+      {
+        id: "carto-voyager",
+        type: "raster",
+        source: "carto-voyager",
+        minzoom: 0,
+        maxzoom: 20,
       },
-      paint: {
-        "line-color": "#000000",
-        "line-width": 4,
-        "line-opacity": 1,
+      {
+        id: "maharashtra-mask-fill",
+        type: "fill",
+        source: "maharashtra-mask",
+        paint: {
+          "fill-color": "#fbf8f3",
+          "fill-opacity": 1,
+        },
       },
-    },
-  ],
-};
+      {
+        id: "maharashtra-boundary-line",
+        type: "line",
+        source: "maharashtra-boundary",
+        layout: {
+          "line-cap": "round",
+          "line-join": "round",
+        },
+        paint: {
+          "line-color": "#000000",
+          "line-width": 4,
+          "line-opacity": 1,
+        },
+      },
+    ],
+  };
+}

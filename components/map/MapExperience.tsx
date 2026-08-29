@@ -33,13 +33,16 @@ import {
   parseLayerFromSearchParams,
 } from "@/lib/data/load";
 import type { CaseFilters, CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
+import type { StyleSpecification } from "maplibre-gl";
 
 export function MapExperience({
   communityPlaces,
   publishedFdaCases = [],
+  mapStyle,
 }: {
   communityPlaces: CommunityPlace[];
   publishedFdaCases?: MapCase[];
+  mapStyle: StyleSpecification;
 }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -246,6 +249,7 @@ export function MapExperience({
             places={communityPlaces}
             selectedId={activeSelectedId}
             onSelect={setSelectedId}
+            mapStyle={mapStyle}
           />
         </div>
 

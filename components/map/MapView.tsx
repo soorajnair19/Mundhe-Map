@@ -6,6 +6,7 @@ import {
   Marker,
   NavigationControl,
   type MapMouseEvent,
+  type StyleSpecification,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
@@ -26,7 +27,6 @@ import {
   MAHARASHTRA_MAX_BOUNDS,
   MAHARASHTRA_MAX_ZOOM,
   MAHARASHTRA_MIN_ZOOM,
-  MAP_STYLE,
 } from "@/lib/geo/maharashtra";
 import { MarkerTooltip } from "@/components/map/MarkerTooltip";
 
@@ -36,6 +36,7 @@ interface MapViewProps {
   places: CommunityPlace[];
   selectedId: string | null;
   onSelect: (id: string | null) => void;
+  mapStyle: StyleSpecification;
 }
 
 interface MapPin {
@@ -128,6 +129,7 @@ export function MapView({
   places,
   selectedId,
   onSelect,
+  mapStyle,
 }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
@@ -156,7 +158,7 @@ export function MapView({
     let cancelled = false;
     const map = new MapLibreMap({
       container,
-      style: MAP_STYLE,
+      style: mapStyle,
       center: MUMBAI_CENTER,
       zoom: MUMBAI_DEFAULT_ZOOM,
       minZoom: MAHARASHTRA_MIN_ZOOM,
@@ -213,7 +215,7 @@ export function MapView({
       map.remove();
       mapRef.current = null;
     };
-  }, []);
+  }, [mapStyle]);
 
   useEffect(() => {
     const map = mapRef.current;
