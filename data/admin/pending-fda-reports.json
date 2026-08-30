@@ -288,7 +288,7 @@
     "duplicate_of_case_id": null,
     "establishment": {
       "id": "est-mumbai-restaurant-ayub-mumbai",
-      "name": "Mumbai Restaurant Ayub",
+      "name": "Ayubs",
       "normalized_name": "mumbai ayub",
       "address": null,
       "locality": null,
@@ -302,7 +302,7 @@
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Restaurant%20Ayub%20Mumbai%20Maharashtra",
       "business_type": "restaurant",
       "created_at": "2026-08-25T15:12:36.095Z",
-      "updated_at": "2026-08-25T15:12:36.095Z"
+      "updated_at": "2026-08-30T08:20:10.371Z"
     },
     "case": {
       "id": "case-mumbai-restaurant-ayub-mumbai-ingested",
@@ -311,11 +311,11 @@
       "status": "licence_suspended",
       "inspection_date": null,
       "action_date": "2026-08-25",
-      "summary": "Mumbai Restaurant Ayub’s Food Licence Suspended After FDA Flags Houseflies, Open Drains & Improper Egg &nbsp;&nbsp; Free Press Journal",
+      "summary": "Mumbai Restaurant Ayub’s Food Licence Suspended After FDA Flags Houseflies, Open Drains; Free Press Journal",
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-25T15:12:36.095Z",
-      "updated_at": "2026-08-25T15:12:36.095Z",
+      "updated_at": "2026-08-30T08:20:10.371Z",
       "actions": [
         {
           "id": "case-mumbai-restaurant-ayub-mumbai-ingested-act-1",
