@@ -17,7 +17,7 @@ import {
   pinAccent,
 } from "@/lib/data/status";
 import {
-  formatMonthYear,
+  formatDisplayDate,
   formatStatus,
 } from "@/lib/data/normalize";
 import {
@@ -77,7 +77,7 @@ function pinsFromCases(cases: MapCase[]): MapPin[] {
       district: mapCase.establishment.district,
       status: mapCase.case.status,
       statusLabel: formatStatus(mapCase.case.status),
-      dateLabel: formatMonthYear(
+      dateLabel: formatDisplayDate(
         mapCase.case.action_date ?? mapCase.case.inspection_date,
       ),
       accent: pinAccent(mapCase.case.status).ink,
@@ -95,7 +95,7 @@ function pinsFromPlaces(places: CommunityPlace[]): MapPin[] {
     locality: place.locality ?? place.city ?? place.district,
     district: place.district,
     statusLabel: "Community report",
-    dateLabel: formatMonthYear(place.submitted_at),
+    dateLabel: formatDisplayDate(place.submitted_at),
     accent: COMMUNITY_PIN_COLOR,
     variant: "community",
   }));
