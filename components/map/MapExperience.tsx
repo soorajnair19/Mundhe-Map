@@ -34,6 +34,7 @@ import {
 } from "@/lib/data/load";
 import type { CaseFilters, CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
 import type { StyleSpecification } from "maplibre-gl";
+import { Flag } from "lucide-react";
 
 export function MapExperience({
   communityPlaces,
@@ -269,8 +270,9 @@ export function MapExperience({
                 closePanel();
                 setReportOpen(true);
               }}
-              className="w-fit rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
+              className="inline-flex w-fit items-center gap-1.5 rounded-md bg-[#E11D2E] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#c41826]"
             >
+              <Flag size={16} strokeWidth={2} aria-hidden />
               Flag for inspection
             </button>
             <div className="rounded-md border border-[var(--border)] bg-[var(--panel)]/95 px-2.5 py-2 text-xs leading-snug text-[var(--muted)] shadow-sm backdrop-blur-sm">
