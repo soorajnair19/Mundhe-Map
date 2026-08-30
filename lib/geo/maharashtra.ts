@@ -32,27 +32,47 @@ export const MAHARASHTRA_MIN_ZOOM = 5.8;
 
 export const MAHARASHTRA_MAX_ZOOM = 14;
 
-function cartoVoyagerTiles(cartoApiKey?: string): string[] {
+export type MapTheme = "light" | "dark";
+
+const THEME_BASEMAP = {
+  light: {
+    path: "rastertiles/voyager",
+    mask: "#fbf8f3",
+    boundary: "#000000",
+  },
+  dark: {
+    path: "dark_all",
+    mask: "#0e0e0e",
+    boundary: "#d8d8d8",
+  },
+} as const;
+
+function cartoTiles(theme: MapTheme, cartoApiKey?: string): string[] {
   const key = cartoApiKey?.trim();
   const suffix = key ? `?key=${encodeURIComponent(key)}` : "";
+  const path = THEME_BASEMAP[theme].path;
   return ["a", "b", "c"].map(
     (sub) =>
-      `https://${sub}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png${suffix}`,
+      `https://${sub}.basemaps.cartocdn.com/${path}/{z}/{x}/{y}@2x.png${suffix}`,
   );
 }
 
 /**
- * Raster basemap clipped to Maharashtra via an opaque mask + solid black outline.
+ * Raster basemap clipped to Maharashtra via an opaque mask + outline.
  * These layers live in the style so they appear on first paint.
  */
-export function buildMapStyle(cartoApiKey?: string): StyleSpecification {
+export function buildMapStyle(
+  cartoApiKey?: string,
+  theme: MapTheme = "light",
+): StyleSpecification {
+  const { mask, boundary } = THEME_BASEMAP[theme];
   return {
     version: 8,
     name: "Maharashtra only",
     sources: {
-      "carto-voyager": {
+      "carto-basemap": {
         type: "raster",
-        tiles: cartoVoyagerTiles(cartoApiKey),
+        tiles: cartoTiles(theme, cartoApiKey),
         tileSize: 256,
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -68,9 +88,9 @@ export function buildMapStyle(cartoApiKey?: string): StyleSpecification {
     },
     layers: [
       {
-        id: "carto-voyager",
+        id: "carto-basemap",
         type: "raster",
-        source: "carto-voyager",
+        source: "carto-basemap",
         minzoom: 0,
         maxzoom: 20,
       },
@@ -79,7 +99,7 @@ export function buildMapStyle(cartoApiKey?: string): StyleSpecification {
         type: "fill",
         source: "maharashtra-mask",
         paint: {
-          "fill-color": "#fbf8f3",
+          "fill-color": mask,
           "fill-opacity": 1,
         },
       },
@@ -92,7 +112,7 @@ export function buildMapStyle(cartoApiKey?: string): StyleSpecification {
           "line-join": "round",
         },
         paint: {
-          "line-color": "#000000",
+          "line-color": boundary,
           "line-width": 4,
           "line-opacity": 1,
         },

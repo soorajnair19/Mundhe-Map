@@ -14,6 +14,21 @@
   --border-strong: #b8c2bc;
   --background: var(--surface);
   --foreground: var(--ink);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --surface: #121614;
+  --panel: #1c211e;
+  --map-canvas: #0e0e0e;
+  --ink: #e8ece9;
+  --muted: #9aa39e;
+  --accent: #3dba96;
+  --community-accent: #E0115F;
+  --community-accent-tint: #3a1524;
+  --border: #2c3430;
+  --border-strong: #4a5550;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -55,6 +70,15 @@ body {
 .maplibregl-ctrl-group {
   border: 1px solid var(--border) !important;
   box-shadow: none !important;
+}
+
+[data-theme="dark"] .maplibregl-ctrl-attrib {
+  background: var(--panel);
+  color: var(--muted);
+}
+
+[data-theme="dark"] .maplibregl-ctrl-attrib a {
+  color: var(--ink);
 }
 
 .maplibregl-marker {

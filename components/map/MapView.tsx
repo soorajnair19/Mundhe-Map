@@ -137,6 +137,7 @@ export function MapView({
   const onSelectRef = useRef(onSelect);
   const [hover, setHover] = useState<HoverState | null>(null);
   const [ready, setReady] = useState(false);
+  const [mapEpoch, setMapEpoch] = useState(0);
 
   const enforcementPins = useMemo(() => pinsFromCases(cases), [cases]);
   const communityPins = useMemo(() => pinsFromPlaces(places), [places]);
@@ -146,6 +147,23 @@ export function MapView({
     () => new Map(activePins.map((pin) => [pin.id, pin])),
     [activePins],
   );
+  const pinsRevision = useMemo(
+    () =>
+      `${enforcementPins.map(markerKey).join("|")}|${communityPins.map(markerKey).join("|")}`,
+    [enforcementPins, communityPins],
+  );
+  const markerInputRef = useRef({
+    enforcementPins,
+    communityPins,
+    layer,
+    selectedId,
+  });
+  markerInputRef.current = {
+    enforcementPins,
+    communityPins,
+    layer,
+    selectedId,
+  };
 
   useEffect(() => {
     onSelectRef.current = onSelect;
@@ -154,6 +172,8 @@ export function MapView({
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+
+    container.replaceChildren();
 
     let cancelled = false;
     const map = new MapLibreMap({
@@ -172,29 +192,41 @@ export function MapView({
       "bottom-right",
     );
     mapRef.current = map;
+    setReady(true);
+    setMapEpoch((n) => n + 1);
 
-    const resizeObserver = new ResizeObserver(() => {
-      map.resize();
-    });
+    const safeResize = () => {
+      if (cancelled) return;
+      try {
+        map.resize();
+      } catch {
+        // MapLibre can throw if teardown already started.
+      }
+    };
+
+    const resizeObserver = new ResizeObserver(safeResize);
     resizeObserver.observe(container);
 
     const finishSetup = () => {
       if (cancelled || !mapRef.current) return;
-      map.resize();
-      map.fitBounds(MUMBAI_BOUNDS, {
-        padding: 48,
-        maxZoom: 11,
-        duration: 0,
-      });
-      setReady(true);
+      safeResize();
+      try {
+        map.fitBounds(MUMBAI_BOUNDS, {
+          padding: 48,
+          maxZoom: 11,
+          duration: 0,
+        });
+      } catch {
+        // Same teardown race as resize.
+      }
     };
 
-    if (map.loaded()) {
+    if (map.loaded() || map.isStyleLoaded()) {
       finishSetup();
     } else {
       map.once("load", finishSetup);
+      map.once("style.load", finishSetup);
     }
-    map.once("style.load", finishSetup);
 
     map.on("click", (event: MapMouseEvent) => {
       const target = event.originalEvent.target as HTMLElement | null;
@@ -212,8 +244,13 @@ export function MapView({
       }
       markers.clear();
       setReady(false);
-      map.remove();
+      try {
+        map.remove();
+      } catch {
+        // MapLibre can throw during teardown in React Strict Mode.
+      }
       mapRef.current = null;
+      container.replaceChildren();
     };
   }, [mapStyle]);
 
@@ -221,6 +258,8 @@ export function MapView({
     const map = mapRef.current;
     if (!map || !ready) return;
 
+    const { enforcementPins, communityPins, layer, selectedId } =
+      markerInputRef.current;
     const allPins = [...enforcementPins, ...communityPins];
     const nextKeys = new Set(allPins.map(markerKey));
 
@@ -284,7 +323,7 @@ export function MapView({
 
       markersRef.current.set(key, marker);
     }
-  }, [enforcementPins, communityPins, layer, selectedId, ready]);
+  }, [pinsRevision, layer, selectedId, ready, mapEpoch]);
 
   useEffect(() => {
     if (!ready) return;

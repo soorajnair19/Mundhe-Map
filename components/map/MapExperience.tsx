@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { MapView } from "@/components/map/MapView";
 import { MapLayerTabs } from "@/components/map/MapLayerTabs";
+import { ThemeToggle } from "@/components/map/ThemeToggle";
 import { ReportRestoModal } from "@/components/map/ReportRestoModal";
 import {
   MapSidePanel,
@@ -33,17 +34,17 @@ import {
   parseLayerFromSearchParams,
 } from "@/lib/data/load";
 import type { CaseFilters, CommunityPlace, MapCase, MapLayer } from "@/lib/data/types";
-import type { StyleSpecification } from "maplibre-gl";
 import { Flag } from "lucide-react";
+import { buildMapStyle, type MapTheme } from "@/lib/geo/maharashtra";
 
 export function MapExperience({
   communityPlaces,
   publishedFdaCases = [],
-  mapStyle,
+  cartoApiKey,
 }: {
   communityPlaces: CommunityPlace[];
   publishedFdaCases?: MapCase[];
-  mapStyle: StyleSpecification;
+  cartoApiKey?: string;
 }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -84,6 +85,18 @@ export function MapExperience({
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [listOpen, setListOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
+  const [theme, setTheme] = useState<MapTheme>("light");
+  const mapStyle = useMemo(
+    () => buildMapStyle(cartoApiKey, theme),
+    [cartoApiKey, theme],
+  );
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    return () => {
+      delete document.documentElement.dataset.theme;
+    };
+  }, [theme]);
   const closeReport = useCallback(() => setReportOpen(false), []);
   const closePanel = useCallback(() => {
     setSelectedId(null);
@@ -255,7 +268,12 @@ export function MapExperience({
           />
         </div>
 
-        <MapLayerTabs layer={layer} onSelect={setLayer} />
+        <div className="pointer-events-none absolute top-4 left-4 z-10 flex items-center gap-2">
+          <MapLayerTabs layer={layer} onSelect={setLayer} />
+          <div className="pointer-events-auto">
+            <ThemeToggle theme={theme} onChange={setTheme} />
+          </div>
+        </div>
 
         {layer === "enforcement" ? (
           <LegendFilter

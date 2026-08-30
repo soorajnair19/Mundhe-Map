@@ -29,7 +29,7 @@ interface MapLayerTabsProps {
 export function MapLayerTabs({ layer, onSelect }: MapLayerTabsProps) {
   return (
     <div
-      className="pointer-events-auto absolute top-4 left-4 z-10 inline-flex rounded-md border border-[var(--border)] bg-[var(--panel)]/95 p-0.5 shadow-sm backdrop-blur-sm"
+      className="pointer-events-auto inline-flex rounded-md border border-[var(--border)] bg-[var(--panel)]/95 p-0.5 shadow-sm backdrop-blur-sm"
       role="tablist"
       aria-label="Map data source"
     >
