@@ -208,11 +208,11 @@
   },
   {
     "id": "fda-mumbais-famous-ayubs-restaurant-mumbai-2026-08-25",
-    "review_status": "pending",
+    "review_status": "duplicate",
     "queued_at": "2026-08-25T15:12:36.095Z",
-    "rejection_reason": null,
+    "rejection_reason": "duplicate",
     "rejection_notes": null,
-    "duplicate_of_case_id": null,
+    "duplicate_of_case_id": "case-mumbai-restaurant-ayub-mumbai-ingested",
     "establishment": {
       "id": "est-mumbais-famous-ayubs-restaurant-mumbai",
       "name": "Mumbais Famous AYUBS Restaurant",
@@ -242,7 +242,7 @@
       "verification_status": "reported",
       "confidence_score": 0.55,
       "created_at": "2026-08-25T15:12:36.095Z",
-      "updated_at": "2026-08-25T15:12:36.095Z",
+      "updated_at": "2026-08-30T08:20:41.898Z",
       "actions": [
         {
           "id": "case-mumbais-famous-ayubs-restaurant-mumbai-ingested-act-1",
