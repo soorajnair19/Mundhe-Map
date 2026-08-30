@@ -90,6 +90,7 @@ export function MapExperience({
   }, []);
   const backToList = useCallback(() => {
     setSelectedId(null);
+    setListOpen(true);
   }, []);
 
   const selectedCase = useMemo(() => {
@@ -303,7 +304,7 @@ export function MapExperience({
           selectedPlace={selectedPlace}
           onClose={closePanel}
           onSelect={setSelectedId}
-          onBack={listOpen ? backToList : undefined}
+          onBack={layer === "community" || listOpen ? backToList : undefined}
         />
         {reportOpen ? <ReportRestoModal onClose={closeReport} /> : null}
       </div>

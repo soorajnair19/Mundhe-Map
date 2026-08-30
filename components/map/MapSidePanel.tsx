@@ -87,7 +87,8 @@ export function MapSidePanel({
     [visibleItems, selectedId],
   );
   const fromList = Boolean(onBack);
-  const showListNav = fromList && visibleItems.length > 1;
+  const showListNav =
+    Boolean(selectedPlace) || (fromList && visibleItems.length > 1);
   const canPrev = showListNav && selectedIndex > 0;
   const canNext =
     showListNav &&
