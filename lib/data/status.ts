@@ -1,4 +1,5 @@
 import type { CaseStatus } from "@/lib/data/types";
+import type { MapTheme } from "@/lib/geo/maharashtra";
 
 export type MarkerKind =
   | "suspended"
@@ -64,6 +65,10 @@ export const MARKER_STYLES: Record<
 export const COMMUNITY_PIN_COLOR = "#E0115F";
 export const COMMUNITY_PIN_TINT = "#fce4ed";
 
+const PANEL_LIGHT = "#ffffff";
+const PANEL_DARK = "#1c211e";
+const MIN_TEXT_CONTRAST = 4.5;
+
 /** UI shades derived from a pin colour — hover labels, panel bars, links. */
 export interface PinAccent {
   pin: string;
@@ -85,16 +90,81 @@ function rgbToHex(r: number, g: number, b: number): string {
     .join("")}`;
 }
 
+function srgbChannel(value: number): number {
+  const channel = value / 255;
+  return channel <= 0.03928
+    ? channel / 12.92
+    : ((channel + 0.055) / 1.055) ** 2.4;
+}
+
+function relativeLuminance(hex: string): number {
+  const [r, g, b] = hexToRgb(hex);
+  return (
+    0.2126 * srgbChannel(r) +
+    0.7152 * srgbChannel(g) +
+    0.0722 * srgbChannel(b)
+  );
+}
+
+function contrastRatio(foreground: string, background: string): number {
+  const fg = relativeLuminance(foreground);
+  const bg = relativeLuminance(background);
+  const lighter = Math.max(fg, bg);
+  const darker = Math.min(fg, bg);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
 function darken(hex: string, amount: number): string {
   const [r, g, b] = hexToRgb(hex);
   const factor = 1 - amount;
   return rgbToHex(r * factor, g * factor, b * factor);
 }
 
-export function pinAccent(status: CaseStatus | string): PinAccent {
-  const pin = MARKER_STYLES[statusToMarkerKind(status)].color;
-  return {
-    pin,
-    ink: darken(pin, 0.22),
-  };
+function lighten(hex: string, amount: number): string {
+  const [r, g, b] = hexToRgb(hex);
+  return rgbToHex(
+    r + (255 - r) * amount,
+    g + (255 - g) * amount,
+    b + (255 - b) * amount,
+  );
+}
+
+function lightenToContrast(
+  hex: string,
+  background: string,
+  target: number,
+): string {
+  for (let step = 1; step <= 20; step += 1) {
+    const candidate = lighten(hex, step / 20);
+    if (contrastRatio(candidate, background) >= target) {
+      return candidate;
+    }
+  }
+  return "#ffffff";
+}
+
+function panelForTheme(theme: MapTheme): string {
+  return theme === "dark" ? PANEL_DARK : PANEL_LIGHT;
+}
+
+function accentInk(pin: string, theme: MapTheme): string {
+  if (theme === "dark") {
+    return lightenToContrast(pin, panelForTheme(theme), MIN_TEXT_CONTRAST);
+  }
+  return darken(pin, 0.22);
+}
+
+export function markerAccent(
+  kind: MarkerKind,
+  theme: MapTheme = "light",
+): PinAccent {
+  const pin = MARKER_STYLES[kind].color;
+  return { pin, ink: accentInk(pin, theme) };
+}
+
+export function pinAccent(
+  status: CaseStatus | string,
+  theme: MapTheme = "light",
+): PinAccent {
+  return markerAccent(statusToMarkerKind(status), theme);
 }

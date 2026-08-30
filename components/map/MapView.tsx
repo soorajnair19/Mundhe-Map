@@ -29,6 +29,8 @@ import {
   MAHARASHTRA_MIN_ZOOM,
 } from "@/lib/geo/maharashtra";
 import { MarkerTooltip } from "@/components/map/MarkerTooltip";
+import { useMapTheme } from "@/components/map/MapThemeContext";
+import type { MapTheme } from "@/lib/geo/maharashtra";
 
 interface MapViewProps {
   layer: MapLayer;
@@ -63,7 +65,7 @@ const CASE_PIN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14
 
 const COMMUNITY_PIN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="map-case-pin__icon" aria-hidden="true"><path d="M0 0h14v14H0z" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.15"><path d="M3.25 1.75v10.5"/><path d="M3.25 2.2h7.1L8.4 5.15l1.95 2.95H3.25"/></g></svg>`;
 
-function pinsFromCases(cases: MapCase[]): MapPin[] {
+function pinsFromCases(cases: MapCase[], theme: MapTheme): MapPin[] {
   return cases.map((mapCase) => {
     return {
       id: mapCase.case.id,
@@ -80,7 +82,7 @@ function pinsFromCases(cases: MapCase[]): MapPin[] {
       dateLabel: formatDisplayDate(
         mapCase.case.action_date ?? mapCase.case.inspection_date,
       ),
-      accent: pinAccent(mapCase.case.status).ink,
+      accent: pinAccent(mapCase.case.status, theme).ink,
       variant: "enforcement",
     };
   });
@@ -96,7 +98,7 @@ function pinsFromPlaces(places: CommunityPlace[]): MapPin[] {
     district: place.district,
     statusLabel: "Community report",
     dateLabel: formatDisplayDate(place.submitted_at),
-    accent: COMMUNITY_PIN_COLOR,
+    accent: "var(--community-accent-ink)",
     variant: "community",
   }));
 }
@@ -131,6 +133,7 @@ export function MapView({
   onSelect,
   mapStyle,
 }: MapViewProps) {
+  const theme = useMapTheme();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const markersRef = useRef<Map<string, Marker>>(new Map());
@@ -139,7 +142,10 @@ export function MapView({
   const [ready, setReady] = useState(false);
   const [mapEpoch, setMapEpoch] = useState(0);
 
-  const enforcementPins = useMemo(() => pinsFromCases(cases), [cases]);
+  const enforcementPins = useMemo(
+    () => pinsFromCases(cases, theme),
+    [cases, theme],
+  );
   const communityPins = useMemo(() => pinsFromPlaces(places), [places]);
   const activePins =
     layer === "community" ? communityPins : enforcementPins;
@@ -149,8 +155,8 @@ export function MapView({
   );
   const pinsRevision = useMemo(
     () =>
-      `${enforcementPins.map(markerKey).join("|")}|${communityPins.map(markerKey).join("|")}`,
-    [enforcementPins, communityPins],
+      `${theme}|${enforcementPins.map(markerKey).join("|")}|${communityPins.map(markerKey).join("|")}`,
+    [theme, enforcementPins, communityPins],
   );
   const markerInputRef = useRef({
     enforcementPins,

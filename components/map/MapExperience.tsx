@@ -5,6 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { MapView } from "@/components/map/MapView";
 import { MapLayerTabs } from "@/components/map/MapLayerTabs";
 import { ThemeToggle } from "@/components/map/ThemeToggle";
+import { MapThemeProvider } from "@/components/map/MapThemeContext";
 import { ReportRestoModal } from "@/components/map/ReportRestoModal";
 import {
   MapSidePanel,
@@ -244,7 +245,8 @@ export function MapExperience({
   }, [reportOpen, closeReport, closePanel]);
 
   return (
-    <div className="flex min-h-screen flex-col bg-[var(--surface)]">
+    <MapThemeProvider theme={theme}>
+      <div className="flex min-h-screen flex-col bg-[var(--surface)]">
       <header className="border-b border-[var(--border)] bg-[var(--panel)] px-4 py-2.5 md:px-6">
         <StatsBar
           items={statItems}
@@ -330,6 +332,7 @@ export function MapExperience({
       </div>
 
       <SiteFooter />
-    </div>
+      </div>
+    </MapThemeProvider>
   );
 }

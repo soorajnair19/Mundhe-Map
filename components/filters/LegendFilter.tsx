@@ -1,8 +1,9 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { MARKER_STYLES, type MarkerKind } from "@/lib/data/status";
+import { MARKER_STYLES, markerAccent, type MarkerKind } from "@/lib/data/status";
 import { StatusIcon } from "@/components/status/StatusIcon";
+import { useMapTheme } from "@/components/map/MapThemeContext";
 
 interface LegendFilterProps {
   selectedKind: string | null;
@@ -87,16 +88,19 @@ function KindChip({
   selectedKind: string | null;
   onSelect: (kind: string | null) => void;
 }) {
+  const theme = useMapTheme();
   const style = MARKER_STYLES[kind];
+  const accent = markerAccent(kind, theme);
   const active = selectedKind === kind;
+  const chipColor = theme === "dark" ? accent.ink : style.color;
 
   return (
     <Chip
       active={active}
-      color={style.color}
+      color={chipColor}
       onClick={() => onSelect(kind)}
     >
-      <StatusIcon kind={kind} size={12} color={style.color} />
+      <StatusIcon kind={kind} size={12} color={accent.ink} />
       {style.label}
     </Chip>
   );

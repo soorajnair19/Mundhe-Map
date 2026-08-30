@@ -9,6 +9,7 @@ import {
   formatStatus,
 } from "@/lib/data/normalize";
 import { pinAccent } from "@/lib/data/status";
+import { useMapTheme } from "@/components/map/MapThemeContext";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { StatusIcon } from "@/components/status/StatusIcon";
 import { FormattedSummary } from "@/components/cases/FormattedSummary";
@@ -31,8 +32,9 @@ export function CaseDetailContent({
   canPrev?: boolean;
   canNext?: boolean;
 }) {
+  const theme = useMapTheme();
   const { case: enforcementCase, establishment } = mapCase;
-  const accent = pinAccent(enforcementCase.status);
+  const accent = pinAccent(enforcementCase.status, theme);
   const history = caseTimeline(enforcementCase);
   const showTimeline = history.length >= 2;
 
@@ -142,7 +144,7 @@ export function CaseDetailContent({
                     <StatusIcon
                       status={event.status}
                       size={13}
-                      color={pinAccent(event.status).pin}
+                      color={pinAccent(event.status, theme).pin}
                     />
                   </span>
                   <p className="text-xs text-[var(--muted)]">

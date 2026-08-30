@@ -30,7 +30,7 @@ const inputClass =
 function RequiredMark({ required }: { required: boolean }) {
   if (!required) return null;
   return (
-    <span className="text-[#E11D2E]" aria-hidden>
+    <span className="text-[var(--danger)]" aria-hidden>
       {" "}
       *
     </span>
@@ -198,7 +198,7 @@ export function ReportRestoModal({ onClose }: ReportRestoModalProps) {
               />
 
               {state.error ? (
-                <p className="text-sm text-[#8B1E1E]" role="alert">
+                <p className="text-sm text-[var(--danger)]" role="alert">
                   {state.error}
                 </p>
               ) : null}
@@ -344,7 +344,7 @@ function PhotoUpload({
       </div>
 
       {error ? (
-        <p className="mt-1 text-xs text-[#8B1E1E]" role="alert">
+        <p className="mt-1 text-xs text-[var(--danger)]" role="alert">
           {error}
         </p>
       ) : null}

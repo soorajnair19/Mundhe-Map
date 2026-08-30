@@ -9,7 +9,9 @@
   --muted: #5c6b64;
   --accent: #0f6e56;
   --community-accent: #E0115F;
+  --community-accent-ink: #E0115F;
   --community-accent-tint: #fce4ed;
+  --danger: #8B1E1E;
   --border: #e2e6e3;
   --border-strong: #b8c2bc;
   --background: var(--surface);
@@ -22,10 +24,12 @@
   --panel: #1c211e;
   --map-canvas: #0e0e0e;
   --ink: #e8ece9;
-  --muted: #9aa39e;
+  --muted: #b0bab4;
   --accent: #3dba96;
   --community-accent: #E0115F;
+  --community-accent-ink: #ff7eab;
   --community-accent-tint: #3a1524;
+  --danger: #f28b82;
   --border: #2c3430;
   --border-strong: #4a5550;
   color-scheme: dark;

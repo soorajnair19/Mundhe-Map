@@ -104,7 +104,7 @@ export function CommunityDetailContent({
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-[var(--community-accent)] underline-offset-2 hover:underline"
+                      className="font-medium text-[var(--community-accent-ink)] underline-offset-2 hover:underline"
                     >
                       {item.label}
                     </a>
@@ -126,7 +126,7 @@ export function CommunityDetailContent({
               href={place.maps_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--community-accent)] underline-offset-2 hover:underline"
+              className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--community-accent-ink)] underline-offset-2 hover:underline"
             >
               Open Map
               <ArrowUpRight size={14} strokeWidth={2.25} aria-hidden />
