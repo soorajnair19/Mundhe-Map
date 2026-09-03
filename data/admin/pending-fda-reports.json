@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-mojo-pizza-mumbai-2026-09-03",
+    "review_status": "pending",
+    "queued_at": "2026-09-03T14:51:40.216Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mojo-pizza-mumbai",
+      "name": "MOJO Pizza",
+      "normalized_name": "mojo pizza",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07528,
+      "longitude": 72.87794000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=MOJO%20Pizza%20Mumbai%20Maharashtra",
+      "business_type": "bakery",
+      "created_at": "2026-09-03T14:51:40.216Z",
+      "updated_at": "2026-09-03T14:51:40.216Z"
+    },
+    "case": {
+      "id": "case-mojo-pizza-mumbai-ingested",
+      "establishment_id": "est-mojo-pizza-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-03",
+      "summary": "Mumbai's Food and Drug Administration has suspended several food licences. EatClub Brands in Goregaon faced suspension for poor hygiene standards. Rani Creators Consultant and Service Providers in Kurla also had its licence revoked. Two bakeries in Chembur, Goodluck and Ashfaque, failed compliance checks. These actions highlight significant lapses in food safety regulations.",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-03T14:51:40.216Z",
+      "updated_at": "2026-09-03T14:51:40.216Z",
+      "actions": [
+        {
+          "id": "case-mojo-pizza-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-03",
+          "description": "Times of India report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mojo-pizza-mumbai-ingested-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mojo-pizza-mumbai-ingested-src-1",
+          "source_name": "Times of India",
+          "source_type": "times_of_india",
+          "title": "FDA suspends EatClub Brands' food licence over violations in Mumbai; MOJO Pizza, BOX8 among those hit",
+          "url": "https://timesofindia.indiatimes.com/city/mumbai/fda-suspends-eatclub-brands-food-licence-over-violations-in-mumbai-mojo-pizza-box8-among-those-hit/articleshow/133723535.cms",
+          "published_at": "2026-09-03",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mojo-pizza-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-03",
+          "notes": "FDA suspends EatClub Brands' food licence over violations in Mumbai; MOJO Pizza, BOX8 among those hit"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-restores-cipla-mh-2026-08-30",
     "review_status": "pending",
     "queued_at": "2026-08-30T14:51:40.054Z",
