@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-nine-hotel-nashik-2026-09-04",
+    "review_status": "pending",
+    "queued_at": "2026-09-04T14:51:39.925Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-nine-hotel-nashik",
+      "name": "Nine Hotel",
+      "normalized_name": "nine",
+      "address": null,
+      "locality": null,
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.996599999999997,
+      "longitude": 73.7898,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Nine%20Hotel%20Nashik%20Maharashtra",
+      "business_type": "hotel",
+      "created_at": "2026-09-04T14:51:39.925Z",
+      "updated_at": "2026-09-04T14:51:39.925Z"
+    },
+    "case": {
+      "id": "case-nine-hotel-nashik-ingested",
+      "establishment_id": "est-nine-hotel-nashik",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-04",
+      "summary": "Nashik: FDA Intensifies Food Safety Inspections, Nine Hotel Licences Suspended &nbsp;&nbsp; Free Press Journal",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-04T14:51:39.925Z",
+      "updated_at": "2026-09-04T14:51:39.925Z",
+      "actions": [
+        {
+          "id": "case-nine-hotel-nashik-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-04",
+          "description": "Free Press Journal report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-nine-hotel-nashik-ingested-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Nashik: FDA Intensifies Food Safety Inspections, Nine Hotel Licences Suspended",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdnBTTDhKcFFDS3BaeklJR3lLRXlNaXI3dXRhcjB2MUpNeHBIYTZ0R0U5aE82VTVMQUp3VmlxRElkaF82TzVHNHJMUjA3OVVrVDlSUXdSdE0yaHptOElFWEdJQ1dkWTBpSElpS05CcWdZeWdnZS1ndmJmajYyX0ZNTTZZM1ZWOVZiOEJTLVZPVmdLeEItQ2dvMVl5UTNFWEREV0hVTXNFQUNnOUtReEE2aEFtOFJmNUF50gG4AUFVX3lxTE92cFNMOEpwUUNLcFp6SUlHeUtFeU1pcjd1dGFyMHYxSk14cEhhNnRHRTloTzZVNUxBSndWaXFESWRoXzZPNUc0ckxSMDc5VWtUOVJRd1J0TTJoem04SUVYR0lDV2RZMGlISWlLTkJxZ1l5Z2dlLWd2YmZqNjJfRk1NNlkzVlY5VmI4QlMtVk9WZ0t4Qi1DZ28xWXlRM0VYRERXSFVNc0VBQ2c5S1F4QTZoQW04UmY1QXk?oc=5",
+          "published_at": "2026-09-04",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-nine-hotel-nashik-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-04",
+          "notes": "Nashik: FDA Intensifies Food Safety Inspections, Nine Hotel Licences Suspended"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mojo-pizza-mumbai-2026-09-03",
     "review_status": "pending",
     "queued_at": "2026-09-03T14:51:40.216Z",
