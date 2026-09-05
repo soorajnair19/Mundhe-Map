@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-unnamed-establishment-in-thane-thane-2026-09-05",
+    "review_status": "pending",
+    "queued_at": "2026-09-05T14:51:39.955Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-unnamed-establishment-in-thane-thane",
+      "name": "Unnamed establishment in Thane",
+      "normalized_name": "unnamed establishment in thane",
+      "address": null,
+      "locality": null,
+      "district": "Thane",
+      "city": "Thane",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.21686,
+      "longitude": 72.97906,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Thane%20Thane%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-05T14:51:39.955Z",
+      "updated_at": "2026-09-05T14:51:39.955Z"
+    },
+    "case": {
+      "id": "case-unnamed-establishment-in-thane-thane-ingested",
+      "establishment_id": "est-unnamed-establishment-in-thane-thane",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-09-05",
+      "summary": "Cockroach In Patient’s Meal Triggers FDA Raid, Shuts Thane Hospital Canteen &nbsp;&nbsp; odishabytes.com",
+      "verification_status": "reported",
+      "confidence_score": 0.25,
+      "created_at": "2026-09-05T14:51:39.955Z",
+      "updated_at": "2026-09-05T14:51:39.955Z",
+      "actions": [
+        {
+          "id": "case-unnamed-establishment-in-thane-thane-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-09-05",
+          "description": "odishabytes.com report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-unnamed-establishment-in-thane-thane-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-unnamed-establishment-in-thane-thane-ingested-src-1",
+          "source_name": "odishabytes.com",
+          "source_type": "other_news",
+          "title": "Cockroach In Patient’s Meal Triggers FDA Raid, Shuts Thane Hospital Canteen",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNHFvOHVQdUtLTmtHTWpYMG1ZQmNSY0o5VFBMbWl4ZV9tS1ZTVzQxM3dxOUhTRHVpWFZxRmNfcEd5d2J2Vml3elFmTEduLWhMdWZzV1NUbkI2a1J3aURxYy1GcC1wR0hZVHUwc1pydFVRSXV4bVN5NkZmMS05U183bHBPZ3lwM01BclJObjdOWVUzMFg2cmxuYlFMdmZsT0XSAaQBQVVfeXFMTWZ3ODZIQWh0U1NKMExjVERSZlhLVUI3RGJiYkJzYl91Y0hkU09sOEZoMXFtT0QwMkZtUjJpUDdGSnNzTGxvTzQ2N1R2WE9lWUQxdmplUnBKX0JDcng0OWpWUzhPOUtra0dtZk9haVc3VEF3dFhrQ01jTTlfbVk4aWdlNnlISWFQNlFaQmQ3RVNLX244WHl2SzljQjJ5N29ic0s5Zjg?oc=5",
+          "published_at": "2026-09-05",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnamed-establishment-in-thane-thane-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-09-05",
+          "notes": "Cockroach In Patient’s Meal Triggers FDA Raid, Shuts Thane Hospital Canteen"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-nine-hotel-nashik-2026-09-04",
     "review_status": "pending",
     "queued_at": "2026-09-04T14:51:39.925Z",
