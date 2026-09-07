@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-kalyan-bakery-mh-2026-09-06",
+    "review_status": "pending",
+    "queued_at": "2026-09-07T14:51:39.930Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-kalyan-bakery-mh",
+      "name": "Kalyan Bakery",
+      "normalized_name": "kalyan bakery",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.95108,
+      "longitude": 75.8506,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kalyan%20Bakery%20Maharashtra",
+      "business_type": "bakery",
+      "created_at": "2026-09-07T14:51:39.930Z",
+      "updated_at": "2026-09-07T14:51:39.930Z"
+    },
+    "case": {
+      "id": "case-kalyan-bakery-mh-ingested",
+      "establishment_id": "est-kalyan-bakery-mh",
+      "case_type": "sealing",
+      "status": "sealed",
+      "inspection_date": null,
+      "action_date": "2026-09-06",
+      "summary": "Popular Kalyan bakery sealed after FDA finds wood-fired furnace &nbsp;&nbsp; The Times of India",
+      "verification_status": "reported",
+      "confidence_score": 0.4,
+      "created_at": "2026-09-07T14:51:39.930Z",
+      "updated_at": "2026-09-07T14:51:39.930Z",
+      "actions": [
+        {
+          "id": "case-kalyan-bakery-mh-ingested-act-1",
+          "action_type": "business_sealed",
+          "action_date": "2026-09-06",
+          "description": "The Times of India report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-kalyan-bakery-mh-ingested-src-1",
+          "source_name": "The Times of India",
+          "source_type": "times_of_india",
+          "title": "Popular Kalyan bakery sealed after FDA finds wood-fired furnace",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPNWlwdTFoWWt1NURXVmxrNFM5d1RncEprQ3AwenBBRlYyaWJFYjdld2V6RkxBZlNLYmctNWVMWUJ0cV9KSUM5TjlFVkpsN1RVazF3blVFOGdTWUZTdVc1VHJMcnJ6V0pLTk9QUGdYQkw5VEN6VVBFYkU3UktaOVkxemFNWFNuRGNoN3A1aXlzWENCRnRkTFpodmszQUhWLUVnZmhFbGF5cVB5b0dSeDZHdkEtQlE5UGN5UmctODlMZnlXY3NsOXFWZFZ3UVRRUnNMRi10WDY0SDDSAd4BQVVfeXFMTm9icjAwQU1tekVqTnduajNfZV9hN3I1NHNRc195dFdzTk9DN0xOVW9CemVQMDZudHJWWWJ3dGxvcEhWdkh5bElOQ1lWLXlmRnA3dWo3QjR6aXNnOXp4SDd2TTdpSFdLajRXaGMxeUdUYW5Ua21UUDdxdXAyVzFYbE9PMWpPUnhIMTVYVUY5dFhOUnJieTBWMU9tMERJU182bVo0OHNHSU53d3owZkgzdGEtdE9JbFhzd010ZUlsNm44SEMyQXlKMkVfWEtFcE14eXI3LTFLUVFZQ0I1aGJB?oc=5",
+          "published_at": "2026-09-06",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-kalyan-bakery-mh-ingested-hist-1",
+          "status": "sealed",
+          "effective_date": "2026-09-06",
+          "notes": "Popular Kalyan bakery sealed after FDA finds wood-fired furnace"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-unnamed-establishment-in-thane-thane-2026-09-05",
     "review_status": "pending",
     "queued_at": "2026-09-05T14:51:39.955Z",
