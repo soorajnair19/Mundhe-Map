@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-mumbai-iskcon-govindas-restaurant-mumbai-2026-09-10",
+    "review_status": "pending",
+    "queued_at": "2026-09-10T17:46:10.518Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-iskcon-govindas-restaurant-mumbai",
+      "name": "Mumbai ISKCON Govindas Restaurant",
+      "normalized_name": "mumbai iskcon govindas",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0751,
+      "longitude": 72.8777,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20ISKCON%20Govindas%20Restaurant%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-09-10T17:46:10.518Z",
+      "updated_at": "2026-09-10T17:46:10.518Z"
+    },
+    "case": {
+      "id": "case-mumbai-iskcon-govindas-restaurant-mumbai-ingested",
+      "establishment_id": "est-mumbai-iskcon-govindas-restaurant-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-10",
+      "summary": "Mumbai ISKCON Govinda's Restaurant licence suspended after FDA finds pest infestation, raw materials not c &nbsp;&nbsp; The Economic Times",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-10T17:46:10.518Z",
+      "updated_at": "2026-09-10T17:46:10.518Z",
+      "actions": [
+        {
+          "id": "case-mumbai-iskcon-govindas-restaurant-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-10",
+          "description": "The Economic Times report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbai-iskcon-govindas-restaurant-mumbai-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbai-iskcon-govindas-restaurant-mumbai-ingested-src-1",
+          "source_name": "The Economic Times",
+          "source_type": "other_news",
+          "title": "Mumbai ISKCON Govinda's Restaurant licence suspended after FDA finds pest infestation, raw materials not c",
+          "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxNcFBQR3d6WlZoNm5US3RZVWs4eGxMcU1GX2pIUXVXa0JHWDQya0NfMVR3NFVEam9LREVkLXZleXFWeFJuZ1dVdmNTUW9WdFp0SEZRWV9YenV1RkFSd0JfRlRraDNCVHBOR1lTS0NxN1RTMHJLTVlVUURfZ3pxZWw1MkVZZGFMOEh6dWN6SHJDbkdlTVZ0alBoenZFR2Z0YV93cjNEajg1V0E0ZFJzekhkVVZQTzEzQUV3djlPV1hoS0VlWmplem9KYzlEbS03UnNfOW9UeXFfWVpJdHE0cWVJcnRSZzI4MlFzcjlaV0tuRjhrNlkxbVRkTTRBSU42eVZiYVBnR21ZdHpoSEM3bWRENl8wc1I0dVdObHpUTzRWMXExbTNVSXZR0gGnAkFVX3lxTE1wUFBHd3paVmg2blRLdFlVazh4bExxTUZfakhRdVdrQkdYNDJrQ18xVHc0VURqb0tERWQtdmV5cVZ4Um5nV1V2Y1NRb1Z0WnRIRlFZX1h6dXVGQVJ3Ql9GVGtoM0JUcE5HWVNLQ3E3VFMwcktNWVVRRF9nenFlbDUyRVlkYUw4SHp1Y3pIckNuR2VNVnRqUGh6dkVHZnRhX3dyM0RqODVXQTRkUnN6SGRVVlBPMTNBRXd2OU9XWGhLRWVaamV6b0pjOURtLTdSc185b1R5cV9ZWkl0cTRxZUlydFJnMjgyUXNyOVpXS25GOGs2WTFtVGRNNEFJTjZ5VmJhUGdHbVl0emhIQzdtZEQ2XzBzUjR1V05selRPNFYxcTFtM1VJdlE?oc=5",
+          "published_at": "2026-09-10",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-iskcon-govindas-restaurant-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-10",
+          "notes": "Mumbai ISKCON Govinda's Restaurant licence suspended after FDA finds pest infestation, raw materials not c"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-kalyan-bakery-mh-2026-09-06",
     "review_status": "pending",
     "queued_at": "2026-09-07T14:51:39.930Z",
