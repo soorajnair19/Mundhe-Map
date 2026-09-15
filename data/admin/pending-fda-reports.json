@@ -1,5 +1,139 @@
 [
   {
+    "id": "fda-mumbais-legendary-cafe-mondegar-mumbai-2026-09-15",
+    "review_status": "pending",
+    "queued_at": "2026-09-15T18:19:56.262Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbais-legendary-cafe-mondegar-mumbai",
+      "name": "Mumbais Legendary Cafe Mondegar",
+      "normalized_name": "mumbais legendary cafe mondegar",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07618,
+      "longitude": 72.87866000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbais%20Legendary%20Cafe%20Mondegar%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-15T18:19:56.262Z",
+      "updated_at": "2026-09-15T18:19:56.262Z"
+    },
+    "case": {
+      "id": "case-mumbais-legendary-cafe-mondegar-mumbai-ingested",
+      "establishment_id": "est-mumbais-legendary-cafe-mondegar-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-15",
+      "summary": "Maharashtra FDA crackdown: Mumbai's legendary Cafe Mondegar's licence suspended over food safety violations &nbsp;&nbsp; Storyboard18",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-15T18:19:56.262Z",
+      "updated_at": "2026-09-15T18:19:56.262Z",
+      "actions": [
+        {
+          "id": "case-mumbais-legendary-cafe-mondegar-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-15",
+          "description": "Storyboard18 report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbais-legendary-cafe-mondegar-mumbai-ingested-src-1",
+          "source_name": "Storyboard18",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA crackdown: Mumbai's legendary Cafe Mondegar's licence suspended over food safety violations",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQcDhIaFQ3SzdScnJJYkVCNTF1b1BPblRIQ2VyOTNrNnhFZE1HVkpod2Fld2RFcTZFTDV0bUpqckw4aGw2WFlPZmhZVi1fYzZNYzlQQWxpQVpqVlFJV081djUwb29iZkRiMlR0NlY1N1VnT0dXRjJzdkppUUxTNHFIa3JCWG9TWWpiWUdJTmo3V0VoVmZMRVJlU0M4clZWR2tRTUpRU0NfZ2xvMy1JbDhFNFJRQ0FTWE5FS0E3TDFoZURIOUkwRGtYUEdEbDNaYk1JTFJYV1JFR0oxcWVvVzNURjlGa1FPTm84QUJiRl9B0gHuAUFVX3lxTFBwOEhoVDdLN1JyckliRUI1MXVvUE9uVEhDZXI5M2s2eEVkTUdWSmh3YWV3ZEVxNkVMNXRtSmpyTDhobDZYWU9maFlWLV9jNk1jOVBBbGlBWmpWUUlXTzV2NTBvb2JmRGIyVHQ2VjU3VWdPR1dGMnN2SmlRTFM0cUhrckJYb1NZamJZR0lOajdXRWhWZkxFUmVTQzhyVlZHa1FNSlFTQ19nbG8zLUlsOEU0UlFDQVNYTkVLQTdMMWhlREg5STBEa1hQR0RsM1piTUlMUlhXUkVHSjFxZW9XM1RGOUZrUU9ObzhBQmJGX0E?oc=5",
+          "published_at": "2026-09-15",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbais-legendary-cafe-mondegar-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-15",
+          "notes": "Maharashtra FDA crackdown: Mumbai's legendary Cafe Mondegar's licence suspended over food safety violations"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-kg-dairy-mh-2026-09-15",
+    "review_status": "pending",
+    "queued_at": "2026-09-15T18:19:56.262Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-kg-dairy-mh",
+      "name": "Kg Dairy",
+      "normalized_name": "kg dairy",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.951439999999998,
+      "longitude": 75.85072,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kg%20Dairy%20Maharashtra",
+      "business_type": "dairy",
+      "created_at": "2026-09-15T18:19:56.262Z",
+      "updated_at": "2026-09-15T18:19:56.262Z"
+    },
+    "case": {
+      "id": "case-kg-dairy-mh-ingested",
+      "establishment_id": "est-kg-dairy-mh",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-09-15",
+      "summary": "Maharashtra FDA seizes over 4,000 kg dairy and sweet products in festive crackdown; Colaba's Cafe Mondegar license suspended &nbsp;&nbsp; Mid-Day",
+      "verification_status": "reported",
+      "confidence_score": 0.4,
+      "created_at": "2026-09-15T18:19:56.262Z",
+      "updated_at": "2026-09-15T18:19:56.262Z",
+      "actions": [
+        {
+          "id": "case-kg-dairy-mh-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-09-15",
+          "description": "Mid-Day report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-kg-dairy-mh-ingested-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Maharashtra FDA seizes over 4,000 kg dairy and sweet products in festive crackdown; Colaba's Cafe Mondegar license suspended",
+          "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNcmhvLUxOY2pZb2hSWnhmQWRZdFByQXNqVG44X1dIX1I0ZHhEcUZNMkdYSHVvaW0tUnlMZjBKR3V6VE1BNmk5cTNNb2UtblJ3dlBreGdnV0o5QXpMdHhFX3RsYWY1SEZIVWxCNGxHd05iOGlhLW9kallnQ3RINEwyV2tJaE55Z1ZaZ3h3LUhvanh6Sl84a0YwZXN3WmNDZ0J2dVJ2S3otYnZLRVZWSlU1cHpncDhXN2VJNDNxelRUVWR1NnBEMTJKMmpUMFhPV3RHS0pTYWRjU3NEV0pTcUdsVlJRX1Zqc3NrZXVrQUJETUdPcTIzRE5uWWVKS2dzQ3pEMEhhcl9rSmV6ZjlZbmtWYWxvY9IBkwJBVV95cUxNcmhvLUxOY2pZb2hSWnhmQWRZdFByQXNqVG44X1dIX1I0ZHhEcUZNMkdYSHVvaW0tUnlMZjBKR3V6VE1BNmk5cTNNb2UtblJ3dlBreGdnV0o5QXpMdHhFX3RsYWY1SEZIVWxCNGxHd05iOGlhLW9kallnQ3RINEwyV2tJaE55Z1ZaZ3h3LUhvanh6Sl84a0YwZXN3WmNDZ0J2dVJ2S3otYnZLRVZWSlU1cHpncDhXN2VJNDNxelRUVWR1NnBEMTJKMmpUMFhPV3RHS0pTYWRjU3NEV0pTcUdsVlJRX1Zqc3NrZXVrQUJETUdPcTIzRE5uWWVKS2dzQ3pEMEhhcl9rSmV6ZjlZbmtWYWxvYw?oc=5",
+          "published_at": "2026-09-15",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-kg-dairy-mh-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-09-15",
+          "notes": "Maharashtra FDA seizes over 4,000 kg dairy and sweet products in festive crackdown; Colaba's Cafe Mondegar license suspended"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbai-iskcon-govindas-restaurant-mumbai-2026-09-10",
     "review_status": "pending",
     "queued_at": "2026-09-10T17:46:10.518Z",
