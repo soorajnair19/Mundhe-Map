@@ -1,5 +1,352 @@
 [
   {
+    "id": "fda-mumbais-cafe-mumbai-2026-09-16",
+    "review_status": "pending",
+    "queued_at": "2026-09-16T18:16:42.182Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbais-cafe-mumbai",
+      "name": "Mumbais Cafe",
+      "normalized_name": "mumbais cafe",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.077080000000002,
+      "longitude": 72.87794000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbais%20Cafe%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z"
+    },
+    "case": {
+      "id": "case-mumbais-cafe-mumbai-ingested",
+      "establishment_id": "est-mumbais-cafe-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-16",
+      "summary": "Mumbai's Cafe Mondegar licence suspended: Improper food thawing, cooling lapses — what else did Maharashtra FDA flag? &nbsp;&nbsp; Livemint",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z",
+      "actions": [
+        {
+          "id": "case-mumbais-cafe-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-16",
+          "description": "Livemint report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbais-cafe-mumbai-ingested-src-1",
+          "source_name": "Livemint",
+          "source_type": "other_news",
+          "title": "Mumbai's Cafe Mondegar licence suspended: Improper food thawing, cooling lapses — what else did Maharashtra FDA flag?",
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOendLeEdORU1NUnhvdlA2ZGtLOEtPcFBTMVB2Y0hEOGhuRE1YU3RXd1RGSDZka2Q4azREdnhVQ3hYb1M4VndmWU5EZXl6VHp5OUNSVXU0bGJXdkpsMjlsbmpNdW9mMkc0clBUWjMxd3AtY21HMUt2X2ctQ25vQmstdE5lU0NJQzlLNmd1cndocGdPWjQ0NmlZcl8zdU1YVGMtRWhOOUlmMFBwOHZTektOZWJ2MlUtSzZSNVVVNDZFYVNyY0FNTXpCaF9GMnhLVWVEbXdKS29yQXIwemh1QzRqNHFVYzVrMnFKVXdFYVJWcm9MWm10SzhlSGFWNNIBgAJBVV95cUxOWGl3MUd4YXp5cTF3ZEZZSll1Z1Y5RlFuUFUtSUx4bE1tN2hXY3ZaNENxTmYzR21qck41ZWdIWGRqZDUwVnRocjNnTmV3NzRPVlMzWkQ5d0NtcFVyUzQweE9pOTE2NHh4Vzhkb1hDdjV1V2ExRTU0cV9IMVhob0kzcmRKbkZWYTJsN2NwNWtyVUJTdHltMGhwbGtNdmlEUC1Dd0xrQVpodmw0N09OY2JXVDU5MlAyb2lkVXFLYmpmZGdOU1F1QmxOV09rT2F0NGl0Zjk2NWJxTl9qZVc3cXNxbS0yMGVVa3V3cXduZVAwb3ByZFljV1NVUGpUTGVrM19u?oc=5",
+          "published_at": "2026-09-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbais-cafe-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-16",
+          "notes": "Mumbai's Cafe Mondegar licence suspended: Improper food thawing, cooling lapses — what else did Maharashtra FDA flag?"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-cafe-mondegar-mumbai-2026-09-16",
+    "review_status": "pending",
+    "queued_at": "2026-09-16T18:16:42.182Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-cafe-mondegar-mumbai",
+      "name": "Mumbai Cafe Mondegar",
+      "normalized_name": "mumbai cafe mondegar",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.0751,
+      "longitude": 72.8777,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Cafe%20Mondegar%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z"
+    },
+    "case": {
+      "id": "case-mumbai-cafe-mondegar-mumbai-ingested",
+      "establishment_id": "est-mumbai-cafe-mondegar-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-16",
+      "summary": "Video | Mumbai Cafe Mondegar's License Suspended, Maharashtra FDA Finds Hygiene Lapses &nbsp;&nbsp; NDTV",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z",
+      "actions": [
+        {
+          "id": "case-mumbai-cafe-mondegar-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-16",
+          "description": "NDTV report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbai-cafe-mondegar-mumbai-ingested-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbai-cafe-mondegar-mumbai-ingested-src-1",
+          "source_name": "NDTV",
+          "source_type": "other_news",
+          "title": "Video | Mumbai Cafe Mondegar's License Suspended, Maharashtra FDA Finds Hygiene Lapses",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPS01iRWdtM2Z2cVpYWVF3Zk9ueGliRWYzdTV5enR2ZEU0dDlqbHZabHpHRnhHZ210VnhWbERTYlp1RlhuUnJZODdjd2pCNVJ2TXBWZ041eG5NanZRQ0xCSmtxQ3M1NTJ1eFRQeVVtQTlvNTFZaVItYml5eHRDVmxKRTBscnVMblg0TTF2UnJweXlvLUdrZTRBazJlc3BOZ05KNFVzajhVcUlhdUtsN2JMZDFB?oc=5",
+          "published_at": "2026-09-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-cafe-mondegar-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-16",
+          "notes": "Video | Mumbai Cafe Mondegar's License Suspended, Maharashtra FDA Finds Hygiene Lapses"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-s-cafe-mumbai-2026-09-16",
+    "review_status": "pending",
+    "queued_at": "2026-09-16T18:16:42.182Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-s-cafe-mumbai",
+      "name": "Mumbai’s Cafe",
+      "normalized_name": "mumbai s cafe",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07528,
+      "longitude": 72.87782,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%E2%80%99s%20Cafe%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z"
+    },
+    "case": {
+      "id": "case-mumbai-s-cafe-mumbai-ingested",
+      "establishment_id": "est-mumbai-s-cafe-mumbai",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-09-16",
+      "summary": "Mumbai’s Cafe Mondegar Among 4 Establishments Facing FDA Licence Suspension &nbsp;&nbsp; News Mobile",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z",
+      "actions": [
+        {
+          "id": "case-mumbai-s-cafe-mumbai-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-09-16",
+          "description": "News Mobile report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-s-cafe-mumbai-ingested-src-1",
+          "source_name": "News Mobile",
+          "source_type": "other_news",
+          "title": "Mumbai’s Cafe Mondegar Among 4 Establishments Facing FDA Licence Suspension",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQeTllQlhEN3R3M3NZaTlPM2t2dE9rWEhWWGxWMWRQT2swTHNQbDlCZFQzUzRYNUhEVDZEZXZMLUQ0bFpqN0lWeFpOdDF5dm5mblBNSHBzVi0wTV9XYnpYbnBQN3RiUnUwVlFuSkhkTXhpMjJHNjBmS0VoNU80ZG1QN3piQkVRZV9TLXl4RjgxRXBRNkZZemlmX01UcDRsRmc5bGIyQUVsMHRkMEdz?oc=5",
+          "published_at": "2026-09-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-s-cafe-mumbai-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-09-16",
+          "notes": "Mumbai’s Cafe Mondegar Among 4 Establishments Facing FDA Licence Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-caf-mondegar-mumbai-2026-09-16",
+    "review_status": "pending",
+    "queued_at": "2026-09-16T18:16:42.182Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-caf-mondegar-mumbai",
+      "name": "Café Mondegar",
+      "normalized_name": "café mondegar",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07528,
+      "longitude": 72.87830000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20Mondegar%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z"
+    },
+    "case": {
+      "id": "case-caf-mondegar-mumbai-ingested",
+      "establishment_id": "est-caf-mondegar-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-16",
+      "summary": "Mumbai: Licences of Café Mondegar, three other outlets suspended due to food safety violations &nbsp;&nbsp; Scroll.in",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z",
+      "actions": [
+        {
+          "id": "case-caf-mondegar-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-16",
+          "description": "Scroll.in report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-caf-mondegar-mumbai-ingested-src-1",
+          "source_name": "Scroll.in",
+          "source_type": "other_news",
+          "title": "Mumbai: Licences of Café Mondegar, three other outlets suspended due to food safety violations",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPc1lIRUJVeEtYN2ZYRDlYbkRHV0tSOWkwQThXN1I3TFBGeEJmUU9kZVB4YkFQSkZwYm81T2Z3OXBWYjNmSFlnUFFfUi1LUUdBdTY1X1UzVTdRaS1ydHVWVU5LY3NuejFYLUs1d0o1VzRWODQ2cTVGVEUxTVVvUUtSS0p4X25kRU50WTZIMVYzd3VVNVlqV1RKcHV2aDVoX0ZaeV9wMElfRUZNajBVRVFVZ2FZM3c2d1EwUExlMWM1cnR6d9IBxwFBVV95cUxNSUpJMm1GSXV2RFRwMG5MUzM2ck1ObUVFakpsNWlTeEM1TGlJWVE4UjhZZm94bkNEdzF6NWZ1Z0pNSDdFNDdhdDdWeEtZVWlkZE9HVGpLMXlsMU1PSms0dU9NSlJidTIyM2FDRjJEUGRSeTdjRnBvdk12NjA1RjNVRmc0eXdXV3FwOURmZnM0M2R2SjMtRmRFOEhZM3R1alY4OW1LN3RhNEYtZkNvU3hDekk0REpGM3REeUQwUDlrSVNJS1FvMDI4?oc=5",
+          "published_at": "2026-09-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-caf-mondegar-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-16",
+          "notes": "Mumbai: Licences of Café Mondegar, three other outlets suspended due to food safety violations"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-icon-cafe-mondegar-mumbai-2026-09-16",
+    "review_status": "pending",
+    "queued_at": "2026-09-16T18:16:42.182Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-icon-cafe-mondegar-mumbai",
+      "name": "Mumbai Icon Cafe Mondegar",
+      "normalized_name": "mumbai icon cafe mondegar",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.077080000000002,
+      "longitude": 72.87818,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Icon%20Cafe%20Mondegar%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z"
+    },
+    "case": {
+      "id": "case-mumbai-icon-cafe-mondegar-mumbai-ingested",
+      "establishment_id": "est-mumbai-icon-cafe-mondegar-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-16",
+      "summary": "Mumbai Icon Cafe Mondegar’s Food Licence Suspended After FDA Flags Hygiene, Safety Lapses &nbsp;&nbsp; Business Today",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-16T18:16:42.182Z",
+      "updated_at": "2026-09-16T18:16:42.182Z",
+      "actions": [
+        {
+          "id": "case-mumbai-icon-cafe-mondegar-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-16",
+          "description": "Business Today report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-mumbai-icon-cafe-mondegar-mumbai-ingested-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-mumbai-icon-cafe-mondegar-mumbai-ingested-src-1",
+          "source_name": "Business Today",
+          "source_type": "other_news",
+          "title": "Mumbai Icon Cafe Mondegar’s Food Licence Suspended After FDA Flags Hygiene, Safety Lapses",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQMmJkNVhxT0pnQmhZY1VTN2JXRzk5QmVQT3RHRS1FeWV6eGxQTzI4a01BQlB0WFBaY3BRemZLVnRuUzRSMzdkOTYtQlI0NVhzWDlFX1Qtb2dLRS1ONEpKTG5NQ09VckxQVWxfQW50b3FPQTJJR0xXQkZZbkU5MDE4eDZuZmxrTWY3STZQZGdHUTB4VEY1WDlyMzk5cGtFUWpHOVB4a25MVkM5SVN4d05RTXdHTnRYZlptd0M0dDdLbXk0UnZ5R2M5TS1BMDZ3amFHckZwUVNHQ015ODQ2VHVoYmZMODhQUGc?oc=5",
+          "published_at": "2026-09-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-icon-cafe-mondegar-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-16",
+          "notes": "Mumbai Icon Cafe Mondegar’s Food Licence Suspended After FDA Flags Hygiene, Safety Lapses"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbais-legendary-cafe-mondegar-mumbai-2026-09-15",
     "review_status": "pending",
     "queued_at": "2026-09-15T18:19:56.262Z",
