@@ -1,5 +1,279 @@
 [
   {
+    "id": "fda-year-old-olympia-cafe-mh-2026-09-18",
+    "review_status": "pending",
+    "queued_at": "2026-09-18T17:45:13.419Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-year-old-olympia-cafe-mh",
+      "name": "Year-Old Olympia Cafe",
+      "normalized_name": "year old olympia cafe",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.951259999999998,
+      "longitude": 75.85072,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Year-Old%20Olympia%20Cafe%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z"
+    },
+    "case": {
+      "id": "case-year-old-olympia-cafe-mh-ingested",
+      "establishment_id": "est-year-old-olympia-cafe-mh",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-18",
+      "summary": "Maharashtra FDA Crackdown: 108-Year-Old Olympia Cafe License Suspended Over Severe Hygiene Lapses - India Today &nbsp;&nbsp; India Today",
+      "verification_status": "reported",
+      "confidence_score": 0.4,
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z",
+      "actions": [
+        {
+          "id": "case-year-old-olympia-cafe-mh-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-18",
+          "description": "India Today report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-year-old-olympia-cafe-mh-ingested-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-year-old-olympia-cafe-mh-ingested-src-1",
+          "source_name": "India Today",
+          "source_type": "other_news",
+          "title": "Maharashtra FDA Crackdown: 108-Year-Old Olympia Cafe License Suspended Over Severe Hygiene Lapses - India Today",
+          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxONFBjck1kOXFSNlhJNF9IclQ2SEc5b0NPcWZWTnNfaERzSmctOWFlWW83bFlLLWdocEZfOVUtZTlnSU0tLWwzcTJxYW1lQ2plVllSU18yclYtV3VLTWNKa0ZSN3pIZHJfU3Fkb3lHcUhmS05ZdjFZM2EzSGhmY0xFcy13UWg3ZDVsNGhSVmVGRDljRzY5VW5QRGVUTUl5UlozYVhTY1A5NEY1NTI5QVpGZ3ZMTDdIQzNZTmg5eDlZenJtQTFKOEhDYndYZFd1c25kc00yQzZLWU9sV2U0VllSV05fc191Uk5YdFRGVVFCQdIB9AFBVV95cUxORV9QNTgtOS1SRGJVeXVReWEwOFcybWZ5b2FDZ0p6dXJyeGFJV0VHQ214Q2FPMmZENVNhWVBkY29YMEZLclYyeXVBTmhuWGMwa01lRW1ZZWxSTW5PblZ3VEhfcV9uNWVCNFlmb1VGWk1QMDNKRVVISWtNbnlUMWdEMFpjRWVKSnU2bFBER2s5QzNvN09VUENOMzZUMmRFWXNleWVkRl9HNXJiMlZpX0RFSWNfcWhEb2NNM1NNUEMyRmUzcEwxQzFtTXJ2MXdMREhWeFBCMWZfcGhwdUNpUXgyVjRHb1NxaFl3Y3ZvNTdMbXNtYV9P?oc=5",
+          "published_at": "2026-09-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-year-old-olympia-cafe-mh-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-18",
+          "notes": "Maharashtra FDA Crackdown: 108-Year-Old Olympia Cafe License Suspended Over Severe Hygiene Lapses - India Today"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-holland-had-chai-from-mumbais-cafe-mumbai-2026-09-18",
+    "review_status": "pending",
+    "queued_at": "2026-09-18T17:45:13.419Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-holland-had-chai-from-mumbais-cafe-mumbai",
+      "name": "Holland Had Chai From Mumbais Cafe",
+      "normalized_name": "holland had chai from mumbais cafe",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07456,
+      "longitude": 72.87830000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Holland%20Had%20Chai%20From%20Mumbais%20Cafe%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z"
+    },
+    "case": {
+      "id": "case-holland-had-chai-from-mumbais-cafe-mumbai-ingested",
+      "establishment_id": "est-holland-had-chai-from-mumbais-cafe-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-18",
+      "summary": "Christopher Nolan, Matt Damon, Tom Holland had chai from Mumbai's Cafe Olympia—So why did Maharashtra FDA suspend its licence? &nbsp;&nbsp; theweek.in",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z",
+      "actions": [
+        {
+          "id": "case-holland-had-chai-from-mumbais-cafe-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-18",
+          "description": "theweek.in report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-holland-had-chai-from-mumbais-cafe-mumbai-ingested-src-1",
+          "source_name": "theweek.in",
+          "source_type": "other_news",
+          "title": "Christopher Nolan, Matt Damon, Tom Holland had chai from Mumbai's Cafe Olympia—So why did Maharashtra FDA suspend its licence?",
+          "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOd25QMndRSmZZMUd1aVlaOWhmVnpFbTJ6NGVOV0ZqM29lVTk0cUpJT3FEdUFKcENzUk5Uem5ubEVxcFhjMnRVbUNjWTVZdEZKbjJheG8xcjZxdmJ0YTVpT2pSTzhSWjJOQnpKY0g4QjdCd1pkUVJNN3ZJTWVfaXJEZW1jZ2M4Y1JwTVV3elYwVlpmOWhPbEZsZmtBWlpoQ1ZwMWZIQWdMaWx2Yzl4QXJrUDFGX2dfeWdWLW9WYXRZZ1pma091Vmc1U0gxZUt5SzFMTFc4RW14S3poSVhILVdzWkF2TlYwWlpxM09ucnJxMXZJZVRaZndNX013Wlo3OU90SUM3aDNQY9IBhwJBVV95cUxOd25QMndRSmZZMUd1aVlaOWhmVnpFbTJ6NGVOV0ZqM29lVTk0cUpJT3FEdUFKcENzUk5Uem5ubEVxcFhjMnRVbUNjWTVZdEZKbjJheG8xcjZxdmJ0YTVpT2pSTzhSWjJOQnpKY0g4QjdCd1pkUVJNN3ZJTWVfaXJEZW1jZ2M4Y1JwTVV3elYwVlpmOWhPbEZsZmtBWlpoQ1ZwMWZIQWdMaWx2Yzl4QXJrUDFGX2dfeWdWLW9WYXRZZ1pma091Vmc1U0gxZUt5SzFMTFc4RW14S3poSVhILVdzWkF2TlYwWlpxM09ucnJxMXZJZVRaZndNX013Wlo3OU90SUM3aDNQYw?oc=5",
+          "published_at": "2026-09-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-holland-had-chai-from-mumbais-cafe-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-18",
+          "notes": "Christopher Nolan, Matt Damon, Tom Holland had chai from Mumbai's Cafe Olympia—So why did Maharashtra FDA suspend its licence?"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-thane-restaurant-thane-2026-09-18",
+    "review_status": "pending",
+    "queued_at": "2026-09-18T17:45:13.419Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-thane-restaurant-thane",
+      "name": "Thane Restaurant",
+      "normalized_name": "thane",
+      "address": null,
+      "locality": null,
+      "district": "Thane",
+      "city": "Thane",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.21866,
+      "longitude": 72.97882,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Thane%20Restaurant%20Thane%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z"
+    },
+    "case": {
+      "id": "case-thane-restaurant-thane-ingested",
+      "establishment_id": "est-thane-restaurant-thane",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-09-18",
+      "summary": "Bombay High Court asks Thane restaurant to approach Food Safety Commissioner over licence suspension &nbsp;&nbsp; The Hindu",
+      "verification_status": "reported",
+      "confidence_score": 0.3,
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z",
+      "actions": [
+        {
+          "id": "case-thane-restaurant-thane-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-09-18",
+          "description": "The Hindu report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-thane-restaurant-thane-ingested-src-1",
+          "source_name": "The Hindu",
+          "source_type": "other_news",
+          "title": "Bombay High Court asks Thane restaurant to approach Food Safety Commissioner over licence suspension",
+          "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPRVJoaDlzb3ZRa1liWmRSbXhnZjJuczZFdXdjZjAtc0tZbjVwNUlycTBlMXdRT095allVZVN3Zk9rWm5OYlFQenZjWWRYUC1fNFFkcnJHN0l1dG9FdjNPaW5RZEFyQjF2N1hYTFNPV19jNlFDMjZ0N2VwQWk4b1pfTTVuTkZIU0lSVWkzOHhfTTZJc3J5STN1ZFcwQ0hsODFLX2FOdDZCV3JvLV93REJ1dGw3d0l0MkJBeU8weHJpM2hzcHJoYzd4S0YyOHcxbHJYWVYzLTJ0UHI1bmVwQXAzZVR1ZXFDVWI4Z3UxRnFrbzcyZFNNblNmQy1LOEZhUdIB_gFBVV95cUxPRVJoaDlzb3ZRa1liWmRSbXhnZjJuczZFdXdjZjAtc0tZbjVwNUlycTBlMXdRT095allVZVN3Zk9rWm5OYlFQenZjWWRYUC1fNFFkcnJHN0l1dG9FdjNPaW5RZEFyQjF2N1hYTFNPV19jNlFDMjZ0N2VwQWk4b1pfTTVuTkZIU0lSVWkzOHhfTTZJc3J5STN1ZFcwQ0hsODFLX2FOdDZCV3JvLV93REJ1dGw3d0l0MkJBeU8weHJpM2hzcHJoYzd4S0YyOHcxbHJYWVYzLTJ0UHI1bmVwQXAzZVR1ZXFDVWI4Z3UxRnFrbzcyZFNNblNmQy1LOEZhUQ?oc=5",
+          "published_at": "2026-09-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-thane-restaurant-thane-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-09-18",
+          "notes": "Bombay High Court asks Thane restaurant to approach Food Safety Commissioner over licence suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-mumbai-s-olympia-coffee-house-visited-mumbai-2026-09-18",
+    "review_status": "pending",
+    "queued_at": "2026-09-18T17:45:13.419Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-s-olympia-coffee-house-visited-mumbai",
+      "name": "Mumbai’s Olympia Coffee House Visited",
+      "normalized_name": "mumbai s olympia coffee house visited",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07744,
+      "longitude": 72.87842,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%E2%80%99s%20Olympia%20Coffee%20House%20Visited%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z"
+    },
+    "case": {
+      "id": "case-mumbai-s-olympia-coffee-house-visited-mumbai-ingested",
+      "establishment_id": "est-mumbai-s-olympia-coffee-house-visited-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-18",
+      "summary": "Urinal in storage area, unclean water: Why FDA suspended licence of Mumbai’s Olympia Coffee House visited &nbsp;&nbsp; The Economic Times",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-18T17:45:13.419Z",
+      "updated_at": "2026-09-18T17:45:13.419Z",
+      "actions": [
+        {
+          "id": "case-mumbai-s-olympia-coffee-house-visited-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-18",
+          "description": "The Economic Times report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-s-olympia-coffee-house-visited-mumbai-ingested-src-1",
+          "source_name": "The Economic Times",
+          "source_type": "other_news",
+          "title": "Urinal in storage area, unclean water: Why FDA suspended licence of Mumbai’s Olympia Coffee House visited",
+          "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOV0hsb09xY0t5MGNhc1I3Y2tFTURyeHhQRlY2OHgzbzJWYVJoVTFEMWVuMUtBUDhTRnlwUXBrUmoxWUlfNU5EdkVPOTRqb0NLX1VJMXpzQ1Z0eW1WWEhRcDZPMENfWWlyN0FTSGJiQlNtU25GVFNBSlRmbm4yLWMwZDRtV2thSHJpRXRWb1ZZOUlmQnFnR2FtNnF6bmtKQjNYWHRsd193a2MyQUhzYXExVGJDOUNOYzdzaXk2YVNGOTdlaUJMaUtYbTM4YkhYNmh0ZEVPRFZiMHhBWDk2dWhWSUd6QWtkOEtKczNKQ21NQlVnMjBwODNKci1oVzlrN0dhY001QXNYTWZKdHF1Q01xbHVidG1pdkJqeDhYZXpMZldxX1N6VW1RVG13cy1kZkxjbm1CV250MjJlSHg5ckFmSXZaeWdfZWRRMkZTTWpQUy15Z2p5aGRjVVhwT3NJcmfSAd8CQVVfeXFMTldIbG9PcWNLeTBjYXNSN2NrRU1Ecnh4UEZWNjh4M28yVmFSaFUxRDFlbjFLQVA4U0Z5cFFwa1JqMVlJXzVORHZFTzk0am9DS19VSTF6c0NWdHltVlhIUXA2TzBDX1lpcjdBU0hiYkJTbVNuRlRTQUpUZm5uMi1jMGQ0bVdrYUhyaUV0Vm9WWTlJZkJxZ0dhbTZxem5rSkIzWFh0bHdfd2tjMkFIc2FxMVRiQzlDTmM3c2l5NmFTRjk3ZWlCTGlLWG0zOGJIWDZodGRFT0RWYjB4QVg5NnVoVklHekFrZDhLSnMzSkNtTUJVZzIwcDgzSnItaFc5azdHYWNNNUFzWE1mSnRxdUNNcWx1YnRtaXZCang4WGV6TGZXcV9TelVtUVRtd3MtZGZMY25tQldudDIyZUh4OXJBZkl2WnlnX2VkUTJGU01qUFMteWdqeWhkY1VYcE9zSXJn?oc=5",
+          "published_at": "2026-09-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-s-olympia-coffee-house-visited-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-18",
+          "notes": "Urinal in storage area, unclean water: Why FDA suspended licence of Mumbai’s Olympia Coffee House visited"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbais-cafe-mumbai-2026-09-16",
     "review_status": "pending",
     "queued_at": "2026-09-16T18:16:42.182Z",
