@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-mumbai-cafe-mumbai-2026-09-19",
+    "review_status": "pending",
+    "queued_at": "2026-09-20T17:33:09.834Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbai-cafe-mumbai",
+      "name": "Mumbai Cafe",
+      "normalized_name": "mumbai cafe",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07528,
+      "longitude": 72.8777,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbai%20Cafe%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-20T17:33:09.834Z",
+      "updated_at": "2026-09-20T17:33:09.834Z"
+    },
+    "case": {
+      "id": "case-mumbai-cafe-mumbai-ingested",
+      "establishment_id": "est-mumbai-cafe-mumbai",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-09-19",
+      "summary": "Where Nolan, Tom Holland had chai: Mumbai cafe faces FDA licence suspension &nbsp;&nbsp; News9live",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-20T17:33:09.834Z",
+      "updated_at": "2026-09-20T17:33:09.834Z",
+      "actions": [
+        {
+          "id": "case-mumbai-cafe-mumbai-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-09-19",
+          "description": "News9live report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbai-cafe-mumbai-ingested-src-1",
+          "source_name": "News9live",
+          "source_type": "other_news",
+          "title": "Where Nolan, Tom Holland had chai: Mumbai cafe faces FDA licence suspension",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPeDlqQ3RyMmJPMmJmYVVDWk9xVDJmQzZtdm41SFRWNVZLU2tVNTFoWDNXMFZoZkxjQ1ZnYW5iVG5MVmtuc2pGM20ySThxZUt4Z05NcHk4bjRBS1ZzcVh5M0tXVEc3OTFqLTh1YnpkT3BCX3VIa3NSVlhuS2VmUElFakFValZzZHZSM3E1OFJQNjNMZmtvUndqYnAyaUdQSU1JSndKclNDS2R2RFRxbkdiM01tQzg0Z211emfSAb8BQVVfeXFMTVdkWnc3UzBzUHFxWmZkTkw3YUxJRkN0VEFOVTVjM21reVQzZDNEY1NvYjZJTGhqdlNZdnVEZ3kwWE04bnBnai1yWXJWZWhWT21UQmRBOEtaX3VfMHpUR2gwRHJ2bGtaWC1yeG5mVEdtMmxDZUFELXAwYjU3OU0xcTBWVHJVUnJMejU5U3NWRHN2bi04Q1JKSWxBamxwdmJHeXNoU2hSa3RUb2FaeFBKSGE5TzhFbkxWMFNTdExlSG8?oc=5",
+          "published_at": "2026-09-19",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbai-cafe-mumbai-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-09-19",
+          "notes": "Where Nolan, Tom Holland had chai: Mumbai cafe faces FDA licence suspension"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-year-old-olympia-cafe-mh-2026-09-18",
     "review_status": "pending",
     "queued_at": "2026-09-18T17:45:13.419Z",
