@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-suleman-usman-mithaiwala-mh-2026-09-21",
+    "review_status": "pending",
+    "queued_at": "2026-09-21T19:37:43.542Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-suleman-usman-mithaiwala-mh",
+      "name": "Suleman Usman Mithaiwala",
+      "normalized_name": "suleman usman mithaiwala",
+      "address": null,
+      "locality": null,
+      "district": "Maharashtra",
+      "city": null,
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.95018,
+      "longitude": 75.85011999999999,
+      "location_accuracy": "unknown",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Suleman%20Usman%20Mithaiwala%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-21T19:37:43.542Z",
+      "updated_at": "2026-09-21T19:37:43.542Z"
+    },
+    "case": {
+      "id": "case-suleman-usman-mithaiwala-mh-ingested",
+      "establishment_id": "est-suleman-usman-mithaiwala-mh",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-21",
+      "summary": "Suleman Usman Mithaiwala, 9 other establishments’ licences suspended as Maharashtra FDA crackdown continues &nbsp;&nbsp; Mid-Day",
+      "verification_status": "reported",
+      "confidence_score": 0.4,
+      "created_at": "2026-09-21T19:37:43.542Z",
+      "updated_at": "2026-09-21T19:37:43.542Z",
+      "actions": [
+        {
+          "id": "case-suleman-usman-mithaiwala-mh-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-21",
+          "description": "Mid-Day report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-suleman-usman-mithaiwala-mh-ingested-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Suleman Usman Mithaiwala, 9 other establishments’ licences suspended as Maharashtra FDA crackdown continues",
+          "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNeGxCdGxVZ3NQaXp4cVJrazQyZGRPSGQ1Ukd6NVdFQjV5R2J3QkJqcUhUeTlKcjE3MFk0clkzdkx3czFZbGhaakNEakxHZGc1WXpYUWRWZGlaUHNyNFFHdThjYUx4N2FCTVNWckhzNTRMaGMxWUJtUTRPNDRNeU5JSG5JQ0g4M3ZQZWJoOEhJblo2VTNWenBkbXBjRlNlVkxwcUFncFdtbkpTMkYxd3h4NmRORGxKOGE4ZEtTbGpNWV9nMTB5VGh0cWtqMzRXU1luRi1mUlNwUENYRElIdjFQeHRwc1NjaGVZWl9VNnlZbUlQY3NBeENhS0xVY0NhR3ZKdmgtelZjZVRDR2ZvbC1vMVdxVjZjUlB1d0hpb05YQmxoVWFzM1JPVFpqWnnSAawCQVVfeXFMTXhsQnRsVWdzUGl6eHFSa2s0MmRkT0hkNVJHejVXRUI1eUdid0JCanFIVHk5SnIxNzBZNHJZM3ZMd3MxWWxoWmpDRGpMR2RnNVl6WFFkVmRpWlBzcjRRR3U4Y2FMeDdhQk1TVnJIczU0TGhjMVlCbVE0TzQ0TXlOSUhuSUNIODN2UGViaDhISW5aNlUzVnpwZG1wY0ZTZVZMcHFBZ3BXbW5KUzJGMXd4eDZkTkRsSjhhOGRLU2xqTVlfZzEweVRodHFrajM0V1NZbkYtZlJTcFBDWERJSHYxUHh0cHNTY2hlWVpfVTZ5WW1JUGNzQXhDYUtMVWNDYUd2SnZoLXpWY2VUQ0dmb2wtbzFXcVY2Y1JQdXdIaW9OWEJsaFVhczNST1Raalp5?oc=5",
+          "published_at": "2026-09-21",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-suleman-usman-mithaiwala-mh-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-21",
+          "notes": "Suleman Usman Mithaiwala, 9 other establishments’ licences suspended as Maharashtra FDA crackdown continues"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbai-cafe-mumbai-2026-09-19",
     "review_status": "pending",
     "queued_at": "2026-09-20T17:33:09.834Z",
