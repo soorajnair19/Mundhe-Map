@@ -1,5 +1,206 @@
 [
   {
+    "id": "fda-gallops-restaurant-mumbai-2026-09-22",
+    "review_status": "pending",
+    "queued_at": "2026-09-23T18:29:39.825Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-gallops-restaurant-mumbai",
+      "name": "Gallops Restaurant",
+      "normalized_name": "gallops",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07744,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Gallops%20Restaurant%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-09-23T18:29:39.825Z",
+      "updated_at": "2026-09-23T18:29:39.825Z"
+    },
+    "case": {
+      "id": "case-gallops-restaurant-mumbai-ingested",
+      "establishment_id": "est-gallops-restaurant-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-22",
+      "summary": "Mumbai: Gallops restaurant at Mahalaxmi Racecourse licence suspended over food safety violations &nbsp;&nbsp; wionews.com",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-23T18:29:39.825Z",
+      "updated_at": "2026-09-23T18:29:39.825Z",
+      "actions": [
+        {
+          "id": "case-gallops-restaurant-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-22",
+          "description": "wionews.com report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-gallops-restaurant-mumbai-ingested-src-1",
+          "source_name": "wionews.com",
+          "source_type": "other_news",
+          "title": "Mumbai: Gallops restaurant at Mahalaxmi Racecourse licence suspended over food safety violations",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUXFieVZ6Ry1sOFp6SEg2dHlkQXhrUjNZNjNEQnktTGRMbTRSY2JOZ29pNmpJWTFwUE9wcWhZOWt2b0pEQXN4eGhsZEVaTUtGbkxWanBvamtkc3RWVUNkMUtUekI4T2VHcGVlcmdKbWh2XzZQa3M4dnBqeFpleWsxS2VJSzY1SXJ3MTlSOUIxZGdEOTA4XzNBZ0E2aUU2eU5JWWdIT2ZNd25ITWlfOFZVY08wdmlZbVo4eTUtTNIBwgFBVV95cUxOa1dYd3FhV0VabjRXV0FTNXdnU2RRMW50cml4WDR6czRCb0NRTDhCSXdLMXdEanAzTWxjRF9iS0kxYW1ZZUFHd2JHOUFPUG92bkJrME5xNWJtQkI3NkEzVTlPTDQ2akRDbGhHem9vcjZDZHJMWWZmRXBBOVlscTNobVlNSXh6OGJPc1B6V2RVZFNWeFBMU1VzZHBTTUR2a3ExU0t4YV9OUW9HcFZJaWlCOG5CaHhNdFFLME51QVMyTVJpUQ?oc=5",
+          "published_at": "2026-09-22",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-gallops-restaurant-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-22",
+          "notes": "Mumbai: Gallops restaurant at Mahalaxmi Racecourse licence suspended over food safety violations"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-unnamed-establishment-in-nashik-nashik-2026-09-23",
+    "review_status": "pending",
+    "queued_at": "2026-09-23T18:29:39.825Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-unnamed-establishment-in-nashik-nashik",
+      "name": "Unnamed establishment in Nashik",
+      "normalized_name": "unnamed establishment in nashik",
+      "address": null,
+      "locality": null,
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.99858,
+      "longitude": 73.7898,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Nashik%20Nashik%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-23T18:29:39.825Z",
+      "updated_at": "2026-09-23T18:29:39.825Z"
+    },
+    "case": {
+      "id": "case-unnamed-establishment-in-nashik-nashik-ingested",
+      "establishment_id": "est-unnamed-establishment-in-nashik-nashik",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-09-23",
+      "summary": "Nashik FDA Raid News | पंचवटीतील श्री बालाजी फ्रूट ट्रेडर्सवर एफडीएचा छापा | N18S &nbsp;&nbsp; News18 Marathi",
+      "verification_status": "reported",
+      "confidence_score": 0.25,
+      "created_at": "2026-09-23T18:29:39.825Z",
+      "updated_at": "2026-09-23T18:29:39.825Z",
+      "actions": [
+        {
+          "id": "case-unnamed-establishment-in-nashik-nashik-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-09-23",
+          "description": "News18 Marathi report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-unnamed-establishment-in-nashik-nashik-ingested-src-1",
+          "source_name": "News18 Marathi",
+          "source_type": "other_news",
+          "title": "Nashik FDA Raid News | पंचवटीतील श्री बालाजी फ्रूट ट्रेडर्सवर एफडीएचा छापा | N18S",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTW1SOTY1N3BaTFFvRjVaZ241dGk2T201LVp0YXVnTFZXMEJtWlpIVmVMVUpVU3ByUFJYYWs3dUpLaDlIOGItWXBYMUhadW1uYlFvLWZ0T2c0UU5BMlRpbm9GdENiTGFHdFpTclRSTTZFcEN6c3RNZTY2T3VrMzRPbTJHejhybWZEd0xv?oc=5",
+          "published_at": "2026-09-23",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnamed-establishment-in-nashik-nashik-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-09-23",
+          "notes": "Nashik FDA Raid News | पंचवटीतील श्री बालाजी फ्रूट ट्रेडर्सवर एफडीएचा छापा | N18S"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-unnamed-establishment-in-nagpur-nagpur-2026-09-23",
+    "review_status": "pending",
+    "queued_at": "2026-09-23T18:29:39.825Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-unnamed-establishment-in-nagpur-nagpur",
+      "name": "Unnamed establishment in Nagpur",
+      "normalized_name": "unnamed establishment in nagpur",
+      "address": null,
+      "locality": null,
+      "district": "Nagpur",
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 21.14724,
+      "longitude": 79.08856,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Unnamed%20establishment%20in%20Nagpur%20Nagpur%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-09-23T18:29:39.825Z",
+      "updated_at": "2026-09-23T18:29:39.825Z"
+    },
+    "case": {
+      "id": "case-unnamed-establishment-in-nagpur-nagpur-ingested",
+      "establishment_id": "est-unnamed-establishment-in-nagpur-nagpur",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-09-23",
+      "summary": "Maharashtra FDA crackdown: Gutkha worth Rs 31.83 lakh seized in Nagpur, seven arrested &nbsp;&nbsp; mid-day.com",
+      "verification_status": "reported",
+      "confidence_score": 0.25,
+      "created_at": "2026-09-23T18:29:39.825Z",
+      "updated_at": "2026-09-23T18:29:39.825Z",
+      "actions": [
+        {
+          "id": "case-unnamed-establishment-in-nagpur-nagpur-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-09-23",
+          "description": "mid-day.com report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-unnamed-establishment-in-nagpur-nagpur-ingested-src-1",
+          "source_name": "mid-day.com",
+          "source_type": "mid_day",
+          "title": "Maharashtra FDA crackdown: Gutkha worth Rs 31.83 lakh seized in Nagpur, seven arrested",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNeFp3VFBnU1dBNlRDTE55UHN4Y1dRQTlMSFRtQk5VNFFST09TWGlNMnAxWjdhYno4d1l6emVfRHgtMVNpd1dPYV9KWVBwcTN5LVBaVFVOVVNKaTg0bmxaZzZLRXNYdldfRVA1Z1doNV9Mb0R4bS1OQUNMYjNNWUpCMXVHRHdSaUhvVWFfTEpwVE9tQ3BqYzd5Mi04NnJhdTBpV0JGc0hDZXc1RU9pbnlDNEx1aXBnY1ZjM1ozQ0VEbXJCbWNKZ1M3Z2hPTHo2Z0xiY2FBVHRtc1hkb0lRcXZkVEZuSV9MUm1BQU9kX091NmRUbDjSAfMBQVVfeXFMTXhad1RQZ1NXQTZUQ0xOeVBzeGNXUUE5TEhUbUJOVTRRUk9PU1hpTTJwMVo3YWJ6OHdZenplX0R4LTFTaXdXT2FfSllQcHEzeS1QWlRVTlVTSmk4NG5sWmc2S0VzWHZXX0VQNWdXaDVfTG9EeG0tTkFDTGIzTVlKQjF1R0R3UmlIb1VhX0xKcFRPbUNwamM3eTItODZyYXUwaVdCRnNIQ2V3NUVPaW55QzRMdWlwZ2NWYzNaM0NFRG1yQm1jSmdTN2doT0x6NmdMYmNhQVR0bXNYZG9JUXF2ZFRGbklfTFJtQUFPZF9PdTZkVGw4?oc=5",
+          "published_at": "2026-09-23",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-unnamed-establishment-in-nagpur-nagpur-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-09-23",
+          "notes": "Maharashtra FDA crackdown: Gutkha worth Rs 31.83 lakh seized in Nagpur, seven arrested"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-suleman-usman-mithaiwala-mh-2026-09-21",
     "review_status": "pending",
     "queued_at": "2026-09-21T19:37:43.542Z",
