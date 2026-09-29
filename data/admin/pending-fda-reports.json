@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-found-in-dosa-at-mumbai-restaurant-mumbai-2026-09-29",
+    "review_status": "pending",
+    "queued_at": "2026-09-29T19:31:09.785Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-found-in-dosa-at-mumbai-restaurant-mumbai",
+      "name": "Found In Dosa At Mumbai Restaurant",
+      "normalized_name": "found in dosa at mumbai",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.076,
+      "longitude": 72.87842,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Found%20In%20Dosa%20At%20Mumbai%20Restaurant%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-09-29T19:31:09.785Z",
+      "updated_at": "2026-09-29T19:31:09.785Z"
+    },
+    "case": {
+      "id": "case-found-in-dosa-at-mumbai-restaurant-mumbai-ingested",
+      "establishment_id": "est-found-in-dosa-at-mumbai-restaurant-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-09-29",
+      "summary": "Rat Allegedly Found In Dosa At Mumbai Restaurant, Licence Suspended Amid Maharashtra FDA Crackdown &nbsp;&nbsp; Oneindia",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-09-29T19:31:09.785Z",
+      "updated_at": "2026-09-29T19:31:09.785Z",
+      "actions": [
+        {
+          "id": "case-found-in-dosa-at-mumbai-restaurant-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-09-29",
+          "description": "Oneindia report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-found-in-dosa-at-mumbai-restaurant-mumbai-ingested-vio-1",
+          "violation_type": "pest_infestation",
+          "description": "Pest infestation reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-found-in-dosa-at-mumbai-restaurant-mumbai-ingested-src-1",
+          "source_name": "Oneindia",
+          "source_type": "other_news",
+          "title": "Rat Allegedly Found In Dosa At Mumbai Restaurant, Licence Suspended Amid Maharashtra FDA Crackdown",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPYU55T0xwQ0cybnNIbDNZQ1ZlZlZVaDZYWWR3OHRzbWY5Z0I1RkV0OE9XMUZMMDVyYW5NRndFb3VkZFNfT3lCaGV5SmZBYnl2MlROSEVvM0VnZDRIeGNVNHctTkZvbFU5WVFZdWR2ZTFlaGNiVk0zWEo4SWVTQ0p2VGpURHlNSDJneENzUTNvMGJySmtZNjFsNnJzTWhncC1NUGJBeGFRdGFYejNITkJBdUhzemxvbHpPeXIwTUZLR3U0Mld0MU9xNUpaODJDM1RRNm81bk1KVGR4UQ?oc=5",
+          "published_at": "2026-09-29",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-found-in-dosa-at-mumbai-restaurant-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-09-29",
+          "notes": "Rat Allegedly Found In Dosa At Mumbai Restaurant, Licence Suspended Amid Maharashtra FDA Crackdown"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-gallops-restaurant-mumbai-2026-09-22",
     "review_status": "pending",
     "queued_at": "2026-09-23T18:29:39.825Z",
