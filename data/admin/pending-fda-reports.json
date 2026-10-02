@@ -1,5 +1,139 @@
 [
   {
+    "id": "fda-cipla-pune-warehouse-pune-2026-10-02",
+    "review_status": "pending",
+    "queued_at": "2026-10-02T19:25:53.655Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-cipla-pune-warehouse-pune",
+      "name": "Cipla Pune Warehouse",
+      "normalized_name": "cipla pune warehouse",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.52076,
+      "longitude": 73.85742,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cipla%20Pune%20Warehouse%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-10-02T19:25:53.655Z",
+      "updated_at": "2026-10-02T19:25:53.655Z"
+    },
+    "case": {
+      "id": "case-cipla-pune-warehouse-pune-ingested",
+      "establishment_id": "est-cipla-pune-warehouse-pune",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": null,
+      "action_date": "2026-10-02",
+      "summary": "Cipla Pune Warehouse Licence Cancelled: FDA Flags Misbranded Reactin Plus, Drugs Stored on Floor &nbsp;&nbsp; LatestLY",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-02T19:25:53.655Z",
+      "updated_at": "2026-10-02T19:25:53.655Z",
+      "actions": [
+        {
+          "id": "case-cipla-pune-warehouse-pune-ingested-act-1",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-10-02",
+          "description": "LatestLY report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-cipla-pune-warehouse-pune-ingested-src-1",
+          "source_name": "LatestLY",
+          "source_type": "other_news",
+          "title": "Cipla Pune Warehouse Licence Cancelled: FDA Flags Misbranded Reactin Plus, Drugs Stored on Floor",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSE43Wkc2czRWVUQ4TVViU09LLV84UVVCbkhEd0FVN1hkZU9WSEV4d1R4bER4ZTd5S2djM3hZR29MMXZpbzNmaGtYNTIyQTNpZUhpX0ZBMWgtbUVoNlBMbGR1YTh0NEo5cm8zdXYzbzJwNHQ1bXpMajFaVXNNbXg1eE85ajkwREdtczNaR2FnbDBYUlJkcExFeG9ROHVSZXE0QzZnVHRwRDBJRi1MdEl5c3ZUbTM3RkE4MHE3YTl5M0R0ai1fV3hjblZSbUlKdi1uTUVSVU1oQUZWUGvSAeABQVVfeXFMTURGYmNOX1hKaGctUThreER0dU1hNThJNVB4dnBHd1dxRGhIeU1SMWlCRXhUYm5WX21mNnVpaUVMUG5rWll2UDhMTWp3dHUwU2FNVDBVUUFaRUVQNjltaUVsZXF5c3RiVGEwak9zSjZXVEQxdFdkT1hmYmRpWDNkdFZNanAwT0JQMG1zQ1BURTBnem5yWHBFZzlKMElZOTdDbXlRU3ducWZLMUk3NTg3eUU0U0Y5Und6UE5JR0d3LUF2Z2IxaUxJeVhQS3h2VVRlUXZBUk85eTYwelNTZmR3dUY?oc=5",
+          "published_at": "2026-10-02",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-cipla-pune-warehouse-pune-ingested-hist-1",
+          "status": "licence_cancelled",
+          "effective_date": "2026-10-02",
+          "notes": "Cipla Pune Warehouse Licence Cancelled: FDA Flags Misbranded Reactin Plus, Drugs Stored on Floor"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-multiple-pune-restaurants-pune-2026-10-02",
+    "review_status": "pending",
+    "queued_at": "2026-10-02T19:25:53.655Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-multiple-pune-restaurants-pune",
+      "name": "Multiple Pune restaurants",
+      "normalized_name": "multiple pune restaurants",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519499999999997,
+      "longitude": 73.85718,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Multiple%20Pune%20restaurants%20Pune%20Maharashtra",
+      "business_type": "dairy",
+      "created_at": "2026-10-02T19:25:53.655Z",
+      "updated_at": "2026-10-02T19:25:53.655Z"
+    },
+    "case": {
+      "id": "case-multiple-pune-restaurants-pune-ingested",
+      "establishment_id": "est-multiple-pune-restaurants-pune",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-10-02",
+      "summary": "Pune FDA Action: 5 Restaurants Including Manas Family (Satara) Resto and Lounge, 12 Dairy Establishments Face Licence Suspension &nbsp;&nbsp; punekarnews.in",
+      "verification_status": "reported",
+      "confidence_score": 0.3,
+      "created_at": "2026-10-02T19:25:53.655Z",
+      "updated_at": "2026-10-02T19:25:53.655Z",
+      "actions": [
+        {
+          "id": "case-multiple-pune-restaurants-pune-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-10-02",
+          "description": "punekarnews.in report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-multiple-pune-restaurants-pune-ingested-src-1",
+          "source_name": "punekarnews.in",
+          "source_type": "other_news",
+          "title": "Pune FDA Action: 5 Restaurants Including Manas Family (Satara) Resto and Lounge, 12 Dairy Establishments Face Licence Suspension",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOR0psQmNGZHZ1RlF3OWIwZURLN2ZReHg4RFpqaVhYOC1kbzlZOXJwZi14d2Z5R1U2MGlqd3NlbW03aXhWaVFHYjZ2NFA0Zm9WcEREX3JMRnFhVGN0TGxXSzlpQ19xZjlqTjJxNHFUeGp2QXh6b01DYkdBX0VITUxQdDZBaTRzVWdGWW02X240ZnR4SDhuQjhHNmhJd3cwdjJ5bUVNbVBiaFMxaHpya0JhQ0pIX0duZ1NmZ3NxLXdFN3pMMTNOV2FjOVViMXVaNURKV2lwZTFQYVNrOTBDRWFJU2JqUmlpUTA?oc=5",
+          "published_at": "2026-10-02",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-multiple-pune-restaurants-pune-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-10-02",
+          "notes": "Pune FDA Action: 5 Restaurants Including Manas Family (Satara) Resto and Lounge, 12 Dairy Establishments Face Licence Suspension"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-found-in-dosa-at-mumbai-restaurant-mumbai-2026-09-29",
     "review_status": "pending",
     "queued_at": "2026-09-29T19:31:09.785Z",
