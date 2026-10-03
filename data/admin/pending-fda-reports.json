@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-cipla-warehouse-pune-2026-10-03",
+    "review_status": "pending",
+    "queued_at": "2026-10-03T18:04:59.844Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-cipla-warehouse-pune",
+      "name": "Cipla Warehouse",
+      "normalized_name": "cipla warehouse",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519499999999997,
+      "longitude": 73.85682,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cipla%20Warehouse%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-10-03T18:04:59.844Z",
+      "updated_at": "2026-10-03T18:04:59.844Z"
+    },
+    "case": {
+      "id": "case-cipla-warehouse-pune-ingested",
+      "establishment_id": "est-cipla-warehouse-pune",
+      "case_type": "licence_cancellation",
+      "status": "licence_cancelled",
+      "inspection_date": null,
+      "action_date": "2026-10-03",
+      "summary": "Cipla Warehouse Licence Cancelled By FDA Over Drug Labelling, Storage Violations &nbsp;&nbsp; Pune Mirror",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-03T18:04:59.844Z",
+      "updated_at": "2026-10-03T18:04:59.844Z",
+      "actions": [
+        {
+          "id": "case-cipla-warehouse-pune-ingested-act-1",
+          "action_type": "licence_cancelled",
+          "action_date": "2026-10-03",
+          "description": "Pune Mirror report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-cipla-warehouse-pune-ingested-vio-1",
+          "violation_type": "labelling",
+          "description": "Labelling issues reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-cipla-warehouse-pune-ingested-src-1",
+          "source_name": "Pune Mirror",
+          "source_type": "other_news",
+          "title": "Cipla Warehouse Licence Cancelled By FDA Over Drug Labelling, Storage Violations",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQlZFckhiQ2E5MjdhXzVTM0pSV09EYzhOTURnNVI0c1VIRFhDd2p3UURBZTl3Yk1iVUFYRmtraE5aRWNnNFJkQnJKQjhoYmwycE5RRTJvaEtCQlJRZHdOTXhZeGRCUmZPMjE4VDRNU2pCQ0ZnZ2o2X1BZS0FoSG1GV0NqRU5HRDNWZkM1cVRn?oc=5",
+          "published_at": "2026-10-03",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-cipla-warehouse-pune-ingested-hist-1",
+          "status": "licence_cancelled",
+          "effective_date": "2026-10-03",
+          "notes": "Cipla Warehouse Licence Cancelled By FDA Over Drug Labelling, Storage Violations"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-cipla-pune-warehouse-pune-2026-10-02",
     "review_status": "pending",
     "queued_at": "2026-10-02T19:25:53.655Z",
