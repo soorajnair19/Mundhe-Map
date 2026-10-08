@@ -1,5 +1,78 @@
 [
   {
+    "id": "fda-sandy-da-dhaba-mumbai-2026-10-08",
+    "review_status": "pending",
+    "queued_at": "2026-10-08T20:01:10.294Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-sandy-da-dhaba-mumbai",
+      "name": "Sandy Da Dhaba",
+      "normalized_name": "sandy da dhaba",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07456,
+      "longitude": 72.87818,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sandy%20Da%20Dhaba%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-10-08T20:01:10.294Z",
+      "updated_at": "2026-10-08T20:01:10.294Z"
+    },
+    "case": {
+      "id": "case-sandy-da-dhaba-mumbai-ingested",
+      "establishment_id": "est-sandy-da-dhaba-mumbai",
+      "case_type": "raid",
+      "status": "inspected",
+      "inspection_date": null,
+      "action_date": "2026-10-08",
+      "summary": "Maharashtra FDA raids: Mumbai's Barista, Sandy Da Dhaba among 21 eateries facing licence suspension over hygiene violations &nbsp;&nbsp; Mid-Day",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-08T20:01:10.294Z",
+      "updated_at": "2026-10-08T20:01:10.294Z",
+      "actions": [
+        {
+          "id": "case-sandy-da-dhaba-mumbai-ingested-act-1",
+          "action_type": "inspection",
+          "action_date": "2026-10-08",
+          "description": "Mid-Day report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-sandy-da-dhaba-mumbai-ingested-vio-1",
+          "violation_type": "poor_hygiene",
+          "description": "Hygiene lapses reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-sandy-da-dhaba-mumbai-ingested-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Maharashtra FDA raids: Mumbai's Barista, Sandy Da Dhaba among 21 eateries facing licence suspension over hygiene violations",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOR1ZleDR5Z3JXTVc1TVp5OWloS2NFalduZTBRbGlyZFNLY0pRMzhSNjMtanZINnFzU1BsSFpXaUN4NkVjZS1JWVlFYkFvVnk2cW1wajdtaEJUZTgwbGtEUUhqX3NwY2xuUjJZdGxEekl5emQ3ZHdoMThobklJQThvcDRlRUJLSFlHbVNoVWpfUkNHUWhuQzZHc29IRUhFNDBodnB6ZkIzOHJGTElZMU92SF9mUUVOenpENmd2YXNWUDZDaVpla00xZl96cG1qekJsRWEwNVVnZm42eWwyRFNIR2NCNWUtTXA0Y2pwODZqYlFCd9IB8gFBVV95cUxOR1ZleDR5Z3JXTVc1TVp5OWloS2NFalduZTBRbGlyZFNLY0pRMzhSNjMtanZINnFzU1BsSFpXaUN4NkVjZS1JWVlFYkFvVnk2cW1wajdtaEJUZTgwbGtEUUhqX3NwY2xuUjJZdGxEekl5emQ3ZHdoMThobklJQThvcDRlRUJLSFlHbVNoVWpfUkNHUWhuQzZHc29IRUhFNDBodnB6ZkIzOHJGTElZMU92SF9mUUVOenpENmd2YXNWUDZDaVpla00xZl96cG1qekJsRWEwNVVnZm42eWwyRFNIR2NCNWUtTXA0Y2pwODZqYlFCdw?oc=5",
+          "published_at": "2026-10-08",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-sandy-da-dhaba-mumbai-ingested-hist-1",
+          "status": "inspected",
+          "effective_date": "2026-10-08",
+          "notes": "Maharashtra FDA raids: Mumbai's Barista, Sandy Da Dhaba among 21 eateries facing licence suspension over hygiene violations"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-cipla-warehouse-pune-2026-10-03",
     "review_status": "pending",
     "queued_at": "2026-10-03T18:04:59.844Z",
