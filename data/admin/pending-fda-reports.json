@@ -1,5 +1,145 @@
 [
   {
+    "id": "fda-caterers-and-dairy-mumbai-2026-10-09",
+    "review_status": "pending",
+    "queued_at": "2026-10-09T19:36:09.429Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-caterers-and-dairy-mumbai",
+      "name": "Caterers and Dairy",
+      "normalized_name": "caterers dairy",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.077080000000002,
+      "longitude": 72.87866000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Caterers%20and%20Dairy%20Mumbai%20Maharashtra",
+      "business_type": "dairy",
+      "created_at": "2026-10-09T19:36:09.429Z",
+      "updated_at": "2026-10-09T19:36:09.429Z"
+    },
+    "case": {
+      "id": "case-caterers-and-dairy-mumbai-ingested",
+      "establishment_id": "est-caterers-and-dairy-mumbai",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-10-09",
+      "summary": "Pizza outlet, caterers and dairy among 10 establishments raided in Mumbai by Maharashtra FDA; adulterated goods seized statewide &nbsp;&nbsp; Mid-Day",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-09T19:36:09.429Z",
+      "updated_at": "2026-10-09T19:36:09.429Z",
+      "actions": [
+        {
+          "id": "case-caterers-and-dairy-mumbai-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-10-09",
+          "description": "Mid-Day report"
+        }
+      ],
+      "violations": [
+        {
+          "id": "case-caterers-and-dairy-mumbai-ingested-vio-1",
+          "violation_type": "adulteration",
+          "description": "Adulteration reported in source"
+        }
+      ],
+      "sources": [
+        {
+          "id": "case-caterers-and-dairy-mumbai-ingested-src-1",
+          "source_name": "Mid-Day",
+          "source_type": "mid_day",
+          "title": "Pizza outlet, caterers and dairy among 10 establishments raided in Mumbai by Maharashtra FDA; adulterated goods seized statewide",
+          "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPZWo5MS1VSGhwSkdGMi1ST2V4WFFSWERNSDNEbU82aC1tcnQxR3Zxanp5YjZrTVdEU3k1dWM5NFpEbS10aHc3M3dJMGxxd3dPRFE2MGo2TUQ1dTVCbFVza25NUlp0cW9reXBKS3p2RWlaMmU2NGdjZGtaNWpNdkFNS2gxdm1aS05hNFJJT0JOenQ1TDdNRWFSSklZNjd3bXlZZnNTbzFaZFI1S2VuSnMtN3BCUlRoRTdKVG1rLWVId0Z3TWllSjh3Mzlad2tITURzWkRNTGVMalJtUFlJSHJxZnhLaGNTMlhVNExGUXZ5UjZYRkhHajhydFp3bWJsdkhkWmtQMjRoRS1oZW9LWmh3NHUtUl9udHJ5cGVCWHJkTDBPOXgxakpLUEVxTXd5NFFqQk5EdEJ5UdIBtwJBVV95cUxPZWo5MS1VSGhwSkdGMi1ST2V4WFFSWERNSDNEbU82aC1tcnQxR3Zxanp5YjZrTVdEU3k1dWM5NFpEbS10aHc3M3dJMGxxd3dPRFE2MGo2TUQ1dTVCbFVza25NUlp0cW9reXBKS3p2RWlaMmU2NGdjZGtaNWpNdkFNS2gxdm1aS05hNFJJT0JOenQ1TDdNRWFSSklZNjd3bXlZZnNTbzFaZFI1S2VuSnMtN3BCUlRoRTdKVG1rLWVId0Z3TWllSjh3Mzlad2tITURzWkRNTGVMalJtUFlJSHJxZnhLaGNTMlhVNExGUXZ5UjZYRkhHajhydFp3bWJsdkhkWmtQMjRoRS1oZW9LWmh3NHUtUl9udHJ5cGVCWHJkTDBPOXgxakpLUEVxTXd5NFFqQk5EdEJ5UQ?oc=5",
+          "published_at": "2026-10-09",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-caterers-and-dairy-mumbai-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-10-09",
+          "notes": "Pizza outlet, caterers and dairy among 10 establishments raided in Mumbai by Maharashtra FDA; adulterated goods seized statewide"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-la-pinoz-pizza-mumbai-2026-10-09",
+    "review_status": "pending",
+    "queued_at": "2026-10-09T19:36:09.429Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-la-pinoz-pizza-mumbai",
+      "name": "La Pinoz Pizza",
+      "normalized_name": "la pinoz pizza",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07546,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=La%20Pinoz%20Pizza%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-10-09T19:36:09.429Z",
+      "updated_at": "2026-10-09T19:36:09.429Z"
+    },
+    "case": {
+      "id": "case-la-pinoz-pizza-mumbai-ingested",
+      "establishment_id": "est-la-pinoz-pizza-mumbai",
+      "case_type": "licence_suspension",
+      "status": "licence_suspended",
+      "inspection_date": null,
+      "action_date": "2026-10-09",
+      "summary": "Mumbai FDA Crackdown: La Pinoz Pizza, Nawab Juice Centre Among 10 Food Licenses Suspended &nbsp;&nbsp; NDTV Profit",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-09T19:36:09.429Z",
+      "updated_at": "2026-10-09T19:36:09.429Z",
+      "actions": [
+        {
+          "id": "case-la-pinoz-pizza-mumbai-ingested-act-1",
+          "action_type": "licence_suspended",
+          "action_date": "2026-10-09",
+          "description": "NDTV Profit report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-la-pinoz-pizza-mumbai-ingested-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "Mumbai FDA Crackdown: La Pinoz Pizza, Nawab Juice Centre Among 10 Food Licenses Suspended",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOalhydUIxWXBURmRhdHY2eFRQV003UTFpYzRnc1hrOGdtQmk3NVh1TE1lSXVNY0JkNmpXSkdtTWVtWUZLRHZCRlBva0dIRERXVWpKTVpXTGdIQ0hkVjE5bXhmencyVlRxQWZoRkxzdE1McFoydGlUdzNHMlpEdzh1YnFCYUljaXN4cng1ZFg0SmVGNklrMU92RGFzMmxNdGV2d2hQb1dJTmxoeXc0T1hVLUVscmh5RFJlYlJmQ3k3bS1IOFJSdWhfWdIB0AFBVV95cUxNR1RfamdlQUJwcFNzUi1jTkY2RTBLbWhsQjN3dDByOWZER2NSSkFnNFdSTjJmVFM5Z29nWTdJQ0c5dW85VGhncmdKRk9Sa19wdEI0UVljTHVreFc3bTJ5S2loa25pVWRxVlU1WUhqQ2FYNjB0al9oMXVzd1BhbGRtLXdpQmRib0pmdk5OUjQxdGxFNnliOElFNzZJSkFQbVhmcWd4a3VHdjBGMmFBSTdZalU2d0J1SnBmbWpjWC1tQTFGbTRvMzdOSmR0SHNzZTNp?oc=5",
+          "published_at": "2026-10-09",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-la-pinoz-pizza-mumbai-ingested-hist-1",
+          "status": "licence_suspended",
+          "effective_date": "2026-10-09",
+          "notes": "Mumbai FDA Crackdown: La Pinoz Pizza, Nawab Juice Centre Among 10 Food Licenses Suspended"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-sandy-da-dhaba-mumbai-2026-10-08",
     "review_status": "pending",
     "queued_at": "2026-10-08T20:01:10.294Z",
