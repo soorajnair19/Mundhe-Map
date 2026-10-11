@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-multiple-pune-establishments-pune-2026-10-11",
+    "review_status": "pending",
+    "queued_at": "2026-10-11T19:04:30.897Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-multiple-pune-establishments-pune",
+      "name": "Multiple Pune establishments",
+      "normalized_name": "multiple pune establishments",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.5213,
+      "longitude": 73.85754,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Multiple%20Pune%20establishments%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-10-11T19:04:30.897Z",
+      "updated_at": "2026-10-11T19:04:30.897Z"
+    },
+    "case": {
+      "id": "case-multiple-pune-establishments-pune-ingested",
+      "establishment_id": "est-multiple-pune-establishments-pune",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-10-11",
+      "summary": "Edible oil worth Rs 1.29 crore seized as FDA raids 25 establishments in Pune division &nbsp;&nbsp; The Indian Express",
+      "verification_status": "reported",
+      "confidence_score": 0.3,
+      "created_at": "2026-10-11T19:04:30.897Z",
+      "updated_at": "2026-10-11T19:04:30.897Z",
+      "actions": [
+        {
+          "id": "case-multiple-pune-establishments-pune-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-10-11",
+          "description": "The Indian Express report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-multiple-pune-establishments-pune-ingested-src-1",
+          "source_name": "The Indian Express",
+          "source_type": "indian_express",
+          "title": "Edible oil worth Rs 1.29 crore seized as FDA raids 25 establishments in Pune division",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOM3g3SUNUWVFhNHBtX3lvR2ZKOHhKeVdWamNFYV91TnIxdndWYll1WEwzd1JtUDVLZmtkRF9tTDhmUF9VRDdZT1ZqY2tkNnVyV0ZCVEhTb0R1NE52U1ZWMDV4TXlZTHh5MmFycmhLb216T1pqOFJVNld2c0xMdzc1RTRPU1F4TlJMamU1VS1lTWp0UHE0N3RaNWVyTFU0cERTNm54S2d4T3JHZ9IBqgFBVV95cUxOM3g3SUNUWVFhNHBtX3lvR2ZKOHhKeVdWamNFYV91TnIxdndWYll1WEwzd1JtUDVLZmtkRF9tTDhmUF9VRDdZT1ZqY2tkNnVyV0ZCVEhTb0R1NE52U1ZWMDV4TXlZTHh5MmFycmhLb216T1pqOFJVNld2c0xMdzc1RTRPU1F4TlJMamU1VS1lTWp0UHE0N3RaNWVyTFU0cERTNm54S2d4T3JHZw?oc=5",
+          "published_at": "2026-10-11",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-multiple-pune-establishments-pune-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-10-11",
+          "notes": "Edible oil worth Rs 1.29 crore seized as FDA raids 25 establishments in Pune division"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-caterers-and-dairy-mumbai-2026-10-09",
     "review_status": "pending",
     "queued_at": "2026-10-09T19:36:09.429Z",
