@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-cupcakes-from-ajmeri-bakery-nashik-2026-10-16",
+    "review_status": "pending",
+    "queued_at": "2026-10-16T18:14:20.965Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-cupcakes-from-ajmeri-bakery-nashik",
+      "name": "Cupcakes From Ajmeri Bakery",
+      "normalized_name": "cupcakes from ajmeri bakery",
+      "address": null,
+      "locality": null,
+      "district": "Nashik",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.99822,
+      "longitude": 73.79004,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Cupcakes%20From%20Ajmeri%20Bakery%20Nashik%20Maharashtra",
+      "business_type": "bakery",
+      "created_at": "2026-10-16T18:14:20.965Z",
+      "updated_at": "2026-10-16T18:14:20.965Z"
+    },
+    "case": {
+      "id": "case-cupcakes-from-ajmeri-bakery-nashik-ingested",
+      "establishment_id": "est-cupcakes-from-ajmeri-bakery-nashik",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-10-16",
+      "summary": "Nashik: FDA Seizes 151 Kg Of Cakes, Cupcakes From Ajmeri Bakery, Orders Suspension &nbsp;&nbsp; Free Press Journal",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-16T18:14:20.965Z",
+      "updated_at": "2026-10-16T18:14:20.965Z",
+      "actions": [
+        {
+          "id": "case-cupcakes-from-ajmeri-bakery-nashik-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-10-16",
+          "description": "Free Press Journal report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-cupcakes-from-ajmeri-bakery-nashik-ingested-src-1",
+          "source_name": "Free Press Journal",
+          "source_type": "other_news",
+          "title": "Nashik: FDA Seizes 151 Kg Of Cakes, Cupcakes From Ajmeri Bakery, Orders Suspension",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZXRKRElBS3dtaTBGRGxsemw2Rno0aWp0cnZER0FuT2RTdi15SUdCRjh0b1ZCWHpNVWJXM3d3YmlfNGRNVE5hX1F4R0pPYjZudkdGWjFVSGN3cVhxd2QzN2x5OTFlZjBJZXUzSjh3eUNtREx0em9DblNLalVPSlNrNGhrc3VUMFU0YmZKcnBXNmtEOS1kcXZCQjctcDdDeHdzZXR5dVdmRXo3M2JKZWRrNWFTZzdtWVXSAbwBQVVfeXFMUG5CdDU0OVdqZUQtbm5mOWphNHE5Ny05dDRXS1lOUXowU01sMnM3TzNLOV9hVGJSTE8waFZJMmYyOEctUDN4ZUp1aXVHNVlzM2stREVjeE5XelRjLXp6UC1MZjBsQTlkdWVKOUxOSjJoSjVoMlBCbFVxdXN0WTRRd01xdTExQUZyRkswcGdaRUl5d2E3cDJNcEQwZ3ctTEg0bm9meXZxN2xHVDFqVXcyOXZ3SDRfRG9pRWJpRno?oc=5",
+          "published_at": "2026-10-16",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-cupcakes-from-ajmeri-bakery-nashik-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-10-16",
+          "notes": "Nashik: FDA Seizes 151 Kg Of Cakes, Cupcakes From Ajmeri Bakery, Orders Suspension"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-multiple-pune-establishments-pune-2026-10-11",
     "review_status": "pending",
     "queued_at": "2026-10-11T19:04:30.897Z",
