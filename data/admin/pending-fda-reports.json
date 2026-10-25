@@ -1,5 +1,72 @@
 [
   {
+    "id": "fda-mumbais-ottoman-cafe-mumbai-2026-10-24",
+    "review_status": "pending",
+    "queued_at": "2026-10-25T17:43:53.115Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-mumbais-ottoman-cafe-mumbai",
+      "name": "Mumbais Ottoman Cafe",
+      "normalized_name": "mumbais ottoman cafe",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07546,
+      "longitude": 72.87806,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Mumbais%20Ottoman%20Cafe%20Mumbai%20Maharashtra",
+      "business_type": "restaurant",
+      "created_at": "2026-10-25T17:43:53.115Z",
+      "updated_at": "2026-10-25T17:43:53.115Z"
+    },
+    "case": {
+      "id": "case-mumbais-ottoman-cafe-mumbai-ingested",
+      "establishment_id": "est-mumbais-ottoman-cafe-mumbai",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-10-24",
+      "summary": "FDA Crackdown Continues: Mumbai's Ottoman Cafe, Bharat Canteen Among Seven Restaurants That Face Suspension &nbsp;&nbsp; NDTV Profit",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-10-25T17:43:53.115Z",
+      "updated_at": "2026-10-25T17:43:53.115Z",
+      "actions": [
+        {
+          "id": "case-mumbais-ottoman-cafe-mumbai-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-10-24",
+          "description": "NDTV Profit report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-mumbais-ottoman-cafe-mumbai-ingested-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "FDA Crackdown Continues: Mumbai's Ottoman Cafe, Bharat Canteen Among Seven Restaurants That Face Suspension",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNZ3ctS041NnNwSElCblR5ZTZxOHBtYlU5Z2Q2N0FUYzQ3ZTZtN0FBbERmdEI1VWw1ZEtXdFBsTjV2c2pUNjBWNkFWTzhieGxuZ2FqR1FWaVcwWVZVZGtUdGJmTkp4eWVudjdQeWxtc2RiaGJ0UVhmS2hkRmFzdXVJUmhkZGpwOHRfWGE5Vjk3ajdJYjJUTUZvNUVtVDdWbHlJWTBlMlZzLTlTSXV5Tm5EZElCVU5yNmpsM1V3ejRPRksybUhSeXFId2dXXzZSUkNvRllvWFN5WWsyb2VmMWRF0gHnAUFVX3lxTE5LeXU2ampKRThPLVlqVG5hT3drX1FmN01OaE5SWFNUalB4dkk4c21vYTlsUWxrcFdzTmVGU0FBMEdKS2ZWTjhMdXR3NU54clNWMFRyaXNVOXVURGRDa2VudWlud2p1bW9yUkVGWHJNR1RDRnVad3RQRHVaWUI1SFhQTDNPVVVad2Q1RS1SQ1otYURoYjBfRDJ6cXdGcVpHZVVWUUtYVklzalo2NHlIZkg1RFNqc1lKRkp3d0NmN1Z3RmFnbWl5ZHVJZGhBX0lzUUZuaXM3MngyT1ZvdkN1MmJwSDRKZ245VQ?oc=5",
+          "published_at": "2026-10-24",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-mumbais-ottoman-cafe-mumbai-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-10-24",
+          "notes": "FDA Crackdown Continues: Mumbai's Ottoman Cafe, Bharat Canteen Among Seven Restaurants That Face Suspension"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-cupcakes-from-ajmeri-bakery-nashik-2026-10-16",
     "review_status": "pending",
     "queued_at": "2026-10-16T18:14:20.965Z",
