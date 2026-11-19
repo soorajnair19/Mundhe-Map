@@ -1,5 +1,139 @@
 [
   {
+    "id": "fda-multiple-mumbai-establishments-mumbai-2026-11-19",
+    "review_status": "pending",
+    "queued_at": "2026-11-19T22:20:59.479Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-multiple-mumbai-establishments-mumbai",
+      "name": "Multiple Mumbai establishments",
+      "normalized_name": "multiple mumbai establishments",
+      "address": null,
+      "locality": null,
+      "district": "Mumbai Suburban",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 19.07456,
+      "longitude": 72.87830000000001,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Multiple%20Mumbai%20establishments%20Mumbai%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-11-19T22:20:59.479Z",
+      "updated_at": "2026-11-19T22:20:59.479Z"
+    },
+    "case": {
+      "id": "case-multiple-mumbai-establishments-mumbai-ingested",
+      "establishment_id": "est-multiple-mumbai-establishments-mumbai",
+      "case_type": "other",
+      "status": "other",
+      "inspection_date": null,
+      "action_date": "2026-11-19",
+      "summary": "5 Spice, EVE, Chaayos Among 6 Mumbai Establishments Hit By FDA Licence Suspension &nbsp;&nbsp; NDTV Profit",
+      "verification_status": "reported",
+      "confidence_score": 0.3,
+      "created_at": "2026-11-19T22:20:59.479Z",
+      "updated_at": "2026-11-19T22:20:59.479Z",
+      "actions": [
+        {
+          "id": "case-multiple-mumbai-establishments-mumbai-ingested-act-1",
+          "action_type": "other",
+          "action_date": "2026-11-19",
+          "description": "NDTV Profit report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-multiple-mumbai-establishments-mumbai-ingested-src-1",
+          "source_name": "NDTV Profit",
+          "source_type": "other_news",
+          "title": "5 Spice, EVE, Chaayos Among 6 Mumbai Establishments Hit By FDA Licence Suspension",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR0VNZlBXel9QdDgwM00xNnRKMnUyamg3ODROaW5NdVlvNlZvbERTaHZvNVQwVjVoZnY5aUM5R21MQWJtVE9CM3JzWWtJZjlyWXdpWFZlMHRHMHQzR3g4enhhaWlEd2JCZ1RDUWV5RWtERUVUSnFXOU5OT19lamlZSVBBWHhLY2F0Y05VVWozWFdLeHdRU3hCUnlTemkyMGc4M1VpRmV2ZTlyNGc3Ujlrc1JTRHJTQkktR1BoVHVB?oc=5",
+          "published_at": "2026-11-19",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-multiple-mumbai-establishments-mumbai-ingested-hist-1",
+          "status": "other",
+          "effective_date": "2026-11-19",
+          "notes": "5 Spice, EVE, Chaayos Among 6 Mumbai Establishments Hit By FDA Licence Suspension"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fda-avenue-supermarts-facility-pune-2026-11-18",
+    "review_status": "pending",
+    "queued_at": "2026-11-19T22:20:59.479Z",
+    "rejection_reason": null,
+    "rejection_notes": null,
+    "duplicate_of_case_id": null,
+    "establishment": {
+      "id": "est-avenue-supermarts-facility-pune",
+      "name": "Avenue Supermarts Facility",
+      "normalized_name": "avenue supermarts facility",
+      "address": null,
+      "locality": null,
+      "district": "Pune",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": null,
+      "latitude": 18.519859999999998,
+      "longitude": 73.85706,
+      "location_accuracy": "approximate",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Avenue%20Supermarts%20Facility%20Pune%20Maharashtra",
+      "business_type": "other",
+      "created_at": "2026-11-19T22:20:59.479Z",
+      "updated_at": "2026-11-19T22:20:59.479Z"
+    },
+    "case": {
+      "id": "case-avenue-supermarts-facility-pune-ingested",
+      "establishment_id": "est-avenue-supermarts-facility-pune",
+      "case_type": "seizure",
+      "status": "seizure",
+      "inspection_date": null,
+      "action_date": "2026-11-18",
+      "summary": "Pune: Avenue Supermarts Facility DMart Raided in Maval; FDA Seizes Edible Oil Stock Worth Rs 50 Lakh &nbsp;&nbsp; Punekar News",
+      "verification_status": "reported",
+      "confidence_score": 0.55,
+      "created_at": "2026-11-19T22:20:59.479Z",
+      "updated_at": "2026-11-19T22:20:59.479Z",
+      "actions": [
+        {
+          "id": "case-avenue-supermarts-facility-pune-ingested-act-1",
+          "action_type": "seizure",
+          "action_date": "2026-11-18",
+          "description": "Punekar News report"
+        }
+      ],
+      "violations": [],
+      "sources": [
+        {
+          "id": "case-avenue-supermarts-facility-pune-ingested-src-1",
+          "source_name": "Punekar News",
+          "source_type": "other_news",
+          "title": "Pune: Avenue Supermarts Facility DMart Raided in Maval; FDA Seizes Edible Oil Stock Worth Rs 50 Lakh",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLUFsUEFiRmNsVk1Rd01qR1BPUHJFYWhVYWFCVm5kbTU0Mk1mM2Fqa3pwUFd1eFN3WDRadkRINmtDZXhqQl96TXY3VWFmbTBtRVNKQVEwQ2Q4cFNYNmJ5TnpvQ1NvRk5xU3ZxT0FYWlUwZmM0eC1YUkZXaF95N3VObUVZUXNsS3AtSkZ1amN2WWxyRTJUNWVzb3F6TVp2azF0MU1hUzdjYkVUcHFaaUYtdTRORFVqM1lkd25nbQ?oc=5",
+          "published_at": "2026-11-18",
+          "is_primary": true
+        }
+      ],
+      "status_history": [
+        {
+          "id": "case-avenue-supermarts-facility-pune-ingested-hist-1",
+          "status": "seizure",
+          "effective_date": "2026-11-18",
+          "notes": "Pune: Avenue Supermarts Facility DMart Raided in Maval; FDA Seizes Edible Oil Stock Worth Rs 50 Lakh"
+        }
+      ]
+    }
+  },
+  {
     "id": "fda-mumbais-ottoman-cafe-mumbai-2026-10-24",
     "review_status": "pending",
     "queued_at": "2026-10-25T17:43:53.115Z",
